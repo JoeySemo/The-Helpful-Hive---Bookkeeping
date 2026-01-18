@@ -9,30 +9,41 @@ export default function ConciergePage() {
             title: 'Bee Done',
             tagline: 'Household Chores & Cleaning Tasks',
             icon: '🧽',
+            price: '$30',
+            priceUnit: 'per hour',
+            popular: true,
             items: ['Bathroom Deep Clean', 'Kitchen Deep Clean', 'Window Washing', 'Laundry Services']
         },
         {
             title: 'Bee Kind',
             tagline: 'Pet Care & Home Visits',
             icon: '🐾',
+            price: '$20',
+            priceUnit: 'per visit',
             items: ['Dog Walking', 'Potty Breaks', 'Feeding & Water', 'Vacation Check-ins']
         },
         {
             title: 'Bee Organized',
             tagline: 'Organization, Decluttering & Lifestyle Systems',
             icon: '🧺',
+            price: '$35',
+            priceUnit: 'per hour',
             items: ['Closet Organization', 'Pantry Systems', 'Home Office Setup', 'Garage Reset']
         },
         {
             title: 'Bee Efficient',
             tagline: 'Errands, Admin, and Office Help',
             icon: '💼',
+            price: '$30',
+            priceUnit: 'per hour',
             items: ['Errand Running', 'Appointment Scheduling', 'Data Entry', 'Event Coordination']
         },
         {
             title: 'Bee Connected',
             tagline: 'Seasonal & Community Services',
             icon: '🌸',
+            price: '$35',
+            priceUnit: 'per hour',
             items: ['Holiday Decorating', 'Donation Drop-offs', 'Event Support', 'Volunteer Help']
         }
     ];
@@ -170,9 +181,38 @@ export default function ConciergePage() {
                                 padding: '2.5rem',
                                 borderRadius: '1rem',
                                 border: '1px solid #e5e7eb',
-                                boxShadow: '0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06)'
+                                boxShadow: '0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06)',
+                                position: 'relative'
                             }}>
-                                <div style={{ fontSize: '3rem', marginBottom: '1rem' }}>{service.icon}</div>
+                                {service.popular && (
+                                    <div style={{
+                                        position: 'absolute',
+                                        top: '-12px',
+                                        left: '32px',
+                                        backgroundColor: '#a67c00', // Darker gold for better contrast
+                                        color: 'white',
+                                        padding: '0.25rem 1rem',
+                                        borderRadius: '12px',
+                                        fontSize: '0.8rem',
+                                        fontWeight: 600,
+                                        boxShadow: '0 2px 4px rgba(0,0,0,0.1)'
+                                    }}>
+                                        Most Popular
+                                    </div>
+                                )}
+
+                                <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start', marginBottom: '1rem' }}>
+                                    <div style={{ fontSize: '3rem' }}>{service.icon}</div>
+                                    <div style={{ textAlign: 'right' }}>
+                                        <div style={{ fontSize: '1.5rem', fontWeight: 700, color: '#a67c00' }}>
+                                            {service.price}
+                                        </div>
+                                        <div style={{ fontSize: '0.9rem', color: '#6b7280' }}>
+                                            {service.priceUnit}
+                                        </div>
+                                    </div>
+                                </div>
+
                                 <h3 style={{ fontSize: '1.5rem', fontWeight: 600, color: '#1f2937', marginBottom: '0.5rem' }}>
                                     {service.title}
                                 </h3>
