@@ -101,8 +101,11 @@ export default function ConciergePage() {
                     <p style={{ fontSize: '1.25rem', color: '#374151', fontStyle: 'italic', marginBottom: '1rem' }}>
                         Sweet solutions for busy homes, pets, and people.
                     </p>
+                    <p style={{ fontSize: '1rem', color: '#4b5563', marginBottom: '0.5rem' }}>
+                        Because even the busiest bees need a little help.
+                    </p>
                     <p style={{ fontSize: '1rem', color: '#4b5563', marginBottom: '2rem' }}>
-                        Because even the busiest bees need a little help. We handle the details of home management so you can focus on what matters most.
+                        We handle the details of home management so you can focus on what matters most.
                     </p>
                     <div style={{ display: 'flex', gap: '1rem', flexWrap: 'wrap' }}>
                         <Link href="/contact" style={{
