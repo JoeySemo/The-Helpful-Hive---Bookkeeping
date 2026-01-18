@@ -84,12 +84,6 @@ export default function Navbar() {
                 <Link href="/concierge" style={{ color: '#a8b78b', fontWeight: 700, fontSize: '1.15rem', borderBottom: '2px solid #a8b78b', textDecoration: 'none' }}>
                   Concierge
                 </Link>
-                <Link href="/concierge#services" style={{ color: '#4b5563', fontWeight: 500, fontSize: '1.15rem', textDecoration: 'none' }}>
-                  Services
-                </Link>
-                <Link href="/concierge#how-it-works" style={{ color: '#4b5563', fontWeight: 500, fontSize: '1.15rem', textDecoration: 'none' }}>
-                  Process
-                </Link>
                 <Link href="/" style={{ color: '#9ca3af', fontWeight: 500, fontSize: '0.875rem', textDecoration: 'none' }}>
                   Back to Portal
                 </Link>
