@@ -1,26 +1,98 @@
-@import "tailwindcss";
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
+@layer base {
   :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+    /* Helpful Hive (Bookkeeping) - Professional, Clean, Efficient */
+    /* Primary: Amber/Honey */
+    --hive-primary: 38 92% 50%;
+    /* #F5A623 equivalent hue */
+    --hive-secondary: 210 20% 96%;
+    /* Light Slate */
+    --hive-bg: 0 0% 100%;
+    /* White */
+    --hive-text: 215 19% 35%;
+    /* Slate 700 */
+    --hive-slate: 215 25% 27%;
+    /* Slate 800 */
+    --hive-border: 214 32% 91%;
+    /* Slate 200 */
+
+    /* Global Base */
+    --background: 0 0% 100%;
+    --foreground: 222.2 84% 4.9%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 222.2 84% 4.9%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 222.2 84% 4.9%;
+
+    --primary: 222.2 47.4% 11.2%;
+    --primary-foreground: 210 40% 98%;
+
+    --secondary: 210 40% 96.1%;
+    --secondary-foreground: 222.2 47.4% 11.2%;
+
+    --muted: 210 40% 96.1%;
+    --muted-foreground: 215.4 16.3% 46.9%;
+
+    --accent: 210 40% 96.1%;
+    --accent-foreground: 222.2 47.4% 11.2%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 214.3 31.8% 91.4%;
+    --input: 214.3 31.8% 91.4%;
+    --ring: 222.2 84% 4.9%;
+
+    --radius: 0.5rem;
+  }
+
+  .concierge-scope {
+    /* Solyn (Home Concierge) - Elegant, Calm, Trustworthy */
+    /* Primary: Sage/Green, Secondary: Soft Gold */
+    --solyn-primary: 0.35 0.08 140;
+    /* OKLCH Green roughly #6B9C7F */
+
+    /* Solyn Brand Colors */
+    --primary: 156 42% 45%;
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 35 30% 94%;
+    --secondary-foreground: 24 10% 10%;
+
+    --muted: 120 10% 96%;
+    --muted-foreground: 120 4% 45%;
+
+    --accent: 38 40% 92%;
+    --accent-foreground: 24 10% 10%;
+
+    --background: 40 20% 99%;
+    --foreground: 120 5% 15%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 120 5% 15%;
+
+    --border: 120 10% 85%;
+    --input: 120 10% 85%;
   }
 }
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+@layer base {
+  * {
+    border-color: hsl(var(--border));
+  }
+
+  body {
+    background-color: hsl(var(--background));
+    color: hsl(var(--foreground));
+  }
+}
+
+/* Force utility class for Warm Honey to ensure it works regardless of Tailwind config issues */
+.bg-portal-honey {
+  background-color: #E2C16B !important;
 }
