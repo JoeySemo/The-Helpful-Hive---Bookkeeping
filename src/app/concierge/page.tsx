@@ -139,11 +139,11 @@ export default function ConciergePage() {
                     justifyContent: 'center'
                 }}>
                     <Image
-                        src="/logo.png"
+                        src="/concierge-logo.jpg"
                         alt="The Helpful Hive"
                         width={280}
-                        height={200}
-                        style={{ objectFit: 'contain' }}
+                        height={280}
+                        style={{ objectFit: 'contain', borderRadius: '50%' }}
                     />
                 </div>
             </div>
