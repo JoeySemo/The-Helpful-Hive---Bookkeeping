@@ -293,7 +293,7 @@ export default function ConciergePage() {
                         />
                     </div>
                     <div style={{ flex: 1, minWidth: '300px' }}>
-                        <p style={{ fontSize: '0.9rem', color: '#E2C16B', fontWeight: 600, marginBottom: '0.5rem' }}>Our Queen Bee</p>
+                        <p style={{ fontSize: '2rem', color: '#E2C16B', fontWeight: 400, marginBottom: '0.5rem', fontFamily: 'Georgia, serif', fontStyle: 'italic' }}>Our Queen Bee</p>
                         <h2 style={{ fontSize: '2rem', fontWeight: 400, color: '#1f2937', marginBottom: '1rem', fontFamily: 'Georgia, serif', fontStyle: 'italic' }}>
                             Meet Your Home Concierge
                         </h2>
@@ -303,9 +303,7 @@ export default function ConciergePage() {
                         <p style={{ color: '#4b5563', marginBottom: '1rem', lineHeight: 1.7 }}>
                             That's why I created The Helpful Hive. My mission is to help busy families, seasonal residents, and anyone who needs a helping hand with their home.
                         </p>
-                        <p style={{ color: '#E2C16B', fontStyle: 'italic', fontWeight: 500 }}>
-                            Because even the busiest bees need a little help.
-                        </p>
+
                     </div>
                 </div>
             </div>
