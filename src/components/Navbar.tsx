@@ -27,12 +27,12 @@ export default function Navbar() {
         overflow: 'hidden'
       }}
     >
-      <div style={{ width: '100%', paddingLeft: '0.5rem', paddingRight: '1.5rem', height: '100%', boxSizing: 'border-box' }}>
+      <div style={{ width: '100%', paddingLeft: '0', paddingRight: '1.5rem', height: '100%', boxSizing: 'border-box' }}>
         <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', height: '100%', flexWrap: 'nowrap' }}>
 
           {/* Logo Section */}
-          <div style={{ display: 'flex', alignItems: 'center', gap: '1rem', flexShrink: 0 }}>
-            <Link href="/" style={{ display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
+          <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', flexShrink: 0 }}>
+            <Link href="/" style={{ display: 'flex', alignItems: 'center', gap: '0.25rem' }}>
               <div style={{ position: 'relative', height: '110px', width: '480px' }}>
                 <Image
                   src="/official-logo-horizontal.png"
@@ -45,7 +45,7 @@ export default function Navbar() {
 
             {/* Slogan - Only for Home, next to logo */}
             {isHome && (
-              <span style={{ color: '#475569', fontFamily: 'serif', fontStyle: 'italic', fontSize: '2.25rem', display: 'block', paddingLeft: '1rem', borderLeft: '2px solid #e2e8f0', whiteSpace: 'nowrap' }}>
+              <span style={{ color: '#E2C16B', fontFamily: 'serif', fontStyle: 'italic', fontSize: '2.25rem', display: 'block', paddingLeft: '0.75rem', borderLeft: '2px solid #e2e8f0', whiteSpace: 'nowrap' }}>
                 Even the Busiest Bees Need a Little Help
               </span>
             )}
@@ -58,10 +58,10 @@ export default function Navbar() {
             {isHome && (
               <>
                 <Link href="/bookkeeping" style={{ color: '#4b5563', fontWeight: 500, fontSize: '1.15rem', textDecoration: 'none', whiteSpace: 'nowrap' }}>
-                  Business Services
+                  Professional Bookkeeping
                 </Link>
                 <Link href="/concierge" style={{ color: '#4b5563', fontWeight: 500, fontSize: '1.15rem', textDecoration: 'none', whiteSpace: 'nowrap' }}>
-                  Home Services
+                  Personal Concierge
                 </Link>
               </>
             )}
@@ -71,12 +71,6 @@ export default function Navbar() {
               <>
                 <Link href="/bookkeeping" style={{ color: '#f59e0b', fontWeight: 700, fontSize: '1.15rem', borderBottom: '2px solid #f59e0b', textDecoration: 'none' }}>
                   Bookkeeping
-                </Link>
-                <Link href="/bookkeeping#services" style={{ color: '#4b5563', fontWeight: 500, fontSize: '1.15rem', textDecoration: 'none' }}>
-                  Services
-                </Link>
-                <Link href="/bookkeeping#about" style={{ color: '#4b5563', fontWeight: 500, fontSize: '1.15rem', textDecoration: 'none' }}>
-                  About
                 </Link>
                 <Link href="/" style={{ color: '#9ca3af', fontWeight: 500, fontSize: '0.875rem', textDecoration: 'none' }}>
                   Back to Portal

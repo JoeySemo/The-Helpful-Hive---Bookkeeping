@@ -3,6 +3,7 @@
 import Link from 'next/link';
 import Image from 'next/image';
 import { useState } from 'react';
+import { useRouter } from 'next/navigation';
 
 import { Geist } from "next/font/google";
 
@@ -11,6 +12,7 @@ const geist = Geist({ subsets: ['latin'] });
 export default function HomePage() {
   const [businessHover, setBusinessHover] = useState(false);
   const [homeHover, setHomeHover] = useState(false);
+  const router = useRouter();
 
   return (
     <div
@@ -18,7 +20,7 @@ export default function HomePage() {
       style={{ display: 'flex', flexDirection: 'row', height: 'calc(100vh - 96px)', overflow: 'hidden' }}
     >
 
-      {/* Business/Bookkeeping Section - Cream */}
+      {/* Business/Bookkeeping Section - Cream - ENTIRE BOX CLICKABLE */}
       <div
         style={{
           flex: 1,
@@ -30,6 +32,7 @@ export default function HomePage() {
         }}
         onMouseEnter={() => setBusinessHover(true)}
         onMouseLeave={() => setBusinessHover(false)}
+        onClick={() => router.push('/bookkeeping')}
       >
         {/* Background Illustration with Animation */}
         <div style={{ position: 'absolute', inset: 0, zIndex: 0 }}>
@@ -65,23 +68,15 @@ export default function HomePage() {
           <p style={{ fontSize: businessHover ? '4rem' : '3.5rem', color: '#E2C16B', marginBottom: '2rem', fontWeight: 400, transition: 'font-size 0.3s ease-in-out', whiteSpace: 'nowrap' }}>
             Professional Bookkeeping
           </p>
-          <Link
-            href="/bookkeeping"
-            style={{
-              color: '#3C3C3C',
-              fontWeight: 500,
-              fontSize: '3.5rem',
-              textDecoration: 'none'
-            }}
-          >
+          <p style={{ color: '#3C3C3C', fontWeight: 500, fontSize: '3.5rem' }}>
             Take the Sting Out of Business Finances
-          </Link>
+          </p>
         </div>
       </div>
 
 
 
-      {/* Home/Concierge Section - Sage */}
+      {/* Home/Concierge Section - Sage - ENTIRE BOX CLICKABLE */}
       <div
         style={{
           flex: 1,
@@ -92,6 +87,7 @@ export default function HomePage() {
         }}
         onMouseEnter={() => setHomeHover(true)}
         onMouseLeave={() => setHomeHover(false)}
+        onClick={() => router.push('/concierge')}
       >
         {/* Background Illustration with Animation */}
         <div style={{ position: 'absolute', inset: 0, zIndex: 0 }}>
@@ -127,17 +123,9 @@ export default function HomePage() {
           <p style={{ fontSize: homeHover ? '4rem' : '3.5rem', color: '#E2C16B', marginBottom: '2rem', fontWeight: 400, transition: 'font-size 0.3s ease-in-out', whiteSpace: 'nowrap' }}>
             Personal Concierge
           </p>
-          <Link
-            href="/concierge"
-            style={{
-              color: '#3C3C3C',
-              fontWeight: 500,
-              fontSize: '3.5rem',
-              textDecoration: 'none'
-            }}
-          >
+          <p style={{ color: '#3C3C3C', fontWeight: 500, fontSize: '3.5rem' }}>
             Sweet solutions for Busy Homes, Pets, and People
-          </Link>
+          </p>
         </div>
       </div>
     </div>
