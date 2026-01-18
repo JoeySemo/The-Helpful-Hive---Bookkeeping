@@ -66,23 +66,7 @@ export default function ConciergePage() {
         }
     ];
 
-    const testimonials = [
-        {
-            name: 'Sarah M.',
-            role: 'Seasonal Homeowner',
-            quote: "The Helpful Hive has been a lifesaver for managing our vacation home. I never worry about anything when we're away."
-        },
-        {
-            name: 'Michael R.',
-            role: 'Business Traveler',
-            quote: "As someone who travels constantly, having someone I trust to handle errands and check on my home is invaluable."
-        },
-        {
-            name: 'The Johnson Family',
-            role: 'Busy Parents',
-            quote: "Between work and kids, we never had time for the little things. Now our home runs like clockwork thanks to The Helpful Hive!"
-        }
-    ];
+
 
     return (
         <main style={{ minHeight: 'calc(100vh - 96px)' }}>
@@ -326,34 +310,7 @@ export default function ConciergePage() {
                 </div>
             </div>
 
-            {/* Testimonials */}
-            <div style={{ backgroundColor: 'white', padding: '4rem 2rem' }}>
-                <div style={{ maxWidth: '70rem', margin: '0 auto' }}>
-                    <h2 style={{ fontSize: '2rem', fontWeight: 400, color: '#1f2937', marginBottom: '0.5rem', textAlign: 'center', fontFamily: 'Georgia, serif', fontStyle: 'italic' }}>
-                        What Our Clients Say
-                    </h2>
-                    <p style={{ color: '#6b7280', textAlign: 'center', marginBottom: '3rem' }}>
-                        Don't just take our word for it—hear from homeowners who've experienced the difference.
-                    </p>
 
-                    <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: '1.5rem' }}>
-                        {testimonials.map((testimonial, index) => (
-                            <div key={index} style={{
-                                backgroundColor: '#f8f9fa',
-                                padding: '1.5rem',
-                                borderRadius: '0.75rem',
-                                border: '1px solid #e5e7eb'
-                            }}>
-                                <p style={{ color: '#4b5563', fontStyle: 'italic', marginBottom: '1rem', lineHeight: 1.6 }}>
-                                    "{testimonial.quote}"
-                                </p>
-                                <p style={{ fontWeight: 600, color: '#1f2937', marginBottom: '0.1rem' }}>{testimonial.name}</p>
-                                <p style={{ fontSize: '0.85rem', color: '#6b7280' }}>{testimonial.role}</p>
-                            </div>
-                        ))}
-                    </div>
-                </div>
-            </div>
 
             {/* CTA Section */}
             <div style={{
