@@ -160,25 +160,25 @@ export default function ConciergePage() {
                         </p>
                     </div>
 
-                    <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))', gap: '1.5rem' }}>
+                    <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(340px, 1fr))', gap: '2rem' }}>
                         {services.map((service, index) => (
                             <div key={index} style={{
                                 backgroundColor: 'white',
-                                padding: '1.5rem',
-                                borderRadius: '0.75rem',
+                                padding: '2.5rem',
+                                borderRadius: '1rem',
                                 border: '1px solid #e5e7eb',
-                                boxShadow: '0 1px 3px rgba(0,0,0,0.1)'
+                                boxShadow: '0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06)'
                             }}>
-                                <div style={{ fontSize: '2rem', marginBottom: '0.75rem' }}>{service.icon}</div>
-                                <h3 style={{ fontSize: '1.15rem', fontWeight: 600, color: '#1f2937', marginBottom: '0.25rem' }}>
+                                <div style={{ fontSize: '3rem', marginBottom: '1rem' }}>{service.icon}</div>
+                                <h3 style={{ fontSize: '1.5rem', fontWeight: 600, color: '#1f2937', marginBottom: '0.5rem' }}>
                                     {service.title}
                                 </h3>
-                                <p style={{ fontSize: '0.9rem', color: '#E2C16B', fontStyle: 'italic', marginBottom: '1rem' }}>
+                                <p style={{ fontSize: '1.1rem', color: '#E2C16B', fontStyle: 'italic', marginBottom: '1.5rem' }}>
                                     {service.tagline}
                                 </p>
                                 <ul style={{ listStyle: 'none', padding: 0, margin: 0 }}>
                                     {service.items.map((item, i) => (
-                                        <li key={i} style={{ fontSize: '0.9rem', color: '#6b7280', marginBottom: '0.25rem', display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
+                                        <li key={i} style={{ fontSize: '1.05rem', color: '#6b7280', marginBottom: '0.5rem', display: 'flex', alignItems: 'center', gap: '0.75rem' }}>
                                             <span style={{ color: '#E2C16B' }}>✓</span> {item}
                                         </li>
                                     ))}
