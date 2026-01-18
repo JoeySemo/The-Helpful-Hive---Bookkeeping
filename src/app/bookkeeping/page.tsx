@@ -126,38 +126,42 @@ export default function BookkeepingPage() {
                     ))}
                 </div>
 
-                {/* Special Rates Card */}
+            </div>
+
+            {/* Special Rates Card */}
+            <div style={{
+                display: 'flex',
+                alignItems: 'center',
+                gap: '1rem',
+                backgroundColor: 'white',
+                padding: '1.25rem 2rem',
+                borderRadius: '9999px',
+                maxWidth: '600px',
+                margin: '-2rem auto 4rem auto',
+                position: 'relative',
+                zIndex: 10,
+                boxShadow: '0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06)'
+            }}>
                 <div style={{
+                    width: '48px',
+                    height: '48px',
+                    backgroundColor: '#FFF8E7',
+                    borderRadius: '50%',
                     display: 'flex',
                     alignItems: 'center',
-                    gap: '1rem',
-                    backgroundColor: '#f3f4f6',
-                    padding: '1.25rem 2rem',
-                    borderRadius: '9999px',
-                    maxWidth: '600px',
-                    margin: '2rem auto 0 auto'
+                    justifyContent: 'center',
+                    border: '2px solid #E2C16B',
+                    flexShrink: 0
                 }}>
-                    <div style={{
-                        width: '48px',
-                        height: '48px',
-                        backgroundColor: '#FFF8E7',
-                        borderRadius: '50%',
-                        display: 'flex',
-                        alignItems: 'center',
-                        justifyContent: 'center',
-                        border: '2px solid #E2C16B',
-                        flexShrink: 0
-                    }}>
-                        <span style={{ fontSize: '1.5rem' }}>🍯</span>
-                    </div>
-                    <div>
-                        <p style={{ fontWeight: 600, color: '#1f2937', margin: 0, fontSize: '1rem' }}>
-                            Special introductory rates for new clients.
-                        </p>
-                        <p style={{ color: '#6b7280', margin: 0, fontSize: '0.9rem' }}>
-                            Contact us for a free consultation and custom quote.
-                        </p>
-                    </div>
+                    <span style={{ fontSize: '1.5rem' }}>🍯</span>
+                </div>
+                <div>
+                    <p style={{ fontWeight: 600, color: '#1f2937', margin: 0, fontSize: '1rem' }}>
+                        Special introductory rates for new clients.
+                    </p>
+                    <p style={{ color: '#6b7280', margin: 0, fontSize: '0.9rem' }}>
+                        Contact us for a free consultation and custom quote.
+                    </p>
                 </div>
             </div>
 

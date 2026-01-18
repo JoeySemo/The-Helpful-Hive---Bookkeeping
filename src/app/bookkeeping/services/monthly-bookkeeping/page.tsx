@@ -33,7 +33,7 @@ export default function MonthlyBookkeepingPage() {
                 padding: '3rem 2rem',
                 textAlign: 'center'
             }}>
-                <Link href="/bookkeeping" style={{ color: '#1f2937', textDecoration: 'none', fontSize: '0.95rem', marginBottom: '1rem', display: 'inline-block' }}>
+                <Link href="/bookkeeping" style={{ color: '#1f2937', textDecoration: 'none', fontSize: '1.25rem', marginBottom: '1rem', display: 'inline-block', fontWeight: 500 }}>
                     ← Back to Services
                 </Link>
                 <h1 style={{
