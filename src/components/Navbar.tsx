@@ -3,9 +3,19 @@
 import Image from 'next/image';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
+import { useState, useEffect } from 'react';
 
 export default function Navbar() {
   const pathname = usePathname();
+  const [isMobile, setIsMobile] = useState(false);
+
+  // Detect mobile viewport
+  useEffect(() => {
+    const checkMobile = () => setIsMobile(window.innerWidth < 768);
+    checkMobile();
+    window.addEventListener('resize', checkMobile);
+    return () => window.removeEventListener('resize', checkMobile);
+  }, []);
 
   // Determine context
   const isBookkeeping = pathname?.startsWith('/bookkeeping');
@@ -16,7 +26,7 @@ export default function Navbar() {
     <nav
       style={{
         backgroundColor: 'rgba(255,255,255,0.95)',
-        height: '96px',
+        height: isMobile ? '64px' : '96px',
         display: 'block',
         position: 'sticky',
         top: 0,
@@ -27,13 +37,23 @@ export default function Navbar() {
         overflow: 'hidden'
       }}
     >
-      <div style={{ width: '100%', paddingLeft: '0', paddingRight: '1.5rem', height: '100%', boxSizing: 'border-box' }}>
+      <div style={{
+        width: '100%',
+        paddingLeft: isMobile ? '0.75rem' : '0',
+        paddingRight: isMobile ? '0.75rem' : '1.5rem',
+        height: '100%',
+        boxSizing: 'border-box'
+      }}>
         <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', height: '100%', flexWrap: 'nowrap' }}>
 
           {/* Logo Section */}
           <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', flexShrink: 0 }}>
             <Link href="/" style={{ display: 'flex', alignItems: 'center', gap: '0.25rem' }}>
-              <div style={{ position: 'relative', height: '110px', width: '480px' }}>
+              <div style={{
+                position: 'relative',
+                height: isMobile ? '50px' : '110px',
+                width: isMobile ? '160px' : '480px'
+              }}>
                 <Image
                   src="/official-logo-horizontal.png"
                   alt="The Helpful Hive"
@@ -43,19 +63,19 @@ export default function Navbar() {
               </div>
             </Link>
 
-            {/* Slogan - Only for Home, next to logo */}
-            {isHome && (
+            {/* Slogan - Desktop only */}
+            {!isMobile && isHome && (
               <span style={{ color: '#E2C16B', fontFamily: 'serif', fontStyle: 'italic', fontSize: '2.25rem', display: 'block', paddingLeft: '0.75rem', borderLeft: '2px solid #e2e8f0', whiteSpace: 'nowrap' }}>
                 Even the Busiest Bees Need a Little Help
               </span>
             )}
           </div>
 
-          {/* Navigation Links - Dynamic based on Context */}
-          <div style={{ display: 'flex', alignItems: 'center', gap: '1.5rem', flexShrink: 0 }}>
+          {/* Navigation Links */}
+          <div style={{ display: 'flex', alignItems: 'center', gap: isMobile ? '0.5rem' : '1.5rem', flexShrink: 0 }}>
 
-            {/* Context: Home Portal */}
-            {isHome && (
+            {/* Context: Home Portal - Desktop only */}
+            {!isMobile && isHome && (
               <>
                 <Link href="/bookkeeping" style={{ color: '#4b5563', fontWeight: 500, fontSize: '1.15rem', textDecoration: 'none', whiteSpace: 'nowrap' }}>
                   Professional Bookkeeping
@@ -66,8 +86,8 @@ export default function Navbar() {
               </>
             )}
 
-            {/* Context: Bookkeeping */}
-            {isBookkeeping && (
+            {/* Context: Bookkeeping - Desktop only */}
+            {!isMobile && isBookkeeping && (
               <>
                 <Link href="/bookkeeping" style={{ color: '#f59e0b', fontWeight: 700, fontSize: '1.15rem', borderBottom: '2px solid #f59e0b', textDecoration: 'none' }}>
                   Bookkeeping
@@ -78,8 +98,8 @@ export default function Navbar() {
               </>
             )}
 
-            {/* Context: Concierge */}
-            {isConcierge && (
+            {/* Context: Concierge - Desktop only */}
+            {!isMobile && isConcierge && (
               <>
                 <Link href="/concierge" style={{ color: '#a8b78b', fontWeight: 700, fontSize: '1.15rem', borderBottom: '2px solid #a8b78b', textDecoration: 'none' }}>
                   Concierge
@@ -90,15 +110,15 @@ export default function Navbar() {
               </>
             )}
 
-            {/* Shared CTA */}
+            {/* Shared CTA - Always visible */}
             <Link
               href="/contact"
               style={{
-                padding: '0.75rem 1.5rem',
+                padding: isMobile ? '0.5rem 1rem' : '0.75rem 1.5rem',
                 borderRadius: '9999px',
                 fontWeight: 700,
                 color: 'white',
-                fontSize: '1rem',
+                fontSize: isMobile ? '0.875rem' : '1rem',
                 backgroundColor: isBookkeeping ? '#f59e0b' : isConcierge ? '#a8b78b' : '#1f2937',
                 textDecoration: 'none',
                 boxShadow: '0 4px 6px -1px rgba(0, 0, 0, 0.1)',
@@ -113,3 +133,4 @@ export default function Navbar() {
     </nav>
   );
 }
+

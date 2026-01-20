@@ -2,7 +2,7 @@
 
 import Link from 'next/link';
 import Image from 'next/image';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { useRouter } from 'next/navigation';
 
 import { Geist } from "next/font/google";
@@ -12,12 +12,27 @@ const geist = Geist({ subsets: ['latin'] });
 export default function HomePage() {
   const [businessHover, setBusinessHover] = useState(false);
   const [homeHover, setHomeHover] = useState(false);
+  const [isMobile, setIsMobile] = useState(false);
   const router = useRouter();
+
+  // Detect mobile viewport
+  useEffect(() => {
+    const checkMobile = () => setIsMobile(window.innerWidth < 768);
+    checkMobile();
+    window.addEventListener('resize', checkMobile);
+    return () => window.removeEventListener('resize', checkMobile);
+  }, []);
 
   return (
     <div
       className={geist.className}
-      style={{ display: 'flex', flexDirection: 'row', height: 'calc(100vh - 96px)', overflow: 'hidden' }}
+      style={{
+        display: 'flex',
+        flexDirection: isMobile ? 'column' : 'row',
+        minHeight: isMobile ? 'auto' : 'calc(100vh - 96px)',
+        height: isMobile ? 'auto' : 'calc(100vh - 96px)',
+        overflow: isMobile ? 'visible' : 'hidden'
+      }}
     >
 
       {/* Business/Bookkeeping Section - Cream - ENTIRE BOX CLICKABLE */}
@@ -27,8 +42,10 @@ export default function HomePage() {
           position: 'relative',
           overflow: 'hidden',
           backgroundColor: '#FFF8E7',
-          borderRight: '1px solid rgba(191, 200, 161, 0.3)',
-          cursor: 'pointer'
+          borderRight: isMobile ? 'none' : '1px solid rgba(191, 200, 161, 0.3)',
+          borderBottom: isMobile ? '1px solid rgba(191, 200, 161, 0.3)' : 'none',
+          cursor: 'pointer',
+          minHeight: isMobile ? '50vh' : 'auto'
         }}
         onMouseEnter={() => setBusinessHover(true)}
         onMouseLeave={() => setBusinessHover(false)}
@@ -61,14 +78,43 @@ export default function HomePage() {
           />
         </div>
 
-        <div style={{ position: 'relative', zIndex: 20, height: '100%', display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'center', textAlign: 'center', padding: '3rem' }}>
-          <h2 style={{ fontSize: '3.5rem', fontWeight: 400, color: '#3C3C3C', marginBottom: '1rem', fontFamily: 'Georgia, serif', fontStyle: 'italic' }}>
+        <div style={{
+          position: 'relative',
+          zIndex: 20,
+          height: '100%',
+          display: 'flex',
+          flexDirection: 'column',
+          justifyContent: 'center',
+          alignItems: 'center',
+          textAlign: 'center',
+          padding: isMobile ? '2rem 1.5rem' : '3rem'
+        }}>
+          <h2 style={{
+            fontSize: isMobile ? '1.5rem' : '3.5rem',
+            fontWeight: 400,
+            color: '#3C3C3C',
+            marginBottom: isMobile ? '0.5rem' : '1rem',
+            fontFamily: 'Georgia, serif',
+            fontStyle: 'italic'
+          }}>
             For Your Business
           </h2>
-          <p style={{ fontSize: businessHover ? '4rem' : '3.5rem', color: '#E2C16B', marginBottom: '2rem', fontWeight: 400, transition: 'font-size 0.3s ease-in-out', whiteSpace: 'nowrap' }}>
+          <p style={{
+            fontSize: isMobile ? '1.75rem' : (businessHover ? '4rem' : '3.5rem'),
+            color: '#E2C16B',
+            marginBottom: isMobile ? '1rem' : '2rem',
+            fontWeight: 400,
+            transition: 'font-size 0.3s ease-in-out',
+            whiteSpace: isMobile ? 'normal' : 'nowrap'
+          }}>
             Professional Bookkeeping
           </p>
-          <p style={{ color: '#3C3C3C', fontWeight: 500, fontSize: '3.5rem' }}>
+          <p style={{
+            color: '#3C3C3C',
+            fontWeight: 500,
+            fontSize: isMobile ? '1.25rem' : '3.5rem',
+            lineHeight: isMobile ? 1.4 : 1.2
+          }}>
             Take the Sting Out of Business Finances
           </p>
         </div>
@@ -83,7 +129,8 @@ export default function HomePage() {
           position: 'relative',
           overflow: 'hidden',
           backgroundColor: 'rgba(191, 200, 161, 0.15)',
-          cursor: 'pointer'
+          cursor: 'pointer',
+          minHeight: isMobile ? '50vh' : 'auto'
         }}
         onMouseEnter={() => setHomeHover(true)}
         onMouseLeave={() => setHomeHover(false)}
@@ -116,14 +163,43 @@ export default function HomePage() {
           />
         </div>
 
-        <div style={{ position: 'relative', zIndex: 20, height: '100%', display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'center', textAlign: 'center', padding: '3rem' }}>
-          <h2 style={{ fontSize: '3.5rem', fontWeight: 400, color: '#3C3C3C', marginBottom: '1rem', fontFamily: 'Georgia, serif', fontStyle: 'italic' }}>
+        <div style={{
+          position: 'relative',
+          zIndex: 20,
+          height: '100%',
+          display: 'flex',
+          flexDirection: 'column',
+          justifyContent: 'center',
+          alignItems: 'center',
+          textAlign: 'center',
+          padding: isMobile ? '2rem 1.5rem' : '3rem'
+        }}>
+          <h2 style={{
+            fontSize: isMobile ? '1.5rem' : '3.5rem',
+            fontWeight: 400,
+            color: '#3C3C3C',
+            marginBottom: isMobile ? '0.5rem' : '1rem',
+            fontFamily: 'Georgia, serif',
+            fontStyle: 'italic'
+          }}>
             For Your Home
           </h2>
-          <p style={{ fontSize: homeHover ? '4rem' : '3.5rem', color: '#E2C16B', marginBottom: '2rem', fontWeight: 400, transition: 'font-size 0.3s ease-in-out', whiteSpace: 'nowrap' }}>
+          <p style={{
+            fontSize: isMobile ? '1.75rem' : (homeHover ? '4rem' : '3.5rem'),
+            color: '#E2C16B',
+            marginBottom: isMobile ? '1rem' : '2rem',
+            fontWeight: 400,
+            transition: 'font-size 0.3s ease-in-out',
+            whiteSpace: isMobile ? 'normal' : 'nowrap'
+          }}>
             Personal Concierge
           </p>
-          <p style={{ color: '#3C3C3C', fontWeight: 500, fontSize: '3.5rem' }}>
+          <p style={{
+            color: '#3C3C3C',
+            fontWeight: 500,
+            fontSize: isMobile ? '1.25rem' : '3.5rem',
+            lineHeight: isMobile ? 1.4 : 1.2
+          }}>
             Sweet solutions for Busy Homes, Pets, and People
           </p>
         </div>
@@ -131,3 +207,4 @@ export default function HomePage() {
     </div>
   );
 }
+
