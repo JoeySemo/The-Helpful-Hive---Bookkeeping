@@ -102,7 +102,7 @@ export default function BookkeepingPage() {
                 <div style={{
                     display: 'grid',
                     gridTemplateColumns: isMobile ? '1fr' : 'repeat(2, 1fr)',
-                    gap: '1.5rem',
+                    gap: '2rem',
                     marginBottom: '2rem'
                 }}>
                     {services.map((service, index) => (

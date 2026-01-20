@@ -49,12 +49,12 @@ export default function Footer() {
                         <ul style={{ display: 'flex', flexDirection: 'column', gap: '0.5rem', fontSize: '1.15rem', listStyle: 'none', padding: 0, margin: 0 }}>
                             <li>
                                 <Link href="/bookkeeping" style={{ color: '#6b7280', textDecoration: 'none' }}>
-                                    Bookkeeping & Payroll
+                                    Professional Bookkeeping
                                 </Link>
                             </li>
                             <li>
                                 <Link href="/concierge" style={{ color: '#6b7280', textDecoration: 'none' }}>
-                                    Home Concierge
+                                    Personal Concierge
                                 </Link>
                             </li>
                         </ul>

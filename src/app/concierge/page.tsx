@@ -163,12 +163,12 @@ export default function ConciergePage() {
                         </p>
                     </div>
 
-                    <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(340px, 1fr))', gap: '2rem', marginBottom: '2rem' }}>
+                    <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(340px, 1fr))', gap: '2rem', gridAutoRows: 'minmax(min-content, auto)', marginBottom: '2rem' }}>
                         {services.map((service, index) => (
                             <Link
                                 key={index}
                                 href={service.href}
-                                style={{ textDecoration: 'none' }}
+                                style={{ textDecoration: 'none', display: 'flex', flexDirection: 'column' }}
                             >
                                 <div style={{
                                     backgroundColor: 'white',
@@ -177,9 +177,9 @@ export default function ConciergePage() {
                                     border: '1px solid #e5e7eb',
                                     boxShadow: '0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06)',
                                     position: 'relative',
-                                    height: '100%',
                                     cursor: 'pointer',
-                                    transition: 'box-shadow 0.2s ease, transform 0.2s ease'
+                                    transition: 'box-shadow 0.2s ease, transform 0.2s ease',
+                                    flex: 1
                                 }}>
                                     {service.popular && (
                                         <div style={{

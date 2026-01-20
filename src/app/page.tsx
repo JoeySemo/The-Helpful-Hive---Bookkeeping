@@ -200,7 +200,7 @@ export default function HomePage() {
             fontSize: isMobile ? '1.25rem' : '3.5rem',
             lineHeight: isMobile ? 1.4 : 1.2
           }}>
-            Sweet solutions for Busy Homes, Pets, and People
+            Sweet Solutions for Busy Homes, Pets, and People
           </p>
         </div>
       </div>
