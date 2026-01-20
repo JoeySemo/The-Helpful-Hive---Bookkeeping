@@ -84,7 +84,7 @@ export default function ContactPage() {
                 }}>
                     <Phone style={{ width: isMobile ? '36px' : '48px', height: isMobile ? '36px' : '48px', color: '#E2C16B', marginBottom: '1rem' }} />
                     <h3 style={{ fontSize: isMobile ? '1.25rem' : '1.5rem', fontWeight: 600, color: '#3C3C3C', marginBottom: '0.5rem' }}>Phone</h3>
-                    <p style={{ fontSize: isMobile ? '1rem' : '1.15rem', color: '#6b7280' }}>(314) 526-7240</p>
+                    <a href="tel:+13145267240" style={{ fontSize: isMobile ? '1rem' : '1.15rem', color: '#6b7280', textDecoration: 'none' }}>(314) 526-7240</a>
                 </div>
 
                 {/* Email */}
@@ -97,7 +97,7 @@ export default function ContactPage() {
                 }}>
                     <Mail style={{ width: isMobile ? '36px' : '48px', height: isMobile ? '36px' : '48px', color: '#E2C16B', marginBottom: '1rem' }} />
                     <h3 style={{ fontSize: isMobile ? '1.25rem' : '1.5rem', fontWeight: 600, color: '#3C3C3C', marginBottom: '0.5rem' }}>Email</h3>
-                    <p style={{ fontSize: isMobile ? '0.9rem' : '1.15rem', color: '#6b7280', wordBreak: 'break-all' }}>hellohelpfulhive@gmail.com</p>
+                    <p style={{ fontSize: isMobile ? '0.9rem' : '1.15rem', color: '#6b7280', whiteSpace: 'nowrap' }}>hellohelpfulhive@gmail.com</p>
                 </div>
 
                 {/* Location */}

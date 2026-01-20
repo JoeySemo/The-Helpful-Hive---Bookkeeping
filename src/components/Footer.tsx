@@ -74,7 +74,7 @@ export default function Footer() {
                             margin: 0
                         }}>
                             <li style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', justifyContent: isMobile ? 'center' : 'flex-start' }}>
-                                <span style={{ fontWeight: 500 }}>Phone:</span> (314) 526-7240
+                                <span style={{ fontWeight: 500 }}>Phone:</span> <a href="tel:+13145267240" style={{ color: '#6b7280', textDecoration: 'none' }}>(314) 526-7240</a>
                             </li>
                             <li style={{
                                 display: 'flex',
