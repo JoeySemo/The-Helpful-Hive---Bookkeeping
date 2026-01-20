@@ -157,9 +157,7 @@ export default function BookkeepingPage() {
                 padding: isMobile ? '1.25rem 1.5rem' : '1.25rem 2rem',
                 borderRadius: isMobile ? '1rem' : '9999px',
                 maxWidth: isMobile ? '90%' : '600px',
-                margin: '-2rem auto 4rem auto',
-                position: 'relative',
-                zIndex: 10,
+                margin: isMobile ? '2rem auto 3rem auto' : '2rem auto 4rem auto',
                 boxShadow: '0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06)',
                 textAlign: isMobile ? 'center' : 'left'
             }}>
