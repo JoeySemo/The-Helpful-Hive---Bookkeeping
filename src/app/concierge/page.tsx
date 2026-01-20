@@ -12,7 +12,8 @@ export default function ConciergePage() {
             price: '$30',
             priceUnit: 'per hour',
             popular: true,
-            items: ['Bathroom Deep Clean', 'Kitchen Deep Clean', 'Window Washing', 'Laundry Services']
+            items: ['Bathroom Deep Clean', 'Kitchen Deep Clean', 'Window Washing', 'Laundry Services'],
+            href: '/concierge/services/bee-done'
         },
         {
             title: 'Bee Kind',
@@ -20,7 +21,8 @@ export default function ConciergePage() {
             icon: '🐾',
             price: '$20',
             priceUnit: 'per visit',
-            items: ['Dog Walking', 'Potty Breaks', 'Feeding & Water', 'Vacation Check-ins']
+            items: ['Dog Walking', 'Potty Breaks', 'Feeding & Water', 'Vacation Check-ins'],
+            href: '/concierge/services/bee-kind'
         },
         {
             title: 'Bee Organized',
@@ -28,7 +30,8 @@ export default function ConciergePage() {
             icon: '🧺',
             price: '$35',
             priceUnit: 'per hour',
-            items: ['Closet Organization', 'Pantry Systems', 'Home Office Setup', 'Garage Reset']
+            items: ['Closet Organization', 'Pantry Systems', 'Home Office Setup', 'Garage Reset'],
+            href: '/concierge/services/bee-organized'
         },
         {
             title: 'Bee Efficient',
@@ -36,7 +39,8 @@ export default function ConciergePage() {
             icon: '💼',
             price: '$30',
             priceUnit: 'per hour',
-            items: ['Errand Running', 'Appointment Scheduling', 'Data Entry', 'Event Coordination']
+            items: ['Errand Running', 'Appointment Scheduling', 'Data Entry', 'Event Coordination'],
+            href: '/concierge/services/bee-efficient'
         },
         {
             title: 'Bee Connected',
@@ -44,7 +48,8 @@ export default function ConciergePage() {
             icon: '🌸',
             price: '$35',
             priceUnit: 'per hour',
-            items: ['Holiday Decorating', 'Donation Drop-offs', 'Event Support', 'Volunteer Help']
+            items: ['Holiday Decorating', 'Donation Drop-offs', 'Event Support', 'Volunteer Help'],
+            href: '/concierge/services/bee-connected'
         }
     ];
 
@@ -160,75 +165,73 @@ export default function ConciergePage() {
 
                     <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(340px, 1fr))', gap: '2rem' }}>
                         {services.map((service, index) => (
-                            <div key={index} style={{
-                                backgroundColor: 'white',
-                                padding: '2.5rem',
-                                borderRadius: '1rem',
-                                border: '1px solid #e5e7eb',
-                                boxShadow: '0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06)',
-                                position: 'relative'
-                            }}>
-                                {service.popular && (
-                                    <div style={{
-                                        position: 'absolute',
-                                        top: '-12px',
-                                        left: '32px',
-                                        backgroundColor: '#a67c00', // Darker gold for better contrast
-                                        color: 'white',
-                                        padding: '0.25rem 1rem',
-                                        borderRadius: '12px',
-                                        fontSize: '0.8rem',
-                                        fontWeight: 600,
-                                        boxShadow: '0 2px 4px rgba(0,0,0,0.1)'
-                                    }}>
-                                        Most Popular
-                                    </div>
-                                )}
+                            <Link
+                                key={index}
+                                href={service.href}
+                                style={{ textDecoration: 'none' }}
+                            >
+                                <div style={{
+                                    backgroundColor: 'white',
+                                    padding: '2.5rem',
+                                    borderRadius: '1rem',
+                                    border: '1px solid #e5e7eb',
+                                    boxShadow: '0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06)',
+                                    position: 'relative',
+                                    height: '100%',
+                                    cursor: 'pointer',
+                                    transition: 'box-shadow 0.2s ease, transform 0.2s ease'
+                                }}>
+                                    {service.popular && (
+                                        <div style={{
+                                            position: 'absolute',
+                                            top: '-12px',
+                                            left: '32px',
+                                            backgroundColor: '#a67c00',
+                                            color: 'white',
+                                            padding: '0.25rem 1rem',
+                                            borderRadius: '12px',
+                                            fontSize: '0.8rem',
+                                            fontWeight: 600,
+                                            boxShadow: '0 2px 4px rgba(0,0,0,0.1)'
+                                        }}>
+                                            Most Popular
+                                        </div>
+                                    )}
 
-                                <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start', marginBottom: '1rem' }}>
-                                    <div style={{ fontSize: '3rem' }}>{service.icon}</div>
-                                    <div style={{ textAlign: 'right' }}>
-                                        <div style={{ fontSize: '1.5rem', fontWeight: 700, color: '#a67c00' }}>
-                                            {service.price}
-                                        </div>
-                                        <div style={{ fontSize: '0.9rem', color: '#6b7280' }}>
-                                            {service.priceUnit}
+                                    <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start', marginBottom: '1rem' }}>
+                                        <div style={{ fontSize: '3rem' }}>{service.icon}</div>
+                                        <div style={{ textAlign: 'right' }}>
+                                            <div style={{ fontSize: '1.5rem', fontWeight: 700, color: '#a67c00' }}>
+                                                {service.price}
+                                            </div>
+                                            <div style={{ fontSize: '0.9rem', color: '#6b7280' }}>
+                                                {service.priceUnit}
+                                            </div>
                                         </div>
                                     </div>
+
+                                    <h3 style={{ fontSize: '1.5rem', fontWeight: 600, color: '#1f2937', marginBottom: '0.5rem' }}>
+                                        {service.title}
+                                    </h3>
+                                    <p style={{ fontSize: '1.1rem', color: '#a67c00', fontStyle: 'italic', marginBottom: '1.5rem' }}>
+                                        {service.tagline}
+                                    </p>
+                                    <ul style={{ listStyle: 'none', padding: 0, margin: 0 }}>
+                                        {service.items.map((item, i) => (
+                                            <li key={i} style={{ fontSize: '1.05rem', color: '#6b7280', marginBottom: '0.5rem', display: 'flex', alignItems: 'center', gap: '0.75rem' }}>
+                                                <span style={{ color: '#E2C16B' }}>✓</span> {item}
+                                            </li>
+                                        ))}
+                                    </ul>
                                 </div>
-
-                                <h3 style={{ fontSize: '1.5rem', fontWeight: 600, color: '#1f2937', marginBottom: '0.5rem' }}>
-                                    {service.title}
-                                </h3>
-                                <p style={{ fontSize: '1.1rem', color: '#a67c00', fontStyle: 'italic', marginBottom: '1.5rem' }}>
-                                    {service.tagline}
-                                </p>
-                                <ul style={{ listStyle: 'none', padding: 0, margin: 0 }}>
-                                    {service.items.map((item, i) => (
-                                        <li key={i} style={{ fontSize: '1.05rem', color: '#6b7280', marginBottom: '0.5rem', display: 'flex', alignItems: 'center', gap: '0.75rem' }}>
-                                            <span style={{ color: '#E2C16B' }}>✓</span> {item}
-                                        </li>
-                                    ))}
-                                </ul>
-                            </div>
+                            </Link>
                         ))}
                     </div>
 
                     <div style={{ textAlign: 'center', marginTop: '2rem' }}>
-                        <p style={{ fontSize: '1.1rem', color: '#6b7280', fontStyle: 'italic', marginBottom: '1rem' }}>
+                        <p style={{ fontSize: '1.1rem', color: '#6b7280', fontStyle: 'italic' }}>
                             "You relax — we'll handle the Honey-Do's."
                         </p>
-                        <Link href="/concierge/services" style={{
-                            display: 'inline-block',
-                            padding: '0.75rem 1.5rem',
-                            backgroundColor: '#E2C16B',
-                            color: 'white',
-                            fontWeight: 600,
-                            borderRadius: '9999px',
-                            textDecoration: 'none'
-                        }}>
-                            View All Services & Pricing
-                        </Link>
                     </div>
                 </div>
             </div>
