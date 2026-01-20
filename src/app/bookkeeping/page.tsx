@@ -103,13 +103,14 @@ export default function BookkeepingPage() {
                     display: 'grid',
                     gridTemplateColumns: isMobile ? '1fr' : 'repeat(2, 1fr)',
                     gap: '2rem',
+                    gridAutoRows: 'minmax(min-content, auto)',
                     marginBottom: '2rem'
                 }}>
                     {services.map((service, index) => (
                         <Link
                             key={index}
                             href={service.href}
-                            style={{ textDecoration: 'none' }}
+                            style={{ textDecoration: 'none', display: 'flex', flexDirection: 'column' }}
                         >
                             <div style={{
                                 backgroundColor: 'white',
@@ -117,7 +118,7 @@ export default function BookkeepingPage() {
                                 borderRadius: '0.75rem',
                                 boxShadow: '0 1px 3px rgba(0, 0, 0, 0.1)',
                                 border: '1px solid #e5e7eb',
-                                height: '100%',
+                                flex: 1,
                                 transition: 'box-shadow 0.2s ease, transform 0.2s ease',
                                 cursor: 'pointer'
                             }}>
