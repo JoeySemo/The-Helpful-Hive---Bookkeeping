@@ -65,7 +65,7 @@ export default function Navbar() {
 
             {/* Slogan - Desktop only */}
             {!isMobile && isHome && (
-              <span style={{ color: '#E2C16B', fontFamily: 'serif', fontStyle: 'italic', fontSize: '2.25rem', display: 'block', paddingLeft: '0.75rem', borderLeft: '2px solid #e2e8f0', whiteSpace: 'nowrap' }}>
+              <span style={{ color: '#3C3C3C', fontFamily: 'serif', fontStyle: 'italic', fontSize: '1.5rem', display: 'block', paddingLeft: '0.75rem', marginRight: '2rem', borderLeft: '2px solid #e2e8f0', whiteSpace: 'nowrap' }}>
                 Even the Busiest Bees Need a Little Help
               </span>
             )}
