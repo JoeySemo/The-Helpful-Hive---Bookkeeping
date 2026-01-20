@@ -74,31 +74,39 @@ export default function ContactPage() {
                 maxWidth: '900px',
                 width: '100%'
             }}>
-                {/* Phone */}
-                <div style={{
-                    backgroundColor: 'rgba(255, 255, 255, 0.9)',
-                    borderRadius: '1rem',
-                    padding: isMobile ? '1.5rem' : '2rem',
-                    textAlign: 'center',
-                    boxShadow: '0 4px 6px -1px rgba(0, 0, 0, 0.1)'
-                }}>
-                    <Phone style={{ width: isMobile ? '36px' : '48px', height: isMobile ? '36px' : '48px', color: '#E2C16B', marginBottom: '1rem' }} />
-                    <h3 style={{ fontSize: isMobile ? '1.25rem' : '1.5rem', fontWeight: 600, color: '#3C3C3C', marginBottom: '0.5rem' }}>Phone</h3>
-                    <a href="tel:+13145267240" style={{ fontSize: isMobile ? '1rem' : '1.15rem', color: '#6b7280', textDecoration: 'none' }}>(314) 526-7240</a>
-                </div>
+                {/* Phone - Entire box clickable */}
+                <a href="tel:+13145267240" style={{ textDecoration: 'none', display: 'block' }}>
+                    <div style={{
+                        backgroundColor: 'rgba(255, 255, 255, 0.9)',
+                        borderRadius: '1rem',
+                        padding: isMobile ? '1.5rem' : '2rem',
+                        textAlign: 'center',
+                        boxShadow: '0 4px 6px -1px rgba(0, 0, 0, 0.1)',
+                        cursor: 'pointer',
+                        transition: 'box-shadow 0.2s ease, transform 0.2s ease'
+                    }}>
+                        <Phone style={{ width: isMobile ? '36px' : '48px', height: isMobile ? '36px' : '48px', color: '#E2C16B', marginBottom: '1rem' }} />
+                        <h3 style={{ fontSize: isMobile ? '1.25rem' : '1.5rem', fontWeight: 600, color: '#3C3C3C', marginBottom: '0.5rem' }}>Phone</h3>
+                        <p style={{ fontSize: isMobile ? '1rem' : '1.15rem', color: '#6b7280' }}>(314) 526-7240</p>
+                    </div>
+                </a>
 
-                {/* Email */}
-                <div style={{
-                    backgroundColor: 'rgba(255, 255, 255, 0.9)',
-                    borderRadius: '1rem',
-                    padding: isMobile ? '1.5rem' : '2rem',
-                    textAlign: 'center',
-                    boxShadow: '0 4px 6px -1px rgba(0, 0, 0, 0.1)'
-                }}>
-                    <Mail style={{ width: isMobile ? '36px' : '48px', height: isMobile ? '36px' : '48px', color: '#E2C16B', marginBottom: '1rem' }} />
-                    <h3 style={{ fontSize: isMobile ? '1.25rem' : '1.5rem', fontWeight: 600, color: '#3C3C3C', marginBottom: '0.5rem' }}>Email</h3>
-                    <p style={{ fontSize: isMobile ? '0.9rem' : '1.15rem', color: '#6b7280', whiteSpace: 'nowrap' }}>hellohelpfulhive@gmail.com</p>
-                </div>
+                {/* Email - Entire box clickable */}
+                <a href="mailto:hellohelpfulhive@gmail.com" style={{ textDecoration: 'none', display: 'block' }}>
+                    <div style={{
+                        backgroundColor: 'rgba(255, 255, 255, 0.9)',
+                        borderRadius: '1rem',
+                        padding: isMobile ? '1.5rem' : '2rem',
+                        textAlign: 'center',
+                        boxShadow: '0 4px 6px -1px rgba(0, 0, 0, 0.1)',
+                        cursor: 'pointer',
+                        transition: 'box-shadow 0.2s ease, transform 0.2s ease'
+                    }}>
+                        <Mail style={{ width: isMobile ? '36px' : '48px', height: isMobile ? '36px' : '48px', color: '#E2C16B', marginBottom: '1rem' }} />
+                        <h3 style={{ fontSize: isMobile ? '1.25rem' : '1.5rem', fontWeight: 600, color: '#3C3C3C', marginBottom: '0.5rem' }}>Email</h3>
+                        <p style={{ fontSize: isMobile ? '0.9rem' : '1.15rem', color: '#6b7280', whiteSpace: 'nowrap' }}>hellohelpfulhive@gmail.com</p>
+                    </div>
+                </a>
 
                 {/* Location */}
                 <div style={{
@@ -112,26 +120,6 @@ export default function ContactPage() {
                     <h3 style={{ fontSize: isMobile ? '1.25rem' : '1.5rem', fontWeight: 600, color: '#3C3C3C', marginBottom: '0.5rem' }}>Location</h3>
                     <p style={{ fontSize: isMobile ? '1rem' : '1.15rem', color: '#6b7280' }}>Wentzville, MO</p>
                 </div>
-            </div>
-
-            {/* CTA */}
-            <div style={{ marginTop: isMobile ? '2rem' : '3rem', textAlign: 'center' }}>
-                <a
-                    href="mailto:hellohelpfulhive@gmail.com"
-                    style={{
-                        display: 'inline-block',
-                        padding: isMobile ? '0.875rem 2rem' : '1rem 2.5rem',
-                        backgroundColor: '#3C3C3C',
-                        color: 'white',
-                        fontSize: isMobile ? '1rem' : '1.25rem',
-                        fontWeight: 600,
-                        borderRadius: '9999px',
-                        textDecoration: 'none',
-                        boxShadow: '0 4px 6px -1px rgba(0, 0, 0, 0.1)'
-                    }}
-                >
-                    Send Us an Email
-                </a>
             </div>
         </main>
     );
