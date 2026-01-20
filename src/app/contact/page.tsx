@@ -58,8 +58,8 @@ export default function ContactPage() {
 
                 <p style={{
                     fontSize: isMobile ? '1.1rem' : '1.5rem',
-                    color: '#E2C16B',
-                    fontWeight: 400,
+                    color: '#3C3C3C',
+                    fontWeight: 500,
                     padding: isMobile ? '0 0.5rem' : 0
                 }}>
                     Ready to simplify your life or business? We'd love to hear from you.

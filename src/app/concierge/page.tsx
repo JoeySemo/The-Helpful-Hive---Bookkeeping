@@ -200,7 +200,7 @@ export default function ConciergePage() {
                                 <h3 style={{ fontSize: '1.5rem', fontWeight: 600, color: '#1f2937', marginBottom: '0.5rem' }}>
                                     {service.title}
                                 </h3>
-                                <p style={{ fontSize: '1.1rem', color: '#E2C16B', fontStyle: 'italic', marginBottom: '1.5rem' }}>
+                                <p style={{ fontSize: '1.1rem', color: '#a67c00', fontStyle: 'italic', marginBottom: '1.5rem' }}>
                                     {service.tagline}
                                 </p>
                                 <ul style={{ listStyle: 'none', padding: 0, margin: 0 }}>

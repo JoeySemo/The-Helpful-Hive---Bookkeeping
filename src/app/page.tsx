@@ -101,9 +101,9 @@ export default function HomePage() {
           </h2>
           <p style={{
             fontSize: isMobile ? '1.75rem' : (businessHover ? '4rem' : '3.5rem'),
-            color: '#E2C16B',
+            color: '#3C3C3C',
             marginBottom: isMobile ? '1rem' : '2rem',
-            fontWeight: 400,
+            fontWeight: 600,
             transition: 'font-size 0.3s ease-in-out',
             whiteSpace: isMobile ? 'normal' : 'nowrap'
           }}>
@@ -186,9 +186,9 @@ export default function HomePage() {
           </h2>
           <p style={{
             fontSize: isMobile ? '1.75rem' : (homeHover ? '4rem' : '3.5rem'),
-            color: '#E2C16B',
+            color: '#3C3C3C',
             marginBottom: isMobile ? '1rem' : '2rem',
-            fontWeight: 400,
+            fontWeight: 600,
             transition: 'font-size 0.3s ease-in-out',
             whiteSpace: isMobile ? 'normal' : 'nowrap'
           }}>
