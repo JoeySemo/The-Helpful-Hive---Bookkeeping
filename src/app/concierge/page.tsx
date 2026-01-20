@@ -155,6 +155,9 @@ export default function ConciergePage() {
             <div style={{ backgroundColor: '#f8f9fa', padding: '4rem 2rem' }}>
                 <div style={{ maxWidth: '80rem', margin: '0 auto' }}>
                     <div style={{ textAlign: 'center', marginBottom: '3rem' }}>
+                        <p style={{ fontSize: '2.5rem', fontWeight: 500, color: '#3C3C3C', marginBottom: '0.75rem', fontFamily: 'Georgia, serif' }}>
+                            You Relax - We'll Handle the Honey-Do's
+                        </p>
                         <h2 style={{ fontSize: '2.25rem', fontWeight: 400, color: '#1f2937', marginBottom: '0.5rem', fontFamily: 'Georgia, serif', fontStyle: 'italic' }}>
                             Our Service Ecosystem
                         </h2>
@@ -228,11 +231,7 @@ export default function ConciergePage() {
                         ))}
                     </div>
 
-                    <div style={{ textAlign: 'center', marginTop: '2rem' }}>
-                        <p style={{ fontSize: '1.1rem', color: '#6b7280', fontStyle: 'italic' }}>
-                            "You relax — we'll handle the Honey-Do's."
-                        </p>
-                    </div>
+
                 </div>
             </div>
 
