@@ -37,15 +37,21 @@ export default function HomePage() {
   }, []);
 
   return (
-    <div className={geist.className}>
+    <div className={geist.className} style={{
+      height: 'calc(100vh - 96px)',
+      display: 'flex',
+      flexDirection: 'column',
+      overflow: 'hidden'
+    }}>
       {/* Tagline */}
       <div style={{
         textAlign: 'center',
-        padding: isMobile ? '1.5rem 1rem 0.5rem' : '2rem 2rem 1rem',
-        fontSize: isMobile ? '1rem' : '1.25rem',
+        padding: isMobile ? '0.75rem 1rem 0.5rem' : '1rem 2rem 0.75rem',
+        fontSize: isMobile ? '0.9rem' : '1.1rem',
         fontStyle: 'italic',
         color: '#6b7280',
-        fontFamily: 'Georgia, serif'
+        fontFamily: 'Georgia, serif',
+        flexShrink: 0
       }}>
         Even the Busiest Bees Need a Little Help
       </div>
@@ -53,7 +59,7 @@ export default function HomePage() {
       {/* Business/Bookkeeping Section */}
       <div style={{
         position: 'relative',
-        minHeight: isMobile ? '85vh' : 'calc(50vh - 48px)',
+        flex: 1,
         overflow: 'hidden',
         backgroundColor: '#FFF8E7'
       }}>
@@ -89,23 +95,23 @@ export default function HomePage() {
           justifyContent: 'center',
           alignItems: 'center',
           textAlign: 'center',
-          padding: isMobile ? '3rem 2rem' : '4rem 3rem',
-          gap: isMobile ? '1.5rem' : '2rem'
+          padding: isMobile ? '2rem 1.5rem' : '2.5rem 2rem',
+          gap: isMobile ? '1rem' : '1.25rem'
         }}>
           <BeeIcon />
 
           <h2 style={{
-            fontSize: isMobile ? '2.5rem' : '3.5rem',
+            fontSize: isMobile ? '2rem' : '2.75rem',
             fontWeight: 700,
             color: '#3C3C3C',
             margin: 0,
-            lineHeight: 1.2
+            lineHeight: 1.1
           }}>
             Professional Bookkeeping
           </h2>
 
           <p style={{
-            fontSize: isMobile ? '1.25rem' : '1.5rem',
+            fontSize: isMobile ? '1.1rem' : '1.25rem',
             fontStyle: 'italic',
             color: '#3C3C3C',
             margin: 0,
@@ -115,7 +121,7 @@ export default function HomePage() {
           </p>
 
           <p style={{
-            fontSize: isMobile ? '1.1rem' : '1.3rem',
+            fontSize: isMobile ? '0.95rem' : '1.1rem',
             color: '#4b5563',
             maxWidth: '600px',
             margin: 0
@@ -127,10 +133,10 @@ export default function HomePage() {
             href="/bookkeeping"
             style={{
               display: 'inline-block',
-              padding: isMobile ? '1rem 2.5rem' : '1.2rem 3rem',
+              padding: isMobile ? '0.85rem 2rem' : '1rem 2.5rem',
               backgroundColor: '#E2C16B',
               color: '#3C3C3C',
-              fontSize: isMobile ? '1.1rem' : '1.25rem',
+              fontSize: isMobile ? '1rem' : '1.15rem',
               fontWeight: 600,
               borderRadius: '9999px',
               textDecoration: 'none',
@@ -157,7 +163,7 @@ export default function HomePage() {
       {/* Home/Concierge Section */}
       <div style={{
         position: 'relative',
-        minHeight: isMobile ? '85vh' : 'calc(50vh - 48px)',
+        flex: 1,
         overflow: 'hidden',
         backgroundColor: 'rgba(191, 200, 161, 0.15)'
       }}>
@@ -193,23 +199,23 @@ export default function HomePage() {
           justifyContent: 'center',
           alignItems: 'center',
           textAlign: 'center',
-          padding: isMobile ? '3rem 2rem' : '4rem 3rem',
-          gap: isMobile ? '1.5rem' : '2rem'
+          padding: isMobile ? '2rem 1.5rem' : '2.5rem 2rem',
+          gap: isMobile ? '1rem' : '1.25rem'
         }}>
           <HomeIcon />
 
           <h2 style={{
-            fontSize: isMobile ? '2.5rem' : '3.5rem',
+            fontSize: isMobile ? '2rem' : '2.75rem',
             fontWeight: 700,
             color: '#3C3C3C',
             margin: 0,
-            lineHeight: 1.2
+            lineHeight: 1.1
           }}>
             Personal Concierge
           </h2>
 
           <p style={{
-            fontSize: isMobile ? '1.25rem' : '1.5rem',
+            fontSize: isMobile ? '1.1rem' : '1.25rem',
             fontStyle: 'italic',
             color: '#3C3C3C',
             margin: 0,
@@ -219,7 +225,7 @@ export default function HomePage() {
           </p>
 
           <p style={{
-            fontSize: isMobile ? '1.1rem' : '1.3rem',
+            fontSize: isMobile ? '0.95rem' : '1.1rem',
             color: '#4b5563',
             maxWidth: '600px',
             margin: 0
@@ -231,10 +237,10 @@ export default function HomePage() {
             href="/concierge"
             style={{
               display: 'inline-block',
-              padding: isMobile ? '1rem 2.5rem' : '1.2rem 3rem',
+              padding: isMobile ? '0.85rem 2rem' : '1rem 2.5rem',
               backgroundColor: 'white',
               color: '#3C3C3C',
-              fontSize: isMobile ? '1.1rem' : '1.25rem',
+              fontSize: isMobile ? '1rem' : '1.15rem',
               fontWeight: 600,
               borderRadius: '9999px',
               textDecoration: 'none',
