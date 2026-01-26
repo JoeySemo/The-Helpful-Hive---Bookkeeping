@@ -127,7 +127,7 @@ export default function HomePage() {
       <section className="py-20 px-4 md:px-8 bg-[#3C3C3C]">
         <div className="max-w-3xl mx-auto text-center">
           <h2 className="font-display text-3xl md:text-5xl font-medium mb-6">
-            <span className="text-gradient-honey">Ready to let us help?</span>
+            <span className="text-gradient-honey">Ready To Let Us Help?</span>
           </h2>
           <p className="text-white/70 mb-10 text-xl font-light">
             Whether It's Your Home, Your Pets, Or Your Books—We've Got You Covered.
