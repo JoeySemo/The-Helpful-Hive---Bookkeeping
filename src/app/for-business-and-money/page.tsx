@@ -111,10 +111,7 @@ export default function BusinessAndMoneyPage() {
             {/* Pricing Grid */}
             <div id="pricing" className="py-20 px-4 md:px-8">
                 <div className="max-w-6xl mx-auto">
-                    <div className="text-center mb-16">
-                        <h2 className="font-display text-3xl md:text-4xl text-[#3C3C3C] mb-4">Sweet Deals For Your Business</h2>
 
-                    </div>
 
                     <div className="grid md:grid-cols-2 gap-8">
                         {services.map((service, index) => (

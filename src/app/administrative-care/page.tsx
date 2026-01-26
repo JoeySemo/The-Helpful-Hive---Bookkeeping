@@ -75,10 +75,7 @@ export default function AdministrativeCarePage() {
             {/* Services Grid */}
             <div id="services" className="py-20 px-4 md:px-8">
                 <div className="max-w-6xl mx-auto">
-                    <div className="text-center mb-16">
-                        <h2 className="font-display text-3xl md:text-4xl text-[#3C3C3C] mb-4">Administrative Services</h2>
 
-                    </div>
 
                     <div className="space-y-16 max-w-4xl mx-auto">
 
