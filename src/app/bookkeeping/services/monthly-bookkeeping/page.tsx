@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import { Check } from 'lucide-react';
 
 export default function MonthlyBookkeepingPage() {
     const included = [
@@ -26,113 +27,106 @@ export default function MonthlyBookkeepingPage() {
     ];
 
     return (
-        <main style={{ minHeight: 'calc(100vh - 96px)', backgroundColor: '#f8f9fa' }}>
+        <main className="min-h-screen bg-[#f8f9fa]">
             {/* Hero */}
-            <div style={{
-                background: '#E2C16B',
-                padding: '3rem 2rem',
-                textAlign: 'center'
-            }}>
-                <Link href="/for-business-and-money" style={{ color: '#1f2937', textDecoration: 'none', fontSize: '1.25rem', marginBottom: '1rem', display: 'inline-block', fontWeight: 500 }}>
+            <div className="bg-[#E2C16B] py-12 px-8 text-center">
+                <Link
+                    href="/for-business-and-money"
+                    className="inline-block text-[#1f2937] text-xl font-medium mb-4 hover:translate-x-[-4px] transition-transform"
+                >
                     ← Back to Bookkeeping
                 </Link>
-                <h1 style={{
-                    fontSize: '2.5rem',
-                    fontWeight: 400,
-                    color: '#1f2937',
-                    marginBottom: '0.75rem',
-                    fontFamily: 'Georgia, serif',
-                    fontStyle: 'italic'
-                }}>
+                <h1 className="font-display text-4xl md:text-5xl font-normal text-[#1f2937] mb-3 italic">
                     Professional Bookkeeping for Growing Businesses
                 </h1>
-                <p style={{ fontSize: '1.15rem', color: '#374151', maxWidth: '600px', margin: '0 auto' }}>
+                <p className="text-lg text-[#374151] max-w-2xl mx-auto">
                     Maintain accurate financial records with our comprehensive bookkeeping services.
                 </p>
             </div>
 
-            <div style={{ maxWidth: '70rem', margin: '0 auto', padding: '3rem 2rem' }}>
+            <div className="max-w-6xl mx-auto px-4 sm:px-8 py-12">
                 {/* What's Included */}
-                <section style={{ marginBottom: '3rem' }}>
-                    <h2 style={{ fontSize: '1.75rem', fontWeight: 400, color: '#1f2937', marginBottom: '1.5rem', fontFamily: 'Georgia, serif', fontStyle: 'italic' }}>
+                <section className="mb-12">
+                    <h2 className="font-display text-3xl font-normal text-[#1f2937] mb-6 italic">
                         What's Included
                     </h2>
-                    <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: '1.25rem' }}>
+                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
                         {included.map((item, i) => (
-                            <div key={i} style={{ backgroundColor: 'white', padding: '1.25rem', borderRadius: '0.5rem', border: '1px solid #e5e7eb' }}>
-                                <h3 style={{ fontSize: '1rem', fontWeight: 600, color: '#1f2937', marginBottom: '0.25rem' }}>{item.title}</h3>
-                                <p style={{ color: '#6b7280', fontSize: '0.9rem', margin: 0 }}>{item.description}</p>
+                            <div key={i} className="bg-white p-5 rounded-lg border border-gray-200 shadow-sm">
+                                <h3 className="text-base font-semibold text-[#1f2937] mb-1">{item.title}</h3>
+                                <p className="text-sm text-gray-500 m-0">{item.description}</p>
                             </div>
                         ))}
                     </div>
                 </section>
 
                 {/* Our Process */}
-                <section style={{ marginBottom: '3rem' }}>
-                    <h2 style={{ fontSize: '1.75rem', fontWeight: 400, color: '#1f2937', marginBottom: '1.5rem', fontFamily: 'Georgia, serif', fontStyle: 'italic' }}>
+                <section className="mb-12">
+                    <h2 className="font-display text-3xl font-normal text-[#1f2937] mb-6 italic">
                         Our Process
                     </h2>
-                    <div style={{ display: 'flex', gap: '1rem' }}>
+                    <div className="flex flex-col md:flex-row gap-4">
                         {process.map((item, i) => (
-                            <div key={i} style={{ flex: 1, backgroundColor: 'white', padding: '1.25rem', borderRadius: '0.5rem', border: '1px solid #e5e7eb', textAlign: 'center' }}>
-                                <div style={{ width: '32px', height: '32px', backgroundColor: '#E2C16B', color: 'white', borderRadius: '50%', display: 'flex', alignItems: 'center', justifyContent: 'center', margin: '0 auto 0.75rem', fontWeight: 600 }}>
+                            <div key={i} className="flex-1 bg-white p-5 rounded-lg border border-gray-200 text-center shadow-sm">
+                                <div className="w-8 h-8 bg-[#E2C16B] text-white rounded-full flex items-center justify-center mx-auto mb-3 font-semibold">
                                     {item.step}
                                 </div>
-                                <h3 style={{ fontSize: '0.95rem', fontWeight: 600, color: '#1f2937', marginBottom: '0.25rem' }}>{item.title}</h3>
-                                <p style={{ color: '#6b7280', fontSize: '0.85rem', margin: 0 }}>{item.description}</p>
+                                <h3 className="text-[0.95rem] font-semibold text-[#1f2937] mb-1">{item.title}</h3>
+                                <p className="text-[0.85rem] text-gray-500 m-0">{item.description}</p>
                             </div>
                         ))}
                     </div>
                 </section>
 
                 {/* Key Benefits */}
-                <section style={{ marginBottom: '3rem' }}>
-                    <h2 style={{ fontSize: '1.75rem', fontWeight: 400, color: '#1f2937', marginBottom: '1.5rem', fontFamily: 'Georgia, serif', fontStyle: 'italic' }}>
+                <section className="mb-12">
+                    <h2 className="font-display text-3xl font-normal text-[#1f2937] mb-6 italic">
                         Key Benefits
                     </h2>
-                    <div style={{ display: 'grid', gridTemplateColumns: 'repeat(2, 1fr)', gap: '1rem' }}>
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                         {benefits.map((benefit, i) => (
-                            <div key={i} style={{ display: 'flex', alignItems: 'center', gap: '0.75rem', backgroundColor: 'white', padding: '1rem', borderRadius: '0.5rem', border: '1px solid #e5e7eb' }}>
-                                <span style={{ color: '#E2C16B', fontSize: '1.25rem' }}>✓</span>
-                                <span style={{ color: '#374151' }}>{benefit}</span>
+                            <div key={i} className="flex items-center gap-3 bg-white p-4 rounded-lg border border-gray-200 shadow-sm">
+                                <span className="text-[#E2C16B] text-xl">✓</span>
+                                <span className="text-[#374151]">{benefit}</span>
                             </div>
                         ))}
                     </div>
                 </section>
 
                 {/* Pricing & Fit */}
-                <section style={{ backgroundColor: 'white', padding: '2rem', borderRadius: '0.75rem', border: '1px solid #e5e7eb', marginBottom: '3rem' }}>
-                    <h2 style={{ fontSize: '1.75rem', fontWeight: 400, color: '#1f2937', marginBottom: '1rem', fontFamily: 'Georgia, serif', fontStyle: 'italic' }}>
+                <section className="bg-white p-8 rounded-xl border border-gray-200 mb-12 shadow-md">
+                    <h2 className="font-display text-3xl font-normal text-[#1f2937] mb-4 italic">
                         Pricing & Fit
                     </h2>
-                    <div style={{ marginBottom: '1rem' }}>
-                        <span style={{ fontSize: '2.25rem', fontWeight: 700, color: '#1f2937' }}>Starting at $400</span>
-                        <span style={{ color: '#6b7280', fontSize: '1.25rem' }}>/month</span>
+                    <div className="mb-4">
+                        <span className="text-4xl font-bold text-[#1f2937]">Starting at $400</span>
+                        <span className="text-gray-500 text-xl">/month</span>
                     </div>
-                    <h3 style={{ fontSize: '1rem', fontWeight: 600, color: '#1f2937', marginBottom: '0.5rem' }}>Who This Is For</h3>
-                    <p style={{ color: '#6b7280', margin: 0 }}>
+                    <h3 className="text-base font-semibold text-[#1f2937] mb-2">Who This Is For</h3>
+                    <p className="text-gray-500 m-0">
                         Ideal for small business owners who want accurate financial records without the time investment.
                     </p>
                 </section>
 
                 {/* CTA */}
-                <section style={{
-                    background: 'linear-gradient(135deg, #3C3C3C 0%, #2d2d2d 100%)',
-                    padding: '2.5rem',
-                    borderRadius: '0.75rem',
-                    textAlign: 'center'
-                }}>
-                    <h2 style={{ fontSize: '1.75rem', fontWeight: 400, color: 'white', marginBottom: '0.75rem', fontFamily: 'Georgia, serif', fontStyle: 'italic' }}>
+                <section className="bg-gradient-to-br from-[#3C3C3C] to-[#2d2d2d] p-10 rounded-xl text-center shadow-lg">
+                    <h2 className="font-display text-3xl font-normal text-white mb-3 italic">
                         Ready to Get Started?
                     </h2>
-                    <p style={{ color: 'rgba(255,255,255,0.8)', marginBottom: '1.5rem' }}>
+                    <p className="text-white/80 mb-6 text-lg">
                         Schedule your free consultation with The Helpful Hive today.
                     </p>
-                    <div style={{ display: 'flex', gap: '1rem', justifyContent: 'center', flexWrap: 'wrap' }}>
-                        <Link href="/about" style={{ padding: '0.75rem 1.75rem', backgroundColor: '#E2C16B', color: 'white', fontWeight: 600, borderRadius: '9999px', textDecoration: 'none' }}>
+                    <div className="flex flex-col sm:flex-row gap-4 justify-center flex-wrap">
+                        <Link
+                            href="/about"
+                            className="px-7 py-3 bg-[#E2C16B] text-white font-semibold rounded-full hover:bg-[#d4b35f] transition-colors"
+                        >
                             Schedule Free Consultation
                         </Link>
-                        <a href="tel:+13145267240" style={{ padding: '0.75rem 1.75rem', border: '2px solid white', color: 'white', fontWeight: 600, borderRadius: '9999px', textDecoration: 'none' }}>
+                        <a
+                            href="tel:+13145267240"
+                            className="px-7 py-3 border-2 border-white text-white font-semibold rounded-full hover:bg-white/10 transition-colors"
+                        >
                             Call (314) 526-7240
                         </a>
                     </div>
