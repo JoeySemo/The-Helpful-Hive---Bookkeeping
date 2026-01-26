@@ -77,7 +77,7 @@ export default function HomeAndLifePage() {
                                 <span className="text-[#E2C16B]">Perfectly Managed</span>
                             </h1>
                             <p className="text-[#3C3C3C]/80 text-lg mb-8 leading-relaxed">
-                                Sweet solutions for busy homes, pets, and people.
+                                Sweet Solutions for Busy Homes, Pets, and People.
                             </p>
                             <div className="flex flex-wrap gap-4">
                                 <Link
