@@ -4,133 +4,110 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import { useState, useEffect } from 'react';
+import { Menu, X, ChevronDown } from 'lucide-react';
 
 export default function Navbar() {
   const pathname = usePathname();
   const [isMobile, setIsMobile] = useState(false);
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
 
-  // Detect mobile viewport
   useEffect(() => {
-    const checkMobile = () => setIsMobile(window.innerWidth < 768);
+    const checkMobile = () => setIsMobile(window.innerWidth < 1024);
     checkMobile();
     window.addEventListener('resize', checkMobile);
     return () => window.removeEventListener('resize', checkMobile);
   }, []);
 
-  // Determine context
-  const isBookkeeping = pathname?.startsWith('/bookkeeping');
-  const isConcierge = pathname?.startsWith('/concierge');
-  const isHome = !isBookkeeping && !isConcierge;
+  const isHome = pathname === '/';
+
+  const navLinks = [
+    { href: '/', label: 'Home' },
+    { href: '/for-home-and-life', label: 'For Home & Life' },
+    { href: '/for-business-and-money', label: 'For Business & Money' },
+    { href: '/about', label: 'About' },
+  ];
 
   return (
-    <nav
-      style={{
-        backgroundColor: 'rgba(255,255,255,0.95)',
-        height: isMobile ? '64px' : '96px',
-        display: 'block',
-        position: 'sticky',
-        top: 0,
-        zIndex: 50,
-        borderBottom: '1px solid #f3f4f6',
-        width: '100%',
-        maxWidth: '100vw',
-        overflow: 'hidden'
-      }}
-    >
-      <div style={{
-        width: '100%',
-        paddingLeft: isMobile ? '0.75rem' : '0',
-        paddingRight: isMobile ? '0.75rem' : '1.5rem',
-        height: '100%',
-        boxSizing: 'border-box'
-      }}>
-        <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', height: '100%', flexWrap: 'nowrap' }}>
+    <nav className="sticky top-0 z-50 bg-white/95 backdrop-blur-md border-b border-[#E2C16B]/20">
+      <div className="max-w-6xl mx-auto px-4 md:px-8">
+        <div className="flex items-center justify-between h-16 md:h-20">
+          {/* Logo */}
+          <Link href="/" className="flex items-center gap-2">
+            <div className="relative h-10 w-32 md:h-12 md:w-40">
+              <Image
+                src="/official-logo-horizontal.png"
+                alt="The Helpful Hive"
+                fill
+                className="object-contain object-left"
+                priority
+              />
+            </div>
+          </Link>
 
-          {/* Logo Section */}
-          <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', flexShrink: 0 }}>
-            <Link href="/" style={{ display: 'flex', alignItems: 'center', gap: '0.25rem' }}>
-              <div style={{
-                position: 'relative',
-                height: isMobile ? '50px' : '110px',
-                width: isMobile ? '160px' : '480px'
-              }}>
-                <Image
-                  src="/official-logo-horizontal.png"
-                  alt="The Helpful Hive"
-                  fill
-                  style={{ objectFit: 'contain', objectPosition: 'left' }}
-                />
-              </div>
-            </Link>
-
-            {/* Slogan - Desktop only */}
-            {!isMobile && isHome && (
-              <span style={{ color: '#3C3C3C', fontFamily: 'serif', fontStyle: 'italic', fontSize: '1.5rem', display: 'block', paddingLeft: '0.75rem', marginRight: '2rem', borderLeft: '2px solid #e2e8f0', whiteSpace: 'nowrap' }}>
-                Even the Busiest Bees Need a Little Help
-              </span>
-            )}
-          </div>
-
-          {/* Navigation Links */}
-          <div style={{ display: 'flex', alignItems: 'center', gap: isMobile ? '0.5rem' : '1.5rem', flexShrink: 0 }}>
-
-            {/* Context: Home Portal - Desktop only */}
-            {!isMobile && isHome && (
-              <>
-                <Link href="/bookkeeping" style={{ color: '#4b5563', fontWeight: 500, fontSize: '1.15rem', textDecoration: 'none', whiteSpace: 'nowrap' }}>
-                  Professional Bookkeeping
+          {/* Desktop Navigation */}
+          {!isMobile && (
+            <div className="flex items-center gap-6">
+              {navLinks.map((link) => (
+                <Link
+                  key={link.href}
+                  href={link.href}
+                  className={`text-sm font-medium transition-colors ${pathname === link.href
+                      ? 'text-[#E2C16B]'
+                      : 'text-[#3C3C3C] hover:text-[#E2C16B]'
+                    }`}
+                >
+                  {link.label}
                 </Link>
-                <Link href="/concierge" style={{ color: '#4b5563', fontWeight: 500, fontSize: '1.15rem', textDecoration: 'none', whiteSpace: 'nowrap' }}>
-                  Personal Concierge
-                </Link>
-              </>
-            )}
+              ))}
+              <Link
+                href="/contact"
+                className="px-5 py-2.5 bg-[#3C3C3C] text-white text-sm font-medium rounded-full hover:bg-[#2d2d2d] transition-all hover:shadow-lg"
+              >
+                Book a Service
+              </Link>
+            </div>
+          )}
 
-            {/* Context: Bookkeeping - Desktop only */}
-            {!isMobile && isBookkeeping && (
-              <>
-                <Link href="/bookkeeping" style={{ color: '#f59e0b', fontWeight: 700, fontSize: '1.15rem', borderBottom: '2px solid #f59e0b', textDecoration: 'none' }}>
-                  Bookkeeping
-                </Link>
-                <Link href="/" style={{ color: '#9ca3af', fontWeight: 500, fontSize: '0.875rem', textDecoration: 'none' }}>
-                  Back to Portal
-                </Link>
-              </>
-            )}
-
-            {/* Context: Concierge - Desktop only */}
-            {!isMobile && isConcierge && (
-              <>
-                <Link href="/concierge" style={{ color: '#a8b78b', fontWeight: 700, fontSize: '1.15rem', borderBottom: '2px solid #a8b78b', textDecoration: 'none' }}>
-                  Concierge
-                </Link>
-                <Link href="/" style={{ color: '#9ca3af', fontWeight: 500, fontSize: '0.875rem', textDecoration: 'none' }}>
-                  Back to Portal
-                </Link>
-              </>
-            )}
-
-            {/* Shared CTA - Always visible */}
-            <Link
-              href="/contact"
-              style={{
-                padding: isMobile ? '0.5rem 1rem' : '0.75rem 1.5rem',
-                borderRadius: '9999px',
-                fontWeight: 700,
-                color: 'white',
-                fontSize: isMobile ? '0.875rem' : '1rem',
-                backgroundColor: isBookkeeping ? '#f59e0b' : isConcierge ? '#a8b78b' : '#1f2937',
-                textDecoration: 'none',
-                boxShadow: '0 4px 6px -1px rgba(0, 0, 0, 0.1)',
-                whiteSpace: 'nowrap'
-              }}
+          {/* Mobile Menu Button */}
+          {isMobile && (
+            <button
+              onClick={() => setIsMenuOpen(!isMenuOpen)}
+              className="p-2 text-[#3C3C3C]"
+              aria-label="Toggle menu"
             >
-              Contact Us
-            </Link>
-          </div>
+              {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
+            </button>
+          )}
         </div>
+
+        {/* Mobile Menu */}
+        {isMobile && isMenuOpen && (
+          <div className="absolute top-16 left-0 right-0 bg-white border-b border-[#E2C16B]/20 shadow-lg p-4 animate-fade-in">
+            <div className="flex flex-col gap-2">
+              {navLinks.map((link) => (
+                <Link
+                  key={link.href}
+                  href={link.href}
+                  onClick={() => setIsMenuOpen(false)}
+                  className={`px-4 py-3 rounded-lg text-sm font-medium ${pathname === link.href
+                      ? 'bg-[#FFF8E7] text-[#E2C16B]'
+                      : 'text-[#3C3C3C] hover:bg-[#FFF8E7]'
+                    }`}
+                >
+                  {link.label}
+                </Link>
+              ))}
+              <Link
+                href="/contact"
+                onClick={() => setIsMenuOpen(false)}
+                className="px-4 py-3 bg-[#3C3C3C] text-white text-sm font-medium rounded-lg text-center mt-2"
+              >
+                Book a Service
+              </Link>
+            </div>
+          </div>
+        )}
       </div>
     </nav>
   );
 }
-

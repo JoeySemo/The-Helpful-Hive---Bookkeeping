@@ -1,15 +1,24 @@
 import type { Metadata } from "next";
-// Main Portal uses Geist font as before
-import { Geist } from "next/font/google";
+import { Inter, Outfit } from "next/font/google";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import "./globals.css";
 
-const geist = Geist({ subsets: ['latin'] });
+const inter = Inter({
+    subsets: ['latin'],
+    variable: '--font-inter',
+    display: 'swap',
+});
+
+const outfit = Outfit({
+    subsets: ['latin'],
+    variable: '--font-outfit',
+    display: 'swap',
+});
 
 export const metadata: Metadata = {
-    title: "The Helpful Hive",
-    description: "Bookkeeping & Home Concierge Services",
+    title: "The Helpful Hive | Bookkeeping & Concierge Services",
+    description: "Professional bookkeeping for your business and personal concierge services for your home. Serving St. Louis and surrounding areas.",
 };
 
 export default function RootLayout({
@@ -18,10 +27,8 @@ export default function RootLayout({
     children: React.ReactNode;
 }>) {
     return (
-        <html lang="en">
-            <body
-                className={`antialiased min-h-screen flex flex-col`}
-            >
+        <html lang="en" className={`${inter.variable} ${outfit.variable}`}>
+            <body className="antialiased min-h-screen flex flex-col bg-neutral-50">
                 <Navbar />
                 <main className="flex-grow">
                     {children}

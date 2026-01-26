@@ -2,123 +2,132 @@
 
 import Link from 'next/link';
 import Image from 'next/image';
-import { useState, useEffect } from 'react';
+import { Facebook, Instagram, Phone, Mail } from 'lucide-react';
 
 export default function Footer() {
-    const [isMobile, setIsMobile] = useState(false);
-
-    useEffect(() => {
-        const checkMobile = () => setIsMobile(window.innerWidth < 768);
-        checkMobile();
-        window.addEventListener('resize', checkMobile);
-        return () => window.removeEventListener('resize', checkMobile);
-    }, []);
+    const currentYear = new Date().getFullYear();
 
     return (
-        <footer style={{ backgroundColor: '#f8fafc', borderTop: '1px solid #e2e8f0', marginTop: 'auto' }}>
-            <div style={{ maxWidth: '100%', margin: '0', padding: isMobile ? '2rem 1rem' : '3rem 1rem' }}>
-                <div style={{
-                    display: isMobile ? 'flex' : 'grid',
-                    flexDirection: isMobile ? 'column' : undefined,
-                    gridTemplateColumns: isMobile ? undefined : '320px repeat(3, 1fr)',
-                    gap: isMobile ? '1.5rem' : '2rem',
-                    alignItems: isMobile ? 'center' : 'start',
-                    textAlign: isMobile ? 'center' : 'left'
-                }}>
-                    {/* Brand Column with Circular Logo */}
-                    <div>
-                        <div style={{
-                            position: 'relative',
-                            width: isMobile ? '150px' : '320px',
-                            height: isMobile ? '150px' : '320px',
-                            marginBottom: '1rem',
-                            margin: isMobile ? '0 auto 1rem auto' : undefined
-                        }}>
+        <footer className="bg-[#3C3C3C] text-white">
+            <div className="max-w-6xl mx-auto px-4 md:px-8 py-12 md:py-16">
+                <div className="grid grid-cols-1 md:grid-cols-4 gap-10 md:gap-8">
+                    {/* Brand */}
+                    <div className="md:col-span-1">
+                        <div className="relative w-24 h-24 mb-4 bg-white rounded-full p-2">
                             <Image
                                 src="/official-logo-circular.jpg"
                                 alt="The Helpful Hive"
                                 fill
-                                style={{ objectFit: 'contain' }}
+                                className="object-contain rounded-full"
                             />
                         </div>
+                        <p className="text-sm text-white/70 leading-relaxed">
+                            Sweet solutions for busy homes, pets, people, and businesses.
+                        </p>
                     </div>
 
-                    {/* Services Column */}
+                    {/* For Home & Life */}
                     <div>
-                        <h3 style={{ fontWeight: 600, color: '#1f2937', marginBottom: '1rem', fontSize: '1.25rem' }}>Services</h3>
-                        <ul style={{ display: 'flex', flexDirection: 'column', gap: '0.5rem', fontSize: '1.15rem', listStyle: 'none', padding: 0, margin: 0 }}>
+                        <h3 className="font-display font-semibold text-[#E2C16B] mb-4">For Home & Life</h3>
+                        <ul className="space-y-2">
                             <li>
-                                <Link href="/bookkeeping" style={{ color: '#6b7280', textDecoration: 'none' }}>
-                                    Professional Bookkeeping
+                                <Link href="/concierge/services/bee-done" className="text-sm text-white/70 hover:text-[#E2C16B] transition-colors">
+                                    Bee Done
                                 </Link>
                             </li>
                             <li>
-                                <Link href="/concierge" style={{ color: '#6b7280', textDecoration: 'none' }}>
-                                    Personal Concierge
+                                <Link href="/concierge/services/bee-kind" className="text-sm text-white/70 hover:text-[#E2C16B] transition-colors">
+                                    Bee Kind
+                                </Link>
+                            </li>
+                            <li>
+                                <Link href="/concierge/services/bee-organized" className="text-sm text-white/70 hover:text-[#E2C16B] transition-colors">
+                                    Bee Organized
+                                </Link>
+                            </li>
+                            <li>
+                                <Link href="/concierge/services/bee-efficient" className="text-sm text-white/70 hover:text-[#E2C16B] transition-colors">
+                                    Bee Efficient
+                                </Link>
+                            </li>
+                            <li>
+                                <Link href="/concierge/services/bee-connected" className="text-sm text-white/70 hover:text-[#E2C16B] transition-colors">
+                                    Bee Connected
                                 </Link>
                             </li>
                         </ul>
                     </div>
 
-                    {/* Contact Column */}
+                    {/* For Business & Money */}
                     <div>
-                        <h3 style={{ fontWeight: 600, color: '#1f2937', marginBottom: '1rem', fontSize: '1.25rem' }}>Contact</h3>
-                        <ul style={{
-                            display: 'flex',
-                            flexDirection: 'column',
-                            gap: '0.5rem',
-                            fontSize: isMobile ? '1rem' : '1.15rem',
-                            color: '#6b7280',
-                            listStyle: 'none',
-                            padding: 0,
-                            margin: 0
-                        }}>
-                            <li style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', justifyContent: isMobile ? 'center' : 'flex-start' }}>
-                                <span style={{ fontWeight: 500 }}>Phone:</span> <a href="tel:+13145267240" style={{ color: '#6b7280', textDecoration: 'none' }}>(314) 526-7240</a>
+                        <h3 className="font-display font-semibold text-[#BFC8A1] mb-4">For Business & Money</h3>
+                        <ul className="space-y-2">
+                            <li>
+                                <Link href="/bookkeeping" className="text-sm text-white/70 hover:text-[#BFC8A1] transition-colors">
+                                    Small Business Bookkeeping
+                                </Link>
                             </li>
-                            <li style={{
-                                display: 'flex',
-                                alignItems: 'center',
-                                gap: '0.5rem',
-                                justifyContent: isMobile ? 'center' : 'flex-start',
-                                flexWrap: isMobile ? 'wrap' : 'nowrap'
-                            }}>
-                                <span style={{ fontWeight: 500 }}>Email:</span>
-                                <a href="mailto:hellohelpfulhive@gmail.com" style={{ color: '#6b7280', textDecoration: 'none', wordBreak: 'break-all' }}>
+                            <li>
+                                <Link href="/bookkeeping" className="text-sm text-white/70 hover:text-[#BFC8A1] transition-colors">
+                                    Money Organization
+                                </Link>
+                            </li>
+                        </ul>
+                    </div>
+
+                    {/* Contact */}
+                    <div>
+                        <h3 className="font-display font-semibold text-white mb-4">Contact</h3>
+                        <ul className="space-y-3">
+                            <li>
+                                <a
+                                    href="tel:+13145267240"
+                                    className="flex items-center gap-2 text-sm text-white/70 hover:text-[#E2C16B] transition-colors"
+                                >
+                                    <Phone size={16} />
+                                    (314) 526-7240
+                                </a>
+                            </li>
+                            <li>
+                                <a
+                                    href="mailto:hellohelpfulhive@gmail.com"
+                                    className="flex items-center gap-2 text-sm text-white/70 hover:text-[#E2C16B] transition-colors"
+                                >
+                                    <Mail size={16} />
                                     hellohelpfulhive@gmail.com
                                 </a>
                             </li>
                         </ul>
-                    </div>
-
-                    {/* Social Media Column */}
-                    <div>
-                        <h3 style={{ fontWeight: 600, color: '#1f2937', marginBottom: '1rem', fontSize: '1.25rem' }}>Follow Us</h3>
-                        <div style={{ display: 'flex', flexDirection: 'column', gap: '0.5rem', fontSize: '1.15rem', alignItems: isMobile ? 'center' : 'flex-start' }}>
+                        <div className="flex gap-3 mt-4">
                             <a
                                 href="https://www.facebook.com/thehelpfulhive"
                                 target="_blank"
                                 rel="noopener noreferrer"
-                                style={{ color: '#6b7280', textDecoration: 'none', display: 'flex', alignItems: 'center', gap: '0.5rem' }}
+                                className="w-9 h-9 flex items-center justify-center rounded-full bg-white/10 text-white/70 hover:bg-[#E2C16B] hover:text-white transition-all"
+                                aria-label="Facebook"
                             >
-                                Facebook
+                                <Facebook size={16} />
                             </a>
                             <a
                                 href="https://www.instagram.com/thehelpfulhiveco/"
                                 target="_blank"
                                 rel="noopener noreferrer"
-                                style={{ color: '#6b7280', textDecoration: 'none', display: 'flex', alignItems: 'center', gap: '0.5rem' }}
+                                className="w-9 h-9 flex items-center justify-center rounded-full bg-white/10 text-white/70 hover:bg-[#E2C16B] hover:text-white transition-all"
+                                aria-label="Instagram"
                             >
-                                Instagram
+                                <Instagram size={16} />
                             </a>
                         </div>
                     </div>
                 </div>
-                <div style={{ marginTop: '2rem', paddingTop: '2rem', borderTop: '1px solid rgba(107, 114, 128, 0.1)', textAlign: 'center', fontSize: '0.75rem', color: 'rgba(107, 114, 128, 0.5)' }}>
-                    &copy; {new Date().getFullYear()} The Helpful Hive. All rights reserved.
+
+                {/* Copyright */}
+                <div className="mt-12 pt-8 border-t border-white/10 text-center">
+                    <p className="text-xs text-white/40">
+                        © {currentYear} The Helpful Hive. All rights reserved.
+                    </p>
                 </div>
             </div>
         </footer>
     );
 }
-

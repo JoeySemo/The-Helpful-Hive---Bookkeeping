@@ -2,6 +2,7 @@
 
 import Link from 'next/link';
 import Image from 'next/image';
+import { Check, Sparkles } from 'lucide-react';
 
 export default function ConciergePage() {
     const services = [
@@ -57,172 +58,124 @@ export default function ConciergePage() {
         {
             step: '1',
             title: 'Schedule a Consultation',
-            description: "Reach out to discuss your home management needs. We'll learn about your property and lifestyle to create a customized plan."
+            description: "Reach out to discuss your home management needs. We'll create a customized plan."
         },
         {
             step: '2',
             title: 'Receive Your Custom Plan',
-            description: "We'll create a tailored service package that addresses your specific needs, from regular maintenance to on-demand concierge services."
+            description: "We'll tailor a service package that addresses your specific needs."
         },
         {
             step: '3',
             title: 'Enjoy Peace of Mind',
-            description: "Relax knowing your home is in expert hands. Receive regular updates and enjoy a home that's always ready and welcoming."
+            description: "Relax knowing your home is in expert hands with regular updates."
         }
     ];
 
-
-
     return (
-        <main style={{ minHeight: 'calc(100vh - 96px)' }}>
+        <main className="min-h-screen bg-neutral-50">
             {/* Hero Section */}
-            <div style={{
-                background: '#E2C16B',
-                padding: '4rem 2rem',
-                display: 'flex',
-                alignItems: 'center',
-                justifyContent: 'center',
-                gap: '4rem',
-                flexWrap: 'wrap'
-            }}>
-                <div style={{ maxWidth: '500px' }}>
-                    <h1 style={{
-                        fontSize: '3rem',
-                        fontWeight: 400,
-                        color: '#1f2937',
-                        marginBottom: '0.5rem',
-                        fontFamily: 'Georgia, serif',
-                        fontStyle: 'italic',
-                        lineHeight: 1.2
-                    }}>
-                        Your Home,<br />
-                        <span style={{ fontStyle: 'italic' }}>Perfectly Managed</span>
-                    </h1>
-                    <p style={{ fontSize: '1.25rem', color: '#374151', fontStyle: 'italic', marginBottom: '1rem' }}>
-                        Sweet solutions for busy homes, pets, and people.
-                    </p>
-                    <p style={{ fontSize: '1rem', color: '#4b5563', marginBottom: '0.5rem' }}>
-                        Because even the busiest bees need a little help.
-                    </p>
-                    <p style={{ fontSize: '1rem', color: '#4b5563', marginBottom: '2rem' }}>
-                        We handle the details of home management so you can focus on what matters most.
-                    </p>
-                    <div style={{ display: 'flex', gap: '1rem', flexWrap: 'wrap' }}>
-                        <Link href="/contact" style={{
-                            padding: '0.875rem 1.75rem',
-                            backgroundColor: '#3C3C3C',
-                            color: 'white',
-                            fontWeight: 600,
-                            borderRadius: '9999px',
-                            textDecoration: 'none',
-                            fontSize: '0.95rem'
-                        }}>
-                            Schedule a Consultation
-                        </Link>
-                        <Link href="/concierge/services" style={{
-                            padding: '0.875rem 1.75rem',
-                            backgroundColor: 'transparent',
-                            border: '2px solid #3C3C3C',
-                            color: '#3C3C3C',
-                            fontWeight: 600,
-                            borderRadius: '9999px',
-                            textDecoration: 'none',
-                            fontSize: '0.95rem'
-                        }}>
-                            Explore Services
-                        </Link>
+            <section className="relative py-16 md:py-24 px-4 md:px-8 bg-gradient-warm overflow-hidden">
+                <div className="max-w-6xl mx-auto">
+                    <div className="grid md:grid-cols-2 gap-12 items-center">
+                        <div>
+                            <h1 className="font-display text-3xl md:text-5xl font-medium text-neutral-900 mb-4">
+                                Your Home,
+                                <br />
+                                <span className="text-gradient-honey">Perfectly Managed</span>
+                            </h1>
+                            <p className="text-neutral-600 text-lg mb-3">
+                                Sweet solutions for busy homes, pets, and people.
+                            </p>
+                            <p className="text-neutral-500 mb-8">
+                                We handle the details of home management so you can focus on what matters most.
+                            </p>
+                            <div className="flex flex-wrap gap-4">
+                                <Link
+                                    href="/contact"
+                                    className="px-6 py-3 bg-neutral-900 text-white font-medium rounded-full hover:bg-neutral-800 transition-all"
+                                >
+                                    Schedule a Consultation
+                                </Link>
+                                <Link
+                                    href="/concierge/services"
+                                    className="px-6 py-3 bg-transparent border border-neutral-300 text-neutral-700 font-medium rounded-full hover:border-honey-500 hover:text-honey-600 transition-all"
+                                >
+                                    Explore Services
+                                </Link>
+                            </div>
+                        </div>
+                        <div className="flex justify-center">
+                            <div className="relative w-64 h-64 md:w-80 md:h-80">
+                                <Image
+                                    src="/concierge-logo.jpg"
+                                    alt="The Helpful Hive Concierge"
+                                    fill
+                                    className="object-cover rounded-3xl shadow-float"
+                                />
+                            </div>
+                        </div>
                     </div>
                 </div>
-                <div style={{
-                    backgroundColor: '#f5f5dc',
-                    padding: '2rem',
-                    borderRadius: '1rem',
-                    display: 'flex',
-                    alignItems: 'center',
-                    justifyContent: 'center'
-                }}>
-                    <Image
-                        src="/concierge-logo.jpg"
-                        alt="The Helpful Hive"
-                        width={280}
-                        height={280}
-                        style={{ objectFit: 'contain', borderRadius: '50%' }}
-                    />
-                </div>
-            </div>
+            </section>
 
-            {/* Service Ecosystem */}
-            <div style={{ backgroundColor: '#f8f9fa', padding: '4rem 2rem' }}>
-                <div style={{ maxWidth: '80rem', margin: '0 auto' }}>
-                    <div style={{ textAlign: 'center', marginBottom: '3rem' }}>
-                        <p style={{ fontSize: '2.5rem', fontWeight: 500, color: '#3C3C3C', marginBottom: '0.75rem', fontFamily: 'Georgia, serif' }}>
-                            You Relax - We'll Handle the Honey-Do's
-                        </p>
-                        <h2 style={{ fontSize: '2.25rem', fontWeight: 400, color: '#1f2937', marginBottom: '0.5rem', fontFamily: 'Georgia, serif', fontStyle: 'italic' }}>
+            {/* Tagline Banner */}
+            <section className="py-8 px-4 bg-white border-b border-neutral-100">
+                <p className="font-display text-xl md:text-2xl text-neutral-900 text-center font-medium">
+                    You Relax — We'll Handle the Honey-Do's
+                </p>
+            </section>
+
+            {/* Services Section */}
+            <section className="py-16 md:py-24 px-4 md:px-8">
+                <div className="max-w-6xl mx-auto">
+                    <div className="text-center mb-12">
+                        <h2 className="font-display text-2xl md:text-3xl font-medium text-neutral-900 mb-3">
                             Our Service Ecosystem
                         </h2>
-                        <p style={{ color: '#6b7280', fontSize: '1.1rem' }}>
-                            Sweet solutions for busy homes, pets, and people. Every service is part of The Helpful Hive.
+                        <p className="text-neutral-500">
+                            Every service is part of The Helpful Hive
                         </p>
                     </div>
 
-                    <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(340px, 1fr))', gap: '2rem', gridAutoRows: 'minmax(min-content, auto)', marginBottom: '2rem' }}>
+                    <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
                         {services.map((service, index) => (
-                            <Link
-                                key={index}
-                                href={service.href}
-                                style={{ textDecoration: 'none', display: 'flex', flexDirection: 'column' }}
-                            >
-                                <div style={{
-                                    backgroundColor: 'white',
-                                    padding: '2.5rem',
-                                    borderRadius: '1rem',
-                                    border: '1px solid #e5e7eb',
-                                    boxShadow: '0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06)',
-                                    position: 'relative',
-                                    cursor: 'pointer',
-                                    transition: 'box-shadow 0.2s ease, transform 0.2s ease',
-                                    flex: 1
-                                }}>
+                            <Link key={index} href={service.href} className="group">
+                                <div className={`relative bg-white rounded-2xl p-6 border transition-all duration-300 hover:shadow-card-hover hover:-translate-y-1 h-full ${service.popular ? 'border-honey-400 shadow-lg' : 'border-neutral-200'
+                                    }`}>
                                     {service.popular && (
-                                        <div style={{
-                                            position: 'absolute',
-                                            top: '-12px',
-                                            left: '32px',
-                                            backgroundColor: '#a67c00',
-                                            color: 'white',
-                                            padding: '0.25rem 1rem',
-                                            borderRadius: '12px',
-                                            fontSize: '0.8rem',
-                                            fontWeight: 600,
-                                            boxShadow: '0 2px 4px rgba(0,0,0,0.1)'
-                                        }}>
-                                            Most Popular
+                                        <div className="absolute -top-3 left-6">
+                                            <span className="inline-flex items-center gap-1 px-3 py-1 bg-honey-500 text-white text-xs font-medium rounded-full">
+                                                <Sparkles className="w-3 h-3" />
+                                                Most Popular
+                                            </span>
                                         </div>
                                     )}
 
-                                    <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start', marginBottom: '1rem' }}>
-                                        <div style={{ fontSize: '3rem' }}>{service.icon}</div>
-                                        <div style={{ textAlign: 'right' }}>
-                                            <div style={{ fontSize: '1.5rem', fontWeight: 700, color: '#a67c00' }}>
+                                    <div className="flex justify-between items-start mb-4">
+                                        <span className="text-4xl">{service.icon}</span>
+                                        <div className="text-right">
+                                            <span className="font-display text-2xl font-semibold text-honey-600">
                                                 {service.price}
-                                            </div>
-                                            <div style={{ fontSize: '0.9rem', color: '#6b7280' }}>
+                                            </span>
+                                            <span className="text-neutral-500 text-sm block">
                                                 {service.priceUnit}
-                                            </div>
+                                            </span>
                                         </div>
                                     </div>
 
-                                    <h3 style={{ fontSize: '1.5rem', fontWeight: 600, color: '#1f2937', marginBottom: '0.5rem' }}>
+                                    <h3 className="font-display text-xl font-medium text-neutral-900 mb-1">
                                         {service.title}
                                     </h3>
-                                    <p style={{ fontSize: '1.1rem', color: '#a67c00', fontStyle: 'italic', marginBottom: '1.5rem' }}>
+                                    <p className="text-honey-600 text-sm mb-4">
                                         {service.tagline}
                                     </p>
-                                    <ul style={{ listStyle: 'none', padding: 0, margin: 0 }}>
+
+                                    <ul className="space-y-2">
                                         {service.items.map((item, i) => (
-                                            <li key={i} style={{ fontSize: '1.05rem', color: '#6b7280', marginBottom: '0.5rem', display: 'flex', alignItems: 'center', gap: '0.75rem' }}>
-                                                <span style={{ color: '#E2C16B' }}>✓</span> {item}
+                                            <li key={i} className="flex items-center gap-2 text-neutral-600 text-sm">
+                                                <Check className="w-4 h-4 text-honey-500 flex-shrink-0" />
+                                                {item}
                                             </li>
                                         ))}
                                     </ul>
@@ -230,130 +183,99 @@ export default function ConciergePage() {
                             </Link>
                         ))}
                     </div>
-
-
                 </div>
-            </div>
+            </section>
 
             {/* How It Works */}
-            <div style={{ backgroundColor: 'white', padding: '4rem 2rem' }}>
-                <div style={{ maxWidth: '70rem', margin: '0 auto' }}>
-                    <h2 style={{ fontSize: '2rem', fontWeight: 400, color: '#1f2937', marginBottom: '0.5rem', textAlign: 'center', fontFamily: 'Georgia, serif', fontStyle: 'italic' }}>
+            <section className="py-16 md:py-24 px-4 md:px-8 bg-white">
+                <div className="max-w-4xl mx-auto">
+                    <h2 className="font-display text-2xl md:text-3xl font-medium text-neutral-900 text-center mb-4">
                         How It Works
                     </h2>
-                    <p style={{ color: '#6b7280', textAlign: 'center', marginBottom: '3rem' }}>
-                        Getting started with The Helpful Hive is simple. We make home management effortless from day one.
+                    <p className="text-neutral-500 text-center mb-12">
+                        Getting started is simple. We make home management effortless from day one.
                     </p>
 
-                    <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: '2rem' }}>
+                    <div className="grid md:grid-cols-3 gap-8">
                         {howItWorks.map((step, index) => (
-                            <div key={index} style={{ textAlign: 'center' }}>
-                                <div style={{
-                                    width: '48px',
-                                    height: '48px',
-                                    backgroundColor: '#E2C16B',
-                                    color: 'white',
-                                    borderRadius: '50%',
-                                    display: 'flex',
-                                    alignItems: 'center',
-                                    justifyContent: 'center',
-                                    margin: '0 auto 1rem',
-                                    fontSize: '1.25rem',
-                                    fontWeight: 700
-                                }}>
+                            <div key={index} className="text-center">
+                                <div className="w-12 h-12 rounded-full bg-honey-500 text-white font-display font-semibold text-lg flex items-center justify-center mx-auto mb-4">
                                     {step.step}
                                 </div>
-                                <h3 style={{ fontSize: '1.15rem', fontWeight: 600, color: '#1f2937', marginBottom: '0.5rem' }}>
+                                <h3 className="font-display font-medium text-neutral-900 mb-2">
                                     {step.title}
                                 </h3>
-                                <p style={{ color: '#6b7280', fontSize: '0.95rem' }}>
+                                <p className="text-neutral-500 text-sm leading-relaxed">
                                     {step.description}
                                 </p>
                             </div>
                         ))}
                     </div>
                 </div>
-            </div>
+            </section>
 
             {/* Meet Your Concierge */}
-            <div style={{ backgroundColor: '#f8f9fa', padding: '4rem 2rem' }}>
-                <div style={{ maxWidth: '60rem', margin: '0 auto', display: 'flex', gap: '3rem', alignItems: 'center', flexWrap: 'wrap', justifyContent: 'center' }}>
-                    <div style={{
-                        width: '200px',
-                        height: '200px',
-                        borderRadius: '50%',
-                        overflow: 'hidden',
-                        border: '4px solid #E2C16B',
-                        flexShrink: 0
-                    }}>
-                        <Image
-                            src="/queen-bee.jpg"
-                            alt="The Queen Bee"
-                            width={200}
-                            height={200}
-                            style={{ objectFit: 'cover', width: '100%', height: '100%' }}
-                        />
-                    </div>
-                    <div style={{ flex: 1, minWidth: '300px' }}>
-                        <p style={{ fontSize: '2rem', color: '#E2C16B', fontWeight: 400, marginBottom: '0.5rem', fontFamily: 'Georgia, serif', fontStyle: 'italic' }}>Our Queen Bee</p>
-                        <h2 style={{ fontSize: '2rem', fontWeight: 400, color: '#1f2937', marginBottom: '1rem', fontFamily: 'Georgia, serif', fontStyle: 'italic' }}>
-                            Meet Your Home Concierge
-                        </h2>
-                        <p style={{ color: '#4b5563', marginBottom: '1rem', lineHeight: 1.7 }}>
-                            Hi there! I'm the founder of The Helpful Hive, and I understand firsthand how overwhelming home management can be. As a wife, mom, and busy professional, I know that keeping a home running smoothly takes more than just time—it takes coordination, attention to detail, and a network of trusted service providers.
-                        </p>
-                        <p style={{ color: '#4b5563', marginBottom: '1rem', lineHeight: 1.7 }}>
-                            That's why I created The Helpful Hive. My mission is to help busy families, seasonal residents, and anyone who needs a helping hand with their home.
-                        </p>
-
+            <section className="py-16 md:py-24 px-4 md:px-8 bg-neutral-100">
+                <div className="max-w-4xl mx-auto">
+                    <div className="grid md:grid-cols-[200px_1fr] gap-8 items-center">
+                        <div className="flex justify-center md:justify-start">
+                            <div className="relative w-40 h-40 md:w-48 md:h-48">
+                                <Image
+                                    src="/queen-bee.jpg"
+                                    alt="The Queen Bee"
+                                    fill
+                                    className="object-cover rounded-full border-4 border-honey-400"
+                                />
+                            </div>
+                        </div>
+                        <div>
+                            <p className="text-honey-600 font-medium mb-1">Our Queen Bee</p>
+                            <h2 className="font-display text-2xl md:text-3xl font-medium text-neutral-900 mb-4">
+                                Meet Your Home Concierge
+                            </h2>
+                            <p className="text-neutral-600 mb-4 leading-relaxed">
+                                Hi there! I'm the founder of The Helpful Hive. As a wife, mom, and busy professional, I know that keeping a home running smoothly takes coordination, attention to detail, and a network of trusted service providers.
+                            </p>
+                            <p className="text-neutral-600 leading-relaxed">
+                                That's why I created The Helpful Hive—to help busy families with their home management needs.
+                            </p>
+                        </div>
                     </div>
                 </div>
-            </div>
-
-
+            </section>
 
             {/* CTA Section */}
-            <div style={{
-                background: 'linear-gradient(135deg, #3C3C3C 0%, #2d2d2d 100%)',
-                padding: '4rem 2rem',
-                textAlign: 'center'
-            }}>
-                <h2 style={{ fontSize: '2rem', fontWeight: 400, color: 'white', marginBottom: '0.75rem', fontFamily: 'Georgia, serif', fontStyle: 'italic' }}>
-                    Get in Touch
-                </h2>
-                <p style={{ color: 'rgba(255,255,255,0.8)', marginBottom: '1.5rem', fontSize: '1.1rem' }}>
-                    Ready to experience stress-free home management? Reach out today for a free consultation.
-                </p>
-                <div style={{ display: 'flex', gap: '1rem', justifyContent: 'center', flexWrap: 'wrap' }}>
-                    <Link href="/contact" style={{
-                        padding: '0.875rem 2rem',
-                        backgroundColor: '#E2C16B',
-                        color: 'white',
-                        fontWeight: 600,
-                        borderRadius: '9999px',
-                        textDecoration: 'none'
-                    }}>
-                        Schedule a Consultation
-                    </Link>
-                    <a href="tel:+13145267240" style={{
-                        padding: '0.875rem 2rem',
-                        border: '2px solid white',
-                        color: 'white',
-                        fontWeight: 600,
-                        borderRadius: '9999px',
-                        textDecoration: 'none'
-                    }}>
-                        Call (314) 526-7240
-                    </a>
+            <section className="py-16 md:py-24 px-4 md:px-8 bg-neutral-900">
+                <div className="max-w-3xl mx-auto text-center">
+                    <h2 className="font-display text-2xl md:text-3xl font-medium text-white mb-4">
+                        Get in Touch
+                    </h2>
+                    <p className="text-neutral-400 mb-8">
+                        Ready to experience stress-free home management? Reach out today for a free consultation.
+                    </p>
+                    <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                        <Link
+                            href="/contact"
+                            className="px-8 py-3 bg-honey-500 text-white font-medium rounded-full hover:bg-honey-600 transition-all"
+                        >
+                            Schedule a Consultation
+                        </Link>
+                        <a
+                            href="tel:+13145267240"
+                            className="px-8 py-3 bg-transparent border-2 border-white/30 text-white font-medium rounded-full hover:bg-white/10 transition-all"
+                        >
+                            Call (314) 526-7240
+                        </a>
+                    </div>
                 </div>
-            </div>
+            </section>
 
-            {/* Footer Info */}
-            <div style={{ backgroundColor: '#f8f9fa', padding: '1.5rem 2rem', textAlign: 'center' }}>
-                <p style={{ color: '#6b7280', fontSize: '0.9rem', margin: 0 }}>
+            {/* Service Area */}
+            <section className="py-6 px-4 bg-neutral-100 text-center">
+                <p className="text-neutral-500 text-sm">
                     Serving Wentzville, Lake St. Louis, O'Fallon, and surrounding St. Charles County areas.
                 </p>
-            </div>
+            </section>
         </main>
     );
 }

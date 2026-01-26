@@ -1,18 +1,9 @@
 'use client';
 
 import Link from 'next/link';
-import { useState, useEffect } from 'react';
+import { Check, Star, Users, Lightbulb, DollarSign, MapPin } from 'lucide-react';
 
 export default function BookkeepingPage() {
-    const [isMobile, setIsMobile] = useState(false);
-
-    useEffect(() => {
-        const checkMobile = () => setIsMobile(window.innerWidth < 768);
-        checkMobile();
-        window.addEventListener('resize', checkMobile);
-        return () => window.removeEventListener('resize', checkMobile);
-    }, []);
-
     const services = [
         {
             title: 'Monthly Bookkeeping',
@@ -20,7 +11,8 @@ export default function BookkeepingPage() {
             period: '/month',
             description: 'Complete monthly financial management',
             features: ['Bank reconciliation', 'AP/AR management', 'Financial statements', 'Unlimited support'],
-            href: '/bookkeeping/services/monthly-bookkeeping'
+            href: '/bookkeeping/services/monthly-bookkeeping',
+            popular: false
         },
         {
             title: 'Full-Service Payroll',
@@ -28,15 +20,17 @@ export default function BookkeepingPage() {
             period: '/month',
             description: 'Hassle-free payroll processing',
             features: ['Direct deposit & checks', 'Tax filing & compliance', 'W-2 & 1099 preparation', 'Quarterly reporting'],
-            href: '/bookkeeping/services/payroll'
+            href: '/bookkeeping/services/payroll',
+            popular: true
         },
         {
             title: 'QuickBooks Cleanup',
             price: '$500 - $2,500',
-            period: ' per project',
+            period: '',
             description: 'Get your books back on track',
             features: ['Error correction', 'Chart of accounts organization', 'Historical data catch-up', 'Training included'],
-            href: '/bookkeeping/services/quickbooks-cleanup'
+            href: '/bookkeeping/services/quickbooks-cleanup',
+            popular: false
         },
         {
             title: 'CFO & Advisory',
@@ -44,238 +38,163 @@ export default function BookkeepingPage() {
             period: '/month',
             description: 'Strategic financial guidance',
             features: ['Cash flow management', 'Budgeting & forecasting', 'Strategic planning', 'Growth consulting'],
-            href: '/bookkeeping/services/cfo-advisory'
+            href: '/bookkeeping/services/cfo-advisory',
+            popular: false
         }
     ];
 
     const whyChoose = [
-        { title: 'Expert Team', description: 'Certified professionals with years of industry experience' },
-        { title: 'Personalized Service', description: 'Tailored solutions that fit your specific business needs' },
-        { title: 'Affordable Solutions', description: 'Transparent pricing with no hidden fees' },
-        { title: 'Local Focus', description: 'Serving St. Louis and surrounding counties with care' }
+        { icon: Users, title: 'Expert Team', description: 'Certified professionals with years of industry experience' },
+        { icon: Lightbulb, title: 'Personalized Service', description: 'Tailored solutions that fit your specific business needs' },
+        { icon: DollarSign, title: 'Affordable Solutions', description: 'Transparent pricing with no hidden fees' },
+        { icon: MapPin, title: 'Local Focus', description: 'Serving St. Louis and surrounding counties with care' }
     ];
 
     return (
-        <main style={{ minHeight: 'calc(100vh - 96px)', backgroundColor: '#f8f9fa' }}>
+        <main className="min-h-screen bg-neutral-50">
             {/* Hero Section */}
-            <div style={{
-                background: '#E2C16B',
-                padding: isMobile ? '2rem 1rem' : '4rem 2rem',
-                textAlign: 'center'
-            }}>
-                <h1 style={{
-                    fontSize: isMobile ? '1.75rem' : '3rem',
-                    fontWeight: 400,
-                    color: '#1f2937',
-                    marginBottom: '1rem',
-                    fontFamily: 'Georgia, serif',
-                    fontStyle: 'italic'
-                }}>
-                    Taking the Sting Out of Business Finances
-                </h1>
-                <p style={{
-                    fontSize: isMobile ? '1rem' : '1.25rem',
-                    color: '#374151',
-                    maxWidth: '100%',
-                    margin: '0 auto 0.75rem auto',
-                    whiteSpace: isMobile ? 'normal' : 'nowrap',
-                    padding: isMobile ? '0 0.5rem' : 0
-                }}>
-                    Expert bookkeeping and financial management for small businesses in St. Louis and surrounding counties.
-                </p>
-                <p style={{ fontSize: isMobile ? '1rem' : '1.25rem', color: '#374151', maxWidth: '700px', margin: '0 auto' }}>
-                    Let us handle your finances while you focus on growth.
-                </p>
-            </div>
-
-            {/* Transparent Pricing Section */}
-            <div style={{ maxWidth: '80rem', margin: '0 auto', padding: isMobile ? '2rem 1rem' : '3rem 2rem' }}>
-                <div style={{ textAlign: 'center', marginBottom: '2.5rem' }}>
-                    <h2 style={{ fontSize: isMobile ? '1.5rem' : '2.25rem', fontWeight: 400, color: '#1f2937', marginBottom: '0.5rem', fontFamily: 'Georgia, serif', fontStyle: 'italic' }}>
-                        Transparent Pricing
-                    </h2>
-                    <p style={{ color: '#6b7280', fontSize: isMobile ? '1rem' : '1.1rem' }}>
-                        Competitive rates designed to help your business thrive
+            <section className="relative py-16 md:py-24 px-4 md:px-8 bg-gradient-warm">
+                <div className="max-w-4xl mx-auto text-center">
+                    <h1 className="font-display text-3xl md:text-5xl font-medium text-neutral-900 mb-4">
+                        Taking the Sting Out of
+                        <br />
+                        <span className="text-gradient-honey">Business Finances</span>
+                    </h1>
+                    <p className="text-neutral-600 text-lg md:text-xl max-w-2xl mx-auto">
+                        Expert bookkeeping and financial management for small businesses in St. Louis and surrounding counties.
                     </p>
                 </div>
+            </section>
 
-                <div style={{
-                    display: 'grid',
-                    gridTemplateColumns: isMobile ? '1fr' : 'repeat(2, 1fr)',
-                    gap: '2rem',
-                    gridAutoRows: 'minmax(min-content, auto)',
-                    marginBottom: '2rem'
-                }}>
-                    {services.map((service, index) => (
-                        <Link
-                            key={index}
-                            href={service.href}
-                            style={{ textDecoration: 'none', display: 'flex', flexDirection: 'column' }}
-                        >
-                            <div style={{
-                                backgroundColor: 'white',
-                                padding: isMobile ? '1.5rem' : '2rem',
-                                borderRadius: '0.75rem',
-                                boxShadow: '0 1px 3px rgba(0, 0, 0, 0.1)',
-                                border: '1px solid #e5e7eb',
-                                flex: 1,
-                                transition: 'box-shadow 0.2s ease, transform 0.2s ease',
-                                cursor: 'pointer'
-                            }}>
-                                <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', marginBottom: '0.75rem' }}>
-                                    <span style={{ color: '#E2C16B', fontSize: '1.25rem' }}>★</span>
-                                    <h3 style={{ fontSize: isMobile ? '1.1rem' : '1.25rem', fontWeight: 600, color: '#1f2937', margin: 0 }}>
-                                        {service.title}
-                                    </h3>
+            {/* Pricing Section */}
+            <section className="py-16 md:py-24 px-4 md:px-8">
+                <div className="max-w-6xl mx-auto">
+                    <div className="text-center mb-12">
+                        <h2 className="font-display text-2xl md:text-3xl font-medium text-neutral-900 mb-3">
+                            Transparent Pricing
+                        </h2>
+                        <p className="text-neutral-500">
+                            Competitive rates designed to help your business thrive
+                        </p>
+                    </div>
+
+                    <div className="grid md:grid-cols-2 gap-6">
+                        {services.map((service, index) => (
+                            <Link key={index} href={service.href} className="group">
+                                <div className={`relative bg-white rounded-2xl p-6 md:p-8 border transition-all duration-300 hover:shadow-card-hover hover:-translate-y-1 h-full ${service.popular ? 'border-honey-400 shadow-lg' : 'border-neutral-200'
+                                    }`}>
+                                    {service.popular && (
+                                        <div className="absolute -top-3 left-6">
+                                            <span className="inline-flex items-center gap-1 px-3 py-1 bg-honey-500 text-white text-xs font-medium rounded-full">
+                                                <Star className="w-3 h-3" />
+                                                Popular
+                                            </span>
+                                        </div>
+                                    )}
+
+                                    <div className="mb-4">
+                                        <h3 className="font-display text-xl font-medium text-neutral-900 mb-1">
+                                            {service.title}
+                                        </h3>
+                                        <p className="text-neutral-500 text-sm">
+                                            {service.description}
+                                        </p>
+                                    </div>
+
+                                    <div className="mb-6">
+                                        <span className="font-display text-3xl font-semibold text-neutral-900">
+                                            {service.price}
+                                        </span>
+                                        <span className="text-neutral-500 text-sm">
+                                            {service.period}
+                                        </span>
+                                    </div>
+
+                                    <ul className="space-y-3">
+                                        {service.features.map((feature, i) => (
+                                            <li key={i} className="flex items-start gap-3 text-neutral-600 text-sm">
+                                                <Check className="w-5 h-5 text-honey-500 flex-shrink-0 mt-0.5" />
+                                                {feature}
+                                            </li>
+                                        ))}
+                                    </ul>
                                 </div>
-                                <div style={{ marginBottom: '0.5rem' }}>
-                                    <span style={{ fontSize: isMobile ? '1.5rem' : '2rem', fontWeight: 700, color: '#1f2937' }}>{service.price}</span>
-                                    <span style={{ color: '#6b7280', fontSize: isMobile ? '0.875rem' : '1rem' }}>{service.period}</span>
-                                </div>
-                                <p style={{ color: '#6b7280', marginBottom: '1rem', fontSize: isMobile ? '0.875rem' : '0.95rem' }}>
-                                    {service.description}
-                                </p>
-                                <ul style={{ listStyle: 'none', padding: 0, margin: 0, color: '#4b5563', fontSize: isMobile ? '0.85rem' : '0.9rem' }}>
-                                    {service.features.map((feature, i) => (
-                                        <li key={i} style={{ marginBottom: '0.35rem', display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
-                                            <span style={{ color: '#3C3C3C' }}>✓</span> {feature}
-                                        </li>
-                                    ))}
-                                </ul>
-                            </div>
-                        </Link>
-                    ))}
-                </div>
-
-            </div>
-
-            {/* Special Rates Card */}
-            <div style={{
-                display: 'flex',
-                flexDirection: isMobile ? 'column' : 'row',
-                alignItems: 'center',
-                gap: '1rem',
-                backgroundColor: 'white',
-                padding: isMobile ? '1.25rem 1.5rem' : '1.25rem 2rem',
-                borderRadius: isMobile ? '1rem' : '9999px',
-                maxWidth: isMobile ? '90%' : '600px',
-                margin: isMobile ? '2rem auto 3rem auto' : '2rem auto 4rem auto',
-                boxShadow: '0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06)',
-                textAlign: isMobile ? 'center' : 'left'
-            }}>
-                <div style={{
-                    width: '48px',
-                    height: '48px',
-                    backgroundColor: '#FFF8E7',
-                    borderRadius: '50%',
-                    display: 'flex',
-                    alignItems: 'center',
-                    justifyContent: 'center',
-                    border: '2px solid #E2C16B',
-                    flexShrink: 0
-                }}>
-                    <span style={{ fontSize: '1.5rem' }}>🍯</span>
-                </div>
-                <div>
-                    <p style={{ fontWeight: 600, color: '#1f2937', margin: 0, fontSize: isMobile ? '0.95rem' : '1rem' }}>
-                        Special introductory rates for new clients.
-                    </p>
-                    <p style={{ color: '#6b7280', margin: 0, fontSize: isMobile ? '0.85rem' : '0.9rem' }}>
-                        Contact us for a free consultation and custom quote.
-                    </p>
-                </div>
-            </div>
-
-            {/* Why Choose Us Section */}
-            <div style={{ backgroundColor: 'white', padding: isMobile ? '2rem 1rem' : '3rem 2rem' }}>
-                <div style={{ maxWidth: '80rem', margin: '0 auto' }}>
-                    <h2 style={{
-                        fontSize: isMobile ? '1.5rem' : '2rem',
-                        fontWeight: 400,
-                        color: '#1f2937',
-                        marginBottom: '2rem',
-                        textAlign: 'center',
-                        fontFamily: 'Georgia, serif',
-                        fontStyle: 'italic'
-                    }}>
-                        Why Choose The Helpful Hive?
-                    </h2>
-                    <div style={{ display: 'grid', gridTemplateColumns: isMobile ? 'repeat(2, 1fr)' : 'repeat(4, 1fr)', gap: isMobile ? '1.5rem' : '2rem' }}>
-                        {whyChoose.map((item, index) => (
-                            <div key={index} style={{ textAlign: 'center' }}>
-                                <h3 style={{ fontSize: isMobile ? '1rem' : '1.15rem', fontWeight: 600, color: '#1f2937', marginBottom: '0.5rem' }}>
-                                    {item.title}
-                                </h3>
-                                <p style={{ color: '#6b7280', fontSize: isMobile ? '0.85rem' : '0.95rem', margin: 0 }}>
-                                    {item.description}
-                                </p>
-                            </div>
+                            </Link>
                         ))}
                     </div>
+
+                    {/* Special Rates Banner */}
+                    <div className="mt-10 bg-white rounded-2xl p-6 md:p-8 border border-honey-200 max-w-2xl mx-auto text-center">
+                        <p className="text-neutral-900 font-medium mb-1">
+                            🍯 Special introductory rates for new clients
+                        </p>
+                        <p className="text-neutral-500 text-sm">
+                            Contact us for a free consultation and custom quote
+                        </p>
+                    </div>
                 </div>
-            </div>
+            </section>
+
+            {/* Why Choose Us */}
+            <section className="py-16 md:py-24 px-4 md:px-8 bg-white">
+                <div className="max-w-5xl mx-auto">
+                    <h2 className="font-display text-2xl md:text-3xl font-medium text-neutral-900 text-center mb-12">
+                        Why Choose The Helpful Hive?
+                    </h2>
+
+                    <div className="grid grid-cols-2 md:grid-cols-4 gap-6 md:gap-8">
+                        {whyChoose.map((item, index) => {
+                            const Icon = item.icon;
+                            return (
+                                <div key={index} className="text-center">
+                                    <div className="w-12 h-12 rounded-xl bg-honey-100 flex items-center justify-center mx-auto mb-4">
+                                        <Icon className="w-6 h-6 text-honey-600" />
+                                    </div>
+                                    <h3 className="font-display font-medium text-neutral-900 mb-2">
+                                        {item.title}
+                                    </h3>
+                                    <p className="text-neutral-500 text-sm leading-relaxed">
+                                        {item.description}
+                                    </p>
+                                </div>
+                            );
+                        })}
+                    </div>
+                </div>
+            </section>
 
             {/* CTA Section */}
-            <div style={{
-                background: 'linear-gradient(135deg, #3C3C3C 0%, #2d2d2d 100%)',
-                padding: isMobile ? '2rem 1rem' : '3rem 2rem',
-                textAlign: 'center'
-            }}>
-                <h2 style={{
-                    fontSize: isMobile ? '1.5rem' : '2rem',
-                    fontWeight: 400,
-                    color: 'white',
-                    marginBottom: '1rem',
-                    fontFamily: 'Georgia, serif',
-                    fontStyle: 'italic'
-                }}>
-                    Ready to Organize Your Finances?
-                </h2>
-                <p style={{ color: 'rgba(255,255,255,0.8)', marginBottom: '1.5rem', fontSize: isMobile ? '1rem' : '1.1rem', padding: isMobile ? '0 0.5rem' : 0 }}>
-                    Contact us today for a free consultation and let The Helpful Hive take the sting out of your business finances.
-                </p>
-                <div style={{ display: 'flex', gap: '1rem', justifyContent: 'center', flexWrap: 'wrap' }}>
-                    <Link
-                        href="/contact"
-                        style={{
-                            display: 'inline-block',
-                            padding: isMobile ? '0.75rem 1.5rem' : '0.875rem 2rem',
-                            backgroundColor: '#E2C16B',
-                            color: 'white',
-                            fontSize: isMobile ? '0.95rem' : '1rem',
-                            fontWeight: 600,
-                            borderRadius: '9999px',
-                            textDecoration: 'none'
-                        }}
-                    >
-                        Schedule Free Consultation
-                    </Link>
-                    <a
-                        href="tel:+13145267240"
-                        style={{
-                            display: 'inline-block',
-                            padding: isMobile ? '0.75rem 1.5rem' : '0.875rem 2rem',
-                            backgroundColor: 'transparent',
-                            border: '2px solid white',
-                            color: 'white',
-                            fontSize: isMobile ? '0.95rem' : '1rem',
-                            fontWeight: 600,
-                            borderRadius: '9999px',
-                            textDecoration: 'none'
-                        }}
-                    >
-                        Call (314) 526-7240
-                    </a>
+            <section className="py-16 md:py-24 px-4 md:px-8 bg-neutral-900">
+                <div className="max-w-3xl mx-auto text-center">
+                    <h2 className="font-display text-2xl md:text-3xl font-medium text-white mb-4">
+                        Ready to Organize Your Finances?
+                    </h2>
+                    <p className="text-neutral-400 mb-8 max-w-xl mx-auto">
+                        Contact us today for a free consultation and let The Helpful Hive take the sting out of your business finances.
+                    </p>
+                    <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                        <Link
+                            href="/contact"
+                            className="px-8 py-3 bg-honey-500 text-white font-medium rounded-full hover:bg-honey-600 transition-all"
+                        >
+                            Schedule Free Consultation
+                        </Link>
+                        <a
+                            href="tel:+13145267240"
+                            className="px-8 py-3 bg-transparent border-2 border-white/30 text-white font-medium rounded-full hover:bg-white/10 transition-all"
+                        >
+                            Call (314) 526-7240
+                        </a>
+                    </div>
                 </div>
-            </div>
+            </section>
 
-            {/* Footer Info */}
-            <div style={{ backgroundColor: '#f8f9fa', padding: '1.5rem 2rem', textAlign: 'center' }}>
-                <p style={{ color: '#6b7280', fontSize: isMobile ? '0.8rem' : '0.9rem', margin: 0 }}>
+            {/* Service Area */}
+            <section className="py-6 px-4 bg-neutral-100 text-center">
+                <p className="text-neutral-500 text-sm">
                     Servicing St. Louis, St. Charles, Lincoln, and Warren County Missouri. Remote services also available.
                 </p>
-            </div>
+            </section>
         </main>
     );
 }
-

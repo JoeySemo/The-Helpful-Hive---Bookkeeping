@@ -2,126 +2,87 @@
 
 import { Mail, Phone, MapPin } from "lucide-react";
 import Image from "next/image";
-import { useState, useEffect } from 'react';
 
 export default function ContactPage() {
-    const [isMobile, setIsMobile] = useState(false);
-
-    useEffect(() => {
-        const checkMobile = () => setIsMobile(window.innerWidth < 768);
-        checkMobile();
-        window.addEventListener('resize', checkMobile);
-        return () => window.removeEventListener('resize', checkMobile);
-    }, []);
+    const contactMethods = [
+        {
+            icon: Phone,
+            title: 'Phone',
+            value: '(314) 526-7240',
+            href: 'tel:+13145267240',
+            clickable: true
+        },
+        {
+            icon: Mail,
+            title: 'Email',
+            value: 'hellohelpfulhive@gmail.com',
+            href: 'mailto:hellohelpfulhive@gmail.com',
+            clickable: true
+        },
+        {
+            icon: MapPin,
+            title: 'Location',
+            value: 'Wentzville, MO',
+            href: null,
+            clickable: false
+        }
+    ];
 
     return (
-        <main style={{
-            minHeight: 'calc(100vh - 96px)',
-            background: 'linear-gradient(135deg, #FFF8E7 0%, rgba(191, 200, 161, 0.2) 100%)',
-            display: 'flex',
-            flexDirection: 'column',
-            alignItems: 'center',
-            justifyContent: 'center',
-            padding: isMobile ? '2rem 1rem' : '3rem 2rem'
-        }}>
-            {/* Header */}
-            <div style={{ textAlign: 'center', marginBottom: isMobile ? '1.5rem' : '2rem' }}>
-                <h1 style={{
-                    fontSize: isMobile ? '2rem' : '3.5rem',
-                    fontWeight: 400,
-                    color: '#3C3C3C',
-                    marginBottom: '1rem',
-                    fontFamily: 'Georgia, serif',
-                    fontStyle: 'italic'
-                }}>
-                    Meet the Queen Bee
-                </h1>
+        <main className="min-h-[calc(100vh-80px)] bg-gradient-warm py-16 md:py-24 px-4 md:px-8">
+            <div className="max-w-4xl mx-auto">
+                {/* Header */}
+                <div className="text-center mb-12">
+                    <h1 className="font-display text-3xl md:text-5xl font-medium text-neutral-900 mb-4">
+                        Meet the <span className="text-gradient-honey">Queen Bee</span>
+                    </h1>
 
-                {/* Queen Bee Photo */}
-                <div style={{
-                    position: 'relative',
-                    width: isMobile ? '180px' : '280px',
-                    height: isMobile ? '180px' : '280px',
-                    margin: '0 auto 1.5rem auto',
-                    borderRadius: '50%',
-                    overflow: 'hidden',
-                    boxShadow: '0 8px 24px rgba(0, 0, 0, 0.15)',
-                    border: '4px solid #E2C16B'
-                }}>
-                    <Image
-                        src="/queen-bee.jpg"
-                        alt="The Queen Bee"
-                        fill
-                        style={{ objectFit: 'cover' }}
-                    />
+                    {/* Photo */}
+                    <div className="relative w-40 h-40 md:w-56 md:h-56 mx-auto mb-6">
+                        <Image
+                            src="/queen-bee.jpg"
+                            alt="The Queen Bee"
+                            fill
+                            className="object-cover rounded-full border-4 border-honey-400 shadow-float"
+                        />
+                    </div>
+
+                    <p className="text-neutral-600 text-lg max-w-xl mx-auto">
+                        Ready to simplify your life or business? We'd love to hear from you.
+                    </p>
                 </div>
 
-                <p style={{
-                    fontSize: isMobile ? '1.1rem' : '1.5rem',
-                    color: '#3C3C3C',
-                    fontWeight: 500,
-                    padding: isMobile ? '0 0.5rem' : 0
-                }}>
-                    Ready to simplify your life or business? We'd love to hear from you.
-                </p>
-            </div>
+                {/* Contact Cards */}
+                <div className="grid md:grid-cols-3 gap-6">
+                    {contactMethods.map((method, index) => {
+                        const Icon = method.icon;
+                        const cardContent = (
+                            <div className={`bg-white rounded-2xl p-6 md:p-8 text-center transition-all duration-300 ${method.clickable ? 'hover:shadow-card-hover hover:-translate-y-1 cursor-pointer' : ''
+                                } border border-neutral-200/50`}>
+                                <div className="w-14 h-14 rounded-xl bg-honey-100 flex items-center justify-center mx-auto mb-4">
+                                    <Icon className="w-7 h-7 text-honey-600" />
+                                </div>
+                                <h3 className="font-display text-lg font-medium text-neutral-900 mb-2">
+                                    {method.title}
+                                </h3>
+                                <p className="text-neutral-600 break-words">
+                                    {method.value}
+                                </p>
+                            </div>
+                        );
 
-            {/* Contact Info Cards */}
-            <div style={{
-                display: 'grid',
-                gridTemplateColumns: isMobile ? '1fr' : 'repeat(3, 1fr)',
-                gap: isMobile ? '1rem' : '2rem',
-                maxWidth: '900px',
-                width: '100%'
-            }}>
-                {/* Phone - Entire box clickable */}
-                <a href="tel:+13145267240" style={{ textDecoration: 'none', display: 'block' }}>
-                    <div style={{
-                        backgroundColor: 'rgba(255, 255, 255, 0.9)',
-                        borderRadius: '1rem',
-                        padding: isMobile ? '1.5rem' : '2rem',
-                        textAlign: 'center',
-                        boxShadow: '0 4px 6px -1px rgba(0, 0, 0, 0.1)',
-                        cursor: 'pointer',
-                        transition: 'box-shadow 0.2s ease, transform 0.2s ease'
-                    }}>
-                        <Phone style={{ width: isMobile ? '36px' : '48px', height: isMobile ? '36px' : '48px', color: '#E2C16B', marginBottom: '1rem' }} />
-                        <h3 style={{ fontSize: isMobile ? '1.25rem' : '1.5rem', fontWeight: 600, color: '#3C3C3C', marginBottom: '0.5rem' }}>Phone</h3>
-                        <p style={{ fontSize: isMobile ? '1rem' : '1.15rem', color: '#6b7280' }}>(314) 526-7240</p>
-                    </div>
-                </a>
-
-                {/* Email - Entire box clickable */}
-                <a href="mailto:hellohelpfulhive@gmail.com" style={{ textDecoration: 'none', display: 'block' }}>
-                    <div style={{
-                        backgroundColor: 'rgba(255, 255, 255, 0.9)',
-                        borderRadius: '1rem',
-                        padding: isMobile ? '1.5rem' : '2rem',
-                        textAlign: 'center',
-                        boxShadow: '0 4px 6px -1px rgba(0, 0, 0, 0.1)',
-                        cursor: 'pointer',
-                        transition: 'box-shadow 0.2s ease, transform 0.2s ease'
-                    }}>
-                        <Mail style={{ width: isMobile ? '36px' : '48px', height: isMobile ? '36px' : '48px', color: '#E2C16B', marginBottom: '1rem' }} />
-                        <h3 style={{ fontSize: isMobile ? '1.25rem' : '1.5rem', fontWeight: 600, color: '#3C3C3C', marginBottom: '0.5rem' }}>Email</h3>
-                        <p style={{ fontSize: isMobile ? '0.9rem' : '1.15rem', color: '#6b7280', whiteSpace: 'nowrap' }}>hellohelpfulhive@gmail.com</p>
-                    </div>
-                </a>
-
-                {/* Location */}
-                <div style={{
-                    backgroundColor: 'rgba(255, 255, 255, 0.9)',
-                    borderRadius: '1rem',
-                    padding: isMobile ? '1.5rem' : '2rem',
-                    textAlign: 'center',
-                    boxShadow: '0 4px 6px -1px rgba(0, 0, 0, 0.1)'
-                }}>
-                    <MapPin style={{ width: isMobile ? '36px' : '48px', height: isMobile ? '36px' : '48px', color: '#E2C16B', marginBottom: '1rem' }} />
-                    <h3 style={{ fontSize: isMobile ? '1.25rem' : '1.5rem', fontWeight: 600, color: '#3C3C3C', marginBottom: '0.5rem' }}>Location</h3>
-                    <p style={{ fontSize: isMobile ? '1rem' : '1.15rem', color: '#6b7280' }}>Wentzville, MO</p>
+                        return method.clickable ? (
+                            <a key={index} href={method.href!} className="block">
+                                {cardContent}
+                            </a>
+                        ) : (
+                            <div key={index}>
+                                {cardContent}
+                            </div>
+                        );
+                    })}
                 </div>
             </div>
         </main>
     );
 }
-
