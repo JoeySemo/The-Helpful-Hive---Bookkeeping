@@ -22,7 +22,9 @@ export default function Navbar() {
 
   const navLinks = [
     { href: '/', label: 'Home' },
-    { href: '/for-home-and-life', label: 'Home Concierge' },
+    { href: '/pet-care', label: 'Pet Care' },
+    { href: '/home-care', label: 'Home Care' },
+    { href: '/administrative-care', label: 'Administrative Care' },
     { href: '/for-business-and-money', label: 'Bookkeeping' },
   ];
 

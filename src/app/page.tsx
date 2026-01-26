@@ -106,12 +106,24 @@ export default function HomePage() {
 
 
           {/* Dual CTAs */}
-          <div className="flex flex-col sm:flex-row gap-4 justify-center animate-fade-up delay-300">
+          <div className="flex flex-col sm:flex-row flex-wrap gap-4 justify-center animate-fade-up delay-300">
             <Link
-              href="/for-home-and-life"
+              href="/pet-care"
               className="px-8 py-4 bg-[#E2C16B] text-[#3C3C3C] font-semibold rounded-full hover:bg-[#d4b35f] transition-all hover:shadow-lg hover:-translate-y-1"
             >
-              Home Concierge
+              Pet Care
+            </Link>
+            <Link
+              href="/home-care"
+              className="px-8 py-4 bg-[#E2C16B] text-[#3C3C3C] font-semibold rounded-full hover:bg-[#d4b35f] transition-all hover:shadow-lg hover:-translate-y-1"
+            >
+              Home Care
+            </Link>
+            <Link
+              href="/administrative-care"
+              className="px-8 py-4 bg-[#E2C16B] text-[#3C3C3C] font-semibold rounded-full hover:bg-[#d4b35f] transition-all hover:shadow-lg hover:-translate-y-1"
+            >
+              Administrative Care
             </Link>
             <Link
               href="/for-business-and-money"
