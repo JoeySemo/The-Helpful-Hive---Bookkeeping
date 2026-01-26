@@ -30,7 +30,7 @@ export default function AdministrativeCarePage() {
                                 <span className="text-[#E2C16B]">Support</span>
                             </h1>
                             <p className="text-[#3C3C3C]/80 text-lg mb-8 leading-relaxed">
-                                Errands, Events, and Everything In Between.
+                                Systems That Keep Your Hive Humming
                             </p>
                             <div className="flex flex-wrap gap-4">
                                 <Link
