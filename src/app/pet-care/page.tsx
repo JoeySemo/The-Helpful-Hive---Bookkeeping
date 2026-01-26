@@ -30,7 +30,7 @@ export default function PetCarePage() {
                                 <span className="text-[#E2C16B]">Pet Care</span>
                             </h1>
                             <p className="text-[#3C3C3C]/80 text-lg mb-8 leading-relaxed">
-                                Pet Care That is the Bee's Knees
+                                Guarding Your Hive, Loving Your Pets
                             </p>
                             <div className="flex flex-wrap gap-4">
                                 <Link
@@ -68,7 +68,7 @@ export default function PetCarePage() {
             {/* Tagline Banner */}
             <section className="py-12 px-4 bg-white border-y border-[#E2C16B]/20">
                 <p className="font-display text-2xl md:text-3xl text-[#3C3C3C] text-center font-medium max-w-3xl mx-auto">
-                    "Guarding your hive, loving your pets."
+                    "Pet Care That is the <span className="text-[#E2C16B] italic">Bee's Knees</span>"
                 </p>
             </section>
 
