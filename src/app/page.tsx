@@ -101,7 +101,7 @@ export default function HomePage() {
           <h1 className="font-display text-4xl md:text-6xl font-medium text-[#3C3C3C] mb-6 animate-fade-up delay-100">
             Even The Busiest Bees
             <br />
-            <span className="text-gradient-honey">Need A Little Help.</span>
+            <span className="text-gradient-honey">Need a Little Help.</span>
           </h1>
 
 
