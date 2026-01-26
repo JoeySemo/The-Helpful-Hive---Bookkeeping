@@ -5,7 +5,8 @@ import Footer from './Footer';
 
 export default function FooterWrapper() {
     const pathname = usePathname();
-    const isHomePage = pathname === '/';
+    const compactPages = ['/', '/for-home-and-life', '/for-business-and-money'];
+    const isCompact = compactPages.includes(pathname);
 
-    return <Footer compact={isHomePage} />;
+    return <Footer compact={isCompact} />;
 }
