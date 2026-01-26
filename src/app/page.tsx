@@ -99,9 +99,9 @@ export default function HomePage() {
 
           {/* Tagline */}
           <h1 className="font-display text-4xl md:text-6xl font-medium text-[#3C3C3C] mb-6 animate-fade-up delay-100">
-            Even the busiest bees
+            Even The Busiest Bees
             <br />
-            <span className="text-gradient-honey">need a little help.</span>
+            <span className="text-gradient-honey">Need A Little Help.</span>
           </h1>
 
 
@@ -130,7 +130,7 @@ export default function HomePage() {
             <span className="text-gradient-honey">Ready to let us help?</span>
           </h2>
           <p className="text-white/70 mb-10 text-xl font-light">
-            Whether it's your home, your pets, or your books—we've got you covered.
+            Whether It's Your Home, Your Pets, Or Your Books—We've Got You Covered.
           </p>
           <div className="flex flex-col sm:flex-row gap-6 justify-center">
             <Link
