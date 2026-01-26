@@ -115,7 +115,7 @@ export default function HomePage() {
             </Link>
             <Link
               href="/home-care"
-              className="px-8 py-4 bg-[#E2C16B] text-[#3C3C3C] font-semibold rounded-full hover:bg-[#d4b35f] transition-all hover:shadow-lg hover:-translate-y-1"
+              className="px-8 py-4 bg-[#3C3C3C] text-white font-semibold rounded-full hover:bg-[#2d2d2d] transition-all hover:shadow-lg hover:-translate-y-1"
             >
               Home Care
             </Link>
@@ -127,7 +127,7 @@ export default function HomePage() {
             </Link>
             <Link
               href="/for-business-and-money"
-              className="px-8 py-4 bg-[#3C3C3C] text-white font-semibold rounded-full hover:bg-[#2d2d2d] transition-all hover:shadow-lg hover:-translate-y-1"
+              className="px-8 py-4 bg-[#BFC8A1] text-[#3C3C3C] font-semibold rounded-full hover:bg-[#aab68b] transition-all hover:shadow-lg hover:-translate-y-1"
             >
               Bookkeeping
             </Link>
