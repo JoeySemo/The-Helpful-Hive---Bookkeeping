@@ -1,7 +1,6 @@
 'use client';
 
 import Image from 'next/image';
-import { Phone, Mail, MapPin } from 'lucide-react';
 
 export default function AboutPage() {
     return (
@@ -32,47 +31,7 @@ export default function AboutPage() {
                         Ready to simplify your life or business? We'd love to hear from you.
                     </p>
 
-                    {/* Contact Cards */}
-                    <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-4xl mx-auto">
-                        {/* Phone */}
-                        <div className="bg-white rounded-2xl p-8 shadow-sm border border-[#E2C16B]/20 hover:shadow-lg transition-shadow">
-                            <div className="w-16 h-16 flex items-center justify-center rounded-full bg-[#E2C16B]/20 mx-auto mb-4">
-                                <Phone size={28} className="text-[#E2C16B]" />
-                            </div>
-                            <h3 className="font-display font-semibold text-[#3C3C3C] mb-2">Phone</h3>
-                            <a
-                                href="tel:+13145267240"
-                                className="text-[#3C3C3C]/70 hover:text-[#E2C16B] transition-colors"
-                            >
-                                (314) 526-7240
-                            </a>
-                        </div>
 
-                        {/* Email */}
-                        <div className="bg-white rounded-2xl p-8 shadow-sm border border-[#E2C16B]/20 hover:shadow-lg transition-shadow">
-                            <div className="w-16 h-16 flex items-center justify-center rounded-full bg-[#E2C16B]/20 mx-auto mb-4">
-                                <Mail size={28} className="text-[#E2C16B]" />
-                            </div>
-                            <h3 className="font-display font-semibold text-[#3C3C3C] mb-2">Email</h3>
-                            <a
-                                href="mailto:hellohelpfulhive@gmail.com"
-                                className="text-[#3C3C3C]/70 hover:text-[#E2C16B] transition-colors"
-                            >
-                                hellohelpfulhive@gmail.com
-                            </a>
-                        </div>
-
-                        {/* Location */}
-                        <div className="bg-white rounded-2xl p-8 shadow-sm border border-[#E2C16B]/20 hover:shadow-lg transition-shadow">
-                            <div className="w-16 h-16 flex items-center justify-center rounded-full bg-[#E2C16B]/20 mx-auto mb-4">
-                                <MapPin size={28} className="text-[#E2C16B]" />
-                            </div>
-                            <h3 className="font-display font-semibold text-[#3C3C3C] mb-2">Location</h3>
-                            <p className="text-[#3C3C3C]/70">
-                                Wentzville, MO
-                            </p>
-                        </div>
-                    </div>
                 </div>
             </section>
         </div>
