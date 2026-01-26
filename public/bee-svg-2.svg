@@ -1,0 +1,30 @@
+<svg width="200" height="200" viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Wings -->
+  <path d="M120 60C120 60 160 20 180 50C200 80 160 100 140 90" fill="white" stroke="#3C3C3C" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M100 60C100 60 130 10 160 30C190 50 150 80 130 80" fill="white" stroke="#3C3C3C" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  
+  <!-- Stinger -->
+  <path d="M40 100L20 100L30 110L40 100Z" fill="#3C3C3C"/>
+
+  <!-- Body -->
+  <ellipse cx="100" cy="100" rx="60" ry="50" fill="#E2C16B" stroke="#3C3C3C" stroke-width="4"/>
+  
+  <!-- Stripes -->
+  <path d="M80 54C80 54 70 100 80 146" stroke="#3C3C3C" stroke-width="12" stroke-linecap="round"/>
+  <path d="M110 52C110 52 100 100 110 148" stroke="#3C3C3C" stroke-width="12" stroke-linecap="round"/>
+  
+  <!-- Face -->
+  <circle cx="140" cy="90" r="3" fill="#3C3C3C"/> 
+  <path d="M145 105C145 105 150 110 155 105" stroke="#3C3C3C" stroke-width="3" stroke-linecap="round"/> 
+  <path d="M148 112C148 112 153 112 153 118" stroke="#E66868" stroke-width="2" stroke-opacity="0.6"/> 
+
+  <!-- Antennae -->
+  <path d="M130 60C130 60 140 40 135 30" stroke="#3C3C3C" stroke-width="3" stroke-linecap="round"/>
+  <circle cx="135" cy="30" r="3" fill="#3C3C3C"/>
+  <path d="M150 65C150 65 160 45 155 35" stroke="#3C3C3C" stroke-width="3" stroke-linecap="round"/>
+  <circle cx="155" cy="35" r="3" fill="#3C3C3C"/>
+
+  <!-- Accessory: Briefcase -->
+  <rect x="70" y="140" width="40" height="30" rx="3" fill="#8B4513" stroke="#5D4037" stroke-width="2"/>
+  <path d="M85 140L85 135C85 133 95 133 95 135L95 140" stroke="#5D4037" stroke-width="2" fill="none"/>
+</svg>

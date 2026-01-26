@@ -138,8 +138,219 @@ h6 {
   .delay-500 {
     animation-delay: 500ms;
   }
+
+  /* Complex fly-in-out animations for bees */
+  .animate-fly-1 {
+    animation: fly1 12s ease-in-out infinite;
+  }
+
+  .animate-fly-2 {
+    animation: fly2 15s ease-in-out infinite;
+    animation-delay: 1s;
+  }
+
+  .animate-fly-3 {
+    animation: fly3 18s ease-in-out infinite;
+    animation-delay: 2s;
+  }
+
+  .animate-fly-4 {
+    animation: fly4 14s ease-in-out infinite;
+    animation-delay: 0.5s;
+  }
+
+  .animate-fly-5 {
+    animation: fly5 16s ease-in-out infinite;
+    animation-delay: 3s;
+  }
+
+  .animate-fly-6 {
+    animation: fly6 20s ease-in-out infinite;
+    animation-delay: 1.5s;
+  }
 }
 
+/* Flight Paths */
+/* Path 1: Figure 8 horizontal - Widened */
+@keyframes fly1 {
+  0% {
+    transform: translate(0, 0) scale(0.8) rotate(0deg);
+    opacity: 0;
+  }
+
+  10% {
+    opacity: 1;
+  }
+
+  25% {
+    transform: translate(220px, -60px) scale(1) rotate(15deg);
+  }
+
+  50% {
+    transform: translate(0, 0) scale(0.8) rotate(0deg);
+  }
+
+  75% {
+    transform: translate(-220px, 60px) scale(1) rotate(-15deg);
+  }
+
+  90% {
+    opacity: 1;
+  }
+
+  100% {
+    transform: translate(0, 0) scale(0.8) rotate(0deg);
+    opacity: 0;
+  }
+}
+
+/* Path 2: Large circle + swoop - Widened */
+@keyframes fly2 {
+  0% {
+    transform: translate(0, 0) scale(0.6);
+    opacity: 0;
+  }
+
+  15% {
+    opacity: 1;
+    transform: translate(-160px, -180px) scale(1) rotate(-20deg);
+  }
+
+  45% {
+    transform: translate(180px, 120px) scale(0.9) rotate(20deg);
+  }
+
+  60% {
+    transform: translate(60px, -60px) scale(1.1) rotate(10deg);
+  }
+
+  85% {
+    opacity: 1;
+  }
+
+  100% {
+    transform: translate(0, 0) scale(0.6);
+    opacity: 0;
+  }
+}
+
+/* Path 3: Vertical Figure 8 - Widened */
+@keyframes fly3 {
+  0% {
+    transform: translate(0, 0) scale(0.7);
+    opacity: 0;
+  }
+
+  20% {
+    opacity: 1;
+  }
+
+  33% {
+    transform: translate(90px, -220px) scale(1) rotate(30deg);
+  }
+
+  66% {
+    transform: translate(-90px, 220px) scale(0.9) rotate(-30deg);
+  }
+
+  90% {
+    opacity: 1;
+  }
+
+  100% {
+    transform: translate(0, 0) scale(0.7);
+    opacity: 0;
+  }
+}
+
+/* Path 4: Wide elliptical orbit - Widened */
+@keyframes fly4 {
+  0% {
+    transform: translate(0, 0) opacity(0);
+  }
+
+  10% {
+    opacity: 1;
+    transform: translate(240px, 0) rotate(90deg);
+  }
+
+  50% {
+    transform: translate(-240px, 0) rotate(270deg);
+  }
+
+  90% {
+    opacity: 1;
+    transform: translate(240px, 0) rotate(450deg);
+  }
+
+  100% {
+    transform: translate(0, 0) opacity(0);
+  }
+}
+
+/* Path 5: Diagonal swoop - Widened */
+@keyframes fly5 {
+  0% {
+    transform: translate(0, 0) scale(0.5);
+    opacity: 0;
+  }
+
+  20% {
+    opacity: 1;
+    transform: translate(-200px, 200px) scale(1) rotate(-45deg);
+  }
+
+  50% {
+    transform: translate(0, 0) scale(0.8);
+  }
+
+  80% {
+    transform: translate(200px, -200px) scale(1.1) rotate(-45deg);
+    opacity: 1;
+  }
+
+  100% {
+    transform: translate(0, 0) scale(0.5);
+    opacity: 0;
+  }
+}
+
+/* Path 6: Random wobble - Widened */
+@keyframes fly6 {
+  0% {
+    transform: translate(0, 0);
+    opacity: 0;
+  }
+
+  15% {
+    opacity: 1;
+    transform: translate(120px, -150px) rotate(20deg);
+  }
+
+  30% {
+    transform: translate(180px, 30px) rotate(45deg);
+  }
+
+  45% {
+    transform: translate(80px, 180px) rotate(90deg);
+  }
+
+  60% {
+    transform: translate(-120px, 120px) rotate(135deg);
+  }
+
+  75% {
+    transform: translate(-180px, -60px) rotate(180deg);
+    opacity: 1;
+  }
+
+  100% {
+    transform: translate(0, 0);
+    opacity: 0;
+  }
+}
+
+/* Base float animation */
 @keyframes float {
   0% {
     transform: translateY(0px);

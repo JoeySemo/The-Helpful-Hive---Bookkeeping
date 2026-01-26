@@ -55,14 +55,46 @@ export default function HomePage() {
 
         <div className="relative max-w-4xl mx-auto text-center z-10">
           {/* Animated Logo */}
-          <div className="relative w-40 h-40 md:w-56 md:h-56 mx-auto mb-8 animate-float">
-            <Image
-              src="/logo-circular.jpg"
-              alt="The Helpful Hive"
-              fill
-              className="object-contain rounded-full border-4 border-[#E2C16B] shadow-2xl"
-              priority
-            />
+          {/* Animated Logo Container */}
+          <div className="relative w-56 h-56 md:w-80 md:h-80 mx-auto mb-10">
+            {/* Main Logo */}
+            <div className="relative w-full h-full animate-float z-10">
+              <Image
+                src="/logo-circular.jpg"
+                alt="The Helpful Hive"
+                fill
+                className="object-contain rounded-full border-4 border-[#E2C16B] shadow-2xl"
+                priority
+              />
+            </div>
+
+            {/* Flying Bees */}
+            <div className="absolute inset-0 flex items-center justify-center pointer-events-none z-0">
+              {/* Bee 1: Standard */}
+              <div className="absolute animate-fly-1 w-12 h-12 md:w-16 md:h-16">
+                <Image src="/bee-svg-1.svg" alt="Bee 1" fill className="object-contain transform scale-x-[-1]" />
+              </div>
+              {/* Bee 2: Mirrored */}
+              <div className="absolute animate-fly-2 w-10 h-10 md:w-14 md:h-14">
+                <Image src="/bee-svg-2.svg" alt="Bee 2" fill className="object-contain transform scale-x-[-1]" />
+              </div>
+              {/* Bee 3: Rotated */}
+              <div className="absolute animate-fly-3 w-12 h-12 md:w-16 md:h-16">
+                <Image src="/bee-svg-3.svg" alt="Bee 3" fill className="object-contain transform scale-x-[-1]" />
+              </div>
+              {/* Bee 4: Mirrored + Rotated */}
+              <div className="absolute animate-fly-4 w-11 h-11 md:w-15 md:h-15">
+                <Image src="/bee-svg-4.svg" alt="Bee 4" fill className="object-contain transform scale-x-[-1]" />
+              </div>
+              {/* Bee 5: Small */}
+              <div className="absolute animate-fly-5 w-11 h-11 md:w-15 md:h-15">
+                <Image src="/bee-svg-5.svg" alt="Bee 5" fill className="object-contain" />
+              </div>
+              {/* Bee 6: Small Mirrored */}
+              <div className="absolute animate-fly-6 w-10 h-10 md:w-14 md:h-14">
+                <Image src="/bee-svg-6.svg" alt="Bee 6" fill className="object-contain" />
+              </div>
+            </div>
           </div>
 
           {/* Tagline */}

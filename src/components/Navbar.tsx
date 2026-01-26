@@ -32,8 +32,8 @@ export default function Navbar() {
       <div className="max-w-7xl mx-auto px-4 md:px-8">
         <div className="flex items-center justify-between h-20 md:h-24">
           {/* Logo - Horizontal Version */}
-          <Link href="/" className="flex items-center gap-2 group">
-            <div className="relative h-12 w-48 md:h-16 md:w-64 transition-transform group-hover:scale-105">
+          <Link href="/" className="flex items-center gap-2 group h-full py-1">
+            <div className="relative h-16 w-64 md:h-24 md:w-80 transition-transform group-hover:scale-105">
               <Image
                 src="/logo-horizontal.png"
                 alt="The Helpful Hive"
@@ -52,8 +52,8 @@ export default function Navbar() {
                   key={link.href}
                   href={link.href}
                   className={`text-sm md:text-base font-medium transition-colors ${pathname === link.href
-                      ? 'text-[#E2C16B]'
-                      : 'text-[#3C3C3C] hover:text-[#E2C16B]'
+                    ? 'text-[#E2C16B]'
+                    : 'text-[#3C3C3C] hover:text-[#E2C16B]'
                     }`}
                 >
                   {link.label}
@@ -90,8 +90,8 @@ export default function Navbar() {
                   href={link.href}
                   onClick={() => setIsMenuOpen(false)}
                   className={`px-4 py-3 rounded-lg text-base font-medium ${pathname === link.href
-                      ? 'bg-[#FFF8E7] text-[#E2C16B]'
-                      : 'text-[#3C3C3C] hover:bg-[#FFF8E7]'
+                    ? 'bg-[#FFF8E7] text-[#E2C16B]'
+                    : 'text-[#3C3C3C] hover:bg-[#FFF8E7]'
                     }`}
                 >
                   {link.label}
