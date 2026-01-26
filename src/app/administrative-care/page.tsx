@@ -77,7 +77,7 @@ export default function AdministrativeCarePage() {
                 <div className="max-w-6xl mx-auto">
                     <div className="text-center mb-16">
                         <h2 className="font-display text-3xl md:text-4xl text-[#3C3C3C] mb-4">Administrative Services</h2>
-                        <p className="text-[#3C3C3C]/70">Your Time Is Precious — Let Us Help</p>
+
                     </div>
 
                     <div className="space-y-16 max-w-4xl mx-auto">

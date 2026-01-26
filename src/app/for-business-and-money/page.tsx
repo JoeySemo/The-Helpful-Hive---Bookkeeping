@@ -113,7 +113,7 @@ export default function BusinessAndMoneyPage() {
                 <div className="max-w-6xl mx-auto">
                     <div className="text-center mb-16">
                         <h2 className="font-display text-3xl md:text-4xl text-[#3C3C3C] mb-4">Sweet Deals For Your Business</h2>
-                        <p className="text-[#3C3C3C]/70">Pricing That Won't Sting Your Budget</p>
+
                     </div>
 
                     <div className="grid md:grid-cols-2 gap-8">

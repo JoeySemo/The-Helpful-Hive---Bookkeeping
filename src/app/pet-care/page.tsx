@@ -77,7 +77,7 @@ export default function PetCarePage() {
                 <div className="max-w-6xl mx-auto">
                     <div className="text-center mb-16">
                         <h2 className="font-display text-3xl md:text-4xl text-[#3C3C3C] mb-4">Pet Care Services</h2>
-                        <p className="text-[#3C3C3C]/70">Compassionate Care While You're Away</p>
+
                     </div>
 
                     <div className="max-w-4xl mx-auto">
