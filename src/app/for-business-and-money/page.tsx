@@ -113,8 +113,8 @@ export default function BusinessAndMoneyPage() {
             <div id="pricing" className="py-20 px-4 md:px-8">
                 <div className="max-w-6xl mx-auto">
                     <div className="text-center mb-16">
-                        <h2 className="font-display text-3xl md:text-4xl text-[#3C3C3C] mb-4">Transparent Pricing</h2>
-                        <p className="text-[#3C3C3C]/70">Competitive rates designed to help your business thrive</p>
+                        <h2 className="font-display text-3xl md:text-4xl text-[#3C3C3C] mb-4">Sweet Deals For Your Business</h2>
+                        <p className="text-[#3C3C3C]/70">Honey-sweet pricing that won't sting your budget</p>
                     </div>
 
                     <div className="grid md:grid-cols-2 gap-8">
@@ -154,9 +154,8 @@ export default function BusinessAndMoneyPage() {
                     </div>
 
                     {/* Sage Tip */}
-                    <div className="mt-12 bg-[#BFC8A1]/10 rounded-2xl p-6 border border-[#BFC8A1]/30 text-center max-w-3xl mx-auto flex items-center justify-center gap-3">
-                        <Image src="/logo-honeycomb.png" alt="The Helpful Hive" width={32} height={32} className="object-contain" />
-                        <p className="text-[#3C3C3C] font-medium">Special introductory rates available for new clients.</p>
+                    <div className="mt-12 bg-[#BFC8A1]/10 rounded-2xl p-6 border border-[#BFC8A1]/30 text-center max-w-3xl mx-auto">
+                        <p className="text-[#3C3C3C] font-medium">🐝 Special introductory rates available for new clients.</p>
                     </div>
                 </div>
             </div>
