@@ -30,7 +30,7 @@ export default function HomeCarePage() {
                                 <span className="text-[#E2C16B]">Perfectly Managed</span>
                             </h1>
                             <p className="text-[#3C3C3C]/80 text-lg mb-8 leading-relaxed">
-                                Cleaning, Organizing, and Keeping Your Home Sparkling.
+                                Where Every Home Gets Buzzed Back Into Shape
                             </p>
                             <div className="flex flex-wrap gap-4">
                                 <Link
@@ -77,7 +77,7 @@ export default function HomeCarePage() {
                 <div className="max-w-6xl mx-auto">
                     <div className="text-center mb-16">
                         <h2 className="font-display text-3xl md:text-4xl text-[#3C3C3C] mb-4">Home Care Services</h2>
-                        <p className="text-[#3C3C3C]/70">A Clean and Organized Home, Every Time</p>
+                        <p className="text-[#3C3C3C]/70">We Swarm Your Chores So You Don’t Have To</p>
                     </div>
 
                     <div className="space-y-16 max-w-4xl mx-auto">
