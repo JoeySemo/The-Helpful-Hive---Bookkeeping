@@ -165,18 +165,18 @@ export default function HomeAndLifePage() {
             </div>
 
             {/* CTA Section */}
-            <section className="py-16 md:py-24 px-4 md:px-8 bg-[#3C3C3C]">
+            <section className="py-20 px-4 md:px-8 bg-[#3C3C3C]">
                 <div className="max-w-3xl mx-auto text-center">
-                    <h2 className="font-display text-2xl md:text-3xl font-medium text-white mb-4">
-                        Ready to sweeten your life?
+                    <h2 className="font-display text-3xl md:text-5xl font-medium mb-6">
+                        <span className="text-gradient-honey">Ready To Sweeten Your Life?</span>
                     </h2>
-                    <p className="text-white/70 mb-8 text-lg">
-                        Let us handle the chores while you enjoy the honey.
+                    <p className="text-white/70 mb-10 text-xl font-light">
+                        Let Us Handle The Chores While You Enjoy The Honey.
                     </p>
-                    <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                    <div className="flex flex-col sm:flex-row gap-6 justify-center">
                         <Link
                             href="/about"
-                            className="px-8 py-4 bg-[#E2C16B] text-[#3C3C3C] font-semibold rounded-full hover:bg-[#d4b35f] transition-all"
+                            className="px-8 py-4 bg-[#E2C16B] text-[#3C3C3C] font-semibold rounded-full hover:bg-[#d4b35f] transition-all transform hover:scale-105"
                         >
                             Schedule a Consultation
                         </Link>

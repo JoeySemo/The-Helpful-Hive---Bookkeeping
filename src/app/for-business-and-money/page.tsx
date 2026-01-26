@@ -161,18 +161,18 @@ export default function BusinessAndMoneyPage() {
             </div>
 
             {/* CTA Section */}
-            <section className="py-16 md:py-24 px-4 md:px-8 bg-[#3C3C3C]">
+            <section className="py-20 px-4 md:px-8 bg-[#3C3C3C]">
                 <div className="max-w-3xl mx-auto text-center">
-                    <h2 className="font-display text-2xl md:text-3xl font-medium text-white mb-4">
-                        Ready to Organize Your Finances?
+                    <h2 className="font-display text-3xl md:text-5xl font-medium mb-6">
+                        <span className="text-gradient-honey">Ready To Organize Your Finances?</span>
                     </h2>
-                    <p className="text-white/70 mb-8 text-lg">
-                        Contact us today for a free consultation and let The Helpful Hive take the sting out of your business finances.
+                    <p className="text-white/70 mb-10 text-xl font-light">
+                        Contact Us Today For a Free Consultation And Let The Helpful Hive Take The Sting Out Of Your Business Finances.
                     </p>
-                    <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                    <div className="flex flex-col sm:flex-row gap-6 justify-center">
                         <Link
                             href="/about"
-                            className="px-8 py-4 bg-[#BFC8A1] text-[#3C3C3C] font-semibold rounded-full hover:bg-[#aab68b] transition-all"
+                            className="px-8 py-4 bg-[#E2C16B] text-[#3C3C3C] font-semibold rounded-full hover:bg-[#d4b35f] transition-all transform hover:scale-105"
                         >
                             Schedule a Consultation
                         </Link>
