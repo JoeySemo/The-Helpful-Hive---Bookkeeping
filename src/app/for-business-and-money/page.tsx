@@ -2,7 +2,7 @@
 
 import Link from 'next/link';
 import Image from 'next/image';
-import { Check, Users, Lightbulb, DollarSign, MapPin } from 'lucide-react';
+import { Check } from 'lucide-react';
 
 export default function BusinessAndMoneyPage() {
     const services = [
@@ -102,6 +102,13 @@ export default function BusinessAndMoneyPage() {
                 </div>
             </section>
 
+            {/* Tagline Banner */}
+            <section className="py-12 px-4 bg-white border-y border-[#BFC8A1]/20">
+                <p className="font-display text-2xl md:text-3xl text-[#3C3C3C] text-center font-medium max-w-3xl mx-auto">
+                    "Taking the Sting Out of <span className="text-[#7A8C57] italic">Business Finances</span>"
+                </p>
+            </section>
+
             {/* Pricing Grid */}
             <div id="pricing" className="py-20 px-4 md:px-8">
                 <div className="max-w-6xl mx-auto">
@@ -152,39 +159,6 @@ export default function BusinessAndMoneyPage() {
                     </div>
                 </div>
             </div>
-
-            {/* Why Choose Us */}
-            <section className="py-20 px-4 md:px-8 bg-white/50">
-                <div className="max-w-5xl mx-auto">
-                    <h2 className="font-display text-3xl font-medium text-[#3C3C3C] text-center mb-12">Why Choose The Helpful Hive?</h2>
-                    <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
-                        <div className="text-center group">
-                            <div className="w-16 h-16 bg-[#BFC8A1]/20 rounded-full flex items-center justify-center mx-auto mb-4 text-[#7A8C57] transform group-hover:rotate-12 transition-transform">
-                                <Users size={32} />
-                            </div>
-                            <h3 className="font-semibold text-[#3C3C3C]">Expert Team</h3>
-                        </div>
-                        <div className="text-center group">
-                            <div className="w-16 h-16 bg-[#BFC8A1]/20 rounded-full flex items-center justify-center mx-auto mb-4 text-[#7A8C57] transform group-hover:rotate-12 transition-transform">
-                                <Lightbulb size={32} />
-                            </div>
-                            <h3 className="font-semibold text-[#3C3C3C]">Personalized</h3>
-                        </div>
-                        <div className="text-center group">
-                            <div className="w-16 h-16 bg-[#BFC8A1]/20 rounded-full flex items-center justify-center mx-auto mb-4 text-[#7A8C57] transform group-hover:rotate-12 transition-transform">
-                                <DollarSign size={32} />
-                            </div>
-                            <h3 className="font-semibold text-[#3C3C3C]">Affordable</h3>
-                        </div>
-                        <div className="text-center group">
-                            <div className="w-16 h-16 bg-[#BFC8A1]/20 rounded-full flex items-center justify-center mx-auto mb-4 text-[#7A8C57] transform group-hover:rotate-12 transition-transform">
-                                <MapPin size={32} />
-                            </div>
-                            <h3 className="font-semibold text-[#3C3C3C]">Local Focus</h3>
-                        </div>
-                    </div>
-                </div>
-            </section>
 
             {/* CTA Section */}
             <section className="py-16 md:py-24 px-4 md:px-8 bg-[#3C3C3C]">

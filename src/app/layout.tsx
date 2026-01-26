@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { Inter, Outfit } from "next/font/google";
 import Navbar from "@/components/Navbar";
-import Footer from "@/components/Footer";
+import FooterWrapper from "@/components/FooterWrapper";
 import "./globals.css";
 
 const inter = Inter({
@@ -33,8 +33,9 @@ export default function RootLayout({
                 <main className="flex-grow">
                     {children}
                 </main>
-                <Footer />
+                <FooterWrapper />
             </body>
         </html>
     );
 }
+
