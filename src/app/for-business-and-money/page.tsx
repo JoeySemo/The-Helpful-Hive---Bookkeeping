@@ -64,7 +64,7 @@ export default function BusinessAndMoneyPage() {
                             <h1 className="font-display text-4xl md:text-5xl lg:text-6xl font-medium text-[#3C3C3C] mb-6">
                                 Taking the Sting Out of <span className="text-[#7A8C57]">Business Finances</span>
                             </h1>
-                            <p className="text-[#3C3C3C]/80 text-lg mb-8 leading-relaxed">
+                            <p className="text-[#3C3C3C]/80 text-lg mb-8 leading-relaxed whitespace-nowrap">
                                 Expert Bookkeeping and Financial Management for Small Businesses.
                             </p>
                             <div className="flex flex-wrap gap-4">
