@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bee Design Options - Round 2</title>
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #FFF8E7;
+            padding: 40px;
+        }
+
+        h1 {
+            text-align: center;
+            color: #3C3C3C;
+            margin-bottom: 40px;
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 40px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .card {
+            background: white;
+            padding: 20px;
+            border-radius: 20px;
+            text-align: center;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+            transition: transform 0.2s;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        h2 {
+            color: #E2C16B;
+            margin-top: 20px;
+            font-size: 1.2rem;
+        }
+
+        p {
+            color: #666;
+            font-size: 0.9rem;
+        }
+
+        svg {
+            max-width: 100%;
+            height: auto;
+            drop-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Bee Design Options (Round 2)</h1>
+    <div class="grid">
+        <!-- Option 6: Elegant Golden Ratio -->
+        <div class="card">
+            <svg width="200" height="200" viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <!-- Golden Ratio Circles Construction Look -->
+                <circle cx="100" cy="100" r="40" stroke="#E2C16B" stroke-width="2" fill="none" opacity="0.5" />
+                <circle cx="140" cy="80" r="30" stroke="#E2C16B" stroke-width="2" fill="none" opacity="0.5" />
+
+                <!-- Main Shape -->
+                <path d="M100 140 C60 140 60 100 80 80 C100 60 140 60 160 80 C180 100 140 140 100 140 Z"
+                    stroke="#3C3C3C" stroke-width="3" fill="none" />
+                <path d="M120 80 C140 40 180 40 160 80" stroke="#3C3C3C" stroke-width="2" fill="none" />
+                <path d="M80 80 C60 40 20 40 40 80" stroke="#3C3C3C" stroke-width="2" fill="none" />
+
+                <!-- Stylized Stripes -->
+                <path d="M90 135 Q110 120 95 110" stroke="#3C3C3C" stroke-width="2" stroke-linecap="round" />
+                <path d="M105 130 Q125 115 110 105" stroke="#3C3C3C" stroke-width="2" stroke-linecap="round" />
+            </svg>
+            <h2>Option 6: Elegant / Logo</h2>
+            <p>Sophisticated, mathematical curves.</p>
+        </div>
+
+        <!-- Option 7: Chubby / Fuzzy -->
+        <div class="card">
+            <svg width="200" height="200" viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <!-- Body composed of overlapping circles to look "puffy" -->
+                <circle cx="90" cy="100" r="30" fill="#FFC107" />
+                <circle cx="110" cy="100" r="30" fill="#FFC107" />
+                <circle cx="100" cy="90" r="28" fill="#FFC107" />
+                <circle cx="100" cy="110" r="28" fill="#FFC107" />
+
+                <!-- Stripes -->
+                <path d="M80 80 Q90 100 80 120" stroke="#3C3C3C" stroke-width="8" stroke-linecap="round" />
+                <path d="M120 80 Q110 100 120 120" stroke="#3C3C3C" stroke-width="8" stroke-linecap="round" />
+
+                <!-- Wings -->
+                <circle cx="70" cy="70" r="20" fill="white" stroke="#3C3C3C" stroke-width="2" />
+                <circle cx="130" cy="70" r="20" fill="white" stroke="#3C3C3C" stroke-width="2" />
+
+                <!-- Face -->
+                <circle cx="100" cy="100" r="3" fill="#3C3C3C" />
+                <circle cx="90" cy="95" r="3" fill="#3C3C3C" />
+                <circle cx="110" cy="95" r="3" fill="#3C3C3C" />
+            </svg>
+            <h2>Option 7: Chubby / Fuzzy</h2>
+            <p>Soft, rounded, very cute.</p>
+        </div>
+
+        <!-- Option 8: Anthropomorphic Mascot -->
+        <div class="card">
+            <svg width="200" height="200" viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <!-- Standing body -->
+                <ellipse cx="100" cy="120" rx="25" ry="40" fill="#FDD835" stroke="#333" stroke-width="3" />
+                <!-- Stripes -->
+                <path d="M80 110 H120" stroke="#333" stroke-width="6" />
+                <path d="M80 130 H120" stroke="#333" stroke-width="6" />
+
+                <!-- Head -->
+                <circle cx="100" cy="70" r="25" fill="#FDD835" stroke="#333" stroke-width="3" />
+
+                <!-- Big Eyes -->
+                <ellipse cx="92" cy="70" rx="8" ry="10" fill="white" stroke="#333" stroke-width="2" />
+                <circle cx="94" cy="70" r="3" fill="black" />
+                <ellipse cx="108" cy="70" rx="8" ry="10" fill="white" stroke="#333" stroke-width="2" />
+                <circle cx="106" cy="70" r="3" fill="black" />
+
+                <!-- Arms/Legs -->
+                <path d="M80 120 L60 140" stroke="#333" stroke-width="3" stroke-linecap="round" />
+                <path d="M120 120 L140 140" stroke="#333" stroke-width="3" stroke-linecap="round" />
+                <path d="M90 155 L90 175" stroke="#333" stroke-width="4" stroke-linecap="round" />
+                <path d="M110 155 L110 175" stroke="#333" stroke-width="4" stroke-linecap="round" />
+
+                <!-- Wings -->
+                <path d="M75 80 C50 60 50 100 75 100" fill="#E1F5FE" stroke="#333" stroke-width="2" opacity="0.8" />
+                <path d="M125 80 C150 60 150 100 125 100" fill="#E1F5FE" stroke="#333" stroke-width="2" opacity="0.8" />
+            </svg>
+            <h2>Option 8: Friendly Mascot</h2>
+            <p>Upright, human-like, trustworthy.</p>
+        </div>
+
+        <!-- Option 9: Vintage Badge Style -->
+        <div class="card">
+            <svg width="200" height="200" viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <!-- Hexagon Badge -->
+                <path d="M100 20 L170 60 V140 L100 180 L30 140 V60 L100 20 Z" fill="#FFF8E1" stroke="#E2C16B"
+                    stroke-width="4" />
+                <path d="M100 30 L160 65 V135 L100 170 L40 135 V65 L100 30 Z" stroke="#E2C16B" stroke-width="2"
+                    stroke-dasharray="4 4" />
+
+                <!-- Retro Bee Silhouette -->
+                <path d="M100 70 C120 70 130 90 120 110 C110 130 90 130 80 110 C70 90 80 70 100 70 Z" fill="#3E2723" />
+                <path d="M80 90 H120" stroke="#E2C16B" stroke-width="4" />
+                <path d="M85 105 H115" stroke="#E2C16B" stroke-width="4" />
+
+                <!-- Wings -->
+                <path d="M100 80 C130 50 160 80 130 100" stroke="#3E2723" stroke-width="2" fill="none" />
+                <path d="M100 80 C70 50 40 80 70 100" stroke="#3E2723" stroke-width="2" fill="none" />
+            </svg>
+            <h2>Option 9: Vintage Badge</h2>
+            <p>Retro, emblem-style, established.</p>
+        </div>
+
+        <!-- Option 10: Single Line Art -->
+        <div class="card">
+            <svg width="200" height="200" viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <!-- One continuous line drawing attempt -->
+                <path
+                    d="M60 100 C60 60 100 60 100 80 C100 60 140 60 140 100 C140 140 100 140 100 120 C100 140 60 140 60 100 Z M100 100 L120 100 M80 100 H95"
+                    stroke="#3C3C3C" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round" />
+                <!-- Loop for wings -->
+                <path d="M100 80 C100 40 160 20 140 80" stroke="#3C3C3C" stroke-width="3" fill="none" />
+                <path d="M100 80 C100 40 40 20 60 80" stroke="#3C3C3C" stroke-width="3" fill="none" />
+            </svg>
+            <h2>Option 10: Monoline Art</h2>
+            <p>Artistic, fluid, continuous flow.</p>
+        </div>
+    </div>
+</body>
+
+</html>

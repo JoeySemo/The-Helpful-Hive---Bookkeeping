@@ -22,9 +22,9 @@ export default function Navbar() {
 
   const navLinks = [
     { href: '/', label: 'Home' },
-    { href: '/for-home-and-life', label: 'For Home & Life' },
-    { href: '/for-business-and-money', label: 'For Business & Money' },
-    { href: '/about', label: 'About' },
+    { href: '/for-home-and-life', label: 'Home Concierge' },
+    { href: '/for-business-and-money', label: 'Bookkeeping' },
+    { href: '/about', label: 'Contact Us' },
   ];
 
   return (
@@ -33,15 +33,9 @@ export default function Navbar() {
         <div className="flex items-center justify-between h-20 md:h-24">
           {/* Logo - Horizontal Version */}
           <Link href="/" className="flex items-center gap-2 group h-full py-1">
-            <div className="relative h-16 w-64 md:h-24 md:w-80 transition-transform group-hover:scale-105">
-              <Image
-                src="/logo-horizontal.png"
-                alt="The Helpful Hive"
-                fill
-                className="object-contain object-left"
-                priority
-              />
-            </div>
+            <span className="font-display text-xl md:text-2xl font-semibold text-[#3C3C3C] group-hover:text-[#E2C16B] transition-colors">
+              The Helpful Hive
+            </span>
           </Link>
 
           {/* Desktop Navigation */}

@@ -115,130 +115,14 @@ export default function HomePage() {
               href="/for-home-and-life"
               className="px-8 py-4 bg-[#E2C16B] text-[#3C3C3C] font-semibold rounded-full hover:bg-[#d4b35f] transition-all hover:shadow-lg hover:-translate-y-1"
             >
-              Help at Home
+              Home Concierge
             </Link>
             <Link
               href="/for-business-and-money"
               className="px-8 py-4 bg-[#3C3C3C] text-white font-semibold rounded-full hover:bg-[#2d2d2d] transition-all hover:shadow-lg hover:-translate-y-1"
             >
-              Help with Your Books
+              Bookkeeping
             </Link>
-          </div>
-        </div>
-      </section>
-
-      {/* Two Pillars Section */}
-      <section className="py-12 md:py-20 px-4 md:px-8 bg-white relative">
-        {/* Decorative background visual */}
-        <div className="absolute top-0 left-0 w-full h-8 bg-gradient-to-b from-[#FFF8E7] to-white pointer-events-none" />
-
-        <div className="max-w-6xl mx-auto">
-          <div className="grid md:grid-cols-2 gap-8 md:gap-12">
-            {/* Home & Life Pillar */}
-            <div className="bg-[#FFF8E7] rounded-[2.5rem] p-8 md:p-12 border-2 border-[#E2C16B]/30 hover:border-[#E2C16B] transition-all duration-500 hover:shadow-2xl group flex flex-col h-full animate-fade-up">
-              <div className="flex items-center gap-4 mb-6">
-                <div className="w-14 h-14 rounded-2xl bg-[#E2C16B] flex items-center justify-center transform group-hover:scale-110 transition-transform duration-300">
-                  <Home className="w-7 h-7 text-white" />
-                </div>
-                <div>
-                  <h2 className="font-display text-2xl md:text-3xl font-semibold text-[#3C3C3C]">
-                    {homePillar.title}
-                  </h2>
-                </div>
-              </div>
-              <p className="text-[#3C3C3C]/70 mb-8 text-lg">{homePillar.subtitle}</p>
-
-              <div className="space-y-6 mb-10 flex-grow">
-                {homePillar.services.map((service, index) => {
-                  const Icon = service.icon;
-                  return (
-                    <div key={index} className="flex items-start gap-4 p-4 bg-white/60 rounded-xl hover:bg-white transition-colors">
-                      <Icon className="w-6 h-6 text-[#E2C16B] mt-0.5 flex-shrink-0" />
-                      <div>
-                        <p className="font-semibold text-[#3C3C3C] text-lg">{service.name}</p>
-                        <p className="text-sm text-[#3C3C3C]/60 leading-relaxed">{service.desc}</p>
-                      </div>
-                    </div>
-                  );
-                })}
-              </div>
-
-              <Link
-                href={homePillar.href}
-                className="inline-flex items-center justify-between w-full px-6 py-4 bg-[#E2C16B]/10 text-[#E2C16B] font-bold rounded-xl group-hover:bg-[#E2C16B] group-hover:text-[#3C3C3C] transition-all"
-              >
-                {homePillar.cta}
-                <ArrowRight className="w-6 h-6 transform group-hover:translate-x-1 transition-transform" />
-              </Link>
-            </div>
-
-            {/* Business & Money Pillar */}
-            <div className="bg-[#BFC8A1]/20 rounded-[2.5rem] p-8 md:p-12 border-2 border-[#BFC8A1]/30 hover:border-[#BFC8A1] transition-all duration-500 hover:shadow-2xl group flex flex-col h-full animate-fade-up delay-200">
-              <div className="flex items-center gap-4 mb-6">
-                <div className="w-14 h-14 rounded-2xl bg-[#BFC8A1] flex items-center justify-center transform group-hover:scale-110 transition-transform duration-300">
-                  <Calculator className="w-7 h-7 text-white" />
-                </div>
-                <div>
-                  <h2 className="font-display text-2xl md:text-3xl font-semibold text-[#3C3C3C]">
-                    {bookkeepingPillar.title}
-                  </h2>
-                </div>
-              </div>
-              <p className="text-[#3C3C3C]/70 mb-8 text-lg">{bookkeepingPillar.subtitle}</p>
-
-              <div className="space-y-6 mb-10 flex-grow">
-                {bookkeepingPillar.services.map((service, index) => {
-                  const Icon = service.icon;
-                  return (
-                    <div key={index} className="flex items-start gap-4 p-4 bg-white/60 rounded-xl hover:bg-white transition-colors">
-                      <Icon className="w-6 h-6 text-[#BFC8A1] mt-0.5 flex-shrink-0" />
-                      <div>
-                        <p className="font-semibold text-[#3C3C3C] text-lg">{service.name}</p>
-                        <p className="text-sm text-[#3C3C3C]/60 leading-relaxed">{service.desc}</p>
-                      </div>
-                    </div>
-                  );
-                })}
-              </div>
-
-              <Link
-                href={bookkeepingPillar.href}
-                className="inline-flex items-center justify-between w-full px-6 py-4 bg-[#BFC8A1]/20 text-[#3C3C3C] font-bold rounded-xl group-hover:bg-[#BFC8A1] transition-all"
-              >
-                {bookkeepingPillar.cta}
-                <ArrowRight className="w-6 h-6 transform group-hover:translate-x-1 transition-transform" />
-              </Link>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Bee Categories Section */}
-      <section className="py-16 px-4 md:px-8 bg-[#FFF8E7]">
-        <div className="max-w-6xl mx-auto">
-          <div className="text-center mb-16">
-            <h2 className="font-display text-3xl md:text-4xl font-medium text-[#3C3C3C] mb-4">
-              Our Service Ecosystem
-            </h2>
-            <p className="text-[#3C3C3C]/70 max-w-2xl mx-auto">
-              Everything we do is part of The Helpful Hive—working together to make your life simpler.
-            </p>
-          </div>
-
-          <div className="grid grid-cols-2 md:grid-cols-5 gap-4 md:gap-6">
-            {beeCategories.map((bee, index) => (
-              <Link key={index} href={bee.href} className="group">
-                <div className="bg-white rounded-3xl p-6 text-center border-2 border-[#E2C16B]/10 hover:border-[#E2C16B] hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 h-full flex flex-col items-center justify-center">
-                  <div className="text-4xl mb-4 transform group-hover:scale-110 transition-transform">{bee.icon}</div>
-                  <h3 className="font-display font-bold text-[#3C3C3C] mb-2">
-                    {bee.name}
-                  </h3>
-                  <p className="text-xs text-[#3C3C3C]/60 leading-relaxed">
-                    {bee.desc}
-                  </p>
-                </div>
-              </Link>
-            ))}
           </div>
         </div>
       </section>
