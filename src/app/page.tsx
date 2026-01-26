@@ -1,6 +1,7 @@
 'use client';
 
 import Link from 'next/link';
+import Image from 'next/image';
 import { ArrowRight, Home, Calculator, Sparkles, Heart, FolderOpen, Briefcase, Users } from 'lucide-react';
 
 export default function HomePage() {
@@ -43,7 +44,7 @@ export default function HomePage() {
       {/* Hero Section */}
       <section className="relative py-16 md:py-24 px-4 md:px-8 overflow-hidden">
         {/* Honeycomb pattern background */}
-        <div className="absolute inset-0 opacity-10">
+        <div className="absolute inset-0 opacity-10 pointer-events-none">
           <svg className="w-full h-full" viewBox="0 0 100 100" preserveAspectRatio="none">
             <pattern id="honeycomb" width="10" height="10" patternUnits="userSpaceOnUse">
               <path d="M5 0L10 2.5V7.5L5 10L0 7.5V2.5Z" fill="none" stroke="#E2C16B" strokeWidth="0.5" />
@@ -52,33 +53,41 @@ export default function HomePage() {
           </svg>
         </div>
 
-        <div className="relative max-w-4xl mx-auto text-center">
-          {/* Bee illustration */}
-          <div className="text-5xl mb-6 animate-in">🐝</div>
+        <div className="relative max-w-4xl mx-auto text-center z-10">
+          {/* Animated Logo */}
+          <div className="relative w-40 h-40 md:w-56 md:h-56 mx-auto mb-8 animate-float">
+            <Image
+              src="/logo-circular.jpg"
+              alt="The Helpful Hive"
+              fill
+              className="object-contain rounded-full border-4 border-[#E2C16B] shadow-2xl"
+              priority
+            />
+          </div>
 
           {/* Tagline */}
-          <h1 className="font-display text-3xl md:text-5xl lg:text-6xl font-medium text-[#3C3C3C] mb-4 animate-in-delay-1">
+          <h1 className="font-display text-4xl md:text-6xl font-medium text-[#3C3C3C] mb-6 animate-fade-up delay-100">
             Even the busiest bees
             <br />
             <span className="text-gradient-honey">need a little help.</span>
           </h1>
 
           {/* Subheadline */}
-          <p className="text-[#3C3C3C]/70 text-lg md:text-xl max-w-2xl mx-auto mb-8 animate-in-delay-2">
+          <p className="text-[#3C3C3C]/70 text-lg md:text-xl max-w-2xl mx-auto mb-10 animate-fade-up delay-200">
             Your full hive of home, pet, lifestyle, and bookkeeping services.
           </p>
 
           {/* Dual CTAs */}
-          <div className="flex flex-col sm:flex-row gap-4 justify-center animate-in-delay-3">
+          <div className="flex flex-col sm:flex-row gap-4 justify-center animate-fade-up delay-300">
             <Link
               href="/for-home-and-life"
-              className="px-8 py-4 bg-[#E2C16B] text-[#3C3C3C] font-semibold rounded-full hover:bg-[#d4b35f] transition-all hover:shadow-lg hover:-translate-y-0.5"
+              className="px-8 py-4 bg-[#E2C16B] text-[#3C3C3C] font-semibold rounded-full hover:bg-[#d4b35f] transition-all hover:shadow-lg hover:-translate-y-1"
             >
               Help at Home
             </Link>
             <Link
               href="/for-business-and-money"
-              className="px-8 py-4 bg-[#3C3C3C] text-white font-semibold rounded-full hover:bg-[#2d2d2d] transition-all hover:shadow-lg hover:-translate-y-0.5"
+              className="px-8 py-4 bg-[#3C3C3C] text-white font-semibold rounded-full hover:bg-[#2d2d2d] transition-all hover:shadow-lg hover:-translate-y-1"
             >
               Help with Your Books
             </Link>
@@ -87,32 +96,35 @@ export default function HomePage() {
       </section>
 
       {/* Two Pillars Section */}
-      <section className="py-12 md:py-20 px-4 md:px-8 bg-white">
+      <section className="py-12 md:py-20 px-4 md:px-8 bg-white relative">
+        {/* Decorative background visual */}
+        <div className="absolute top-0 left-0 w-full h-8 bg-gradient-to-b from-[#FFF8E7] to-white pointer-events-none" />
+
         <div className="max-w-6xl mx-auto">
-          <div className="grid md:grid-cols-2 gap-8">
+          <div className="grid md:grid-cols-2 gap-8 md:gap-12">
             {/* Home & Life Pillar */}
-            <div className="bg-[#FFF8E7] rounded-3xl p-8 border-2 border-[#E2C16B]/30 hover:border-[#E2C16B] transition-all hover:shadow-xl group">
-              <div className="flex items-center gap-3 mb-4">
-                <div className="w-12 h-12 rounded-xl bg-[#E2C16B] flex items-center justify-center">
-                  <Home className="w-6 h-6 text-white" />
-                  "</div>
+            <div className="bg-[#FFF8E7] rounded-[2.5rem] p-8 md:p-12 border-2 border-[#E2C16B]/30 hover:border-[#E2C16B] transition-all duration-500 hover:shadow-2xl group flex flex-col h-full animate-fade-up">
+              <div className="flex items-center gap-4 mb-6">
+                <div className="w-14 h-14 rounded-2xl bg-[#E2C16B] flex items-center justify-center transform group-hover:scale-110 transition-transform duration-300">
+                  <Home className="w-7 h-7 text-white" />
+                </div>
                 <div>
-                  <h2 className="font-display text-2xl font-semibold text-[#3C3C3C]">
+                  <h2 className="font-display text-2xl md:text-3xl font-semibold text-[#3C3C3C]">
                     {homePillar.title}
                   </h2>
                 </div>
               </div>
-              <p className="text-[#3C3C3C]/70 mb-6">{homePillar.subtitle}</p>
+              <p className="text-[#3C3C3C]/70 mb-8 text-lg">{homePillar.subtitle}</p>
 
-              <div className="space-y-4 mb-8">
+              <div className="space-y-6 mb-10 flex-grow">
                 {homePillar.services.map((service, index) => {
                   const Icon = service.icon;
                   return (
-                    <div key={index} className="flex items-start gap-3">
-                      <Icon className="w-5 h-5 text-[#E2C16B] mt-0.5 flex-shrink-0" />
+                    <div key={index} className="flex items-start gap-4 p-4 bg-white/60 rounded-xl hover:bg-white transition-colors">
+                      <Icon className="w-6 h-6 text-[#E2C16B] mt-0.5 flex-shrink-0" />
                       <div>
-                        <p className="font-medium text-[#3C3C3C]">{service.name}</p>
-                        <p className="text-sm text-[#3C3C3C]/60">{service.desc}</p>
+                        <p className="font-semibold text-[#3C3C3C] text-lg">{service.name}</p>
+                        <p className="text-sm text-[#3C3C3C]/60 leading-relaxed">{service.desc}</p>
                       </div>
                     </div>
                   );
@@ -121,36 +133,36 @@ export default function HomePage() {
 
               <Link
                 href={homePillar.href}
-                className="inline-flex items-center gap-2 text-[#E2C16B] font-semibold group-hover:gap-4 transition-all"
+                className="inline-flex items-center justify-between w-full px-6 py-4 bg-[#E2C16B]/10 text-[#E2C16B] font-bold rounded-xl group-hover:bg-[#E2C16B] group-hover:text-[#3C3C3C] transition-all"
               >
                 {homePillar.cta}
-                <ArrowRight className="w-5 h-5" />
+                <ArrowRight className="w-6 h-6 transform group-hover:translate-x-1 transition-transform" />
               </Link>
             </div>
 
             {/* Business & Money Pillar */}
-            <div className="bg-[#BFC8A1]/20 rounded-3xl p-8 border-2 border-[#BFC8A1]/30 hover:border-[#BFC8A1] transition-all hover:shadow-xl group">
-              <div className="flex items-center gap-3 mb-4">
-                <div className="w-12 h-12 rounded-xl bg-[#BFC8A1] flex items-center justify-center">
-                  <Calculator className="w-6 h-6 text-white" />
+            <div className="bg-[#BFC8A1]/20 rounded-[2.5rem] p-8 md:p-12 border-2 border-[#BFC8A1]/30 hover:border-[#BFC8A1] transition-all duration-500 hover:shadow-2xl group flex flex-col h-full animate-fade-up delay-200">
+              <div className="flex items-center gap-4 mb-6">
+                <div className="w-14 h-14 rounded-2xl bg-[#BFC8A1] flex items-center justify-center transform group-hover:scale-110 transition-transform duration-300">
+                  <Calculator className="w-7 h-7 text-white" />
                 </div>
                 <div>
-                  <h2 className="font-display text-2xl font-semibold text-[#3C3C3C]">
+                  <h2 className="font-display text-2xl md:text-3xl font-semibold text-[#3C3C3C]">
                     {bookkeepingPillar.title}
                   </h2>
                 </div>
               </div>
-              <p className="text-[#3C3C3C]/70 mb-6">{bookkeepingPillar.subtitle}</p>
+              <p className="text-[#3C3C3C]/70 mb-8 text-lg">{bookkeepingPillar.subtitle}</p>
 
-              <div className="space-y-4 mb-8">
+              <div className="space-y-6 mb-10 flex-grow">
                 {bookkeepingPillar.services.map((service, index) => {
                   const Icon = service.icon;
                   return (
-                    <div key={index} className="flex items-start gap-3">
-                      <Icon className="w-5 h-5 text-[#BFC8A1] mt-0.5 flex-shrink-0" />
+                    <div key={index} className="flex items-start gap-4 p-4 bg-white/60 rounded-xl hover:bg-white transition-colors">
+                      <Icon className="w-6 h-6 text-[#BFC8A1] mt-0.5 flex-shrink-0" />
                       <div>
-                        <p className="font-medium text-[#3C3C3C]">{service.name}</p>
-                        <p className="text-sm text-[#3C3C3C]/60">{service.desc}</p>
+                        <p className="font-semibold text-[#3C3C3C] text-lg">{service.name}</p>
+                        <p className="text-sm text-[#3C3C3C]/60 leading-relaxed">{service.desc}</p>
                       </div>
                     </div>
                   );
@@ -159,10 +171,10 @@ export default function HomePage() {
 
               <Link
                 href={bookkeepingPillar.href}
-                className="inline-flex items-center gap-2 text-[#3C3C3C] font-semibold group-hover:gap-4 transition-all"
+                className="inline-flex items-center justify-between w-full px-6 py-4 bg-[#BFC8A1]/20 text-[#3C3C3C] font-bold rounded-xl group-hover:bg-[#BFC8A1] transition-all"
               >
                 {bookkeepingPillar.cta}
-                <ArrowRight className="w-5 h-5" />
+                <ArrowRight className="w-6 h-6 transform group-hover:translate-x-1 transition-transform" />
               </Link>
             </div>
           </div>
@@ -170,23 +182,23 @@ export default function HomePage() {
       </section>
 
       {/* Bee Categories Section */}
-      <section className="py-12 md:py-20 px-4 md:px-8 bg-[#FFF8E7]">
+      <section className="py-16 px-4 md:px-8 bg-[#FFF8E7]">
         <div className="max-w-6xl mx-auto">
-          <div className="text-center mb-12">
-            <h2 className="font-display text-2xl md:text-3xl font-medium text-[#3C3C3C] mb-3">
+          <div className="text-center mb-16">
+            <h2 className="font-display text-3xl md:text-4xl font-medium text-[#3C3C3C] mb-4">
               Our Service Ecosystem
             </h2>
-            <p className="text-[#3C3C3C]/70">
-              Everything we do is part of The Helpful Hive
+            <p className="text-[#3C3C3C]/70 max-w-2xl mx-auto">
+              Everything we do is part of The Helpful Hive—working together to make your life simpler.
             </p>
           </div>
 
           <div className="grid grid-cols-2 md:grid-cols-5 gap-4 md:gap-6">
             {beeCategories.map((bee, index) => (
               <Link key={index} href={bee.href} className="group">
-                <div className="bg-white rounded-2xl p-5 text-center border border-[#E2C16B]/20 hover:border-[#E2C16B] hover:shadow-lg transition-all hover:-translate-y-1">
-                  <div className="text-3xl mb-3">{bee.icon}</div>
-                  <h3 className="font-display font-semibold text-[#3C3C3C] mb-1">
+                <div className="bg-white rounded-3xl p-6 text-center border-2 border-[#E2C16B]/10 hover:border-[#E2C16B] hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 h-full flex flex-col items-center justify-center">
+                  <div className="text-4xl mb-4 transform group-hover:scale-110 transition-transform">{bee.icon}</div>
+                  <h3 className="font-display font-bold text-[#3C3C3C] mb-2">
                     {bee.name}
                   </h3>
                   <p className="text-xs text-[#3C3C3C]/60 leading-relaxed">
@@ -200,18 +212,18 @@ export default function HomePage() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-16 md:py-24 px-4 md:px-8 bg-[#3C3C3C]">
+      <section className="py-20 px-4 md:px-8 bg-[#3C3C3C]">
         <div className="max-w-3xl mx-auto text-center">
-          <h2 className="font-display text-2xl md:text-4xl font-medium text-white mb-4">
+          <h2 className="font-display text-3xl md:text-5xl font-medium text-white mb-6">
             Ready to let us help?
           </h2>
-          <p className="text-white/70 mb-8 text-lg">
+          <p className="text-white/70 mb-10 text-xl font-light">
             Whether it's your home, your pets, or your books—we've got you covered.
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+          <div className="flex flex-col sm:flex-row gap-6 justify-center">
             <Link
               href="/contact"
-              className="px-8 py-4 bg-[#E2C16B] text-[#3C3C3C] font-semibold rounded-full hover:bg-[#d4b35f] transition-all"
+              className="px-8 py-4 bg-[#E2C16B] text-[#3C3C3C] font-semibold rounded-full hover:bg-[#d4b35f] transition-all transform hover:scale-105"
             >
               Schedule a Consultation
             </Link>

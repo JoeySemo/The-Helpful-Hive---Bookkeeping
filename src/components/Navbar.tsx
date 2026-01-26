@@ -4,7 +4,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import { useState, useEffect } from 'react';
-import { Menu, X, ChevronDown } from 'lucide-react';
+import { Menu, X } from 'lucide-react';
 
 export default function Navbar() {
   const pathname = usePathname();
@@ -29,13 +29,13 @@ export default function Navbar() {
 
   return (
     <nav className="sticky top-0 z-50 bg-white/95 backdrop-blur-md border-b border-[#E2C16B]/20">
-      <div className="max-w-6xl mx-auto px-4 md:px-8">
-        <div className="flex items-center justify-between h-16 md:h-20">
-          {/* Logo */}
-          <Link href="/" className="flex items-center gap-2">
-            <div className="relative h-10 w-32 md:h-12 md:w-40">
+      <div className="max-w-7xl mx-auto px-4 md:px-8">
+        <div className="flex items-center justify-between h-20 md:h-24">
+          {/* Logo - Horizontal Version */}
+          <Link href="/" className="flex items-center gap-2 group">
+            <div className="relative h-12 w-48 md:h-16 md:w-64 transition-transform group-hover:scale-105">
               <Image
-                src="/official-logo-horizontal.png"
+                src="/logo-horizontal.png"
                 alt="The Helpful Hive"
                 fill
                 className="object-contain object-left"
@@ -46,12 +46,12 @@ export default function Navbar() {
 
           {/* Desktop Navigation */}
           {!isMobile && (
-            <div className="flex items-center gap-6">
+            <div className="flex items-center gap-8">
               {navLinks.map((link) => (
                 <Link
                   key={link.href}
                   href={link.href}
-                  className={`text-sm font-medium transition-colors ${pathname === link.href
+                  className={`text-sm md:text-base font-medium transition-colors ${pathname === link.href
                       ? 'text-[#E2C16B]'
                       : 'text-[#3C3C3C] hover:text-[#E2C16B]'
                     }`}
@@ -61,7 +61,7 @@ export default function Navbar() {
               ))}
               <Link
                 href="/contact"
-                className="px-5 py-2.5 bg-[#3C3C3C] text-white text-sm font-medium rounded-full hover:bg-[#2d2d2d] transition-all hover:shadow-lg"
+                className="px-6 py-3 bg-[#3C3C3C] text-white text-sm font-medium rounded-full hover:bg-[#2d2d2d] transition-all hover:shadow-lg hover:-translate-y-0.5"
               >
                 Book a Service
               </Link>
@@ -75,21 +75,21 @@ export default function Navbar() {
               className="p-2 text-[#3C3C3C]"
               aria-label="Toggle menu"
             >
-              {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
+              {isMenuOpen ? <X size={28} /> : <Menu size={28} />}
             </button>
           )}
         </div>
 
         {/* Mobile Menu */}
         {isMobile && isMenuOpen && (
-          <div className="absolute top-16 left-0 right-0 bg-white border-b border-[#E2C16B]/20 shadow-lg p-4 animate-fade-in">
-            <div className="flex flex-col gap-2">
+          <div className="absolute top-20 left-0 right-0 bg-white border-b border-[#E2C16B]/20 shadow-lg p-4 animate-fade-up">
+            <div className="flex flex-col gap-3">
               {navLinks.map((link) => (
                 <Link
                   key={link.href}
                   href={link.href}
                   onClick={() => setIsMenuOpen(false)}
-                  className={`px-4 py-3 rounded-lg text-sm font-medium ${pathname === link.href
+                  className={`px-4 py-3 rounded-lg text-base font-medium ${pathname === link.href
                       ? 'bg-[#FFF8E7] text-[#E2C16B]'
                       : 'text-[#3C3C3C] hover:bg-[#FFF8E7]'
                     }`}
@@ -100,7 +100,7 @@ export default function Navbar() {
               <Link
                 href="/contact"
                 onClick={() => setIsMenuOpen(false)}
-                className="px-4 py-3 bg-[#3C3C3C] text-white text-sm font-medium rounded-lg text-center mt-2"
+                className="px-4 py-3 bg-[#3C3C3C] text-white text-base font-medium rounded-lg text-center mt-2 shadow-md"
               >
                 Book a Service
               </Link>

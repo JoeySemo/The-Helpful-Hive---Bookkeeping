@@ -1,7 +1,8 @@
 'use client';
 
 import Link from 'next/link';
-import { Check, Star, Users, Lightbulb, DollarSign, MapPin, Calculator, Briefcase } from 'lucide-react';
+import Image from 'next/image';
+import { Check, Users, Lightbulb, DollarSign, MapPin } from 'lucide-react';
 
 export default function BusinessAndMoneyPage() {
     const services = [
@@ -48,7 +49,7 @@ export default function BusinessAndMoneyPage() {
             {/* Hero Section - Sage Theme */}
             <section className="relative py-16 md:py-24 px-4 md:px-8 overflow-hidden">
                 {/* Honeycomb background */}
-                <div className="absolute inset-0 opacity-10">
+                <div className="absolute inset-0 opacity-10 pointer-events-none">
                     <svg className="w-full h-full" viewBox="0 0 100 100" preserveAspectRatio="none">
                         <pattern id="honeycomb" width="10" height="10" patternUnits="userSpaceOnUse">
                             <path d="M5 0L10 2.5V7.5L5 10L0 7.5V2.5Z" fill="none" stroke="#BFC8A1" strokeWidth="0.5" />
@@ -59,7 +60,7 @@ export default function BusinessAndMoneyPage() {
 
                 <div className="max-w-6xl mx-auto relative z-10">
                     <div className="grid md:grid-cols-2 gap-12 items-center">
-                        <div>
+                        <div className="order-2 md:order-1 animate-fade-up">
                             <div className="inline-block px-4 py-1.5 bg-[#BFC8A1]/20 rounded-full text-[#7A8C57] font-semibold text-sm mb-4">
                                 Business & Money Services
                             </div>
@@ -74,7 +75,7 @@ export default function BusinessAndMoneyPage() {
                             <div className="flex flex-wrap gap-4">
                                 <Link
                                     href="/contact"
-                                    className="px-8 py-4 bg-[#BFC8A1] text-[#3C3C3C] font-semibold rounded-full hover:bg-[#aab68b] transition-all"
+                                    className="px-8 py-4 bg-[#BFC8A1] text-[#3C3C3C] font-semibold rounded-full hover:bg-[#aab68b] transition-all hover:shadow-md"
                                 >
                                     Get a Quote
                                 </Link>
@@ -86,10 +87,18 @@ export default function BusinessAndMoneyPage() {
                                 </a>
                             </div>
                         </div>
-                        <div className="flex justify-center md:justify-end">
-                            {/* Placeholder for visual or illustration */}
-                            <div className="w-full max-w-md aspect-square bg-white rounded-3xl p-8 border-2 border-[#BFC8A1]/30 shadow-card rotate-3 flex items-center justify-center">
-                                <span className="text-8xl">📊</span>
+                        <div className="order-1 md:order-2 flex justify-center md:justify-end">
+                            {/* Animated Logo Placement */}
+                            <div className="relative w-64 h-64 md:w-80 md:h-80 animate-float">
+                                <div className="absolute inset-0 bg-[#BFC8A1] rounded-full opacity-10 blur-3xl transform scale-110"></div>
+                                <div className="relative w-full h-full bg-white rounded-full p-4 border-4 border-[#BFC8A1] shadow-2xl flex items-center justify-center overflow-hidden">
+                                    <Image
+                                        src="/logo-circular.jpg"
+                                        alt="Business Services Logo"
+                                        fill
+                                        className="object-contain hover:scale-110 transition-transform duration-700"
+                                    />
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -152,27 +161,27 @@ export default function BusinessAndMoneyPage() {
                 <div className="max-w-5xl mx-auto">
                     <h2 className="font-display text-3xl font-medium text-[#3C3C3C] text-center mb-12">Why Choose The Helpful Hive?</h2>
                     <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
-                        <div className="text-center">
-                            <div className="w-14 h-14 bg-[#BFC8A1]/20 rounded-full flex items-center justify-center mx-auto mb-4 text-[#7A8C57]">
-                                <Users size={28} />
+                        <div className="text-center group">
+                            <div className="w-16 h-16 bg-[#BFC8A1]/20 rounded-full flex items-center justify-center mx-auto mb-4 text-[#7A8C57] transform group-hover:rotate-12 transition-transform">
+                                <Users size={32} />
                             </div>
                             <h3 className="font-semibold text-[#3C3C3C]">Expert Team</h3>
                         </div>
-                        <div className="text-center">
-                            <div className="w-14 h-14 bg-[#BFC8A1]/20 rounded-full flex items-center justify-center mx-auto mb-4 text-[#7A8C57]">
-                                <Lightbulb size={28} />
+                        <div className="text-center group">
+                            <div className="w-16 h-16 bg-[#BFC8A1]/20 rounded-full flex items-center justify-center mx-auto mb-4 text-[#7A8C57] transform group-hover:rotate-12 transition-transform">
+                                <Lightbulb size={32} />
                             </div>
                             <h3 className="font-semibold text-[#3C3C3C]">Personalized</h3>
                         </div>
-                        <div className="text-center">
-                            <div className="w-14 h-14 bg-[#BFC8A1]/20 rounded-full flex items-center justify-center mx-auto mb-4 text-[#7A8C57]">
-                                <DollarSign size={28} />
+                        <div className="text-center group">
+                            <div className="w-16 h-16 bg-[#BFC8A1]/20 rounded-full flex items-center justify-center mx-auto mb-4 text-[#7A8C57] transform group-hover:rotate-12 transition-transform">
+                                <DollarSign size={32} />
                             </div>
                             <h3 className="font-semibold text-[#3C3C3C]">Affordable</h3>
                         </div>
-                        <div className="text-center">
-                            <div className="w-14 h-14 bg-[#BFC8A1]/20 rounded-full flex items-center justify-center mx-auto mb-4 text-[#7A8C57]">
-                                <MapPin size={28} />
+                        <div className="text-center group">
+                            <div className="w-16 h-16 bg-[#BFC8A1]/20 rounded-full flex items-center justify-center mx-auto mb-4 text-[#7A8C57] transform group-hover:rotate-12 transition-transform">
+                                <MapPin size={32} />
                             </div>
                             <h3 className="font-semibold text-[#3C3C3C]">Local Focus</h3>
                         </div>

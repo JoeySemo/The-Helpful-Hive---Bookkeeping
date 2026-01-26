@@ -2,7 +2,7 @@
 
 import Link from 'next/link';
 import Image from 'next/image';
-import { Check, Sparkles, ArrowRight } from 'lucide-react';
+import { Check, ArrowRight } from 'lucide-react';
 
 export default function HomeAndLifePage() {
     const services = [
@@ -59,7 +59,7 @@ export default function HomeAndLifePage() {
             {/* Hero Section */}
             <section className="relative py-16 md:py-24 px-4 md:px-8 overflow-hidden">
                 {/* Honeycomb background */}
-                <div className="absolute inset-0 opacity-10">
+                <div className="absolute inset-0 opacity-10 pointer-events-none">
                     <svg className="w-full h-full" viewBox="0 0 100 100" preserveAspectRatio="none">
                         <pattern id="honeycomb" width="10" height="10" patternUnits="userSpaceOnUse">
                             <path d="M5 0L10 2.5V7.5L5 10L0 7.5V2.5Z" fill="none" stroke="#E2C16B" strokeWidth="0.5" />
@@ -70,7 +70,7 @@ export default function HomeAndLifePage() {
 
                 <div className="max-w-6xl mx-auto relative z-10">
                     <div className="grid md:grid-cols-2 gap-12 items-center">
-                        <div>
+                        <div className="order-2 md:order-1 animate-fade-up">
                             <div className="inline-block px-4 py-1.5 bg-[#E2C16B]/20 rounded-full text-[#E2C16B] font-semibold text-sm mb-4">
                                 Home & Life Services
                             </div>
@@ -85,7 +85,7 @@ export default function HomeAndLifePage() {
                             <div className="flex flex-wrap gap-4">
                                 <Link
                                     href="/contact"
-                                    className="px-8 py-4 bg-[#E2C16B] text-[#3C3C3C] font-semibold rounded-full hover:bg-[#d4b35f] transition-all"
+                                    className="px-8 py-4 bg-[#E2C16B] text-[#3C3C3C] font-semibold rounded-full hover:bg-[#d4b35f] transition-all hover:shadow-lg"
                                 >
                                     Schedule a Consultation
                                 </Link>
@@ -97,10 +97,18 @@ export default function HomeAndLifePage() {
                                 </a>
                             </div>
                         </div>
-                        <div className="flex justify-center md:justify-end">
-                            {/* Placeholder for visual or illustration */}
-                            <div className="w-full max-w-md aspect-square bg-white rounded-3xl p-8 border-2 border-[#E2C16B]/30 shadow-card rotate-3 flex items-center justify-center">
-                                <span className="text-8xl">🏠</span>
+                        <div className="order-1 md:order-2 flex justify-center md:justify-end">
+                            {/* Animated Logo Placement */}
+                            <div className="relative w-64 h-64 md:w-80 md:h-80 animate-float">
+                                <div className="absolute inset-0 bg-[#E2C16B] rounded-full opacity-10 blur-3xl transform scale-110"></div>
+                                <div className="relative w-full h-full bg-white rounded-full p-4 border-4 border-[#E2C16B] shadow-2xl flex items-center justify-center overflow-hidden">
+                                    <Image
+                                        src="/logo-circular.jpg"
+                                        alt="Home Services Logo"
+                                        fill
+                                        className="object-contain hover:scale-110 transition-transform duration-700"
+                                    />
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -134,7 +142,7 @@ export default function HomeAndLifePage() {
                                     )}
 
                                     <div className="flex justify-between items-start mb-6">
-                                        <span className="text-5xl">{service.icon}</span>
+                                        <span className="text-5xl transform group-hover:scale-110 transition-transform duration-300 inline-block">{service.icon}</span>
                                         <div className="text-right">
                                             <div className="font-display text-2xl font-bold text-[#E2C16B]">{service.price}</div>
                                             <div className="text-[#3C3C3C]/60 text-sm">{service.priceUnit}</div>
