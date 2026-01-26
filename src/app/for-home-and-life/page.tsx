@@ -124,7 +124,7 @@ export default function HomeAndLifePage() {
                 <div className="max-w-6xl mx-auto">
                     <div className="text-center mb-16">
                         <h2 className="font-display text-3xl md:text-4xl text-[#3C3C3C] mb-4">The Bee Ecosystem</h2>
-                        <p className="text-[#3C3C3C]/70">Every service is designed to make your life sweeter</p>
+                        <p className="text-[#3C3C3C]/70">Every Service Is Designed To Make Your Life Sweeter</p>
                     </div>
 
                     <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
