@@ -24,7 +24,6 @@ export default function Navbar() {
     { href: '/', label: 'Home' },
     { href: '/for-home-and-life', label: 'Home Concierge' },
     { href: '/for-business-and-money', label: 'Bookkeeping' },
-    { href: '/about', label: 'Contact Us' },
   ];
 
   return (
@@ -54,10 +53,10 @@ export default function Navbar() {
                 </Link>
               ))}
               <Link
-                href="/contact"
+                href="/about"
                 className="px-6 py-3 bg-[#3C3C3C] text-white text-sm font-medium rounded-full hover:bg-[#2d2d2d] transition-all hover:shadow-lg hover:-translate-y-0.5"
               >
-                Book a Service
+                Contact Us
               </Link>
             </div>
           )}
@@ -92,11 +91,11 @@ export default function Navbar() {
                 </Link>
               ))}
               <Link
-                href="/contact"
+                href="/about"
                 onClick={() => setIsMenuOpen(false)}
                 className="px-4 py-3 bg-[#3C3C3C] text-white text-base font-medium rounded-lg text-center mt-2 shadow-md"
               >
-                Book a Service
+                Contact Us
               </Link>
             </div>
           </div>

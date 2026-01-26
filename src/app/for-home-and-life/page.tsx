@@ -71,16 +71,13 @@ export default function HomeAndLifePage() {
                 <div className="max-w-6xl mx-auto relative z-10">
                     <div className="grid md:grid-cols-2 gap-12 items-center">
                         <div className="order-2 md:order-1 animate-fade-up">
-                            <div className="inline-block px-4 py-1.5 bg-[#E2C16B]/20 rounded-full text-[#E2C16B] font-semibold text-sm mb-4">
-                                Home & Life Services
-                            </div>
                             <h1 className="font-display text-4xl md:text-5xl lg:text-6xl font-medium text-[#3C3C3C] mb-6">
                                 Your Home,
                                 <br />
                                 <span className="text-[#E2C16B]">Perfectly Managed</span>
                             </h1>
                             <p className="text-[#3C3C3C]/80 text-lg mb-8 leading-relaxed">
-                                Sweet solutions for busy homes, pets, and people. We handle the details so you can focus on what matters most.
+                                Sweet solutions for busy homes, pets, and people.
                             </p>
                             <div className="flex flex-wrap gap-4">
                                 <Link
@@ -166,32 +163,6 @@ export default function HomeAndLifePage() {
                     </div>
                 </div>
             </div>
-
-            {/* Meet Your Concierge */}
-            <section className="py-20 px-4 md:px-8 bg-white/50">
-                <div className="max-w-5xl mx-auto grid md:grid-cols-2 gap-12 items-center">
-                    <div className="order-2 md:order-1">
-                        <h2 className="font-display text-3xl text-[#3C3C3C] mb-6">Meet Your Home Concierge</h2>
-                        <p className="text-[#3C3C3C]/80 mb-6 leading-relaxed">
-                            Hi there! I'm the founder of The Helpful Hive. As a wife, mom, and busy professional, I know that keeping a home running smoothly takes coordination, attention to detail, and a network of trusted service providers.
-                        </p>
-                        <p className="text-[#3C3C3C]/80 leading-relaxed font-medium">
-                            That's why I created The Helpful Hive—to help busy families with their home management needs.
-                        </p>
-                    </div>
-                    <div className="order-1 md:order-2 flex justify-center">
-                        <div className="relative w-64 h-64">
-                            <div className="absolute inset-0 bg-[#E2C16B] rounded-full opacity-20 blur-2xl transform scale-110"></div>
-                            <Image
-                                src="/queen-bee.jpg"
-                                alt="Founder"
-                                fill
-                                className="object-cover rounded-full border-4 border-[#E2C16B] relative z-10 shadow-float"
-                            />
-                        </div>
-                    </div>
-                </div>
-            </section>
 
             {/* CTA Section */}
             <section className="py-16 md:py-24 px-4 md:px-8 bg-[#3C3C3C]">

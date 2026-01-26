@@ -104,10 +104,6 @@ export default function HomePage() {
             <span className="text-gradient-honey">need a little help.</span>
           </h1>
 
-          {/* Subheadline */}
-          <p className="text-[#3C3C3C]/70 text-lg md:text-xl max-w-2xl mx-auto mb-10 animate-fade-up delay-200">
-            Your full hive of home, pet, lifestyle, and bookkeeping services.
-          </p>
 
           {/* Dual CTAs */}
           <div className="flex flex-col sm:flex-row gap-4 justify-center animate-fade-up delay-300">

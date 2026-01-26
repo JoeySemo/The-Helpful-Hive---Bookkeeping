@@ -25,8 +25,8 @@ export default function BeeDonePage() {
                 padding: '3rem 2rem',
                 textAlign: 'center'
             }}>
-                <Link href="/concierge" style={{ color: '#1f2937', textDecoration: 'none', fontSize: '1.25rem', marginBottom: '1rem', display: 'inline-block', fontWeight: 500 }}>
-                    ← Back to Concierge
+                <Link href="/for-home-and-life" style={{ color: '#1f2937', textDecoration: 'none', fontSize: '1.25rem', marginBottom: '1rem', display: 'inline-block', fontWeight: 500 }}>
+                    ← Back to Home Concierge
                 </Link>
                 <h1 style={{
                     fontSize: '2.5rem',

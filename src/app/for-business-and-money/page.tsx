@@ -61,16 +61,13 @@ export default function BusinessAndMoneyPage() {
                 <div className="max-w-6xl mx-auto relative z-10">
                     <div className="grid md:grid-cols-2 gap-12 items-center">
                         <div className="order-2 md:order-1 animate-fade-up">
-                            <div className="inline-block px-4 py-1.5 bg-[#BFC8A1]/20 rounded-full text-[#7A8C57] font-semibold text-sm mb-4">
-                                Business & Money Services
-                            </div>
                             <h1 className="font-display text-4xl md:text-5xl lg:text-6xl font-medium text-[#3C3C3C] mb-6">
                                 Taking the Sting Out of
                                 <br />
                                 <span className="text-[#7A8C57]">Business Finances</span>
                             </h1>
                             <p className="text-[#3C3C3C]/80 text-lg mb-8 leading-relaxed">
-                                Expert bookkeeping and financial management for small businesses. We bring clarity and calm to your books.
+                                Expert bookkeeping and financial management for small businesses.
                             </p>
                             <div className="flex flex-wrap gap-4">
                                 <Link
