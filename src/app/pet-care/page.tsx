@@ -30,7 +30,7 @@ export default function PetCarePage() {
                                 <span className="text-[#E2C16B]">Pet Care</span>
                             </h1>
                             <p className="text-[#3C3C3C]/80 text-lg mb-8 leading-relaxed">
-                                Loving Care for Your Furry Family Members.
+                                Pet Care That is the Bee's Knees
                             </p>
                             <div className="flex flex-wrap gap-4">
                                 <Link
@@ -68,7 +68,7 @@ export default function PetCarePage() {
             {/* Tagline Banner */}
             <section className="py-12 px-4 bg-white border-y border-[#E2C16B]/20">
                 <p className="font-display text-2xl md:text-3xl text-[#3C3C3C] text-center font-medium max-w-3xl mx-auto">
-                    "Your Pets Deserve the <span className="text-[#E2C16B] italic">Bee-st</span> Care"
+                    "Guarding your hive, loving your pets."
                 </p>
             </section>
 
@@ -93,8 +93,8 @@ export default function PetCarePage() {
                                     </div>
                                 </div>
                                 <div className="text-left md:text-right bg-[#FFF8E7] px-6 py-3 rounded-2xl border border-[#E2C16B]/30">
-                                    <div className="font-display text-3xl font-bold text-[#E2C16B]">$20 and up</div>
-                                    <div className="text-[#3C3C3C]/60 text-sm font-medium">per visit</div>
+                                    <div className="font-display text-3xl font-bold text-[#E2C16B]">$20</div>
+                                    <div className="text-[#3C3C3C]/60 text-sm font-medium">and up</div>
                                 </div>
                             </div>
 
