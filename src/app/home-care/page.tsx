@@ -5,26 +5,7 @@ import Image from 'next/image';
 import { Check } from 'lucide-react';
 
 export default function HomeCarePage() {
-    const services = [
-        {
-            title: 'Bee Done',
-            tagline: 'Household Chores & Cleaning Tasks',
-            icon: '🧽',
-            price: '$30',
-            priceUnit: 'per hour',
-            items: ['Bathroom Deep Clean', 'Kitchen Deep Clean', 'Window Washing', 'Laundry Services'],
-            href: '/concierge/services/bee-done'
-        },
-        {
-            title: 'Bee Organized',
-            tagline: 'Organization, Decluttering & Lifestyle Systems',
-            icon: '🧺',
-            price: '$35',
-            priceUnit: 'per hour',
-            items: ['Closet Organization', 'Pantry Systems', 'Home Office Setup', 'Garage Reset'],
-            href: '/concierge/services/bee-organized'
-        }
-    ];
+    // Services data integrated directly into the view below
 
     return (
         <main className="min-h-screen bg-[#FFF8E7]">
@@ -99,33 +80,154 @@ export default function HomeCarePage() {
                         <p className="text-[#3C3C3C]/70">A Clean and Organized Home, Every Time</p>
                     </div>
 
-                    <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
-                        {services.map((service, index) => (
-                            <Link key={index} href={service.href} className="group h-full">
-                                <div className="h-full bg-white rounded-3xl p-8 border-2 border-[#E2C16B]/20 transition-all duration-300 hover:shadow-xl hover:-translate-y-1">
+                    <div className="space-y-16 max-w-4xl mx-auto">
 
-                                    <div className="flex justify-between items-start mb-6">
-                                        <span className="text-5xl transform group-hover:scale-110 transition-transform duration-300 inline-block">{service.icon}</span>
-                                        <div className="text-right">
-                                            <div className="font-display text-2xl font-bold text-[#E2C16B]">{service.price}</div>
-                                            <div className="text-[#3C3C3C]/60 text-sm">{service.priceUnit}</div>
-                                        </div>
+                        {/* Bee Done Card */}
+                        <div className="bg-white rounded-3xl p-8 md:p-12 border-2 border-[#E2C16B]/20 shadow-xl">
+                            {/* Header: Icon & Price */}
+                            <div className="flex flex-col md:flex-row justify-between items-start md:items-center mb-10 gap-6">
+                                <div className="flex items-center gap-6">
+                                    <span className="text-6xl">🧽</span>
+                                    <div>
+                                        <h3 className="font-display text-3xl font-bold text-[#3C3C3C]">Bee Done</h3>
+                                        <p className="text-[#E2C16B] font-medium text-lg">Household Chores & Cleaning Tasks</p>
                                     </div>
+                                </div>
+                                <div className="text-left md:text-right bg-[#FFF8E7] px-6 py-3 rounded-2xl border border-[#E2C16B]/30">
+                                    <div className="font-display text-3xl font-bold text-[#E2C16B]">$30</div>
+                                    <div className="text-[#3C3C3C]/60 text-sm font-medium">per hour</div>
+                                </div>
+                            </div>
 
-                                    <h3 className="font-display text-xl font-bold text-[#3C3C3C] mb-2">{service.title}</h3>
-                                    <p className="text-[#E2C16B] font-medium text-sm mb-6">{service.tagline}</p>
+                            <hr className="border-[#E2C16B]/20 mb-10" />
 
-                                    <ul className="space-y-3">
-                                        {service.items.map((item, i) => (
-                                            <li key={i} className="flex items-start gap-3 text-[#3C3C3C]/80 text-sm">
-                                                <Check className="w-4 h-4 text-[#E2C16B] mt-0.5 flex-shrink-0" />
-                                                {item}
+                            <div className="grid md:grid-cols-2 gap-12">
+                                {/* What's Included */}
+                                <div>
+                                    <h4 className="font-display text-xl font-bold text-[#3C3C3C] mb-6 flex items-center gap-2">
+                                        <span className="w-2 h-2 rounded-full bg-[#E2C16B]"></span>
+                                        What's Included
+                                    </h4>
+                                    <ul className="space-y-4">
+                                        {[
+                                            { title: 'Bathroom Deep Clean', desc: 'Thorough scrubbing of all surfaces' },
+                                            { title: 'Kitchen Deep Clean', desc: 'Appliances, counters, cabinets, floors' },
+                                            { title: 'Window Washing', desc: 'Interior and exterior window cleaning' },
+                                            { title: 'Laundry Services', desc: 'Wash, dry, fold, and put away' },
+                                            { title: 'General Cleaning', desc: 'Dusting, vacuuming, and mopping' },
+                                            { title: 'Move-In/Out Cleaning', desc: 'Complete deep clean for transitions' }
+                                        ].map((item, i) => (
+                                            <li key={i} className="flex items-start gap-3">
+                                                <Check className="w-5 h-5 text-[#E2C16B] mt-1 flex-shrink-0" />
+                                                <div>
+                                                    <span className="font-semibold text-[#3C3C3C] block">{item.title}</span>
+                                                    <span className="text-[#3C3C3C]/70 text-sm">{item.desc}</span>
+                                                </div>
                                             </li>
                                         ))}
                                     </ul>
                                 </div>
-                            </Link>
-                        ))}
+
+                                {/* Key Benefits */}
+                                <div>
+                                    <h4 className="font-display text-xl font-bold text-[#3C3C3C] mb-6 flex items-center gap-2">
+                                        <span className="w-2 h-2 rounded-full bg-[#E2C16B]"></span>
+                                        Key Benefits
+                                    </h4>
+                                    <div className="bg-[#FFF8E7]/50 rounded-2xl p-6 border border-[#E2C16B]/10">
+                                        <ul className="space-y-4">
+                                            {[
+                                                "Save time for what matters most",
+                                                "Professional-grade cleaning supplies",
+                                                "Reliable, trustworthy service",
+                                                "Flexible scheduling options"
+                                            ].map((benefit, i) => (
+                                                <li key={i} className="flex items-center gap-3 text-[#3C3C3C]/90">
+                                                    <div className="w-8 h-8 rounded-full bg-white flex items-center justify-center text-[#E2C16B] shadow-sm flex-shrink-0">
+                                                        <Check className="w-4 h-4" />
+                                                    </div>
+                                                    <span className="font-medium">{benefit}</span>
+                                                </li>
+                                            ))}
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        {/* Bee Organized Card */}
+                        <div className="bg-white rounded-3xl p-8 md:p-12 border-2 border-[#E2C16B]/20 shadow-xl">
+                            {/* Header: Icon & Price */}
+                            <div className="flex flex-col md:flex-row justify-between items-start md:items-center mb-10 gap-6">
+                                <div className="flex items-center gap-6">
+                                    <span className="text-6xl">🧺</span>
+                                    <div>
+                                        <h3 className="font-display text-3xl font-bold text-[#3C3C3C]">Bee Organized</h3>
+                                        <p className="text-[#E2C16B] font-medium text-lg">Organization, Decluttering & Lifestyle Systems</p>
+                                    </div>
+                                </div>
+                                <div className="text-left md:text-right bg-[#FFF8E7] px-6 py-3 rounded-2xl border border-[#E2C16B]/30">
+                                    <div className="font-display text-3xl font-bold text-[#E2C16B]">$35</div>
+                                    <div className="text-[#3C3C3C]/60 text-sm font-medium">per hour</div>
+                                </div>
+                            </div>
+
+                            <hr className="border-[#E2C16B]/20 mb-10" />
+
+                            <div className="grid md:grid-cols-2 gap-12">
+                                {/* What's Included */}
+                                <div>
+                                    <h4 className="font-display text-xl font-bold text-[#3C3C3C] mb-6 flex items-center gap-2">
+                                        <span className="w-2 h-2 rounded-full bg-[#E2C16B]"></span>
+                                        What's Included
+                                    </h4>
+                                    <ul className="space-y-4">
+                                        {[
+                                            { title: 'Closet Organization', desc: 'Custom systems for wardrobes' },
+                                            { title: 'Pantry Systems', desc: 'Efficient food storage and labeling' },
+                                            { title: 'Home Office Setup', desc: 'Productive workspace design' },
+                                            { title: 'Garage Reset', desc: 'Transform clutter into storage' },
+                                            { title: 'Decluttering Services', desc: 'Sort, donate, and dispose responsibly' },
+                                            { title: 'Lifestyle Systems', desc: 'Routines for lasting organization' }
+                                        ].map((item, i) => (
+                                            <li key={i} className="flex items-start gap-3">
+                                                <Check className="w-5 h-5 text-[#E2C16B] mt-1 flex-shrink-0" />
+                                                <div>
+                                                    <span className="font-semibold text-[#3C3C3C] block">{item.title}</span>
+                                                    <span className="text-[#3C3C3C]/70 text-sm">{item.desc}</span>
+                                                </div>
+                                            </li>
+                                        ))}
+                                    </ul>
+                                </div>
+
+                                {/* Key Benefits */}
+                                <div>
+                                    <h4 className="font-display text-xl font-bold text-[#3C3C3C] mb-6 flex items-center gap-2">
+                                        <span className="w-2 h-2 rounded-full bg-[#E2C16B]"></span>
+                                        Key Benefits
+                                    </h4>
+                                    <div className="bg-[#FFF8E7]/50 rounded-2xl p-6 border border-[#E2C16B]/10">
+                                        <ul className="space-y-4">
+                                            {[
+                                                "Find what you need when you need it",
+                                                "Reduce stress and mental clutter",
+                                                "Create more usable space",
+                                                "Maintain organization long-term"
+                                            ].map((benefit, i) => (
+                                                <li key={i} className="flex items-center gap-3 text-[#3C3C3C]/90">
+                                                    <div className="w-8 h-8 rounded-full bg-white flex items-center justify-center text-[#E2C16B] shadow-sm flex-shrink-0">
+                                                        <Check className="w-4 h-4" />
+                                                    </div>
+                                                    <span className="font-medium">{benefit}</span>
+                                                </li>
+                                            ))}
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
                     </div>
                 </div>
             </div>

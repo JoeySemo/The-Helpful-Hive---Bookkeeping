@@ -93,7 +93,7 @@ export default function PetCarePage() {
                                     </div>
                                 </div>
                                 <div className="text-left md:text-right bg-[#FFF8E7] px-6 py-3 rounded-2xl border border-[#E2C16B]/30">
-                                    <div className="font-display text-3xl font-bold text-[#E2C16B]">$20</div>
+                                    <div className="font-display text-3xl font-bold text-[#E2C16B]">$20 and up</div>
                                     <div className="text-[#3C3C3C]/60 text-sm font-medium">per visit</div>
                                 </div>
                             </div>
