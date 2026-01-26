@@ -174,7 +174,7 @@ export default function BookkeepingPage() {
                     </p>
                     <div className="flex flex-col sm:flex-row gap-4 justify-center">
                         <Link
-                            href="/contact"
+                            href="/about"
                             className="px-8 py-3 bg-honey-500 text-white font-medium rounded-full hover:bg-honey-600 transition-all"
                         >
                             Schedule Free Consultation

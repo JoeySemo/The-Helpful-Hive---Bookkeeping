@@ -71,7 +71,7 @@ export default function BusinessAndMoneyPage() {
                             </p>
                             <div className="flex flex-wrap gap-4">
                                 <Link
-                                    href="/contact"
+                                    href="/about"
                                     className="px-8 py-4 bg-[#BFC8A1] text-[#3C3C3C] font-semibold rounded-full hover:bg-[#aab68b] transition-all hover:shadow-md"
                                 >
                                     Get a Quote
@@ -197,7 +197,7 @@ export default function BusinessAndMoneyPage() {
                     </p>
                     <div className="flex flex-col sm:flex-row gap-4 justify-center">
                         <Link
-                            href="/contact"
+                            href="/about"
                             className="px-8 py-4 bg-[#BFC8A1] text-[#3C3C3C] font-semibold rounded-full hover:bg-[#aab68b] transition-all"
                         >
                             Schedule a Consultation

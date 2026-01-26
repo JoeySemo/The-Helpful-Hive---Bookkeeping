@@ -92,7 +92,7 @@ export default function ConciergePage() {
                             </p>
                             <div className="flex flex-wrap gap-4">
                                 <Link
-                                    href="/contact"
+                                    href="/about"
                                     className="px-6 py-3 bg-neutral-900 text-white font-medium rounded-full hover:bg-neutral-800 transition-all"
                                 >
                                     Schedule a Consultation
@@ -255,7 +255,7 @@ export default function ConciergePage() {
                     </p>
                     <div className="flex flex-col sm:flex-row gap-4 justify-center">
                         <Link
-                            href="/contact"
+                            href="/about"
                             className="px-8 py-3 bg-honey-500 text-white font-medium rounded-full hover:bg-honey-600 transition-all"
                         >
                             Schedule a Consultation

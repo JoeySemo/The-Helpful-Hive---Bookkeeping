@@ -81,7 +81,7 @@ export default function HomeAndLifePage() {
                             </p>
                             <div className="flex flex-wrap gap-4">
                                 <Link
-                                    href="/contact"
+                                    href="/about"
                                     className="px-8 py-4 bg-[#E2C16B] text-[#3C3C3C] font-semibold rounded-full hover:bg-[#d4b35f] transition-all hover:shadow-lg"
                                 >
                                     Schedule a Consultation
@@ -175,7 +175,7 @@ export default function HomeAndLifePage() {
                     </p>
                     <div className="flex flex-col sm:flex-row gap-4 justify-center">
                         <Link
-                            href="/contact"
+                            href="/about"
                             className="px-8 py-4 bg-[#E2C16B] text-[#3C3C3C] font-semibold rounded-full hover:bg-[#d4b35f] transition-all"
                         >
                             Schedule a Consultation

@@ -206,7 +206,7 @@ export default function ConciergeServicesPage() {
                     Contact us today for a free consultation and let us create a customized home management plan for you.
                 </p>
                 <div style={{ display: 'flex', gap: '1rem', justifyContent: 'center', flexWrap: 'wrap' }}>
-                    <Link href="/contact" style={{
+                    <Link href="/about" style={{
                         padding: '0.75rem 1.75rem',
                         backgroundColor: '#E2C16B',
                         color: 'white',
