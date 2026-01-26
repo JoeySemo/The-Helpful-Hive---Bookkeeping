@@ -60,14 +60,15 @@ export default function BusinessAndMoneyPage() {
 
                 <div className="max-w-6xl mx-auto relative z-10">
                     <div className="grid md:grid-cols-2 gap-12 items-center">
-                        <div className="order-2 md:order-1 animate-fade-up">
+                        <div className="order-2 md:order-1 animate-fade-up text-center md:text-left">
                             <h1 className="font-display text-4xl md:text-5xl lg:text-6xl font-medium text-[#3C3C3C] mb-6">
-                                Taking the Sting Out of <span className="text-[#7A8C57]">Business Finances</span>
+                                Taking the Sting Out of <br />
+                                <span className="text-[#7A8C57]">Business Finances</span>
                             </h1>
                             <p className="text-[#3C3C3C]/80 text-lg mb-8 leading-relaxed">
                                 Expert Bookkeeping and Financial Management for Small Businesses.
                             </p>
-                            <div className="flex flex-wrap gap-4">
+                            <div className="flex flex-wrap gap-4 justify-center md:justify-start">
                                 <Link
                                     href="/about"
                                     className="px-8 py-4 bg-[#BFC8A1] text-[#3C3C3C] font-semibold rounded-full hover:bg-[#aab68b] transition-all hover:shadow-md"
