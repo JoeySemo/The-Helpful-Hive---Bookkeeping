@@ -12,7 +12,7 @@ export default function HomeAndLifePage() {
             icon: '🧽',
             price: '$30',
             priceUnit: 'per hour',
-            popular: true,
+            popular: false,
             items: ['Bathroom Deep Clean', 'Kitchen Deep Clean', 'Window Washing', 'Laundry Services'],
             href: '/concierge/services/bee-done'
         },

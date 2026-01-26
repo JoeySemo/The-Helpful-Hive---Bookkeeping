@@ -22,7 +22,7 @@ export default function BusinessAndMoneyPage() {
             description: 'Hassle-free payroll processing',
             features: ['Direct deposit & checks', 'Tax filing & compliance', 'W-2 & 1099 preparation', 'Quarterly reporting'],
             href: '/bookkeeping/services/payroll',
-            popular: true
+            popular: false
         },
         {
             title: 'QuickBooks Cleanup',
@@ -154,8 +154,9 @@ export default function BusinessAndMoneyPage() {
                     </div>
 
                     {/* Sage Tip */}
-                    <div className="mt-12 bg-[#BFC8A1]/10 rounded-2xl p-6 border border-[#BFC8A1]/30 text-center max-w-3xl mx-auto">
-                        <p className="text-[#3C3C3C] font-medium">🍃 Special introductory rates available for new clients.</p>
+                    <div className="mt-12 bg-[#BFC8A1]/10 rounded-2xl p-6 border border-[#BFC8A1]/30 text-center max-w-3xl mx-auto flex items-center justify-center gap-3">
+                        <Image src="/logo-honeycomb.png" alt="The Helpful Hive" width={32} height={32} className="object-contain" />
+                        <p className="text-[#3C3C3C] font-medium">Special introductory rates available for new clients.</p>
                     </div>
                 </div>
             </div>
