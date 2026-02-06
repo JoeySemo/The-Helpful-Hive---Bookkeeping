@@ -70,29 +70,29 @@ export default function HomePage() {
 
             {/* Flying Bees */}
             <div className="absolute inset-0 flex items-center justify-center pointer-events-none z-0">
-              {/* Bee 1: Standard */}
+              {/* Bee 1: Pet Food Bee */}
               <div className="absolute animate-fly-1 w-12 h-12 md:w-16 md:h-16">
-                <Image src="/bee-svg-1.svg" alt="Bee 1" fill className="object-contain transform scale-x-[-1]" />
+                <Image src="/bee-new-1.png" alt="Bee with pet food" fill className="object-contain" />
               </div>
-              {/* Bee 2: Mirrored */}
+              {/* Bee 2: Briefcase Bee */}
               <div className="absolute animate-fly-2 w-10 h-10 md:w-14 md:h-14">
-                <Image src="/bee-svg-2.svg" alt="Bee 2" fill className="object-contain transform scale-x-[-1]" />
+                <Image src="/bee-new-2.png" alt="Bee with briefcase" fill className="object-contain" />
               </div>
-              {/* Bee 3: Rotated */}
+              {/* Bee 3: Cleaning Bee */}
               <div className="absolute animate-fly-3 w-12 h-12 md:w-16 md:h-16">
-                <Image src="/bee-svg-3.svg" alt="Bee 3" fill className="object-contain transform scale-x-[-1]" />
+                <Image src="/bee-new-3.png" alt="Bee with broom" fill className="object-contain" />
               </div>
-              {/* Bee 4: Mirrored + Rotated */}
+              {/* Bee 4: Clipboard Bee */}
               <div className="absolute animate-fly-4 w-11 h-11 md:w-15 md:h-15">
-                <Image src="/bee-svg-4.svg" alt="Bee 4" fill className="object-contain transform scale-x-[-1]" />
+                <Image src="/bee-new-4.png" alt="Bee with clipboard" fill className="object-contain" />
               </div>
-              {/* Bee 5: Small */}
+              {/* Bee 5: Spray Bottle Bee */}
               <div className="absolute animate-fly-5 w-11 h-11 md:w-15 md:h-15">
-                <Image src="/bee-svg-5.svg" alt="Bee 5" fill className="object-contain" />
+                <Image src="/bee-new-5.png" alt="Bee with spray bottle" fill className="object-contain" />
               </div>
-              {/* Bee 6: Small Mirrored */}
+              {/* Bee 6: Calculator Bee */}
               <div className="absolute animate-fly-6 w-10 h-10 md:w-14 md:h-14">
-                <Image src="/bee-svg-6.svg" alt="Bee 6" fill className="object-contain" />
+                <Image src="/bee-new-6.png" alt="Bee with calculator" fill className="object-contain" />
               </div>
             </div>
           </div>
