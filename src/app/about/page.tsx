@@ -37,6 +37,13 @@ export default function AboutPage() {
             items: ['Event Coordination', 'Realtor Assistance', 'Volunteer Support'],
         },
         {
+            name: 'Bee Efficient',
+            tagline: 'Errands & Admin',
+            color: '#D4A574',
+            href: '/for-home-and-life/bee-efficient',
+            items: ['Errand Running', 'Appointment Scheduling', 'Marketing Assistance'],
+        },
+        {
             name: 'Bee Balanced',
             tagline: 'Bookkeeping & Financials',
             color: '#4A5D66',
@@ -145,7 +152,7 @@ export default function AboutPage() {
                             The Bee Ecosystem
                         </h2>
                         <p className="font-[family-name:var(--font-montserrat)] text-[#525252] max-w-2xl mx-auto">
-                            Five service categories designed to support every part of your life — from your home to your business.
+                            Six service categories designed to support every part of your life — from your home to your business.
                         </p>
                     </div>
 

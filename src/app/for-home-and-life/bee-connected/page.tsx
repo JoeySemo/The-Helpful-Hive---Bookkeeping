@@ -72,10 +72,10 @@ export default function BeeConnectedPage() {
                                 </div>
 
                                 {/* Orbiting Bees */}
-                                <div className="absolute -top-2 left-1/4 w-20 h-20 md:w-24 md:h-24 animate-float" style={{ animationDelay: '0s' }}>
+                                <div className="absolute -top-8 left-1/6 w-20 h-20 md:w-24 md:h-24 animate-float" style={{ animationDelay: '0s' }}>
                                     <Image src="/bee-7-megaphone.png" alt="Megaphone Bee" fill className="object-contain drop-shadow-lg" />
                                 </div>
-                                <div className="absolute top-1/3 -right-4 md:-right-8 w-[72px] h-[72px] md:w-[88px] md:h-[88px] animate-float" style={{ animationDelay: '1s' }}>
+                                <div className="absolute top-1/3 -right-10 md:-right-14 w-[72px] h-[72px] md:w-[88px] md:h-[88px] animate-float" style={{ animationDelay: '1s' }}>
                                     <Image src="/bee-8-calendar.png" alt="Calendar Bee" fill className="object-contain drop-shadow-lg" />
                                 </div>
                             </div>

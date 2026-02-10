@@ -54,13 +54,13 @@ export default function BeeEfficientPage() {
                                         <Image src="/official-logo-circular.jpg" alt="The Helpful Hive" fill className="object-cover" priority />
                                     </div>
                                 </div>
-                                <div className="absolute -top-2 left-1/4 w-20 h-20 md:w-24 md:h-24 animate-float">
+                                <div className="absolute -top-8 left-1/6 w-20 h-20 md:w-24 md:h-24 animate-float">
                                     <Image src="/bee-10-briefcase.png" alt="Briefcase Bee" fill className="object-contain drop-shadow-lg" />
                                 </div>
-                                <div className="absolute top-1/3 -right-4 md:-right-8 w-[72px] h-[72px] md:w-[88px] md:h-[88px] animate-float" style={{ animationDelay: '0.7s' }}>
+                                <div className="absolute top-1/3 -right-10 md:-right-14 w-[72px] h-[72px] md:w-[88px] md:h-[88px] animate-float" style={{ animationDelay: '0.7s' }}>
                                     <Image src="/bee-5-clipboard.png" alt="Clipboard Bee" fill className="object-contain drop-shadow-lg" />
                                 </div>
-                                <div className="absolute bottom-0 left-4 md:left-0 w-16 h-16 md:w-20 md:h-20 animate-float" style={{ animationDelay: '1.4s' }}>
+                                <div className="absolute -bottom-6 left-0 md:-left-4 w-16 h-16 md:w-20 md:h-20 animate-float" style={{ animationDelay: '1.4s' }}>
                                     <Image src="/bee-8-calendar.png" alt="Calendar Bee" fill className="object-contain drop-shadow-lg" />
                                 </div>
                             </div>

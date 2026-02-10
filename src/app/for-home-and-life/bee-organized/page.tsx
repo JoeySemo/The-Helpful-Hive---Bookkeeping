@@ -72,10 +72,10 @@ export default function BeeOrganizedPage() {
                                 </div>
 
                                 {/* Orbiting Bees */}
-                                <div className="absolute -top-2 right-1/4 w-20 h-20 md:w-24 md:h-24 animate-float" style={{ animationDelay: '0s' }}>
+                                <div className="absolute -top-8 right-1/6 w-20 h-20 md:w-24 md:h-24 animate-float" style={{ animationDelay: '0s' }}>
                                     <Image src="/bee-6-bins.png" alt="Storage Bins Bee" fill className="object-contain drop-shadow-lg" />
                                 </div>
-                                <div className="absolute bottom-4 left-4 md:left-0 w-[72px] h-[72px] md:w-[88px] md:h-[88px] animate-float" style={{ animationDelay: '1s' }}>
+                                <div className="absolute -bottom-4 -left-2 md:-left-6 w-[72px] h-[72px] md:w-[88px] md:h-[88px] animate-float" style={{ animationDelay: '1s' }}>
                                     <Image src="/bee-9-label.png" alt="Label Tag Bee" fill className="object-contain drop-shadow-lg" />
                                 </div>
                             </div>

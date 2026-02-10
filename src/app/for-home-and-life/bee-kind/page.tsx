@@ -82,10 +82,10 @@ export default function BeeKindPage() {
                                         <Image src="/official-logo-circular.jpg" alt="The Helpful Hive" fill className="object-cover" priority />
                                     </div>
                                 </div>
-                                <div className="absolute -top-2 left-1/4 w-20 h-20 md:w-24 md:h-24 animate-float">
+                                <div className="absolute -top-8 left-1/6 w-20 h-20 md:w-24 md:h-24 animate-float">
                                     <Image src="/bee-1-petfood.png" alt="Pet Food Bee" fill className="object-contain drop-shadow-lg" />
                                 </div>
-                                <div className="absolute top-1/3 -right-4 md:-right-8 w-[72px] h-[72px] md:w-[88px] md:h-[88px] animate-float" style={{ animationDelay: '1s' }}>
+                                <div className="absolute top-1/3 -right-10 md:-right-14 w-[72px] h-[72px] md:w-[88px] md:h-[88px] animate-float" style={{ animationDelay: '1s' }}>
                                     <Image src="/bee-3-wateringcan.png" alt="Watering Can Bee" fill className="object-contain drop-shadow-lg" />
                                 </div>
                             </div>
