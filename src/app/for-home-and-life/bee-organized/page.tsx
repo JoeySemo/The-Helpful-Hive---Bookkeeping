@@ -123,7 +123,7 @@ export default function BeeOrganizedPage() {
                 </div>
                 <div className="max-w-3xl mx-auto text-center relative z-10">
                     <h2 className="font-[family-name:var(--font-lora)] text-3xl md:text-4xl font-bold text-white mb-4">
-                        Ready to transform your <span className="text-[#A2C1D4]">spaces</span>?
+                        Ready to transform your <span className="text-[#E2C16B]">spaces</span>?
                     </h2>
                     <p className="font-[family-name:var(--font-montserrat)] text-white/70 mb-8 text-lg">
                         Let us bring order to your home and peace to your mind.

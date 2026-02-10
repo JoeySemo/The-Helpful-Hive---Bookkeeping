@@ -123,7 +123,7 @@ export default function BeeConnectedPage() {
                 </div>
                 <div className="max-w-3xl mx-auto text-center relative z-10">
                     <h2 className="font-[family-name:var(--font-lora)] text-3xl md:text-4xl font-bold text-white mb-4">
-                        Ready to strengthen your <span className="text-[#7B6B8D]">connections</span>?
+                        Ready to strengthen your <span className="text-[#E2C16B]">connections</span>?
                     </h2>
                     <p className="font-[family-name:var(--font-montserrat)] text-white/70 mb-8 text-lg">
                         Let us help coordinate your next event or support your team.

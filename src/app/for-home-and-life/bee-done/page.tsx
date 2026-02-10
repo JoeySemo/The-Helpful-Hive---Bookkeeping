@@ -243,7 +243,7 @@ export default function BeeDonePage() {
                 </div>
                 <div className="max-w-3xl mx-auto text-center relative z-10">
                     <h2 className="font-[family-name:var(--font-lora)] text-3xl md:text-4xl font-bold text-white mb-4">
-                        Ready to <span className="text-[#BFC8A1]">Bee Done</span> with your to-do list?
+                        Ready to <span className="text-[#E2C16B]">Bee Done</span> with your to-do list?
                     </h2>
                     <p className="font-[family-name:var(--font-montserrat)] text-white/70 mb-8 text-lg">
                         Let us take care of the cleaning and errands so you can enjoy your home.

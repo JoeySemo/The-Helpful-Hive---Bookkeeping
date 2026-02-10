@@ -196,7 +196,7 @@ export default function BeeKindPage() {
                 </div>
                 <div className="max-w-3xl mx-auto text-center relative z-10">
                     <h2 className="font-[family-name:var(--font-lora)] text-3xl md:text-4xl font-bold text-white mb-4">
-                        Ready to give your pets the <span className="text-[#98B4AC]">kindness</span> they deserve?
+                        Ready to give your pets the <span className="text-[#E2C16B]">kindness</span> they deserve?
                     </h2>
                     <p className="font-[family-name:var(--font-montserrat)] text-white/70 mb-8 text-lg">
                         Book a visit and let us shower your furry friends with love.

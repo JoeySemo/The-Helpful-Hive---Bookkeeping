@@ -171,9 +171,16 @@ export default function Navbar() {
               <Link
                 href="/for-business-and-money"
                 onClick={() => setIsMenuOpen(false)}
-                className={`px-4 py-3 rounded-lg text-base font-medium font-[family-name:var(--font-montserrat)] ${isBusinessActive ? 'bg-[#FFF8E7] text-[#E2C16B]' : 'text-[#3C3C3C] hover:bg-[#FFF8E7]'}`}
+                className={`flex items-center gap-3 px-4 py-3 rounded-lg hover:bg-[#FFF8E7] transition-colors`}
               >
-                Bee Balanced (Bookkeeping)
+                <div
+                  className="w-3 h-3 rounded-full flex-shrink-0"
+                  style={{ backgroundColor: '#4A5D66' }}
+                />
+                <div>
+                  <div className={`font-medium font-[family-name:var(--font-montserrat)] ${isBusinessActive ? 'text-[#E2C16B]' : 'text-[#3C3C3C]'}`}>Bee Balanced</div>
+                  <div className="text-xs text-[#737373]">Bookkeeping & Finance</div>
+                </div>
               </Link>
 
               <Link

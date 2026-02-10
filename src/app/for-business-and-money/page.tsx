@@ -196,7 +196,12 @@ export default function BusinessAndMoneyPage() {
 
                     {/* Introductory Rate Note */}
                     <div className="mt-10 bg-[#4A5D66]/10 rounded-2xl p-6 border border-[#4A5D66]/20 text-center max-w-3xl mx-auto">
-                        <p className="font-[family-name:var(--font-montserrat)] text-[#3C3C3C] font-medium">🐝 Special introductory rates available for new clients.</p>
+                        <div className="flex items-center justify-center gap-3 mb-2">
+                            <div className="relative w-8 h-8"><Image src="/bee-11-calculator.png" alt="Calculator Bee" fill className="object-contain" /></div>
+                            <div className="relative w-8 h-8"><Image src="/bee-10-briefcase.png" alt="Briefcase Bee" fill className="object-contain" /></div>
+                            <div className="relative w-8 h-8"><Image src="/bee-5-clipboard.png" alt="Clipboard Bee" fill className="object-contain" /></div>
+                        </div>
+                        <p className="font-[family-name:var(--font-montserrat)] text-[#3C3C3C] font-medium">Special introductory rates available for new clients.</p>
                     </div>
                 </div>
             </section>

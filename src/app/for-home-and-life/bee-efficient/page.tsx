@@ -165,7 +165,7 @@ export default function BeeEfficientPage() {
                 </div>
                 <div className="max-w-3xl mx-auto text-center relative z-10">
                     <h2 className="font-[family-name:var(--font-lora)] text-3xl md:text-4xl font-bold text-white mb-4">
-                        Ready to <span className="text-[#D4A574]">Bee Efficient</span>?
+                        Ready to <span className="text-[#E2C16B]">Bee Efficient</span>?
                     </h2>
                     <p className="font-[family-name:var(--font-montserrat)] text-white/70 mb-8 text-lg">
                         Let us handle the busy work so you can focus on what matters most.
