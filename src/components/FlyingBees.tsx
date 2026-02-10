@@ -35,7 +35,7 @@ export default function FlyingBees({ bees, accentColor = '#E2C16B' }: FlyingBees
             </div>
 
             {/* Flying Bees */}
-            <div className="absolute inset-0 flex items-center justify-center pointer-events-none z-0">
+            <div className="absolute inset-0 flex items-center justify-center pointer-events-none z-20">
                 {bees.map((bee, index) => (
                     <div key={index} className={`absolute ${bee.flyClass} ${bee.size}`}>
                         <Image src={bee.src} alt={bee.alt} fill className="object-contain" />

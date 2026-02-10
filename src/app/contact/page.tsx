@@ -40,7 +40,7 @@ export default function ContactPage() {
                     {/* Photo */}
                     <div className="relative w-40 h-40 md:w-56 md:h-56 mx-auto mb-6">
                         <Image
-                            src="/queen-bee.jpg"
+                            src="/amanda-headshot.jpg"
                             alt="The Queen Bee"
                             fill
                             className="object-cover rounded-full border-4 border-honey-400 shadow-float"
