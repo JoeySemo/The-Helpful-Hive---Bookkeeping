@@ -53,7 +53,7 @@ export default function AdministrativeCarePage() {
                                 <div className="absolute inset-0 bg-[#E2C16B] rounded-full opacity-10 blur-3xl transform scale-110"></div>
                                 <div className="relative w-full h-full bg-white rounded-full p-4 border-4 border-[#E2C16B] shadow-2xl flex items-center justify-center overflow-hidden">
                                     <Image
-                                        src="/logo-circular.jpg"
+                                        src="/official-logo-circular.jpg"
                                         alt="Administrative Care Services Logo"
                                         fill
                                         className="object-contain hover:scale-110 transition-transform duration-700"

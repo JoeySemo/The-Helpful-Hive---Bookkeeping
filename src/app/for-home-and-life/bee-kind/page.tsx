@@ -7,21 +7,39 @@ export const metadata = {
 };
 
 export default function BeeKindPage() {
-    const services = [
-        { name: "Dog Walking", description: "15 or 30 minute walks to keep tails wagging", icon: "🐕" },
-        { name: "Potty Breaks & Let-Outs", description: "Quick relief visits during long days", icon: "🚪" },
-        { name: "Feeding & Water Refresh", description: "Meals and fresh water on schedule", icon: "🥣" },
-        { name: "Cat Litter Refresh", description: "Clean and comfortable for your feline friends", icon: "🐱" },
-        { name: "Vacation Home Check-Ins", description: "Peace of mind while you're away", icon: "🏠" },
-        { name: "Plant Watering & Bird Feeding", description: "Care for all your living things", icon: "🌿" },
+    const visits = [
+        {
+            name: 'The Home Hive Check',
+            price: '$25',
+            description: 'Ideal for travelers. Mail & package retrieval, trash bin in/out, plant watering, light rotation, and a perimeter security walk-through.',
+            icon: '🏠',
+        },
+        {
+            name: 'The Paws and Claws Visit',
+            price: '$30',
+            description: 'Ideal for busy pet parents. Fresh food and water, potty break or litter box scoop, and 15 minutes of dedicated playtime or a short neighborhood walk.',
+            icon: '🐾',
+        },
+        {
+            name: 'The Hive Hybrid',
+            price: '$45',
+            description: 'The perfect all-in-one solution for the busy traveler. This visit combines a full Home Hive Check (mail, trash, plants, and security) with a Paws and Claws session (feeding, waste cleanup, and play).',
+            icon: '🐝',
+            popular: true,
+        },
+        {
+            name: 'The Golden Companion Visit',
+            price: '$40',
+            description: 'Ideal for local families. A friendly face-to-face wellness check. Includes light meal prep or snack, medication reminders, and a companion chat to brighten their day.',
+            icon: '💛',
+        },
     ];
 
     return (
         <div className="min-h-screen bg-[#FFF8E7]">
-            {/* Hero Section - Split Layout */}
+            {/* Hero Section */}
             <section className="relative overflow-hidden">
                 <div className="absolute inset-0 bg-gradient-to-br from-[#98B4AC]/15 via-[#FFF8E7] to-[#98B4AC]/10" />
-
                 <div className="absolute inset-0 opacity-5 pointer-events-none">
                     <svg className="w-full h-full" viewBox="0 0 100 100" preserveAspectRatio="none">
                         <pattern id="honeycomb-bk" width="10" height="10" patternUnits="userSpaceOnUse">
@@ -36,22 +54,18 @@ export default function BeeKindPage() {
                         <div className="order-2 md:order-1">
                             <div className="inline-block px-4 py-2 bg-[#98B4AC]/25 rounded-full mb-6 backdrop-blur-sm">
                                 <span className="text-[#3C3C3C] font-[family-name:var(--font-montserrat)] text-sm font-medium">
-                                    Pet Care & Home Visits
+                                    The &ldquo;Bee Kind&rdquo; Service Menu
                                 </span>
                             </div>
-
                             <h1 className="font-[family-name:var(--font-lora)] text-5xl md:text-7xl font-bold text-[#3C3C3C] mb-4">
                                 Bee Kind
                             </h1>
-
                             <p className="font-[family-name:var(--font-allura)] text-3xl md:text-4xl text-[#98B4AC] mb-6">
                                 Sweetening the day for your pets and plants.
                             </p>
-
                             <p className="font-[family-name:var(--font-montserrat)] text-lg text-[#525252] mb-8 leading-relaxed max-w-lg">
-                                Your pets will thank you — paws down. We provide loving care for your furry friends and green companions while you&apos;re away from the hive.
+                                Sweetening the day for your pets and plants while you&apos;re away from the hive. All visits are approximately 45 minutes and include a digital &ldquo;Hive Update&rdquo; (text/photo) sent immediately after the visit.
                             </p>
-
                             <Link
                                 href="/contact"
                                 className="inline-block px-8 py-4 bg-[#C17A5B] text-white font-[family-name:var(--font-montserrat)] font-semibold rounded-full hover:bg-[#a86a4d] transition-all hover:shadow-lg hover:-translate-y-0.5"
@@ -60,19 +74,15 @@ export default function BeeKindPage() {
                             </Link>
                         </div>
 
-                        {/* Right - Logo + Bee Cluster */}
                         <div className="order-1 md:order-2 flex justify-center">
                             <div className="relative w-72 h-72 md:w-96 md:h-96">
                                 <div className="absolute inset-4 bg-[#98B4AC]/15 rounded-full blur-2xl" />
-
                                 <div className="relative w-48 h-48 md:w-64 md:h-64 mx-auto mt-8 md:mt-12">
                                     <div className="w-full h-full rounded-full border-4 border-[#98B4AC]/50 shadow-2xl overflow-hidden bg-white animate-float">
-                                        <Image src="/logo-circular.jpg" alt="The Helpful Hive" fill className="object-cover" priority />
+                                        <Image src="/official-logo-circular.jpg" alt="The Helpful Hive" fill className="object-cover" priority />
                                     </div>
                                 </div>
-
-                                {/* Orbiting Bees */}
-                                <div className="absolute -top-2 left-1/4 w-20 h-20 md:w-24 md:h-24 animate-float" style={{ animationDelay: '0s' }}>
+                                <div className="absolute -top-2 left-1/4 w-20 h-20 md:w-24 md:h-24 animate-float">
                                     <Image src="/bee-1-petfood.png" alt="Pet Food Bee" fill className="object-contain drop-shadow-lg" />
                                 </div>
                                 <div className="absolute top-1/3 -right-4 md:-right-8 w-[72px] h-[72px] md:w-[88px] md:h-[88px] animate-float" style={{ animationDelay: '1s' }}>
@@ -84,44 +94,103 @@ export default function BeeKindPage() {
                 </div>
             </section>
 
-            {/* Tagline Banner */}
-            <section className="py-8 px-4 bg-[#98B4AC]/10 border-y border-[#98B4AC]/20">
-                <p className="font-[family-name:var(--font-lora)] text-xl md:text-2xl text-[#3C3C3C] text-center font-medium italic max-w-3xl mx-auto">
-                    &ldquo;Sweetening the day for your pets and plants while you&apos;re away from the <span className="text-[#98B4AC]">hive</span>&rdquo;
+            {/* Visit Info Banner */}
+            <section className="py-5 px-4 bg-[#98B4AC]/15 border-y border-[#98B4AC]/20">
+                <p className="font-[family-name:var(--font-montserrat)] text-sm text-[#3C3C3C] text-center font-medium max-w-3xl mx-auto">
+                    🐝 All visits are approximately <strong>45 minutes</strong> and include a digital &ldquo;Hive Update&rdquo; (text/photo) sent immediately after the visit.
                 </p>
             </section>
 
-            {/* Services Grid */}
-            <section className="py-16 md:py-20 px-6">
-                <div className="max-w-6xl mx-auto">
-                    <div className="text-center mb-12">
-                        <h2 className="font-[family-name:var(--font-lora)] text-3xl md:text-4xl font-bold text-[#3C3C3C] mb-3">
-                            Our Pet & Plant Care Services
+            {/* Visit Packages */}
+            <section className="py-14 md:py-20 px-6">
+                <div className="max-w-5xl mx-auto">
+                    <div className="text-center mb-10">
+                        <h2 className="font-[family-name:var(--font-lora)] text-3xl md:text-4xl font-bold text-[#3C3C3C] mb-2">
+                            Visit Packages
                         </h2>
-                        <p className="font-[family-name:var(--font-montserrat)] text-[#525252]">
-                            Loving care for every member of your household
+                        <p className="font-[family-name:var(--font-montserrat)] text-sm text-[#525252]">
+                            Choose the visit that fits your needs
                         </p>
                     </div>
 
-                    <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
-                        {services.map((service, index) => (
+                    <div className="grid sm:grid-cols-2 gap-5">
+                        {visits.map((visit, i) => (
                             <div
-                                key={index}
-                                className="group bg-white rounded-2xl p-6 border border-[#98B4AC]/20 hover:border-[#98B4AC] hover:shadow-xl transition-all duration-300 hover:-translate-y-1"
+                                key={i}
+                                className={`group bg-white rounded-2xl overflow-hidden border-2 transition-all duration-300 hover:shadow-xl hover:-translate-y-1 relative ${visit.popular ? 'border-[#98B4AC]' : 'border-[#98B4AC]/20 hover:border-[#98B4AC]'}`}
                             >
-                                <div className="text-3xl mb-4 group-hover:scale-110 transition-transform duration-300">
-                                    {service.icon}
+                                {visit.popular && (
+                                    <div className="absolute top-0 right-0 bg-[#98B4AC] text-white text-xs font-[family-name:var(--font-montserrat)] font-bold px-3 py-1 rounded-bl-xl">
+                                        MOST POPULAR
+                                    </div>
+                                )}
+
+                                <div className="p-6">
+                                    <div className="flex items-center justify-between mb-3">
+                                        <span className="text-3xl">{visit.icon}</span>
+                                        <span className="bg-[#98B4AC] text-white text-lg px-4 py-1.5 rounded-full font-[family-name:var(--font-montserrat)] font-bold">
+                                            {visit.price}
+                                        </span>
+                                    </div>
+                                    <h3 className="font-[family-name:var(--font-lora)] text-xl font-bold text-[#3C3C3C] mb-2">
+                                        {visit.name}
+                                    </h3>
+                                    <p className="font-[family-name:var(--font-montserrat)] text-sm text-[#525252] leading-relaxed">
+                                        {visit.description}
+                                    </p>
                                 </div>
-                                <h3 className="font-[family-name:var(--font-lora)] text-lg font-semibold text-[#3C3C3C] mb-2">
-                                    {service.name}
-                                </h3>
-                                <p className="font-[family-name:var(--font-montserrat)] text-sm text-[#525252] leading-relaxed">
-                                    {service.description}
-                                </p>
                             </div>
                         ))}
                     </div>
                 </div>
+            </section>
+
+            {/* Overnight Section */}
+            <section className="py-14 md:py-16 px-6 bg-white">
+                <div className="max-w-5xl mx-auto">
+                    <div className="rounded-3xl border-2 border-[#98B4AC] overflow-hidden bg-[#FFF8E7] relative">
+                        <div className="bg-[#98B4AC]/15 px-8 py-6 border-b border-[#98B4AC]/20 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-3">
+                            <div className="flex items-center gap-4">
+                                <div className="relative w-12 h-12 flex-shrink-0">
+                                    <Image src="/bee-1-petfood.png" alt="Overnight Bee" fill className="object-contain" />
+                                </div>
+                                <div>
+                                    <h2 className="font-[family-name:var(--font-lora)] text-2xl md:text-3xl font-bold text-[#3C3C3C]">
+                                        Overnight Home and Pet Sitting
+                                    </h2>
+                                </div>
+                            </div>
+                            <div className="bg-[#98B4AC] text-white px-5 py-2.5 rounded-full font-[family-name:var(--font-montserrat)] font-bold text-lg self-start sm:self-auto">
+                                $125
+                            </div>
+                        </div>
+
+                        <div className="p-8">
+                            <p className="font-[family-name:var(--font-montserrat)] text-[#525252] leading-relaxed mb-4">
+                                Maximum peace of mind with a consistent presence. This premium service includes a <strong>10-hour overnight stay</strong> in your home. We maintain your pet&apos;s familiar bedtime and morning routines while providing the &ldquo;lived-in&rdquo; look that keeps your property secure.
+                            </p>
+                            <p className="font-[family-name:var(--font-montserrat)] text-[#525252] leading-relaxed">
+                                Includes evening/morning feedings and a complimentary Home Hive Check.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            {/* Bee Done Add-on Callout */}
+            <section className="py-6 px-6 bg-[#BFC8A1]/15 border-y border-[#BFC8A1]/20">
+                <div className="max-w-3xl mx-auto text-center">
+                    <p className="font-[family-name:var(--font-montserrat)] text-sm text-[#3C3C3C]">
+                        <strong>Make it a <span className="italic">Bee Done</span> Day!</strong> Already have a check-in scheduled? Add any of our professional chore services (from laundry to light tidying) to your visit for a flat add-on rate.
+                    </p>
+                </div>
+            </section>
+
+            {/* Pricing Note */}
+            <section className="py-6 px-6">
+                <p className="font-[family-name:var(--font-montserrat)] text-sm text-[#525252] text-center italic max-w-3xl mx-auto">
+                    Prices listed are estimates. Final pricing depends on the job details and will be confirmed before we start. Extra fees may apply for holidays, rush requests, or add-on tasks.
+                </p>
             </section>
 
             {/* CTA Section */}

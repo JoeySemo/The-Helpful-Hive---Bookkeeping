@@ -60,7 +60,7 @@ export default function HomePage() {
             {/* Main Logo */}
             <div className="relative w-full h-full animate-float z-10">
               <Image
-                src="/logo-circular.jpg"
+                src="/official-logo-circular.jpg"
                 alt="The Helpful Hive"
                 fill
                 className="object-contain rounded-full border-4 border-[#E2C16B] shadow-2xl"

@@ -86,7 +86,7 @@ export default function AboutPage() {
                             <div className="relative w-64 h-64 md:w-80 md:h-80">
                                 <div className="absolute inset-4 bg-[#E2C16B]/10 rounded-full blur-2xl" />
                                 <div className="relative w-full h-full rounded-full border-4 border-[#E2C16B]/40 shadow-2xl overflow-hidden bg-white animate-float">
-                                    <Image src="/logo-circular.jpg" alt="The Helpful Hive" fill className="object-cover" priority />
+                                    <Image src="/official-logo-circular.jpg" alt="The Helpful Hive" fill className="object-cover" priority />
                                 </div>
                             </div>
                         </div>

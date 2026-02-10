@@ -93,7 +93,7 @@ export default function BusinessAndMoneyPage() {
                                 <div className="relative w-48 h-48 md:w-64 md:h-64 mx-auto mt-8 md:mt-12">
                                     <div className="w-full h-full rounded-full border-4 border-[#4A5D66]/50 shadow-2xl overflow-hidden bg-white animate-float">
                                         <Image
-                                            src="/logo-circular.jpg"
+                                            src="/official-logo-circular.jpg"
                                             alt="The Helpful Hive"
                                             fill
                                             className="object-cover"

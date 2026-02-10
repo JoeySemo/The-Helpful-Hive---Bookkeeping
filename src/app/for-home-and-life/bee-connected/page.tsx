@@ -67,7 +67,7 @@ export default function BeeConnectedPage() {
 
                                 <div className="relative w-48 h-48 md:w-64 md:h-64 mx-auto mt-8 md:mt-12">
                                     <div className="w-full h-full rounded-full border-4 border-[#7B6B8D]/50 shadow-2xl overflow-hidden bg-white animate-float">
-                                        <Image src="/logo-circular.jpg" alt="The Helpful Hive" fill className="object-cover" priority />
+                                        <Image src="/official-logo-circular.jpg" alt="The Helpful Hive" fill className="object-cover" priority />
                                     </div>
                                 </div>
 

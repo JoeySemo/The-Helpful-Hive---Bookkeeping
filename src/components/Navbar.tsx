@@ -1,6 +1,7 @@
 "use client";
 
 import Link from 'next/link';
+import Image from 'next/image';
 import { usePathname } from 'next/navigation';
 import { useState, useEffect } from 'react';
 import { Menu, X, ChevronDown } from 'lucide-react';
@@ -30,13 +31,19 @@ export default function Navbar() {
 
   return (
     <nav className="sticky top-0 z-50 bg-[#FFF8E7]/95 backdrop-blur-md border-b border-[#E2C16B]/20">
-      <div className="max-w-7xl mx-auto px-4 md:px-8">
+      <div className="max-w-7xl mx-auto pl-0 pr-4 md:pr-8">
         <div className="flex items-center justify-between h-20 md:h-24">
           {/* Logo */}
-          <Link href="/" className="flex items-center gap-2 group h-full py-1">
-            <span className="font-[family-name:var(--font-lora)] text-xl md:text-2xl font-semibold text-[#3C3C3C] group-hover:text-[#E2C16B] transition-colors">
-              The Helpful Hive
-            </span>
+          <Link href="/" className="flex items-center gap-2 group h-full py-2">
+            <div className="relative h-20 md:h-24 w-72 md:w-80">
+              <Image
+                src="/official-logo-horizontal.png"
+                alt="The Helpful Hive"
+                fill
+                className="object-contain object-left"
+                priority
+              />
+            </div>
           </Link>
 
           {/* Desktop Navigation */}
