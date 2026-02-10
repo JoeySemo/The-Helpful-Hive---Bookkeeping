@@ -38,7 +38,7 @@ export default function Navbar() {
           <Link href="/" className="flex items-center gap-2 group h-full py-2">
             <div className="relative h-20 md:h-24 w-72 md:w-80">
               <Image
-                src="/official-logo-horizontal.png"
+                src="/wordmark-cream.png"
                 alt="The Helpful Hive"
                 fill
                 className="object-contain object-left"
