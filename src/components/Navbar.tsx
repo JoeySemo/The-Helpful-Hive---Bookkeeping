@@ -23,6 +23,7 @@ export default function Navbar() {
     { href: '/for-home-and-life/bee-done', label: 'Bee Done', subtitle: 'Cleaning & Errands', color: '#BFC8A1' },
     { href: '/for-home-and-life/bee-kind', label: 'Bee Kind', subtitle: 'Pet & Plant Care', color: '#98B4AC' },
     { href: '/for-home-and-life/bee-organized', label: 'Bee Organized', subtitle: 'Organization', color: '#A2C1D4' },
+    { href: '/for-home-and-life/bee-efficient', label: 'Bee Efficient', subtitle: 'Errands & Admin', color: '#D4A574' },
     { href: '/for-home-and-life/bee-connected', label: 'Bee Connected', subtitle: 'Coordination', color: '#7B6B8D' },
   ];
 

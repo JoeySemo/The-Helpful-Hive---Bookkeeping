@@ -44,7 +44,7 @@ export default function HomeAndLifePage() {
             color: '#D4A574',
             bee: '/bee-10-briefcase.png',
             items: ['Errand Running', 'Appointment Scheduling', 'Data Entry & Admin', 'Marketing Assistance'],
-            href: '/for-home-and-life/bee-done'
+            href: '/for-home-and-life/bee-efficient'
         },
         {
             title: 'Bee Connected',
