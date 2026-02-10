@@ -52,7 +52,7 @@ export default function BusinessAndMoneyPage() {
                 <div className="absolute inset-0 opacity-10 pointer-events-none">
                     <svg className="w-full h-full" viewBox="0 0 100 100" preserveAspectRatio="none">
                         <pattern id="honeycomb" width="10" height="10" patternUnits="userSpaceOnUse">
-                            <path d="M5 0L10 2.5V7.5L5 10L0 7.5V2.5Z" fill="none" stroke="#BFC8A1" strokeWidth="0.5" />
+                            <path d="M5 0L10 2.5V7.5L5 10L0 7.5V2.5Z" fill="none" stroke="#4A5D66" strokeWidth="0.5" />
                         </pattern>
                         <rect width="100%" height="100%" fill="url(#honeycomb)" />
                     </svg>
@@ -61,39 +61,53 @@ export default function BusinessAndMoneyPage() {
                 <div className="max-w-6xl mx-auto relative z-10">
                     <div className="grid md:grid-cols-2 gap-12 items-center">
                         <div className="order-2 md:order-1 animate-fade-up text-center md:text-left">
-                            <h1 className="font-display text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-medium text-[#3C3C3C] mb-6">
-                                Taking the Sting Out&nbsp;of <br className="hidden md:block" />
-                                <span className="text-[#7A8C57]">Business Finances</span>
+                            <h1 className="font-[family-name:var(--font-lora)] text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-medium text-[#3C3C3C] mb-6">
+                                <span className="font-[family-name:var(--font-allura)] text-[#4A5D66] text-4xl md:text-5xl">Bee Balanced</span>
+                                <br className="hidden md:block" />
+                                <span className="text-[#4A5D66]">Bookkeeping & Financial Support</span>
                             </h1>
                             <p className="text-[#3C3C3C]/80 text-lg mb-8 leading-relaxed">
                                 Expert Bookkeeping and Financial Management for Small&nbsp;Businesses.
                             </p>
                             <div className="flex flex-wrap gap-4 justify-center md:justify-start">
                                 <Link
-                                    href="/about"
-                                    className="px-8 py-4 bg-[#BFC8A1] text-[#3C3C3C] font-semibold rounded-full hover:bg-[#aab68b] transition-all hover:shadow-md"
+                                    href="/contact"
+                                    className="px-8 py-4 bg-[#C17A5B] text-white font-[family-name:var(--font-montserrat)] font-semibold rounded-full hover:bg-[#a86a4d] transition-all hover:shadow-md"
                                 >
                                     Get a Quote
                                 </Link>
                                 <a
                                     href="#pricing"
-                                    className="px-8 py-4 bg-transparent border-2 border-[#BFC8A1] text-[#3C3C3C] font-semibold rounded-full hover:bg-[#BFC8A1] hover:text-[#3C3C3C] transition-all"
+                                    className="px-8 py-4 bg-transparent border-2 border-[#4A5D66] text-[#3C3C3C] font-[family-name:var(--font-montserrat)] font-semibold rounded-full hover:bg-[#4A5D66] hover:text-white transition-all"
                                 >
                                     View Pricing
                                 </a>
                             </div>
                         </div>
                         <div className="order-1 md:order-2 flex justify-center md:justify-end">
-                            {/* Animated Logo Placement */}
-                            <div className="relative w-64 h-64 md:w-80 md:h-80 animate-float">
-                                <div className="absolute inset-0 bg-[#BFC8A1] rounded-full opacity-10 blur-3xl transform scale-110"></div>
-                                <div className="relative w-full h-full bg-white rounded-full p-4 border-4 border-[#BFC8A1] shadow-2xl flex items-center justify-center overflow-hidden">
-                                    <Image
-                                        src="/logo-circular.jpg"
-                                        alt="Business Services Logo"
-                                        fill
-                                        className="object-contain hover:scale-110 transition-transform duration-700"
-                                    />
+                            <div className="relative w-72 h-72 md:w-96 md:h-96">
+                                {/* Glowing background ring */}
+                                <div className="absolute inset-4 bg-[#4A5D66]/15 rounded-full blur-2xl" />
+
+                                {/* Logo Circle */}
+                                <div className="relative w-48 h-48 md:w-64 md:h-64 mx-auto mt-8 md:mt-12">
+                                    <div className="w-full h-full rounded-full border-4 border-[#4A5D66]/50 shadow-2xl overflow-hidden bg-white animate-float">
+                                        <Image
+                                            src="/logo-circular.jpg"
+                                            alt="The Helpful Hive"
+                                            fill
+                                            className="object-cover"
+                                            priority
+                                        />
+                                    </div>
+                                </div>
+
+                                {/* Orbiting Bees */}
+                                <div className="absolute -top-2 left-1/4 w-20 h-20 md:w-24 md:h-24 animate-float" style={{ animationDelay: '0s' }}>
+                                    <Image src="/bee-10-briefcase.png" alt="Briefcase Bee" fill className="object-contain drop-shadow-lg" />
+                                </div>
+                                <div className="absolute top-1/3 -right-4 md:-right-8 w-[72px] h-[72px] md:w-[88px] md:h-[88px] animate-float" style={{ animationDelay: '1s' }}>
+                                    <Image src="/bee-11-calculator.png" alt="Calculator Bee" fill className="object-contain drop-shadow-lg" />
                                 </div>
                             </div>
                         </div>
@@ -102,9 +116,9 @@ export default function BusinessAndMoneyPage() {
             </section>
 
             {/* Tagline Banner */}
-            <section className="py-12 px-4 bg-white border-y border-[#BFC8A1]/20">
-                <p className="font-display text-2xl md:text-3xl text-[#3C3C3C] text-center font-medium max-w-3xl mx-auto">
-                    "Taking the Sting Out of <span className="text-[#7A8C57] italic">Business Finances</span>"
+            <section className="py-12 px-4 bg-white border-y border-[#4A5D66]/20">
+                <p className="font-[family-name:var(--font-lora)] text-2xl md:text-3xl text-[#3C3C3C] text-center font-medium max-w-3xl mx-auto">
+                    "Taking the Sting Out of <span className="text-[#4A5D66] italic">Business Finances</span>"
                 </p>
             </section>
 
@@ -167,7 +181,7 @@ export default function BusinessAndMoneyPage() {
                     </p>
                     <div className="flex flex-col sm:flex-row gap-6 justify-center">
                         <Link
-                            href="/about"
+                            href="/contact"
                             className="px-8 py-4 bg-[#E2C16B] text-[#3C3C3C] font-semibold rounded-full hover:bg-[#d4b35f] transition-all transform hover:scale-105"
                         >
                             Schedule a Consultation

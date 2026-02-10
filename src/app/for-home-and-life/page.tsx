@@ -10,47 +10,33 @@ export default function HomeAndLifePage() {
             title: 'Bee Done',
             tagline: 'Household Chores & Cleaning Tasks',
             icon: '🧽',
-            price: '$30',
-            priceUnit: 'per hour',
-            popular: false,
+            color: '#BFC8A1',
             items: ['Bathroom Deep Clean', 'Kitchen Deep Clean', 'Window Washing', 'Laundry Services'],
-            href: '/concierge/services/bee-done'
+            href: '/for-home-and-life/bee-done'
         },
         {
             title: 'Bee Kind',
             tagline: 'Pet Care & Home Visits',
             icon: '🐾',
-            price: '$20',
-            priceUnit: 'per visit',
+            color: '#98B4AC',
             items: ['Dog Walking', 'Potty Breaks', 'Feeding & Water', 'Vacation Check-ins'],
-            href: '/concierge/services/bee-kind'
+            href: '/for-home-and-life/bee-kind'
         },
         {
             title: 'Bee Organized',
             tagline: 'Organization, Decluttering & Lifestyle Systems',
             icon: '🧺',
-            price: '$35',
-            priceUnit: 'per hour',
+            color: '#A2C1D4',
             items: ['Closet Organization', 'Pantry Systems', 'Home Office Setup', 'Garage Reset'],
-            href: '/concierge/services/bee-organized'
-        },
-        {
-            title: 'Bee Efficient',
-            tagline: 'Errands, Admin, and Office Help',
-            icon: '💼',
-            price: '$30',
-            priceUnit: 'per hour',
-            items: ['Errand Running', 'Appointment Scheduling', 'Data Entry', 'Event Coordination'],
-            href: '/concierge/services/bee-efficient'
+            href: '/for-home-and-life/bee-organized'
         },
         {
             title: 'Bee Connected',
-            tagline: 'Seasonal & Community Services',
+            tagline: 'Coordination & Community Support',
             icon: '🌸',
-            price: '$35',
-            priceUnit: 'per hour',
-            items: ['Holiday Decorating', 'Donation Drop-offs', 'Event Support', 'Volunteer Help'],
-            href: '/concierge/services/bee-connected'
+            color: '#7B6B8D',
+            items: ['Holiday Decorating', 'Event Assistance', 'Realtor Support', 'Volunteer Help'],
+            href: '/for-home-and-life/bee-connected'
         }
     ];
 
@@ -71,18 +57,18 @@ export default function HomeAndLifePage() {
                 <div className="max-w-6xl mx-auto relative z-10">
                     <div className="grid md:grid-cols-2 gap-12 items-center">
                         <div className="order-2 md:order-1 animate-fade-up">
-                            <h1 className="font-display text-4xl md:text-5xl lg:text-6xl font-medium text-[#3C3C3C] mb-6">
+                            <h1 className="font-[family-name:var(--font-lora)] text-4xl md:text-5xl lg:text-6xl font-medium text-[#3C3C3C] mb-6">
                                 Your Home,
                                 <br />
                                 <span className="text-[#E2C16B]">Perfectly Managed</span>
                             </h1>
-                            <p className="text-[#3C3C3C]/80 text-lg mb-8 leading-relaxed">
+                            <p className="font-[family-name:var(--font-montserrat)] text-[#3C3C3C]/80 text-lg mb-8 leading-relaxed">
                                 Sweet Solutions for Busy Homes, Pets, and People.
                             </p>
                             <div className="flex flex-wrap gap-4">
                                 <Link
-                                    href="/about"
-                                    className="px-8 py-4 bg-[#E2C16B] text-[#3C3C3C] font-semibold rounded-full hover:bg-[#d4b35f] transition-all hover:shadow-lg"
+                                    href="/contact"
+                                    className="px-8 py-4 bg-[#C17A5B] text-white font-[family-name:var(--font-montserrat)] font-semibold rounded-full hover:bg-[#a86a4d] transition-all hover:shadow-lg"
                                 >
                                     Schedule a Consultation
                                 </Link>
@@ -127,32 +113,25 @@ export default function HomeAndLifePage() {
                         <p className="text-[#3C3C3C]/70">Every Service Is Designed To Make Your Life Sweeter</p>
                     </div>
 
-                    <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <div className="grid md:grid-cols-2 gap-8">
                         {services.map((service, index) => (
                             <Link key={index} href={service.href} className="group h-full">
-                                <div className={`h-full bg-white rounded-3xl p-8 border-2 transition-all duration-300 hover:shadow-xl hover:-translate-y-1 ${service.popular ? 'border-[#E2C16B] shadow-lg relative overflow-hidden' : 'border-[#E2C16B]/20'}`}>
-
-                                    {service.popular && (
-                                        <div className="absolute top-0 right-0 bg-[#E2C16B] text-[#3C3C3C] text-xs font-bold px-4 py-1.5 rounded-bl-xl">
-                                            Most Popular
-                                        </div>
-                                    )}
-
+                                <div className="h-full bg-white rounded-3xl p-8 border-2 transition-all duration-300 hover:shadow-xl hover:-translate-y-1" style={{ borderColor: `${service.color}40` }}>
                                     <div className="flex justify-between items-start mb-6">
                                         <span className="text-5xl transform group-hover:scale-110 transition-transform duration-300 inline-block">{service.icon}</span>
-                                        <div className="text-right">
-                                            <div className="font-display text-2xl font-bold text-[#E2C16B]">{service.price}</div>
-                                            <div className="text-[#3C3C3C]/60 text-sm">{service.priceUnit}</div>
-                                        </div>
+                                        <div
+                                            className="w-4 h-4 rounded-full"
+                                            style={{ backgroundColor: service.color }}
+                                        />
                                     </div>
 
-                                    <h3 className="font-display text-xl font-bold text-[#3C3C3C] mb-2">{service.title}</h3>
-                                    <p className="text-[#E2C16B] font-medium text-sm mb-6">{service.tagline}</p>
+                                    <h3 className="font-[family-name:var(--font-lora)] text-xl font-bold text-[#3C3C3C] mb-2">{service.title}</h3>
+                                    <p className="font-[family-name:var(--font-montserrat)] font-medium text-sm mb-6" style={{ color: service.color }}>{service.tagline}</p>
 
                                     <ul className="space-y-3">
                                         {service.items.map((item, i) => (
-                                            <li key={i} className="flex items-start gap-3 text-[#3C3C3C]/80 text-sm">
-                                                <Check className="w-4 h-4 text-[#E2C16B] mt-0.5 flex-shrink-0" />
+                                            <li key={i} className="flex items-start gap-3 text-[#3C3C3C]/80 text-sm font-[family-name:var(--font-montserrat)]">
+                                                <Check className="w-4 h-4 mt-0.5 flex-shrink-0" style={{ color: service.color }} />
                                                 {item}
                                             </li>
                                         ))}
@@ -175,7 +154,7 @@ export default function HomeAndLifePage() {
                     </p>
                     <div className="flex flex-col sm:flex-row gap-6 justify-center">
                         <Link
-                            href="/about"
+                            href="/contact"
                             className="px-8 py-4 bg-[#E2C16B] text-[#3C3C3C] font-semibold rounded-full hover:bg-[#d4b35f] transition-all transform hover:scale-105"
                         >
                             Schedule a Consultation

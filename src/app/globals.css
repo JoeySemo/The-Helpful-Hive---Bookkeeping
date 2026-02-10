@@ -1,17 +1,37 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Allura&family=Montserrat:wght@300;400;500;600;700&display=swap');
 @import "tailwindcss";
 
 :root {
-  --font-inter: 'Inter', system-ui, sans-serif;
-  --font-outfit: 'Outfit', system-ui, sans-serif;
+  /* Brand Fonts */
+  --font-lora: 'Lora', Georgia, serif;
+  --font-allura: 'Allura', cursive;
+  --font-montserrat: 'Montserrat', system-ui, sans-serif;
 
-  /* Sweet & Minimal Color System */
+  /* Primary Brand Colors */
+  --warm-honey: #E2C16B;
+  --charcoal-gray: #3C3C3C;
+  --cream-white: #FFF8E7;
+  --terra-cotta: #C17A5B;
+
+  /* Service Colors */
+  --soft-sage: #BFC8A1;
+  /* Bee Done */
+  --seafoam-teal: #98B4AC;
+  /* Bee Kind */
+  --sky-blue: #A2C1D4;
+  /* Bee Organized */
+  --slate-blue: #4A5D66;
+  /* Bee Balanced */
+  --elderberry: #7B6B8D;
+  /* Bee Connected */
+
+  /* Legacy support */
   --honey-50: #FFFBF0;
   --honey-100: #FFF5E0;
   --honey-200: #FFECC2;
   --honey-400: #F5C859;
-  --honey-500: #E5A921;
-  --honey-600: #C98E19;
+  --honey-500: #E2C16B;
+  --honey-600: #C9A84A;
   --neutral-50: #FAFAFA;
   --neutral-100: #F5F5F5;
   --neutral-200: #E8E8E8;
@@ -25,12 +45,26 @@
 }
 
 @theme {
+  /* Primary Brand Colors */
+  --color-warm-honey: #E2C16B;
+  --color-charcoal: #3C3C3C;
+  --color-cream: #FFF8E7;
+  --color-terra-cotta: #C17A5B;
+
+  /* Service Colors */
+  --color-soft-sage: #BFC8A1;
+  --color-seafoam-teal: #98B4AC;
+  --color-sky-blue: #A2C1D4;
+  --color-slate-blue: #4A5D66;
+  --color-elderberry: #7B6B8D;
+
+  /* Legacy honey colors for compatibility */
   --color-honey-50: #FFFBF0;
   --color-honey-100: #FFF5E0;
   --color-honey-200: #FFECC2;
   --color-honey-400: #F5C859;
-  --color-honey-500: #E5A921;
-  --color-honey-600: #C98E19;
+  --color-honey-500: #E2C16B;
+  --color-honey-600: #C9A84A;
   --color-honey-700: #A67314;
 
   --color-neutral-50: #FAFAFA;
@@ -44,8 +78,10 @@
   --color-neutral-800: #262626;
   --color-neutral-900: #171717;
 
-  --font-family-sans: 'Inter', system-ui, sans-serif;
-  --font-family-display: 'Outfit', system-ui, sans-serif;
+  /* Brand Typography */
+  --font-family-sans: 'Montserrat', system-ui, sans-serif;
+  --font-family-display: 'Lora', Georgia, serif;
+  --font-family-script: 'Allura', cursive;
 
   --shadow-card: 0 1px 3px 0 rgba(0, 0, 0, 0.04), 0 1px 2px -1px rgba(0, 0, 0, 0.04);
   --shadow-card-hover: 0 10px 30px -10px rgba(0, 0, 0, 0.1);

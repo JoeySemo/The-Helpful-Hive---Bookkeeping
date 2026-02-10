@@ -1,15 +1,15 @@
 "use client";
 
-import Image from 'next/image';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import { useState, useEffect } from 'react';
-import { Menu, X } from 'lucide-react';
+import { Menu, X, ChevronDown } from 'lucide-react';
 
 export default function Navbar() {
   const pathname = usePathname();
   const [isMobile, setIsMobile] = useState(false);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [isHomeLifeOpen, setIsHomeLifeOpen] = useState(false);
 
   useEffect(() => {
     const checkMobile = () => setIsMobile(window.innerWidth < 1024);
@@ -18,45 +18,91 @@ export default function Navbar() {
     return () => window.removeEventListener('resize', checkMobile);
   }, []);
 
-  const isHome = pathname === '/';
-
-  const navLinks = [
-    { href: '/', label: 'Home' },
-    { href: '/pet-care', label: 'Pet Care' },
-    { href: '/home-care', label: 'Home Care' },
-    { href: '/administrative-care', label: 'Administrative Care' },
-    { href: '/for-business-and-money', label: 'Bookkeeping' },
+  const homeLifeServices = [
+    { href: '/for-home-and-life/bee-done', label: 'Bee Done', subtitle: 'Cleaning & Errands', color: '#BFC8A1' },
+    { href: '/for-home-and-life/bee-kind', label: 'Bee Kind', subtitle: 'Pet & Plant Care', color: '#98B4AC' },
+    { href: '/for-home-and-life/bee-organized', label: 'Bee Organized', subtitle: 'Organization', color: '#A2C1D4' },
+    { href: '/for-home-and-life/bee-connected', label: 'Bee Connected', subtitle: 'Coordination', color: '#7B6B8D' },
   ];
 
+  const isHomeLifeActive = pathname.startsWith('/for-home-and-life');
+  const isBusinessActive = pathname.startsWith('/for-business-and-money') || pathname.startsWith('/bookkeeping');
+
   return (
-    <nav className="sticky top-0 z-50 bg-white/95 backdrop-blur-md border-b border-[#E2C16B]/20">
+    <nav className="sticky top-0 z-50 bg-[#FFF8E7]/95 backdrop-blur-md border-b border-[#E2C16B]/20">
       <div className="max-w-7xl mx-auto px-4 md:px-8">
         <div className="flex items-center justify-between h-20 md:h-24">
-          {/* Logo - Horizontal Version */}
+          {/* Logo */}
           <Link href="/" className="flex items-center gap-2 group h-full py-1">
-            <span className="font-display text-xl md:text-2xl font-semibold text-[#3C3C3C] group-hover:text-[#E2C16B] transition-colors">
+            <span className="font-[family-name:var(--font-lora)] text-xl md:text-2xl font-semibold text-[#3C3C3C] group-hover:text-[#E2C16B] transition-colors">
               The Helpful Hive
             </span>
           </Link>
 
           {/* Desktop Navigation */}
           {!isMobile && (
-            <div className="flex items-center gap-8">
-              {navLinks.map((link) => (
-                <Link
-                  key={link.href}
-                  href={link.href}
-                  className={`text-sm md:text-base font-medium transition-colors ${pathname === link.href
-                    ? 'text-[#E2C16B]'
-                    : 'text-[#3C3C3C] hover:text-[#E2C16B]'
-                    }`}
+            <div className="flex items-center gap-6">
+              <Link
+                href="/"
+                className={`text-sm font-medium font-[family-name:var(--font-montserrat)] transition-colors ${pathname === '/' ? 'text-[#E2C16B]' : 'text-[#3C3C3C] hover:text-[#E2C16B]'}`}
+              >
+                Home
+              </Link>
+
+              {/* For Home & Life Dropdown - CSS-only for instant response */}
+              <div className="relative group/nav">
+                <button
+                  className={`flex items-center gap-1 text-sm font-medium font-[family-name:var(--font-montserrat)] transition-colors py-2 ${isHomeLifeActive ? 'text-[#E2C16B]' : 'text-[#3C3C3C] hover:text-[#E2C16B]'}`}
                 >
-                  {link.label}
-                </Link>
-              ))}
+                  For Home & Life
+                  <ChevronDown size={16} className="transition-transform group-hover/nav:rotate-180" />
+                </button>
+
+                {/* Invisible bridge so cursor can travel from button to menu */}
+                <div className="absolute top-full left-0 h-2 w-64 hidden group-hover/nav:block" />
+
+                <div className="absolute top-full left-0 pt-2 w-64 invisible opacity-0 group-hover/nav:visible group-hover/nav:opacity-100 transition-[visibility,opacity] duration-75 z-50">
+                  <div className="bg-white rounded-xl shadow-xl border border-[#E2C16B]/10 py-2">
+                    {homeLifeServices.map((service) => (
+                      <Link
+                        key={service.href}
+                        href={service.href}
+                        className="flex items-center gap-3 px-4 py-3 hover:bg-[#FFF8E7] transition-colors"
+                      >
+                        <div
+                          className="w-3 h-3 rounded-full"
+                          style={{ backgroundColor: service.color }}
+                        />
+                        <div>
+                          <div className="font-medium text-[#3C3C3C] font-[family-name:var(--font-montserrat)]">{service.label}</div>
+                          <div className="text-xs text-[#737373]">{service.subtitle}</div>
+                        </div>
+                      </Link>
+                    ))}
+                  </div>
+                </div>
+              </div>
+
+              {/* For Business & Money */}
+              <Link
+                href="/for-business-and-money"
+                className={`text-sm font-medium font-[family-name:var(--font-montserrat)] transition-colors ${isBusinessActive ? 'text-[#E2C16B]' : 'text-[#3C3C3C] hover:text-[#E2C16B]'}`}
+              >
+                For Business & Money
+              </Link>
+
+              {/* About */}
               <Link
                 href="/about"
-                className="px-6 py-3 bg-[#3C3C3C] text-white text-sm font-medium rounded-full hover:bg-[#2d2d2d] transition-all hover:shadow-lg hover:-translate-y-0.5"
+                className={`text-sm font-medium font-[family-name:var(--font-montserrat)] transition-colors ${pathname === '/about' ? 'text-[#E2C16B]' : 'text-[#3C3C3C] hover:text-[#E2C16B]'}`}
+              >
+                About
+              </Link>
+
+              {/* CTA Button - Terra Cotta */}
+              <Link
+                href="/contact"
+                className="px-6 py-3 bg-[#C17A5B] text-white text-sm font-medium font-[family-name:var(--font-montserrat)] rounded-full hover:bg-[#a86a4d] transition-all hover:shadow-lg hover:-translate-y-0.5"
               >
                 Contact Us
               </Link>
@@ -78,24 +124,61 @@ export default function Navbar() {
         {/* Mobile Menu */}
         {isMobile && isMenuOpen && (
           <div className="absolute top-20 left-0 right-0 bg-white border-b border-[#E2C16B]/20 shadow-lg p-4 animate-fade-up">
-            <div className="flex flex-col gap-3">
-              {navLinks.map((link) => (
+            <div className="flex flex-col gap-2">
+              <Link
+                href="/"
+                onClick={() => setIsMenuOpen(false)}
+                className={`px-4 py-3 rounded-lg text-base font-medium font-[family-name:var(--font-montserrat)] ${pathname === '/' ? 'bg-[#FFF8E7] text-[#E2C16B]' : 'text-[#3C3C3C] hover:bg-[#FFF8E7]'}`}
+              >
+                Home
+              </Link>
+
+              {/* Home & Life Section */}
+              <div className="px-4 py-2 text-xs uppercase tracking-wider text-[#737373] font-[family-name:var(--font-montserrat)]">
+                For Home & Life
+              </div>
+              {homeLifeServices.map((service) => (
                 <Link
-                  key={link.href}
-                  href={link.href}
+                  key={service.href}
+                  href={service.href}
                   onClick={() => setIsMenuOpen(false)}
-                  className={`px-4 py-3 rounded-lg text-base font-medium ${pathname === link.href
-                    ? 'bg-[#FFF8E7] text-[#E2C16B]'
-                    : 'text-[#3C3C3C] hover:bg-[#FFF8E7]'
-                    }`}
+                  className="flex items-center gap-3 px-4 py-3 rounded-lg hover:bg-[#FFF8E7] transition-colors"
                 >
-                  {link.label}
+                  <div
+                    className="w-3 h-3 rounded-full"
+                    style={{ backgroundColor: service.color }}
+                  />
+                  <div>
+                    <div className="font-medium text-[#3C3C3C] font-[family-name:var(--font-montserrat)]">{service.label}</div>
+                    <div className="text-xs text-[#737373]">{service.subtitle}</div>
+                  </div>
                 </Link>
               ))}
+
+              {/* Business & Money Section */}
+              <div className="px-4 py-2 text-xs uppercase tracking-wider text-[#737373] font-[family-name:var(--font-montserrat)] mt-2">
+                For Business & Money
+              </div>
+              <Link
+                href="/for-business-and-money"
+                onClick={() => setIsMenuOpen(false)}
+                className={`px-4 py-3 rounded-lg text-base font-medium font-[family-name:var(--font-montserrat)] ${isBusinessActive ? 'bg-[#FFF8E7] text-[#E2C16B]' : 'text-[#3C3C3C] hover:bg-[#FFF8E7]'}`}
+              >
+                Bee Balanced (Bookkeeping)
+              </Link>
+
               <Link
                 href="/about"
                 onClick={() => setIsMenuOpen(false)}
-                className="px-4 py-3 bg-[#3C3C3C] text-white text-base font-medium rounded-lg text-center mt-2 shadow-md"
+                className={`px-4 py-3 rounded-lg text-base font-medium font-[family-name:var(--font-montserrat)] ${pathname === '/about' ? 'bg-[#FFF8E7] text-[#E2C16B]' : 'text-[#3C3C3C] hover:bg-[#FFF8E7]'}`}
+              >
+                About
+              </Link>
+
+              <Link
+                href="/contact"
+                onClick={() => setIsMenuOpen(false)}
+                className="px-4 py-3 bg-[#C17A5B] text-white text-base font-medium font-[family-name:var(--font-montserrat)] rounded-lg text-center mt-2 shadow-md"
               >
                 Contact Us
               </Link>

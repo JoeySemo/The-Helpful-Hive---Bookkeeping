@@ -32,11 +32,11 @@ export default function HomePage() {
   };
 
   const beeCategories = [
-    { name: 'Bee Done', desc: 'Tasks and projects, completed efficiently', icon: '🧽', href: '/concierge/services/bee-done' },
-    { name: 'Bee Kind', desc: 'Compassionate care for people and pets', icon: '🐾', href: '/concierge/services/bee-kind' },
-    { name: 'Bee Organized', desc: 'Clear space, clear mind', icon: '🧺', href: '/concierge/services/bee-organized' },
-    { name: 'Bee Efficient', desc: 'Saving you time and resources', icon: '💼', href: '/concierge/services/bee-efficient' },
-    { name: 'Bee Connected', desc: 'Building community and support', icon: '🌸', href: '/concierge/services/bee-connected' },
+    { name: 'Bee Done', desc: 'Tasks and projects, completed efficiently', icon: '🧽', href: '/for-home-and-life/bee-done', color: '#BFC8A1' },
+    { name: 'Bee Kind', desc: 'Compassionate care for people and pets', icon: '🐾', href: '/for-home-and-life/bee-kind', color: '#98B4AC' },
+    { name: 'Bee Organized', desc: 'Clear space, clear mind', icon: '🧺', href: '/for-home-and-life/bee-organized', color: '#A2C1D4' },
+    { name: 'Bee Connected', desc: 'Building community and support', icon: '🌸', href: '/for-home-and-life/bee-connected', color: '#7B6B8D' },
+    { name: 'Bee Balanced', desc: 'Bookkeeping for small businesses', icon: '💼', href: '/for-business-and-money', color: '#4A5D66' },
   ];
 
   return (
@@ -118,38 +118,28 @@ export default function HomePage() {
           </div>
 
           {/* Tagline */}
-          <h1 className="font-display text-4xl md:text-6xl font-medium text-[#3C3C3C] mb-6 animate-fade-up delay-100">
-            Even The Busiest Bees
+          <h1 className="font-[family-name:var(--font-lora)] text-4xl md:text-6xl font-medium text-[#3C3C3C] mb-4 animate-fade-up delay-100">
+            Because Even The Busiest Bees
             <br />
             <span className="text-gradient-honey">Need a Little Help.</span>
           </h1>
-
+          <p className="font-[family-name:var(--font-montserrat)] text-lg md:text-xl text-[#525252] mb-8 max-w-2xl mx-auto">
+            The Helpful Hive offers a full suite of services to help your home and business hum.
+          </p>
 
           {/* Dual CTAs */}
           <div className="flex flex-col sm:flex-row flex-wrap gap-4 justify-center animate-fade-up delay-300">
             <Link
-              href="/pet-care"
-              className="px-8 py-4 bg-[#E2C16B] text-[#3C3C3C] font-semibold rounded-full hover:bg-[#d4b35f] transition-all hover:shadow-lg hover:-translate-y-1"
+              href="/for-home-and-life"
+              className="px-8 py-4 bg-[#C17A5B] text-white font-[family-name:var(--font-montserrat)] font-semibold rounded-full hover:bg-[#a86a4d] transition-all hover:shadow-lg hover:-translate-y-1"
             >
-              Pet Care
-            </Link>
-            <Link
-              href="/home-care"
-              className="px-8 py-4 bg-[#3C3C3C] text-white font-semibold rounded-full hover:bg-[#2d2d2d] transition-all hover:shadow-lg hover:-translate-y-1"
-            >
-              Home Care
-            </Link>
-            <Link
-              href="/administrative-care"
-              className="px-8 py-4 bg-[#E2C16B] text-[#3C3C3C] font-semibold rounded-full hover:bg-[#d4b35f] transition-all hover:shadow-lg hover:-translate-y-1"
-            >
-              Administrative Care
+              For Home & Life
             </Link>
             <Link
               href="/for-business-and-money"
-              className="px-8 py-4 bg-[#BFC8A1] text-[#3C3C3C] font-semibold rounded-full hover:bg-[#aab68b] transition-all hover:shadow-lg hover:-translate-y-1"
+              className="px-8 py-4 bg-[#4A5D66] text-white font-[family-name:var(--font-montserrat)] font-semibold rounded-full hover:bg-[#3a4b53] transition-all hover:shadow-lg hover:-translate-y-1"
             >
-              Bookkeeping
+              For Business & Money
             </Link>
           </div>
         </div>
@@ -166,7 +156,7 @@ export default function HomePage() {
           </p>
           <div className="flex flex-col sm:flex-row gap-6 justify-center">
             <Link
-              href="/about"
+              href="/contact"
               className="px-8 py-4 bg-[#E2C16B] text-[#3C3C3C] font-semibold rounded-full hover:bg-[#d4b35f] transition-all transform hover:scale-105"
             >
               Schedule a Consultation

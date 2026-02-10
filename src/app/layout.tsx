@@ -1,24 +1,24 @@
 import type { Metadata } from "next";
-import { Inter, Outfit } from "next/font/google";
+import { Lora, Montserrat } from "next/font/google";
 import Navbar from "@/components/Navbar";
 import FooterWrapper from "@/components/FooterWrapper";
 import "./globals.css";
 
-const inter = Inter({
+const lora = Lora({
     subsets: ['latin'],
-    variable: '--font-inter',
+    variable: '--font-lora',
     display: 'swap',
 });
 
-const outfit = Outfit({
+const montserrat = Montserrat({
     subsets: ['latin'],
-    variable: '--font-outfit',
+    variable: '--font-montserrat',
     display: 'swap',
 });
 
 export const metadata: Metadata = {
-    title: "The Helpful Hive | Bookkeeping & Concierge Services",
-    description: "Professional bookkeeping for your business and personal concierge services for your home. Serving St. Louis and surrounding areas.",
+    title: "The Helpful Hive | Home, Pet & Bookkeeping Services",
+    description: "Because even the busiest bees need a little help. The Helpful Hive offers services for busy homes, pets, families, and small businesses.",
 };
 
 export default function RootLayout({
@@ -27,8 +27,8 @@ export default function RootLayout({
     children: React.ReactNode;
 }>) {
     return (
-        <html lang="en" className={`${inter.variable} ${outfit.variable}`}>
-            <body className="antialiased min-h-screen flex flex-col bg-neutral-50">
+        <html lang="en" className={`${lora.variable} ${montserrat.variable}`}>
+            <body className="antialiased min-h-screen flex flex-col bg-[#FFF8E7]">
                 <Navbar />
                 <main className="flex-grow">
                     {children}
@@ -38,4 +38,5 @@ export default function RootLayout({
         </html>
     );
 }
+
 
