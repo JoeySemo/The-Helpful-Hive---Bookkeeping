@@ -119,10 +119,9 @@ export default function AboutPage() {
                     <div className="grid md:grid-cols-5 gap-10 items-center">
                         {/* Photo */}
                         <div className="md:col-span-2 flex justify-center">
-                            <div className="relative w-56 h-56 md:w-64 md:h-64">
-                                <div className="w-full h-full rounded-full border-4 border-[#E2C16B] shadow-xl overflow-hidden">
-                                    <Image src="/queen-bee.jpg" alt="Amanda — The Queen Bee" fill className="object-cover" />
-                                </div>
+                            <div className="relative w-56 h-72 md:w-64 md:h-80 rounded-2xl overflow-hidden">
+                                <div className="absolute inset-0 rounded-2xl border-4 border-[#E2C16B] shadow-xl z-10 pointer-events-none" />
+                                <Image src="/amanda-headshot.jpg" alt="Amanda Knittel — The Queen Bee" fill className="object-cover" />
                             </div>
                         </div>
 
@@ -144,6 +143,7 @@ export default function AboutPage() {
                 </div>
             </section>
 
+
             {/* Our Services Overview */}
             <section className="py-16 md:py-20 px-6 bg-white">
                 <div className="max-w-6xl mx-auto">
@@ -156,7 +156,7 @@ export default function AboutPage() {
                         </p>
                     </div>
 
-                    <div className="grid sm:grid-cols-2 lg:grid-cols-5 gap-5">
+                    <div className="grid grid-cols-2 lg:grid-cols-3 gap-5">
                         {serviceCategories.map((cat) => (
                             <Link
                                 key={cat.name}

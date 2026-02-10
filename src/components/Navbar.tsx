@@ -32,7 +32,7 @@ export default function Navbar() {
 
   return (
     <nav className="sticky top-0 z-50 bg-[#FFF8E7]/95 backdrop-blur-md border-b border-[#E2C16B]/20">
-      <div className="max-w-7xl mx-auto pl-0 pr-4 md:pr-8">
+      <div className="w-full pl-0 pr-4 md:pr-8">
         <div className="flex items-center justify-between h-20 md:h-24">
           {/* Logo */}
           <Link href="/" className="flex items-center gap-2 group h-full py-2">

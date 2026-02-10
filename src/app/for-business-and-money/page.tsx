@@ -2,111 +2,111 @@
 
 import Link from 'next/link';
 import Image from 'next/image';
-import { Check } from 'lucide-react';
+import { ArrowRight } from 'lucide-react';
 
 export default function BusinessAndMoneyPage() {
     const services = [
         {
             title: 'Monthly Bookkeeping',
-            price: '$400',
-            period: '/month',
-            description: 'Complete monthly financial management',
-            features: ['Bank reconciliation', 'AP/AR management', 'Financial statements', 'Unlimited support'],
-            href: '/bookkeeping/services/monthly-bookkeeping',
-            popular: false
+            tagline: 'Accurate records, zero headaches.',
+            description: 'Complete monthly financial management including bank reconciliation, AP/AR, and financial statements so you always know where you stand.',
+            icon: '📊',
+            color: '#4A5D66',
+            bee: '/bee-11-calculator.png',
+            items: ['Bank Reconciliation', 'AP/AR Management', 'Financial Statements', 'Expense Tracking'],
+            price: '$400/mo',
+            href: '/for-business-and-money/monthly-bookkeeping'
         },
         {
             title: 'Full-Service Payroll',
-            price: '$500',
-            period: '/month',
-            description: 'Hassle-free payroll processing',
-            features: ['Direct deposit & checks', 'Tax filing & compliance', 'W-2 & 1099 preparation', 'Quarterly reporting'],
-            href: '/bookkeeping/services/payroll',
-            popular: false
+            tagline: 'Hassle-free payroll, every time.',
+            description: 'From direct deposits to tax filings, we handle every detail so your team gets paid accurately and on time.',
+            icon: '💰',
+            color: '#7B6B8D',
+            bee: '/bee-10-briefcase.png',
+            items: ['Direct Deposit & Checks', 'Tax Filing & Compliance', 'W-2 & 1099 Prep', 'Quarterly Reporting'],
+            price: '$500/mo',
+            href: '/for-business-and-money/payroll'
         },
         {
             title: 'QuickBooks Cleanup',
+            tagline: 'Get your books back on track.',
+            description: 'We fix errors, reconcile months of backlog, reorganize your chart of accounts, and train your team on best practices.',
+            icon: '🔧',
+            color: '#C17A5B',
+            bee: '/bee-5-clipboard.png',
+            items: ['Error Correction', 'Chart of Accounts Cleanup', 'Historical Catch-Up', 'Training Included'],
             price: '$500+',
-            period: 'project',
-            description: 'Get your books back on track',
-            features: ['Error correction', 'Chart of accounts organization', 'Historical data catch-up', 'Training included'],
-            href: '/bookkeeping/services/quickbooks-cleanup',
-            popular: false
+            href: '/for-business-and-money/quickbooks-cleanup'
         },
         {
             title: 'CFO & Advisory',
-            price: '$750',
-            period: '/month',
-            description: 'Strategic financial guidance',
-            features: ['Cash flow management', 'Budgeting & forecasting', 'Strategic planning', 'Growth consulting'],
-            href: '/bookkeeping/services/cfo-advisory',
-            popular: false
+            tagline: 'Strategic guidance for growing businesses.',
+            description: 'Expert financial advice including cash flow management, budgeting, forecasting, and growth strategy to scale your business.',
+            icon: '📈',
+            color: '#98B4AC',
+            bee: '/bee-10-briefcase.png',
+            items: ['Cash Flow Management', 'Budgeting & Forecasting', 'Strategic Planning', 'Growth Consulting'],
+            price: '$750/mo',
+            href: '/for-business-and-money/cfo-advisory'
         }
     ];
 
     return (
         <main className="min-h-screen bg-[#FFF8E7]">
-            {/* Hero Section - Sage Theme */}
-            <section className="relative py-16 md:py-24 px-4 md:px-8 overflow-hidden">
-                {/* Honeycomb background */}
-                <div className="absolute inset-0 opacity-10 pointer-events-none">
+            {/* Hero Section */}
+            <section className="relative py-16 md:py-24 px-6 overflow-hidden">
+                <div className="absolute inset-0 bg-gradient-to-br from-[#4A5D66]/10 via-[#FFF8E7] to-[#C17A5B]/5" />
+                <div className="absolute inset-0 opacity-5 pointer-events-none">
                     <svg className="w-full h-full" viewBox="0 0 100 100" preserveAspectRatio="none">
-                        <pattern id="honeycomb" width="10" height="10" patternUnits="userSpaceOnUse">
+                        <pattern id="honeycomb-bm" width="10" height="10" patternUnits="userSpaceOnUse">
                             <path d="M5 0L10 2.5V7.5L5 10L0 7.5V2.5Z" fill="none" stroke="#4A5D66" strokeWidth="0.5" />
                         </pattern>
-                        <rect width="100%" height="100%" fill="url(#honeycomb)" />
+                        <rect width="100%" height="100%" fill="url(#honeycomb-bm)" />
                     </svg>
                 </div>
 
-                <div className="max-w-6xl mx-auto relative z-10">
+                <div className="max-w-7xl mx-auto relative z-10">
                     <div className="grid md:grid-cols-2 gap-12 items-center">
-                        <div className="order-2 md:order-1 animate-fade-up text-center md:text-left">
-                            <h1 className="font-[family-name:var(--font-lora)] text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-medium text-[#3C3C3C] mb-6">
-                                <span className="font-[family-name:var(--font-allura)] text-[#4A5D66] text-4xl md:text-5xl">Bee Balanced</span>
-                                <br className="hidden md:block" />
-                                <span className="text-[#4A5D66]">Bookkeeping & Financial Support</span>
+                        <div className="order-2 md:order-1">
+                            <h1 className="font-[family-name:var(--font-lora)] text-5xl md:text-7xl font-bold text-[#3C3C3C] mb-4">
+                                For Business
+                                <br />
+                                <span className="text-[#4A5D66]">& Money</span>
                             </h1>
-                            <p className="text-[#3C3C3C]/80 text-lg mb-8 leading-relaxed">
-                                Expert Bookkeeping and Financial Management for Small&nbsp;Businesses.
+                            <p className="font-[family-name:var(--font-allura)] text-2xl md:text-3xl text-[#C17A5B] mb-4">
+                                Taking the sting out of business finances.
                             </p>
-                            <div className="flex flex-wrap gap-4 justify-center md:justify-start">
+                            <p className="font-[family-name:var(--font-montserrat)] text-lg text-[#525252] mb-8 leading-relaxed max-w-lg">
+                                Expert bookkeeping, payroll, and financial advisory services for small businesses. Let The Helpful Hive keep your numbers in order.
+                            </p>
+                            <div className="flex flex-wrap gap-4">
                                 <Link
                                     href="/contact"
-                                    className="px-8 py-4 bg-[#C17A5B] text-white font-[family-name:var(--font-montserrat)] font-semibold rounded-full hover:bg-[#a86a4d] transition-all hover:shadow-md"
+                                    className="px-8 py-4 bg-[#C17A5B] text-white font-[family-name:var(--font-montserrat)] font-semibold rounded-full hover:bg-[#a86a4d] transition-all hover:shadow-lg hover:-translate-y-0.5"
                                 >
-                                    Get a Quote
+                                    Get a Free Quote
                                 </Link>
                                 <a
-                                    href="#pricing"
+                                    href="#services"
                                     className="px-8 py-4 bg-transparent border-2 border-[#4A5D66] text-[#3C3C3C] font-[family-name:var(--font-montserrat)] font-semibold rounded-full hover:bg-[#4A5D66] hover:text-white transition-all"
                                 >
-                                    View Pricing
+                                    Explore Services
                                 </a>
                             </div>
                         </div>
-                        <div className="order-1 md:order-2 flex justify-center md:justify-end">
+                        <div className="order-1 md:order-2 flex justify-center">
                             <div className="relative w-72 h-72 md:w-96 md:h-96">
-                                {/* Glowing background ring */}
-                                <div className="absolute inset-4 bg-[#4A5D66]/15 rounded-full blur-2xl" />
-
-                                {/* Logo Circle */}
+                                <div className="absolute inset-4 bg-[#4A5D66]/10 rounded-full blur-2xl" />
                                 <div className="relative w-48 h-48 md:w-64 md:h-64 mx-auto mt-8 md:mt-12">
                                     <div className="w-full h-full rounded-full border-4 border-[#4A5D66]/50 shadow-2xl overflow-hidden bg-white animate-float">
-                                        <Image
-                                            src="/official-logo-circular.jpg"
-                                            alt="The Helpful Hive"
-                                            fill
-                                            className="object-cover"
-                                            priority
-                                        />
+                                        <Image src="/official-logo-circular.jpg" alt="The Helpful Hive" fill className="object-cover" priority />
                                     </div>
                                 </div>
-
-                                {/* Orbiting Bees */}
-                                <div className="absolute -top-2 left-1/4 w-20 h-20 md:w-24 md:h-24 animate-float" style={{ animationDelay: '0s' }}>
+                                <div className="absolute -top-8 left-1/6 w-20 h-20 md:w-24 md:h-24 animate-float" style={{ animationDelay: '0s' }}>
                                     <Image src="/bee-10-briefcase.png" alt="Briefcase Bee" fill className="object-contain drop-shadow-lg" />
                                 </div>
-                                <div className="absolute top-1/3 -right-4 md:-right-8 w-[72px] h-[72px] md:w-[88px] md:h-[88px] animate-float" style={{ animationDelay: '1s' }}>
+                                <div className="absolute top-1/3 -right-10 md:-right-14 w-[72px] h-[72px] md:w-[88px] md:h-[88px] animate-float" style={{ animationDelay: '1s' }}>
                                     <Image src="/bee-11-calculator.png" alt="Calculator Bee" fill className="object-contain drop-shadow-lg" />
                                 </div>
                             </div>
@@ -116,86 +116,132 @@ export default function BusinessAndMoneyPage() {
             </section>
 
             {/* Tagline Banner */}
-            <section className="py-12 px-4 bg-white border-y border-[#4A5D66]/20">
-                <p className="font-[family-name:var(--font-lora)] text-2xl md:text-3xl text-[#3C3C3C] text-center font-medium max-w-3xl mx-auto">
-                    "Taking the Sting Out of <span className="text-[#4A5D66] italic">Business Finances</span>"
+            <section className="py-6 px-4 bg-white/60 border-y border-[#4A5D66]/15">
+                <p className="font-[family-name:var(--font-lora)] text-lg md:text-xl text-[#3C3C3C] text-center font-medium italic max-w-2xl mx-auto">
+                    &ldquo;Taking the sting out of <span className="text-[#4A5D66]">business finances</span>&rdquo;
                 </p>
             </section>
 
-            {/* Pricing Grid */}
-            <div id="pricing" className="py-20 px-4 md:px-8">
-                <div className="max-w-6xl mx-auto">
+            {/* Services Section */}
+            <section id="services" className="py-14 md:py-20 px-6">
+                <div className="max-w-7xl mx-auto">
+                    <div className="text-center mb-10">
+                        <h2 className="font-[family-name:var(--font-lora)] text-3xl md:text-4xl font-bold text-[#3C3C3C] mb-2">
+                            Our Services
+                        </h2>
+                        <p className="font-[family-name:var(--font-montserrat)] text-[#525252] text-sm">
+                            Bookkeeping and financial services to keep your business buzzing
+                        </p>
+                    </div>
 
-
-                    <div className="grid md:grid-cols-2 gap-8">
+                    <div className="space-y-5">
                         {services.map((service, index) => (
-                            <Link key={index} href={service.href} className="group h-full">
-                                <div className={`h-full bg-white rounded-3xl p-8 border-2 transition-all duration-300 hover:shadow-xl hover:-translate-y-1 ${service.popular ? 'border-[#BFC8A1] shadow-lg relative overflow-hidden' : 'border-[#BFC8A1]/20'}`}>
+                            <Link key={index} href={service.href} className="group block">
+                                <div
+                                    className="relative bg-white rounded-2xl overflow-hidden border-2 transition-all duration-300 hover:shadow-2xl hover:-translate-y-0.5"
+                                    style={{ borderColor: `${service.color}30` }}
+                                >
+                                    {/* Accent stripe */}
+                                    <div className="absolute left-0 top-0 bottom-0 w-1.5 rounded-l-2xl" style={{ backgroundColor: service.color }} />
 
-                                    {service.popular && (
-                                        <div className="absolute top-0 right-0 bg-[#BFC8A1] text-[#3C3C3C] text-xs font-bold px-4 py-1.5 rounded-bl-xl">
-                                            Most Popular
+                                    <div className="flex flex-col md:flex-row items-stretch">
+                                        {/* Bee Image Accent */}
+                                        <div
+                                            className="md:w-40 flex items-center justify-center py-6 md:py-0"
+                                            style={{ backgroundColor: `${service.color}12` }}
+                                        >
+                                            <div className="relative w-20 h-20 md:w-24 md:h-24 group-hover:scale-110 transition-transform duration-300">
+                                                <Image src={service.bee} alt={service.title} fill className="object-contain drop-shadow-md" />
+                                            </div>
                                         </div>
-                                    )}
 
-                                    <div className="mb-6">
-                                        <div className="flex justify-between items-baseline mb-2">
-                                            <h3 className="font-display text-2xl font-bold text-[#3C3C3C]">{service.title}</h3>
+                                        {/* Content */}
+                                        <div className="flex-1 py-6 px-6 md:px-8">
+                                            <div className="flex items-center gap-3 mb-1">
+                                                <h3 className="font-[family-name:var(--font-lora)] text-2xl font-bold text-[#3C3C3C]">
+                                                    {service.title}
+                                                </h3>
+                                                <span
+                                                    className="text-xs font-[family-name:var(--font-montserrat)] font-bold px-3 py-1 rounded-full text-white"
+                                                    style={{ backgroundColor: service.color }}
+                                                >
+                                                    {service.price}
+                                                </span>
+                                            </div>
+                                            <p className="font-[family-name:var(--font-montserrat)] text-sm font-medium mb-2" style={{ color: service.color }}>
+                                                {service.tagline}
+                                            </p>
+                                            <p className="font-[family-name:var(--font-montserrat)] text-sm text-[#525252] mb-3 max-w-xl">
+                                                {service.description}
+                                            </p>
+                                            <div className="flex flex-wrap gap-2">
+                                                {service.items.map((item, i) => (
+                                                    <span
+                                                        key={i}
+                                                        className="inline-block px-3 py-1 rounded-full text-xs font-[family-name:var(--font-montserrat)] font-medium"
+                                                        style={{ backgroundColor: `${service.color}15`, color: '#3C3C3C' }}
+                                                    >
+                                                        {item}
+                                                    </span>
+                                                ))}
+                                            </div>
                                         </div>
-                                        <p className="text-[#3C3C3C]/60 text-sm">{service.description}</p>
-                                    </div>
 
-                                    <div className="mb-6 pb-6 border-b border-[#BFC8A1]/20">
-                                        <span className="text-4xl font-display font-bold text-[#7A8C57]">{service.price}</span>
-                                        <span className="text-[#3C3C3C]/60 font-medium ml-1">{service.period}</span>
+                                        {/* Arrow */}
+                                        <div className="hidden md:flex items-center pr-8">
+                                            <div
+                                                className="w-10 h-10 rounded-full flex items-center justify-center group-hover:scale-110 transition-all duration-300"
+                                                style={{ backgroundColor: `${service.color}20` }}
+                                            >
+                                                <ArrowRight size={18} style={{ color: service.color }} className="group-hover:translate-x-0.5 transition-transform" />
+                                            </div>
+                                        </div>
                                     </div>
-
-                                    <ul className="space-y-4">
-                                        {service.features.map((feature, i) => (
-                                            <li key={i} className="flex items-start gap-3 text-[#3C3C3C]/80 text-sm">
-                                                <Check className="w-5 h-5 text-[#BFC8A1] mt-0.5 flex-shrink-0" />
-                                                {feature}
-                                            </li>
-                                        ))}
-                                    </ul>
                                 </div>
                             </Link>
                         ))}
                     </div>
 
-                    {/* Sage Tip */}
-                    <div className="mt-12 bg-[#BFC8A1]/10 rounded-2xl p-6 border border-[#BFC8A1]/30 text-center max-w-3xl mx-auto">
-                        <p className="text-[#3C3C3C] font-medium">🐝 Special introductory rates available for new clients.</p>
+                    {/* Introductory Rate Note */}
+                    <div className="mt-10 bg-[#4A5D66]/10 rounded-2xl p-6 border border-[#4A5D66]/20 text-center max-w-3xl mx-auto">
+                        <p className="font-[family-name:var(--font-montserrat)] text-[#3C3C3C] font-medium">🐝 Special introductory rates available for new clients.</p>
                     </div>
                 </div>
-            </div>
+            </section>
 
             {/* CTA Section */}
-            <section className="py-20 px-4 md:px-8 bg-[#3C3C3C]">
-                <div className="max-w-3xl mx-auto text-center">
-                    <h2 className="font-display text-3xl md:text-5xl font-medium mb-6">
-                        <span className="text-gradient-honey">Ready To Organize Your Finances?</span>
+            <section className="py-16 px-6 bg-[#3C3C3C] relative overflow-hidden">
+                <div className="absolute inset-0 opacity-5 pointer-events-none">
+                    <svg className="w-full h-full" viewBox="0 0 100 100" preserveAspectRatio="none">
+                        <pattern id="honeycomb-cta-bm" width="10" height="10" patternUnits="userSpaceOnUse">
+                            <path d="M5 0L10 2.5V7.5L5 10L0 7.5V2.5Z" fill="none" stroke="#4A5D66" strokeWidth="0.5" />
+                        </pattern>
+                        <rect width="100%" height="100%" fill="url(#honeycomb-cta-bm)" />
+                    </svg>
+                </div>
+                <div className="max-w-3xl mx-auto text-center relative z-10">
+                    <h2 className="font-[family-name:var(--font-lora)] text-3xl md:text-4xl font-bold text-white mb-4">
+                        Ready to <span className="text-[#E2C16B]">organize</span> your finances?
                     </h2>
-                    <p className="text-white/70 mb-10 text-xl font-light">
-                        Contact Us Today For a Free Consultation And Let The Helpful Hive Take The Sting Out Of Your Business Finances.
+                    <p className="font-[family-name:var(--font-montserrat)] text-white/70 mb-8 text-lg">
+                        Contact us today for a free consultation and let The Helpful Hive take the sting out of your business finances.
                     </p>
-                    <div className="flex flex-col sm:flex-row gap-6 justify-center">
+                    <div className="flex flex-col sm:flex-row gap-4 justify-center">
                         <Link
                             href="/contact"
-                            className="px-8 py-4 bg-[#E2C16B] text-[#3C3C3C] font-semibold rounded-full hover:bg-[#d4b35f] transition-all transform hover:scale-105"
+                            className="inline-block px-8 py-4 bg-[#C17A5B] text-white font-[family-name:var(--font-montserrat)] font-semibold rounded-full hover:bg-[#a86a4d] transition-all hover:shadow-lg hover:-translate-y-0.5"
                         >
                             Schedule a Consultation
                         </Link>
                         <a
                             href="tel:+13145267240"
-                            className="px-8 py-4 bg-transparent border-2 border-white/30 text-white font-semibold rounded-full hover:bg-white/10 transition-all"
+                            className="inline-block px-8 py-4 bg-transparent border-2 border-white/30 text-white font-[family-name:var(--font-montserrat)] font-semibold rounded-full hover:bg-white/10 transition-all"
                         >
                             Call (314) 526-7240
                         </a>
                     </div>
                 </div>
             </section>
-
         </main>
     );
 }
