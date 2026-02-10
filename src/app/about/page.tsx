@@ -143,6 +143,30 @@ export default function AboutPage() {
                 </div>
             </section>
 
+            {/* Family Section */}
+            <section className="py-12 px-6 bg-white">
+                <div className="max-w-5xl mx-auto">
+                    <div className="grid md:grid-cols-5 gap-10 items-center">
+                        <div className="md:col-span-3 order-2 md:order-1">
+                            <h2 className="font-[family-name:var(--font-lora)] text-2xl md:text-3xl font-bold text-[#3C3C3C] mb-3">
+                                Family at the <span className="text-[#E2C16B]">Heart</span>
+                            </h2>
+                            <p className="font-[family-name:var(--font-montserrat)] text-[#525252] leading-relaxed mb-4">
+                                The Helpful Hive was born from real family life. As a wife and mother of two, Amanda understands the daily juggle — and that&apos;s exactly why she built a business dedicated to making life a little easier for other families.
+                            </p>
+                            <p className="font-[family-name:var(--font-montserrat)] text-[#525252] leading-relaxed">
+                                When we take care of your home, your pets, or your books, it&apos;s because we know what it means to have someone in your corner. This isn&apos;t just a service — it&apos;s a community built on trust, care, and a whole lot of heart.
+                            </p>
+                        </div>
+                        <div className="md:col-span-2 flex justify-center order-1 md:order-2">
+                            <div className="relative w-full max-w-sm aspect-[4/3] rounded-2xl overflow-hidden">
+                                <div className="absolute inset-0 rounded-2xl border-4 border-[#C17A5B]/40 shadow-xl z-10 pointer-events-none" />
+                                <Image src="/knittel-family.jpg" alt="The Knittel Family" fill className="object-cover" />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
 
             {/* Our Services Overview */}
             <section className="py-16 md:py-20 px-6 bg-white">
