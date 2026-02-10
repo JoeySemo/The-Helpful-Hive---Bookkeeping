@@ -1,5 +1,6 @@
 import Image from 'next/image';
 import Link from 'next/link';
+import FlyingBees from '@/components/FlyingBees';
 
 export const metadata = {
     title: "Bee Kind | The Helpful Hive",
@@ -75,20 +76,10 @@ export default function BeeKindPage() {
                         </div>
 
                         <div className="order-1 md:order-2 flex justify-center">
-                            <div className="relative w-72 h-72 md:w-96 md:h-96">
-                                <div className="absolute inset-4 bg-[#98B4AC]/15 rounded-full blur-2xl" />
-                                <div className="relative w-48 h-48 md:w-64 md:h-64 mx-auto mt-8 md:mt-12">
-                                    <div className="w-full h-full rounded-full border-4 border-[#98B4AC]/50 shadow-2xl overflow-hidden bg-white animate-float">
-                                        <Image src="/official-logo-circular.jpg" alt="The Helpful Hive" fill className="object-cover" priority />
-                                    </div>
-                                </div>
-                                <div className="absolute -top-8 left-1/6 w-20 h-20 md:w-24 md:h-24 animate-float">
-                                    <Image src="/bee-1-petfood.png" alt="Pet Food Bee" fill className="object-contain drop-shadow-lg" />
-                                </div>
-                                <div className="absolute top-1/3 -right-10 md:-right-14 w-[72px] h-[72px] md:w-[88px] md:h-[88px] animate-float" style={{ animationDelay: '1s' }}>
-                                    <Image src="/bee-3-wateringcan.png" alt="Watering Can Bee" fill className="object-contain drop-shadow-lg" />
-                                </div>
-                            </div>
+                            <FlyingBees accentColor="#98B4AC" bees={[
+                                { src: '/bee-1-petfood.png', alt: 'Pet Food Bee', flyClass: 'animate-fly-1', size: 'w-12 h-12 md:w-16 md:h-16' },
+                                { src: '/bee-3-wateringcan.png', alt: 'Watering Can Bee', flyClass: 'animate-fly-7', size: 'w-12 h-12 md:w-16 md:h-16' },
+                            ]} />
                         </div>
                     </div>
                 </div>

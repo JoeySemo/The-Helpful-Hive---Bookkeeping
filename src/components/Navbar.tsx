@@ -59,12 +59,13 @@ export default function Navbar() {
 
               {/* For Home & Life Dropdown - CSS-only for instant response */}
               <div className="relative group/nav">
-                <button
+                <Link
+                  href="/for-home-and-life"
                   className={`flex items-center gap-1 text-sm font-medium font-[family-name:var(--font-montserrat)] transition-colors py-2 ${isHomeLifeActive ? 'text-[#E2C16B]' : 'text-[#3C3C3C] hover:text-[#E2C16B]'}`}
                 >
                   For Home & Life
                   <ChevronDown size={16} className="transition-transform group-hover/nav:rotate-180" />
-                </button>
+                </Link>
 
                 {/* Invisible bridge so cursor can travel from button to menu */}
                 <div className="absolute top-full left-0 h-2 w-64 hidden group-hover/nav:block" />

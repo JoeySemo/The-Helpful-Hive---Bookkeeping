@@ -3,6 +3,7 @@
 import Link from 'next/link';
 import Image from 'next/image';
 import { ArrowRight } from 'lucide-react';
+import FlyingBees from '@/components/FlyingBees';
 
 export default function HomeAndLifePage() {
     const services = [
@@ -102,24 +103,13 @@ export default function HomeAndLifePage() {
                             </div>
                         </div>
                         <div className="order-1 md:order-2 flex justify-center">
-                            <div className="relative w-72 h-72 md:w-96 md:h-96">
-                                <div className="absolute inset-4 bg-[#E2C16B]/10 rounded-full blur-2xl" />
-                                <div className="relative w-48 h-48 md:w-64 md:h-64 mx-auto mt-8 md:mt-12">
-                                    <div className="w-full h-full rounded-full border-4 border-[#E2C16B]/50 shadow-2xl overflow-hidden bg-white animate-float">
-                                        <Image src="/official-logo-circular.jpg" alt="The Helpful Hive" fill className="object-cover" priority />
-                                    </div>
-                                </div>
-                                {/* Orbiting Bees */}
-                                <div className="absolute -top-2 left-1/4 w-20 h-20 md:w-24 md:h-24 animate-float">
-                                    <Image src="/bee-2-broom.png" alt="Broom Bee" fill className="object-contain drop-shadow-lg" />
-                                </div>
-                                <div className="absolute top-1/3 -right-4 md:-right-8 w-[72px] h-[72px] md:w-[88px] md:h-[88px] animate-float" style={{ animationDelay: '0.7s' }}>
-                                    <Image src="/bee-1-petfood.png" alt="Pet Food Bee" fill className="object-contain drop-shadow-lg" />
-                                </div>
-                                <div className="absolute bottom-0 left-4 md:left-0 w-16 h-16 md:w-20 md:h-20 animate-float" style={{ animationDelay: '1.4s' }}>
-                                    <Image src="/bee-7-megaphone.png" alt="Megaphone Bee" fill className="object-contain drop-shadow-lg" />
-                                </div>
-                            </div>
+                            <FlyingBees accentColor="#E2C16B" bees={[
+                                { src: '/bee-2-broom.png', alt: 'Broom Bee', flyClass: 'animate-fly-1', size: 'w-12 h-12 md:w-16 md:h-16' },
+                                { src: '/bee-1-petfood.png', alt: 'Pet Food Bee', flyClass: 'animate-fly-3', size: 'w-12 h-12 md:w-16 md:h-16' },
+                                { src: '/bee-6-bins.png', alt: 'Storage Bins Bee', flyClass: 'animate-fly-5', size: 'w-10 h-10 md:w-14 md:h-14' },
+                                { src: '/bee-10-briefcase.png', alt: 'Briefcase Bee', flyClass: 'animate-fly-8', size: 'w-10 h-10 md:w-14 md:h-14' },
+                                { src: '/bee-7-megaphone.png', alt: 'Megaphone Bee', flyClass: 'animate-fly-11', size: 'w-11 h-11 md:w-15 md:h-15' },
+                            ]} />
                         </div>
                     </div>
                 </div>

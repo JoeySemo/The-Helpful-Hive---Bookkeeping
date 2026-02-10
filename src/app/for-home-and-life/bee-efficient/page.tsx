@@ -1,5 +1,6 @@
 import Image from 'next/image';
 import Link from 'next/link';
+import FlyingBees from '@/components/FlyingBees';
 
 export const metadata = {
     title: "Bee Efficient | The Helpful Hive",
@@ -47,23 +48,11 @@ export default function BeeEfficientPage() {
                         </div>
 
                         <div className="order-1 md:order-2 flex justify-center">
-                            <div className="relative w-72 h-72 md:w-96 md:h-96">
-                                <div className="absolute inset-4 bg-[#D4A574]/15 rounded-full blur-2xl" />
-                                <div className="relative w-48 h-48 md:w-64 md:h-64 mx-auto mt-8 md:mt-12">
-                                    <div className="w-full h-full rounded-full border-4 border-[#D4A574]/50 shadow-2xl overflow-hidden bg-white animate-float">
-                                        <Image src="/official-logo-circular.jpg" alt="The Helpful Hive" fill className="object-cover" priority />
-                                    </div>
-                                </div>
-                                <div className="absolute -top-8 left-1/6 w-20 h-20 md:w-24 md:h-24 animate-float">
-                                    <Image src="/bee-10-briefcase.png" alt="Briefcase Bee" fill className="object-contain drop-shadow-lg" />
-                                </div>
-                                <div className="absolute top-1/3 -right-10 md:-right-14 w-[72px] h-[72px] md:w-[88px] md:h-[88px] animate-float" style={{ animationDelay: '0.7s' }}>
-                                    <Image src="/bee-5-clipboard.png" alt="Clipboard Bee" fill className="object-contain drop-shadow-lg" />
-                                </div>
-                                <div className="absolute -bottom-6 left-0 md:-left-4 w-16 h-16 md:w-20 md:h-20 animate-float" style={{ animationDelay: '1.4s' }}>
-                                    <Image src="/bee-8-calendar.png" alt="Calendar Bee" fill className="object-contain drop-shadow-lg" />
-                                </div>
-                            </div>
+                            <FlyingBees accentColor="#D4A574" bees={[
+                                { src: '/bee-10-briefcase.png', alt: 'Briefcase Bee', flyClass: 'animate-fly-2', size: 'w-10 h-10 md:w-14 md:h-14' },
+                                { src: '/bee-5-clipboard.png', alt: 'Clipboard Bee', flyClass: 'animate-fly-6', size: 'w-11 h-11 md:w-15 md:h-15' },
+                                { src: '/bee-8-calendar.png', alt: 'Calendar Bee', flyClass: 'animate-fly-10', size: 'w-10 h-10 md:w-14 md:h-14' },
+                            ]} />
                         </div>
                     </div>
                 </div>
