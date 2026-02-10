@@ -63,7 +63,7 @@ export default function BeeOrganizedPage() {
 
                         <div className="order-1 md:order-2 flex justify-center">
                             <FlyingBees accentColor="#A2C1D4" bees={[
-                                { src: '/bee-6-bins.png', alt: 'Storage Bins Bee', flyClass: 'animate-fly-3', size: 'w-10 h-10 md:w-14 md:h-14' },
+                                { src: '/bee-6-bins.png', alt: 'Storage Bins Bee', flyClass: 'animate-fly-4', size: 'w-10 h-10 md:w-14 md:h-14' },
                                 { src: '/bee-9-label.png', alt: 'Label Tag Bee', flyClass: 'animate-fly-8', size: 'w-12 h-12 md:w-16 md:h-16' },
                             ]} />
                         </div>
