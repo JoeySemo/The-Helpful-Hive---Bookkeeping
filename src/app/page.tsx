@@ -205,7 +205,7 @@ export default function HomePage() {
                   className="object-contain"
                 />
               </div>
-              <h3 className="font-[family-name:var(--font-lora)] text-2xl font-bold text-[#3C3C3C] mb-2">
+              <h3 className="font-[family-name:var(--font-lora)] text-2xl font-bold text-[#E2C16B] mb-2">
                 {service.name}
               </h3>
               <p className="font-[family-name:var(--font-montserrat)] text-[#525252] mb-4">

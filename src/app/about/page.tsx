@@ -7,50 +7,7 @@ export const metadata = {
 };
 
 export default function AboutPage() {
-    const serviceCategories = [
-        {
-            name: 'Bee Done',
-            tagline: 'Cleaning & Errands',
-            color: '#BFC8A1',
-            href: '/for-home-and-life/bee-done',
-            items: ['Deep Cleaning', 'Laundry Services', 'Custom Hourly Tasks'],
-        },
-        {
-            name: 'Bee Kind',
-            tagline: 'Pet & Plant Care',
-            color: '#98B4AC',
-            href: '/for-home-and-life/bee-kind',
-            items: ['Dog Walking', 'Feeding & Check-ins', 'Plant Watering'],
-        },
-        {
-            name: 'Bee Organized',
-            tagline: 'Organization & Decluttering',
-            color: '#A2C1D4',
-            href: '/for-home-and-life/bee-organized',
-            items: ['Closet Systems', 'Home Office Setup', 'Garage Resets'],
-        },
-        {
-            name: 'Bee Connected',
-            tagline: 'Coordination & Community',
-            color: '#7B6B8D',
-            href: '/for-home-and-life/bee-connected',
-            items: ['Event Coordination', 'Realtor Assistance', 'Volunteer Support'],
-        },
-        {
-            name: 'Bee Efficient',
-            tagline: 'Errands & Admin',
-            color: '#D4A574',
-            href: '/for-home-and-life/bee-efficient',
-            items: ['Errand Running', 'Appointment Scheduling', 'Marketing Assistance'],
-        },
-        {
-            name: 'Bee Balanced',
-            tagline: 'Bookkeeping & Financials',
-            color: '#4A5D66',
-            href: '/for-business-and-money',
-            items: ['Monthly Bookkeeping', 'QuickBooks Cleanup', 'Payroll Support'],
-        },
-    ];
+
 
     return (
         <div className="min-h-screen bg-[#FFF8E7]">
@@ -174,48 +131,7 @@ export default function AboutPage() {
                 </div>
             </section>
 
-            {/* Our Services Overview */}
-            <section className="py-16 md:py-20 px-6 bg-white">
-                <div className="max-w-6xl mx-auto">
-                    <div className="text-center mb-12">
-                        <h2 className="font-[family-name:var(--font-lora)] text-3xl md:text-4xl font-bold text-[#3C3C3C] mb-3">
-                            The Bee Ecosystem
-                        </h2>
-                        <p className="font-[family-name:var(--font-montserrat)] text-[#525252] max-w-2xl mx-auto">
-                            Six service categories designed to support every part of your life — from your home to your business.
-                        </p>
-                    </div>
 
-                    <div className="grid grid-cols-2 lg:grid-cols-3 gap-5">
-                        {serviceCategories.map((cat) => (
-                            <Link
-                                key={cat.name}
-                                href={cat.href}
-                                className="group bg-[#FFF8E7] rounded-2xl p-5 border-2 hover:shadow-xl transition-all duration-300 hover:-translate-y-1"
-                                style={{ borderColor: `${cat.color}30` }}
-                            >
-                                {/* Color dot */}
-                                <div className="w-4 h-4 rounded-full mb-3" style={{ backgroundColor: cat.color }} />
-
-                                <h3 className="font-[family-name:var(--font-lora)] text-lg font-bold text-[#3C3C3C] mb-1">
-                                    {cat.name}
-                                </h3>
-                                <p className="font-[family-name:var(--font-montserrat)] text-xs font-medium mb-3" style={{ color: cat.color }}>
-                                    {cat.tagline}
-                                </p>
-                                <ul className="space-y-1.5">
-                                    {cat.items.map((item) => (
-                                        <li key={item} className="font-[family-name:var(--font-montserrat)] text-xs text-[#525252] flex items-start gap-1.5">
-                                            <span className="mt-1 w-1.5 h-1.5 rounded-full flex-shrink-0" style={{ backgroundColor: cat.color }} />
-                                            {item}
-                                        </li>
-                                    ))}
-                                </ul>
-                            </Link>
-                        ))}
-                    </div>
-                </div>
-            </section>
 
             {/* Values */}
             <section className="py-16 md:py-20 px-6">
