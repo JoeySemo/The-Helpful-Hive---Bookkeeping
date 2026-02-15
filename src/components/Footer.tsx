@@ -19,7 +19,7 @@ export default function Footer({ compact = false }: FooterProps) {
                         <div className={`${compact ? 'w-10 h-10 mb-2' : 'w-14 h-14 mb-4'} flex items-center justify-center rounded-full bg-[#E2C16B]/20`}>
                             <Phone size={compact ? 18 : 24} className="text-[#E2C16B]" />
                         </div>
-                        <h3 className={`font-display font-semibold text-white ${compact ? 'text-sm mb-1' : 'mb-2'}`}>Phone</h3>
+                        <h3 className={`font-display font-semibold text-[#E2C16B] ${compact ? 'text-sm mb-1' : 'mb-2'}`}>Phone</h3>
                         <a
                             href="tel:+13145267240"
                             className={`${compact ? 'text-xs' : 'text-sm'} text-white/70 hover:text-[#E2C16B] transition-colors`}
@@ -33,7 +33,7 @@ export default function Footer({ compact = false }: FooterProps) {
                         <div className={`${compact ? 'w-10 h-10 mb-2' : 'w-14 h-14 mb-4'} flex items-center justify-center rounded-full bg-[#E2C16B]/20`}>
                             <Mail size={compact ? 18 : 24} className="text-[#E2C16B]" />
                         </div>
-                        <h3 className={`font-display font-semibold text-white ${compact ? 'text-sm mb-1' : 'mb-2'}`}>Email</h3>
+                        <h3 className={`font-display font-semibold text-[#E2C16B] ${compact ? 'text-sm mb-1' : 'mb-2'}`}>Email</h3>
                         <a
                             href="mailto:hellohelpfulhive@gmail.com"
                             className={`${compact ? 'text-xs' : 'text-sm'} text-white/70 hover:text-[#E2C16B] transition-colors`}
@@ -47,7 +47,7 @@ export default function Footer({ compact = false }: FooterProps) {
                         <div className={`${compact ? 'w-10 h-10 mb-2' : 'w-14 h-14 mb-4'} flex items-center justify-center rounded-full bg-[#E2C16B]/20`}>
                             <MapPin size={compact ? 18 : 24} className="text-[#E2C16B]" />
                         </div>
-                        <h3 className={`font-display font-semibold text-white ${compact ? 'text-sm mb-1' : 'mb-2'}`}>Location</h3>
+                        <h3 className={`font-display font-semibold text-[#E2C16B] ${compact ? 'text-sm mb-1' : 'mb-2'}`}>Location</h3>
                         <p className={`${compact ? 'text-xs' : 'text-sm'} text-white/70`}>
                             Wentzville, MO
                         </p>
