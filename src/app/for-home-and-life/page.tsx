@@ -9,53 +9,47 @@ export default function HomeAndLifePage() {
     const services = [
         {
             title: 'Bee Done',
-            tagline: 'Because you deserve to Bee Done with the dirty work.',
+            tagline: 'Taking the sting out of home chores and errands so you can Bee Done with your to-do list.',
             description: 'From deep cleaning to daily tidying, we take care of the chores so you can focus on what matters most.',
             icon: '🧹',
             color: '#BFC8A1',
             bee: '/bee-2-broom.png',
-            items: ['Bathroom & Kitchen Deep Clean', 'Window Washing', 'Laundry Services', 'Custom Hourly Tasks'],
-            href: '/for-home-and-life/bee-done'
+            items: ['Home Resets', 'Laundry & Dishes', 'Errand Dashes', 'Custom Hourly Tasks'],
+            href: '/for-home-and-life/bee-done',
+            active: true
         },
         {
             title: 'Bee Kind',
-            tagline: 'Where tails wag and homes stay happy.',
+            tagline: 'Tending to your pets and plants so you can Bee Kind to your peace of mind while you\'re away from the hive.',
             description: 'Loving care for your furry friends and green companions while you\'re away from the hive.',
             icon: '🐾',
             color: '#98B4AC',
             bee: '/bee-1-petfood.png',
-            items: ['Dog Walking', 'Potty Breaks & Feeding', 'Vacation Check-ins', 'Plant Watering'],
-            href: '/for-home-and-life/bee-kind'
+            items: ['Pet Care', 'Plant Care', 'Home Watch', 'Vacation Checks'],
+            href: '/for-home-and-life/bee-kind',
+            active: true
         },
         {
             title: 'Bee Organized',
-            tagline: 'Bringing order to the buzz.',
-            description: 'We transform cluttered spaces into organized havens that make daily life easier.',
+            tagline: 'Clearing the clutter and creating structure so you can Bee Organized in a home that finally hums.',
+            description: 'Detailed organization for pantries, closets, garages, and home offices. (Coming Soon)',
             icon: '📦',
             color: '#A2C1D4',
             bee: '/bee-6-bins.png',
-            items: ['Closet & Pantry Systems', 'Home Office Setup', 'Garage Reset', 'Digital File Organization'],
-            href: '/for-home-and-life/bee-organized'
-        },
-        {
-            title: 'Bee Efficient',
-            tagline: 'We handle the busy work, so you don\'t have to.',
-            description: 'Errands, admin tasks, and back-office support for families and small businesses.',
-            icon: '⚡',
-            color: '#D4A574',
-            bee: '/bee-10-briefcase.png',
-            items: ['Errand Running', 'Appointment Scheduling', 'Data Entry & Admin', 'Marketing Assistance'],
-            href: '/for-home-and-life/bee-efficient'
+            items: ['Pantry & Closets', 'Garage Reset', 'Home Office', 'System Setup'],
+            href: '#',
+            active: false
         },
         {
             title: 'Bee Connected',
-            tagline: 'Rooted in the Crossroads, ready to help.',
-            description: 'Supporting your events, teams, and community with hands-on coordination.',
+            tagline: 'Handling the details of your events and outreach so you can Bee Connected to the community.',
+            description: 'Support for realtors, events, and community outreach. (Coming Soon)',
             icon: '🤝',
             color: '#7B6B8D',
             bee: '/bee-7-megaphone.png',
-            items: ['Holiday Decorating', 'Event Assistance', 'Realtor Support', 'Volunteer Help'],
-            href: '/for-home-and-life/bee-connected'
+            items: ['Realtor Support', 'Event Coordination', 'Admin Help', 'Volunteer Management'],
+            href: '#',
+            active: false
         },
     ];
 

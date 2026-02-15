@@ -80,11 +80,11 @@ export default function AboutPage() {
                             </p>
 
                             <p className="font-[family-name:var(--font-montserrat)] text-lg text-[#525252] leading-relaxed mb-6">
-                                The Helpful Hive is a family-focused service business based in <strong>Wentzville, Missouri</strong>. We believe that when families are supported at home and in business, communities thrive.
+                                The Helpful Hive is a multi-service business designed for the modern "busy bee." We help local families and professionals reclaim their time by catching the tasks that fall off their to-do lists.
                             </p>
 
                             <p className="font-[family-name:var(--font-montserrat)] text-lg text-[#525252] leading-relaxed">
-                                From cleaning and pet care to bookkeeping and event coordination, we offer a full suite of services designed to lighten your load — so you can spend more time on what matters most.
+                                Through our specialized service wings—covering everything from home chores and pet care to professional bookkeeping—we handle the tasks that clutter your schedule so your hive can stay focused on what matters most.
                             </p>
                         </div>
 
@@ -108,7 +108,7 @@ export default function AboutPage() {
                         Our Mission
                     </h2>
                     <p className="font-[family-name:var(--font-montserrat)] text-white/80 text-lg leading-relaxed max-w-3xl mx-auto">
-                        We&apos;re here to help families succeed — at home and in business. By taking the sting out of life&apos;s everyday to-dos, we give you more time, less stress, and a sweeter way to live.
+                        If we can give you one thing, it is the <strong>gift of time</strong> to focus on your own passions and the peace of mind that comes with a "sigh of relief." We treat every home and business we step into with the same care and attention we give our own.
                     </p>
                 </div>
             </section>
@@ -133,29 +133,35 @@ export default function AboutPage() {
                             <p className="font-[family-name:var(--font-allura)] text-xl text-[#C17A5B] mb-4">Amanda Knittel</p>
 
                             <p className="font-[family-name:var(--font-montserrat)] text-[#525252] leading-relaxed mb-4">
-                                As a busy mom and lifelong organizer, I started The Helpful Hive because I know firsthand how overwhelming it can be to juggle everything. I wanted to build something that truly helps families — not just checks a box, but makes life genuinely easier.
+                                My name is Amanda, and I run The Helpful Hive. My journey started with a realization after leaving the corporate world: in our fast-paced lives, the "miscellaneous" chores are often what prevent us from truly enjoying our homes. In today's world, we could all use a House Manager.
                             </p>
+                            <p className="font-[family-name:var(--font-montserrat)] text-[#525252] leading-relaxed mb-4">
+                                I also realized I have a unique advantage: a genuine joy for numbers and data. Most small business owners and solopreneurs want to focus on the passion that started their journey; not the bookkeeping or pricing analysis at the bottom of the list.
+                            </p>
+                            <h3 className="font-[family-name:var(--font-lora)] text-xl font-bold text-[#3C3C3C] mt-6 mb-2">
+                                A Career Built on Precision
+                            </h3>
                             <p className="font-[family-name:var(--font-montserrat)] text-[#525252] leading-relaxed">
-                                Whether it&apos;s tackling your to-do list, caring for your pets while you&apos;re away, or keeping your books balanced, every service we offer comes from a place of care, reliability, and real understanding of what families need.
+                                My background is rooted in numbers and organization. With a 20-year career spanning billing and collection, healthcare administration, and small business bookkeeping, I have a deep-seated love for data and a keen attention to detail. Whether I am managing the books for your business (Bee Balanced) or organizing a chaotic pantry (Bee Organized), I bring the same level of professional scrutiny and care to every task.
                             </p>
                         </div>
                     </div>
                 </div>
             </section>
 
-            {/* Family Section */}
+            {/* Life in the Hive (Family) */}
             <section className="py-12 px-6 bg-white">
                 <div className="max-w-5xl mx-auto">
                     <div className="grid md:grid-cols-5 gap-10 items-center">
                         <div className="md:col-span-3 order-2 md:order-1">
                             <h2 className="font-[family-name:var(--font-lora)] text-2xl md:text-3xl font-bold text-[#3C3C3C] mb-3">
-                                Family at the <span className="text-[#E2C16B]">Heart</span>
+                                Life in the <span className="text-[#E2C16B]">Hive</span>
                             </h2>
                             <p className="font-[family-name:var(--font-montserrat)] text-[#525252] leading-relaxed mb-4">
-                                The Helpful Hive was born from real family life. As a wife and mother of two, Amanda understands the daily juggle — and that&apos;s exactly why she built a business dedicated to making life a little easier for other families.
+                                When I'm not color-coding a bookshelf or building a complex spreadsheet, you'll find me with my husband, Joe, and our two daughters, Harleigh and Scarlett.
                             </p>
                             <p className="font-[family-name:var(--font-montserrat)] text-[#525252] leading-relaxed">
-                                When we take care of your home, your pets, or your books, it&apos;s because we know what it means to have someone in your corner. This isn&apos;t just a service — it&apos;s a community built on trust, care, and a whole lot of heart.
+                                Our home is a full hive with two Puggles (Cassian and Lucy) and two cats (Taco and Randy). I'm an avid reader, and "Book Club Day" is easily my favorite day of the month!
                             </p>
                         </div>
                         <div className="md:col-span-2 flex justify-center order-1 md:order-2">

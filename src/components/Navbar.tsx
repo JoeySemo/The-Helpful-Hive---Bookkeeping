@@ -4,13 +4,12 @@ import Link from 'next/link';
 import Image from 'next/image';
 import { usePathname } from 'next/navigation';
 import { useState, useEffect } from 'react';
-import { Menu, X, ChevronDown } from 'lucide-react';
+import { Menu, X } from 'lucide-react';
 
 export default function Navbar() {
   const pathname = usePathname();
   const [isMobile, setIsMobile] = useState(false);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const [isHomeLifeOpen, setIsHomeLifeOpen] = useState(false);
 
   useEffect(() => {
     const checkMobile = () => setIsMobile(window.innerWidth < 1024);
@@ -18,17 +17,6 @@ export default function Navbar() {
     window.addEventListener('resize', checkMobile);
     return () => window.removeEventListener('resize', checkMobile);
   }, []);
-
-  const homeLifeServices = [
-    { href: '/for-home-and-life/bee-done', label: 'Bee Done', subtitle: 'Cleaning & Errands', color: '#BFC8A1' },
-    { href: '/for-home-and-life/bee-kind', label: 'Bee Kind', subtitle: 'Pet & Plant Care', color: '#98B4AC' },
-    { href: '/for-home-and-life/bee-organized', label: 'Bee Organized', subtitle: 'Organization', color: '#A2C1D4' },
-    { href: '/for-home-and-life/bee-efficient', label: 'Bee Efficient', subtitle: 'Errands & Admin', color: '#D4A574' },
-    { href: '/for-home-and-life/bee-connected', label: 'Bee Connected', subtitle: 'Coordination', color: '#7B6B8D' },
-  ];
-
-  const isHomeLifeActive = pathname.startsWith('/for-home-and-life');
-  const isBusinessActive = pathname.startsWith('/for-business-and-money') || pathname.startsWith('/bookkeeping');
 
   return (
     <nav className="sticky top-0 z-50 bg-[#FFF8E7]/95 backdrop-blur-md border-b border-[#E2C16B]/20">
@@ -57,47 +45,25 @@ export default function Navbar() {
                 Home
               </Link>
 
-              {/* For Home & Life Dropdown - CSS-only for instant response */}
-              <div className="relative group/nav">
-                <Link
-                  href="/for-home-and-life"
-                  className={`flex items-center gap-1 text-sm font-medium font-[family-name:var(--font-montserrat)] transition-colors py-2 ${isHomeLifeActive ? 'text-[#E2C16B]' : 'text-[#3C3C3C] hover:text-[#E2C16B]'}`}
-                >
-                  For Home & Life
-                  <ChevronDown size={16} className="transition-transform group-hover/nav:rotate-180" />
-                </Link>
-
-                {/* Invisible bridge so cursor can travel from button to menu */}
-                <div className="absolute top-full left-0 h-2 w-64 hidden group-hover/nav:block" />
-
-                <div className="absolute top-full left-0 pt-2 w-64 invisible opacity-0 group-hover/nav:visible group-hover/nav:opacity-100 transition-[visibility,opacity] duration-75 z-50">
-                  <div className="bg-white rounded-xl shadow-xl border border-[#E2C16B]/10 py-2">
-                    {homeLifeServices.map((service) => (
-                      <Link
-                        key={service.href}
-                        href={service.href}
-                        className="flex items-center gap-3 px-4 py-3 hover:bg-[#FFF8E7] transition-colors"
-                      >
-                        <div
-                          className="w-3 h-3 rounded-full"
-                          style={{ backgroundColor: service.color }}
-                        />
-                        <div>
-                          <div className="font-medium text-[#3C3C3C] font-[family-name:var(--font-montserrat)]">{service.label}</div>
-                          <div className="text-xs text-[#737373]">{service.subtitle}</div>
-                        </div>
-                      </Link>
-                    ))}
-                  </div>
-                </div>
-              </div>
-
-              {/* For Business & Money */}
+              {/* Active Services */}
               <Link
-                href="/for-business-and-money"
-                className={`text-sm font-medium font-[family-name:var(--font-montserrat)] transition-colors ${isBusinessActive ? 'text-[#E2C16B]' : 'text-[#3C3C3C] hover:text-[#E2C16B]'}`}
+                href="/for-home-and-life/bee-done"
+                className={`flex items-center gap-2 text-sm font-medium font-[family-name:var(--font-montserrat)] transition-colors ${pathname === '/for-home-and-life/bee-done' ? 'text-[#E2C16B]' : 'text-[#3C3C3C] hover:text-[#E2C16B]'}`}
               >
-                For Business & Money
+                <div className="relative w-6 h-6">
+                  <Image src="/bee-2-broom.png" alt="Bee Done" fill className="object-contain" />
+                </div>
+                Bee Done
+              </Link>
+
+              <Link
+                href="/for-home-and-life/bee-kind"
+                className={`flex items-center gap-2 text-sm font-medium font-[family-name:var(--font-montserrat)] transition-colors ${pathname === '/for-home-and-life/bee-kind' ? 'text-[#E2C16B]' : 'text-[#3C3C3C] hover:text-[#E2C16B]'}`}
+              >
+                <div className="relative w-6 h-6">
+                  <Image src="/bee-1-petfood.png" alt="Bee Kind" fill className="object-contain" />
+                </div>
+                Bee Kind
               </Link>
 
               {/* About */}
@@ -142,45 +108,26 @@ export default function Navbar() {
                 Home
               </Link>
 
-              {/* Home & Life Section */}
-              <div className="px-4 py-2 text-xs uppercase tracking-wider text-[#737373] font-[family-name:var(--font-montserrat)]">
-                For Home & Life
-              </div>
-              {homeLifeServices.map((service) => (
-                <Link
-                  key={service.href}
-                  href={service.href}
-                  onClick={() => setIsMenuOpen(false)}
-                  className="flex items-center gap-3 px-4 py-3 rounded-lg hover:bg-[#FFF8E7] transition-colors"
-                >
-                  <div
-                    className="w-3 h-3 rounded-full"
-                    style={{ backgroundColor: service.color }}
-                  />
-                  <div>
-                    <div className="font-medium text-[#3C3C3C] font-[family-name:var(--font-montserrat)]">{service.label}</div>
-                    <div className="text-xs text-[#737373]">{service.subtitle}</div>
-                  </div>
-                </Link>
-              ))}
-
-              {/* Business & Money Section */}
-              <div className="px-4 py-2 text-xs uppercase tracking-wider text-[#737373] font-[family-name:var(--font-montserrat)] mt-2">
-                For Business & Money
-              </div>
               <Link
-                href="/for-business-and-money"
+                href="/for-home-and-life/bee-done"
                 onClick={() => setIsMenuOpen(false)}
-                className={`flex items-center gap-3 px-4 py-3 rounded-lg hover:bg-[#FFF8E7] transition-colors`}
+                className={`flex items-center gap-3 px-4 py-3 rounded-lg text-base font-medium font-[family-name:var(--font-montserrat)] ${pathname === '/for-home-and-life/bee-done' ? 'bg-[#FFF8E7] text-[#E2C16B]' : 'text-[#3C3C3C] hover:bg-[#FFF8E7]'}`}
               >
-                <div
-                  className="w-3 h-3 rounded-full flex-shrink-0"
-                  style={{ backgroundColor: '#4A5D66' }}
-                />
-                <div>
-                  <div className={`font-medium font-[family-name:var(--font-montserrat)] ${isBusinessActive ? 'text-[#E2C16B]' : 'text-[#3C3C3C]'}`}>Bee Balanced</div>
-                  <div className="text-xs text-[#737373]">Bookkeeping & Finance</div>
+                <div className="relative w-6 h-6">
+                  <Image src="/bee-2-broom.png" alt="Bee Done" fill className="object-contain" />
                 </div>
+                Bee Done
+              </Link>
+
+              <Link
+                href="/for-home-and-life/bee-kind"
+                onClick={() => setIsMenuOpen(false)}
+                className={`flex items-center gap-3 px-4 py-3 rounded-lg text-base font-medium font-[family-name:var(--font-montserrat)] ${pathname === '/for-home-and-life/bee-kind' ? 'bg-[#FFF8E7] text-[#E2C16B]' : 'text-[#3C3C3C] hover:bg-[#FFF8E7]'}`}
+              >
+                <div className="relative w-6 h-6">
+                  <Image src="/bee-1-petfood.png" alt="Bee Kind" fill className="object-contain" />
+                </div>
+                Bee Kind
               </Link>
 
               <Link

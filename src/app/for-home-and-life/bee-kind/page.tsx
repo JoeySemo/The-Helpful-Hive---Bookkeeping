@@ -65,7 +65,7 @@ export default function BeeKindPage() {
                                 Sweetening the day for your pets and plants.
                             </p>
                             <p className="font-[family-name:var(--font-montserrat)] text-lg text-[#525252] mb-8 leading-relaxed max-w-lg">
-                                Sweetening the day for your pets and plants while you&apos;re away from the hive. All visits are approximately 45 minutes and include a digital &ldquo;Hive Update&rdquo; (text/photo) sent immediately after the visit.
+                                Tending to your pets and plants so you can <strong>Bee Kind</strong> to your peace of mind while you&apos;re away from the hive.
                             </p>
                             <Link
                                 href="/contact"
@@ -88,50 +88,46 @@ export default function BeeKindPage() {
             {/* Visit Info Banner */}
             <section className="py-5 px-4 bg-[#98B4AC]/15 border-y border-[#98B4AC]/20">
                 <p className="font-[family-name:var(--font-montserrat)] text-sm text-[#3C3C3C] text-center font-medium max-w-3xl mx-auto">
-                    🐝 All visits are approximately <strong>45 minutes</strong> and include a digital &ldquo;Hive Update&rdquo; (text/photo) sent immediately after the visit.
+                    🐝 All visits include a digital &ldquo;Hive Update&rdquo; (text/photo) sent immediately after the visit.
                 </p>
             </section>
 
-            {/* Visit Packages */}
+            {/* Services List */}
             <section className="py-14 md:py-20 px-6">
                 <div className="max-w-5xl mx-auto">
                     <div className="text-center mb-10">
                         <h2 className="font-[family-name:var(--font-lora)] text-3xl md:text-4xl font-bold text-[#3C3C3C] mb-2">
-                            Visit Packages
+                            Our Services
                         </h2>
                         <p className="font-[family-name:var(--font-montserrat)] text-sm text-[#525252]">
-                            Choose the visit that fits your needs
+                            Reliable care for your home and pets
                         </p>
                     </div>
 
-                    <div className="grid sm:grid-cols-2 gap-5">
-                        {visits.map((visit, i) => (
-                            <div
-                                key={i}
-                                className={`group bg-white rounded-2xl overflow-hidden border-2 transition-all duration-300 hover:shadow-xl hover:-translate-y-1 relative ${visit.popular ? 'border-[#98B4AC]' : 'border-[#98B4AC]/20 hover:border-[#98B4AC]'}`}
-                            >
-                                {visit.popular && (
-                                    <div className="absolute top-0 right-0 bg-[#98B4AC] text-white text-xs font-[family-name:var(--font-montserrat)] font-bold px-3 py-1 rounded-bl-xl">
-                                        MOST POPULAR
-                                    </div>
-                                )}
+                    <div className="grid sm:grid-cols-3 gap-6">
+                        <div className="bg-white p-8 rounded-2xl border-2 border-[#98B4AC]/20 hover:border-[#98B4AC] transition-all hover:shadow-lg text-center">
+                            <div className="text-4xl mb-4">🐾</div>
+                            <h3 className="font-[family-name:var(--font-lora)] text-xl font-bold text-[#3C3C3C] mb-3">Pet Care</h3>
+                            <p className="text-sm text-[#525252] font-[family-name:var(--font-montserrat)]">
+                                Dog walking, potty breaks, and feeding tailored to your pet's routine.
+                            </p>
+                        </div>
 
-                                <div className="p-6">
-                                    <div className="flex items-center justify-between mb-3">
-                                        <span className="text-3xl">{visit.icon}</span>
-                                        <span className="bg-[#98B4AC] text-white text-lg px-4 py-1.5 rounded-full font-[family-name:var(--font-montserrat)] font-bold">
-                                            {visit.price}
-                                        </span>
-                                    </div>
-                                    <h3 className="font-[family-name:var(--font-lora)] text-xl font-bold text-[#3C3C3C] mb-2">
-                                        {visit.name}
-                                    </h3>
-                                    <p className="font-[family-name:var(--font-montserrat)] text-sm text-[#525252] leading-relaxed">
-                                        {visit.description}
-                                    </p>
-                                </div>
-                            </div>
-                        ))}
+                        <div className="bg-white p-8 rounded-2xl border-2 border-[#98B4AC]/20 hover:border-[#98B4AC] transition-all hover:shadow-lg text-center">
+                            <div className="text-4xl mb-4">🐱</div>
+                            <h3 className="font-[family-name:var(--font-lora)] text-xl font-bold text-[#3C3C3C] mb-3">Litter Refresh</h3>
+                            <p className="text-sm text-[#525252] font-[family-name:var(--font-montserrat)]">
+                                Regular maintenance and deep cleaning to keep your home fresh.
+                            </p>
+                        </div>
+
+                        <div className="bg-white p-8 rounded-2xl border-2 border-[#98B4AC]/20 hover:border-[#98B4AC] transition-all hover:shadow-lg text-center">
+                            <div className="text-4xl mb-4">🏡</div>
+                            <h3 className="font-[family-name:var(--font-lora)] text-xl font-bold text-[#3C3C3C] mb-3">Vacation Checks</h3>
+                            <p className="text-sm text-[#525252] font-[family-name:var(--font-montserrat)]">
+                                Home security checks, mail retrieval, and plant watering while you're away.
+                            </p>
+                        </div>
                     </div>
                 </div>
             </section>

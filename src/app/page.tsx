@@ -32,25 +32,61 @@ export default function HomePage() {
   };
 
   const beeCategories = [
-    { name: 'Bee Done', desc: 'Tasks and projects, completed efficiently', icon: '🧽', href: '/for-home-and-life/bee-done', color: '#BFC8A1' },
-    { name: 'Bee Kind', desc: 'Compassionate care for people and pets', icon: '🐾', href: '/for-home-and-life/bee-kind', color: '#98B4AC' },
-    { name: 'Bee Organized', desc: 'Clear space, clear mind', icon: '🧺', href: '/for-home-and-life/bee-organized', color: '#A2C1D4' },
-    { name: 'Bee Connected', desc: 'Building community and support', icon: '🌸', href: '/for-home-and-life/bee-connected', color: '#7B6B8D' },
-    { name: 'Bee Balanced', desc: 'Bookkeeping for small businesses', icon: '💼', href: '/for-business-and-money', color: '#4A5D66' },
+    {
+      name: 'Bee Done',
+      desc: 'Taking the sting out of your "honey-do" list.',
+      icon: '🧽',
+      bee: '/bee-2-broom.png',
+      href: '/for-home-and-life/bee-done',
+      color: '#BFC8A1',
+      active: true
+    },
+    {
+      name: 'Bee Kind',
+      desc: 'Tending to your pets and plants.',
+      icon: '🐾',
+      bee: '/bee-1-petfood.png',
+      href: '/for-home-and-life/bee-kind',
+      color: '#98B4AC',
+      active: true
+    },
+    {
+      name: 'Bee Organized',
+      desc: 'Clearing the clutter and creating structure. (Coming Soon)',
+      icon: '📦',
+      bee: '/bee-6-bins.png',
+      href: '#',
+      color: '#A2C1D4',
+      active: false
+    },
+    {
+      name: 'Bee Connected',
+      desc: 'Networking and community support. (Coming Soon)',
+      icon: '🤝',
+      bee: '/bee-7-megaphone.png',
+      href: '#',
+      color: '#7B6B8D',
+      active: false
+    },
+    {
+      name: 'Bee Balanced',
+      desc: 'Harmony for your business and books. (Coming Soon)',
+      icon: '💼',
+      bee: '/bee-11-calculator.png',
+      href: '#',
+      color: '#4A5D66',
+      active: false
+    },
   ];
 
   return (
-    <div className="min-h-screen bg-[#FFF8E7]">
+    <div className="min-h-screen font-[family-name:var(--font-geist-sans)]">
       {/* Hero Section */}
-      <section className="relative py-16 md:py-24 px-4 md:px-8 overflow-hidden">
-        {/* Honeycomb pattern background */}
-        <div className="absolute inset-0 opacity-10 pointer-events-none">
-          <svg className="w-full h-full" viewBox="0 0 100 100" preserveAspectRatio="none">
-            <pattern id="honeycomb" width="10" height="10" patternUnits="userSpaceOnUse">
-              <path d="M5 0L10 2.5V7.5L5 10L0 7.5V2.5Z" fill="none" stroke="#E2C16B" strokeWidth="0.5" />
-            </pattern>
-            <rect width="100%" height="100%" fill="url(#honeycomb)" />
-          </svg>
+      <section className="relative min-h-[90vh] flex flex-col items-center justify-center p-8 md:p-20 overflow-hidden bg-[#FFF8E7]">
+        {/* Background Decorative Elements */}
+        <div className="absolute inset-0 pointer-events-none">
+          <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-[#E2C16B]/10 rounded-full blur-3xl -translate-y-1/2 translate-x-1/2" />
+          <div className="absolute bottom-0 left-0 w-[600px] h-[600px] bg-[#C17A5B]/10 rounded-full blur-3xl translate-y-1/3 -translate-x-1/3" />
         </div>
 
         <div className="relative max-w-4xl mx-auto text-center z-10">
@@ -118,17 +154,12 @@ export default function HomePage() {
           </div>
 
           {/* Tagline */}
-          <h1 className="font-[family-name:var(--font-lora)] text-4xl md:text-6xl font-medium text-[#3C3C3C] mb-4 animate-fade-up delay-100">
-            Because Even The Busiest Bees
-            <br />
-            <span className="text-gradient-honey">Need a Little Help.</span>
+          <h1 className="font-[family-name:var(--font-lora)] text-2xl md:text-3xl font-medium text-[#3C3C3C] mb-8 animate-fade-up delay-100 max-w-4xl mx-auto leading-relaxed">
+            The Helpful Hive offers a full suite of services to help your home and business hum. Whether you need to <span className="text-[#BFC8A1] font-bold">Bee Done</span> with your to-do list, <span className="text-[#98B4AC] font-bold">Bee Kind</span> to your pets, <span className="text-[#A2C1D4] font-bold">Bee Organized</span>, <span className="text-[#7B6B8D] font-bold">Bee Connected</span>, or <span className="text-[#4A5D66] font-bold">Bee Balanced</span> with your books, we make life a little sweeter.
           </h1>
-          <p className="font-[family-name:var(--font-montserrat)] text-lg md:text-xl text-[#525252] mb-8 max-w-2xl mx-auto">
-            The Helpful Hive offers a full suite of services to help your home and business hum.
-          </p>
 
-          {/* Dual CTAs */}
-          <div className="flex flex-col sm:flex-row flex-wrap gap-4 justify-center animate-fade-up delay-300">
+          {/* Dual CTAs - Removed per user request */}
+          {/* <div className="flex flex-col sm:flex-row flex-wrap gap-4 justify-center animate-fade-up delay-300">
             <Link
               href="/for-home-and-life"
               className="px-8 py-4 bg-[#C17A5B] text-white font-[family-name:var(--font-montserrat)] font-semibold rounded-full hover:bg-[#a86a4d] transition-all hover:shadow-lg hover:-translate-y-1"
@@ -141,7 +172,80 @@ export default function HomePage() {
             >
               For Business & Money
             </Link>
-          </div>
+          </div> */}
+        </div>
+      </section>
+
+      {/* Service Menu Section */}
+      <section className="py-16 px-4 md:px-8 max-w-7xl mx-auto" id="services">
+        <div className="text-center mb-12">
+          <h2 className="font-[family-name:var(--font-lora)] text-3xl md:text-5xl font-bold text-[#3C3C3C] mb-4">
+            Our Services
+          </h2>
+          <p className="font-[family-name:var(--font-montserrat)] text-[#525252] max-w-2xl mx-auto">
+            Choose a service below to get started.
+          </p>
+        </div>
+
+        {/* Active Services (Top Row - 2 cols) */}
+        <div className="grid md:grid-cols-2 gap-6 mb-8">
+          {beeCategories.filter(s => s.active).map((service, index) => (
+            <Link
+              key={index}
+              href={service.href}
+              className="group relative overflow-hidden rounded-3xl bg-white border-2 border-[#E2C16B]/20 hover:border-[#E2C16B] transition-all duration-300 hover:shadow-xl hover:-translate-y-1 p-8 flex flex-col items-center text-center"
+            >
+              <div
+                className="w-24 h-24 relative mb-4 group-hover:scale-110 transition-transform duration-300"
+              >
+                <Image
+                  src={service.bee}
+                  alt={service.name}
+                  fill
+                  className="object-contain"
+                />
+              </div>
+              <h3 className="font-[family-name:var(--font-lora)] text-2xl font-bold text-[#3C3C3C] mb-2">
+                {service.name}
+              </h3>
+              <p className="font-[family-name:var(--font-montserrat)] text-[#525252] mb-4">
+                {service.desc}
+              </p>
+              <div className="mt-auto px-6 py-2 rounded-full text-white font-semibold text-sm transition-colors" style={{ backgroundColor: service.color }}>
+                View Services
+              </div>
+            </Link>
+          ))}
+        </div>
+
+        {/* Coming Soon Services (Bottom Row - 3 cols) */}
+        <div className="grid md:grid-cols-3 gap-6">
+          {beeCategories.filter(s => !s.active).map((service, index) => (
+            <div
+              key={index}
+              className="relative overflow-hidden rounded-3xl bg-gray-50 border-2 border-dashed border-gray-200 p-6 flex flex-col items-center text-center opacity-80"
+            >
+              <div className="absolute top-3 right-3 bg-gray-200 text-gray-500 text-xs font-bold px-2 py-1 rounded">
+                COMING SOON
+              </div>
+              <div
+                className="w-16 h-16 relative mb-3 grayscale opacity-60"
+              >
+                <Image
+                  src={service.bee}
+                  alt={service.name}
+                  fill
+                  className="object-contain"
+                />
+              </div>
+              <h3 className="font-[family-name:var(--font-lora)] text-xl font-bold text-gray-500 mb-1">
+                {service.name}
+              </h3>
+              <p className="font-[family-name:var(--font-montserrat)] text-sm text-gray-400">
+                {service.desc}
+              </p>
+            </div>
+          ))}
         </div>
       </section>
 
