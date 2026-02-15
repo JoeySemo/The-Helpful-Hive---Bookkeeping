@@ -33,21 +33,21 @@ export default function HomePage() {
 
   const beeCategories = [
     {
-      name: 'Bee Done',
-      desc: 'Taking the sting out of your "honey-do" list.',
+      name: "Bee Done",
+      desc: "Taking the sting out of home chores and errands so you can Bee Done with your to-do list.",
       icon: '🧽',
-      bee: '/bee-2-broom.png',
-      href: '/for-home-and-life/bee-done',
-      color: '#BFC8A1',
+      color: "#BFC8A1", // Soft Sage
+      bee: "/bee-done-icon.png", // This would be the hexagon bee for Bee Done
+      href: "/for-home-and-life/bee-done",
       active: true
     },
     {
-      name: 'Bee Kind',
-      desc: 'Tending to your pets and plants.',
+      name: "Bee Kind",
+      desc: "Tending to your pets and plants so you can Bee Kind to your peace of mind while you're away from the hive.",
       icon: '🐾',
-      bee: '/bee-1-petfood.png',
-      href: '/for-home-and-life/bee-kind',
-      color: '#98B4AC',
+      color: "#98B4AC", // Seafoam Teal
+      bee: "/bee-kind-icon.png", // This would be the hexagon bee for Bee Kind
+      href: "/for-home-and-life/bee-kind",
       active: true
     },
     {

@@ -61,11 +61,8 @@ export default function BeeKindPage() {
                             <h1 className="font-[family-name:var(--font-lora)] text-5xl md:text-7xl font-bold text-[#3C3C3C] mb-4">
                                 Bee Kind
                             </h1>
-                            <p className="font-[family-name:var(--font-allura)] text-3xl md:text-4xl text-[#98B4AC] mb-6">
-                                Sweetening the day for your pets and plants.
-                            </p>
-                            <p className="font-[family-name:var(--font-montserrat)] text-lg text-[#525252] mb-8 leading-relaxed max-w-lg">
-                                Tending to your pets and plants so you can <strong>Bee Kind</strong> to your peace of mind while you&apos;re away from the hive.
+                            <p className="font-[family-name:var(--font-allura)] text-3xl md:text-5xl text-[#98B4AC] mb-8 leading-snug">
+                                Tending to your pets and plants so you can Bee Kind to your peace of mind while you're away from the hive.
                             </p>
                             <Link
                                 href="/contact"
@@ -191,8 +188,8 @@ export default function BeeKindPage() {
                     </svg>
                 </div>
                 <div className="max-w-3xl mx-auto text-center relative z-10">
-                    <h2 className="font-[family-name:var(--font-lora)] text-3xl md:text-4xl font-bold text-white mb-4">
-                        Ready to give your pets the <span className="text-[#E2C16B]">kindness</span> they deserve?
+                    <h2 className="font-[family-name:var(--font-lora)] text-3xl md:text-4xl font-bold !text-[#E2C16B] mb-4">
+                        Ready to give your pets the kindness they deserve?
                     </h2>
                     <p className="font-[family-name:var(--font-montserrat)] text-white/70 mb-8 text-lg">
                         Book a visit and let us shower your furry friends with love.
@@ -200,7 +197,7 @@ export default function BeeKindPage() {
                     <div className="flex flex-col sm:flex-row gap-4 justify-center">
                         <Link
                             href="/contact"
-                            className="inline-block px-8 py-4 bg-[#C17A5B] text-white font-[family-name:var(--font-montserrat)] font-semibold rounded-full hover:bg-[#a86a4d] transition-all hover:shadow-lg hover:-translate-y-0.5"
+                            className="inline-block px-8 py-4 bg-[#E2C16B] text-[#3C3C3C] font-[family-name:var(--font-montserrat)] font-semibold rounded-full hover:bg-[#d4b35f] transition-all hover:shadow-lg hover:-translate-y-0.5"
                         >
                             Book a Visit
                         </Link>
