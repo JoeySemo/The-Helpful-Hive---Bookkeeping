@@ -61,7 +61,7 @@ export default function BeeKindPage() {
                             <h1 className="font-[family-name:var(--font-lora)] text-5xl md:text-7xl font-bold text-[#3C3C3C] mb-4">
                                 Bee Kind
                             </h1>
-                            <p className="font-[family-name:var(--font-allura)] text-3xl md:text-5xl text-[#98B4AC] mb-8 leading-snug">
+                            <p className="font-[family-name:var(--font-lora)] italic text-3xl md:text-5xl text-[#98B4AC] mb-8 leading-snug">
                                 Tending to your pets and plants so you can Bee Kind to your peace of mind while you're away from the hive.
                             </p>
                             <Link
