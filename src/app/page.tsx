@@ -37,7 +37,7 @@ export default function HomePage() {
       desc: "Taking the sting out of home chores and errands so you can Bee Done with your to-do list.",
       icon: '🧽',
       color: "#BFC8A1", // Soft Sage
-      bee: "/bee-done-icon.png", // This would be the hexagon bee for Bee Done
+      bee: "/bee-clean.png", // Bee Done logo
       href: "/for-home-and-life/bee-done",
       active: true
     },
@@ -46,7 +46,7 @@ export default function HomePage() {
       desc: "Tending to your pets and plants so you can Bee Kind to your peace of mind while you're away from the hive.",
       icon: '🐾',
       color: "#98B4AC", // Seafoam Teal
-      bee: "/bee-kind-icon.png", // This would be the hexagon bee for Bee Kind
+      bee: "/bee-1-petfood.png", // Bee Kind logo
       href: "/for-home-and-life/bee-kind",
       active: true
     },

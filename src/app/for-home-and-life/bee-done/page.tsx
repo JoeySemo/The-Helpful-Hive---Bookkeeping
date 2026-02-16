@@ -33,7 +33,7 @@ export default function BeeDonePage() {
                             <h1 className="font-[family-name:var(--font-lora)] text-5xl md:text-7xl font-bold text-[#3C3C3C] mb-4">
                                 Bee Done
                             </h1>
-                            <p className="font-[family-name:var(--font-lora)] italic text-3xl md:text-5xl text-[#BFC8A1] mb-8 leading-snug">
+                            <p className="font-[family-name:var(--font-allura)] text-2xl md:text-4xl text-[#BFC8A1] mb-6 leading-normal">
                                 Taking the sting out of home chores and errands so you can Bee Done with your to-do list.
                             </p>
                             <Link
