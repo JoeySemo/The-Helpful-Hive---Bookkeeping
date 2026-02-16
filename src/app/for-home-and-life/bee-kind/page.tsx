@@ -83,11 +83,7 @@ export default function BeeKindPage() {
             </section>
 
             {/* Visit Info Banner */}
-            <section className="py-5 px-4 bg-[#98B4AC]/15 border-y border-[#98B4AC]/20">
-                <p className="font-[family-name:var(--font-montserrat)] text-sm text-[#3C3C3C] text-center font-medium max-w-3xl mx-auto">
-                    🐝 All visits include a digital &ldquo;Hive Update&rdquo; (text/photo) sent immediately after the visit.
-                </p>
-            </section>
+
 
             {/* Services List */}
             <section className="py-14 md:py-20 px-6">
@@ -129,8 +125,20 @@ export default function BeeKindPage() {
                 </div>
             </section>
 
+            {/* Visit Info Banner - Moved from top */}
+            <section className="py-8 px-4 bg-[#98B4AC]/15 border-y border-[#98B4AC]/20">
+                <div className="flex flex-col md:flex-row items-center justify-center gap-4 max-w-3xl mx-auto">
+                    <div className="relative w-12 h-12 flex-shrink-0">
+                        <Image src="/bee-1-petfood.png" alt="Bee Kind Bee" fill className="object-contain" />
+                    </div>
+                    <p className="font-[family-name:var(--font-montserrat)] text-sm text-[#3C3C3C] text-center md:text-left font-medium">
+                        All visits include a digital &ldquo;Hive Update&rdquo; (text/photo) sent immediately after the visit.
+                    </p>
+                </div>
+            </section >
+
             {/* Overnight Section */}
-            <section className="py-14 md:py-16 px-6 bg-white">
+            < section className="py-14 md:py-16 px-6 bg-white" >
                 <div className="max-w-5xl mx-auto">
                     <div className="rounded-3xl border-2 border-[#98B4AC] overflow-hidden bg-[#FFF8E7] relative">
                         <div className="bg-[#98B4AC]/15 px-8 py-6 border-b border-[#98B4AC]/20 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-3">
@@ -159,16 +167,10 @@ export default function BeeKindPage() {
                         </div>
                     </div>
                 </div>
-            </section>
+            </section >
 
             {/* Bee Done Add-on Callout */}
-            <section className="py-6 px-6 bg-[#BFC8A1]/15 border-y border-[#BFC8A1]/20">
-                <div className="max-w-3xl mx-auto text-center">
-                    <p className="font-[family-name:var(--font-montserrat)] text-sm text-[#3C3C3C]">
-                        <strong>Make it a <span className="italic">Bee Done</span> Day!</strong> Already have a check-in scheduled? Add any of our professional chore services (from laundry to light tidying) to your visit for a flat add-on rate.
-                    </p>
-                </div>
-            </section>
+
 
             {/* Pricing Note */}
             <section className="py-6 px-6">
@@ -210,6 +212,6 @@ export default function BeeKindPage() {
                     </div>
                 </div>
             </section>
-        </div>
+        </div >
     );
 }
