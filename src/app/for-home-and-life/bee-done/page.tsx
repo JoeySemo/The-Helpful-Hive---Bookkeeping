@@ -12,7 +12,7 @@ export default function BeeDonePage() {
         <div className="min-h-screen bg-[#FFF8E7]">
             {/* Hero Section */}
             <section className="relative overflow-hidden">
-                <div className="absolute inset-0 bg-gradient-to-br from-[#BFC8A1]/15 via-[#FFF8E7] to-[#BFC8A1]/10" />
+                <div className="absolute inset-0 bg-gradient-to-br from-soft-sage/15 via-cream-white to-soft-sage/10" />
                 <div className="absolute inset-0 opacity-5 pointer-events-none">
                     <svg className="w-full h-full" viewBox="0 0 100 100" preserveAspectRatio="none">
                         <pattern id="honeycomb-bd" width="10" height="10" patternUnits="userSpaceOnUse">
@@ -25,20 +25,20 @@ export default function BeeDonePage() {
                 <div className="max-w-7xl mx-auto px-6 py-16 md:py-24 relative z-10">
                     <div className="grid md:grid-cols-2 gap-12 items-center">
                         <div className="order-2 md:order-1">
-                            <div className="inline-block px-4 py-2 bg-[#BFC8A1]/25 rounded-full mb-6 backdrop-blur-sm">
-                                <span className="text-[#3C3C3C] font-[family-name:var(--font-montserrat)] text-sm font-medium">
+                            <div className="inline-block px-4 py-2 bg-soft-sage/25 rounded-full mb-6 backdrop-blur-sm">
+                                <span className="text-charcoal-gray font-[family-name:var(--font-montserrat)] text-sm font-medium">
                                     The &ldquo;Bee Done&rdquo; Service Menu
                                 </span>
                             </div>
-                            <h1 className="font-[family-name:var(--font-lora)] text-5xl md:text-7xl font-bold text-[#3C3C3C] mb-4">
+                            <h1 className="font-[family-name:var(--font-lora)] text-5xl md:text-7xl font-bold text-charcoal-gray mb-4">
                                 Bee Done
                             </h1>
-                            <p className="font-[family-name:var(--font-allura)] text-2xl md:text-4xl text-[#BFC8A1] mb-6 leading-normal">
+                            <p className="font-[family-name:var(--font-allura)] text-xl md:text-2xl text-soft-sage-dark mb-6 leading-normal">
                                 Taking the sting out of home chores and errands so you can Bee Done with your to-do list.
                             </p>
                             <Link
                                 href="/contact"
-                                className="inline-block px-8 py-4 bg-[#C17A5B] text-white font-[family-name:var(--font-montserrat)] font-semibold rounded-full hover:bg-[#a86a4d] transition-all hover:shadow-lg hover:-translate-y-0.5"
+                                className="inline-block px-8 py-4 bg-terra-cotta text-white font-[family-name:var(--font-montserrat)] font-semibold rounded-full hover:bg-[#a86a4d] transition-all hover:shadow-lg hover:-translate-y-0.5"
                             >
                                 Book a Service
                             </Link>
@@ -55,35 +55,13 @@ export default function BeeDonePage() {
                 </div>
             </section>
 
-            {/* Tagline Banner */}
-            <section className="py-6 px-4 bg-[#BFC8A1]/10 border-y border-[#BFC8A1]/20">
-                <p className="font-[family-name:var(--font-lora)] text-lg md:text-xl text-[#3C3C3C] text-center font-medium italic max-w-3xl mx-auto">
-                    &ldquo;You relax — we&apos;ll handle the <span className="text-[#BFC8A1]">honey-do&apos;s</span>&rdquo;
-                </p>
-            </section>
+
 
             {/* === The Bee Done Service Menu === */}
             <section className="py-14 md:py-20 px-6">
                 <div className="max-w-6xl mx-auto">
 
-                    {/* Intro Categories */}
-                    <div className="grid md:grid-cols-3 gap-8 mb-16 text-center">
-                        <div className="p-6 bg-white rounded-2xl shadow-sm border border-[#BFC8A1]/20">
-                            <div className="text-4xl mb-3">🏡</div>
-                            <h3 className="font-[family-name:var(--font-lora)] text-xl font-bold text-[#3C3C3C] mb-2">Home Resets</h3>
-                            <p className="font-[family-name:var(--font-montserrat)] text-sm text-[#525252]">Kitchen, bathroom, and main-floor cleaning bundles.</p>
-                        </div>
-                        <div className="p-6 bg-white rounded-2xl shadow-sm border border-[#BFC8A1]/20">
-                            <div className="text-4xl mb-3">🧺</div>
-                            <h3 className="font-[family-name:var(--font-lora)] text-xl font-bold text-[#3C3C3C] mb-2">Laundry & Dishes</h3>
-                            <p className="font-[family-name:var(--font-montserrat)] text-sm text-[#525252]">A-la-carte cycles and "Laundry Assists."</p>
-                        </div>
-                        <div className="p-6 bg-white rounded-2xl shadow-sm border border-[#BFC8A1]/20">
-                            <div className="text-4xl mb-3">🏎️</div>
-                            <h3 className="font-[family-name:var(--font-lora)] text-xl font-bold text-[#3C3C3C] mb-2">Errand Dashes</h3>
-                            <p className="font-[family-name:var(--font-montserrat)] text-sm text-[#525252]">Fast pickups, returns, and local deliveries.</p>
-                        </div>
-                    </div>
+
 
                     {/* === The A-La-Carte Hive === */}
                     <div className="mb-20">
@@ -127,21 +105,21 @@ export default function BeeDonePage() {
                     {/* === Bundles === */}
                     <div className="grid md:grid-cols-2 gap-8 mb-20">
                         {/* The Monday Reset */}
-                        <div className="bg-white rounded-3xl border-2 border-[#3C3C3C] overflow-hidden shadow-lg relative">
-                            <div className="absolute top-0 right-0 bg-[#3C3C3C] text-[#E2C16B] px-4 py-1 rounded-bl-xl text-sm font-bold">POPULAR</div>
+                        <div className="bg-white rounded-3xl border-2 border-charcoal-gray overflow-hidden shadow-lg relative">
+                            <div className="absolute top-0 right-0 bg-charcoal-gray text-warm-honey px-4 py-1 rounded-bl-xl text-sm font-bold">POPULAR</div>
                             <div className="p-8 flex flex-col h-full">
-                                <h2 className="font-[family-name:var(--font-lora)] text-3xl font-bold text-[#3C3C3C] mb-2">
+                                <h2 className="font-[family-name:var(--font-lora)] text-3xl font-bold text-charcoal-gray mb-2">
                                     The Monday Reset
                                 </h2>
-                                <div className="text-2xl font-bold text-[#C17A5B] mb-4">$55 <span className="text-sm font-normal text-gray-400 line-through">($65 Value)</span></div>
-                                <p className="font-[family-name:var(--font-montserrat)] text-sm text-[#525252] mb-6">
+                                <div className="text-2xl font-bold text-terra-cotta-dark mb-4">$55 <span className="text-sm font-normal text-gray-400 line-through">($65 Value)</span></div>
+                                <p className="font-[family-name:var(--font-montserrat)] text-sm text-neutral-600 mb-6">
                                     Don't let a "weekend hangover" of chores ruin your Monday focus. While you're at work, I'll erase the evidence of your busy weekend.
                                 </p>
                                 <div className="mb-6 flex-grow">
-                                    <h4 className="font-bold text-[#3C3C3C] mb-2 text-sm uppercase tracking-wide">What's Included:</h4>
+                                    <h4 className="font-bold text-charcoal-gray mb-2 text-sm uppercase tracking-wide">What's Included:</h4>
                                     <ul className="space-y-3">
-                                        <li className="flex items-start gap-3 text-sm text-[#525252]">
-                                            <span className="text-[#E2C16B] text-xl">✓</span> <span><strong>2 Laundry Assists:</strong> You start the first wash, I handle the rest! (2nd load left in dryer).</span>
+                                        <li className="flex items-start gap-3 text-sm text-neutral-600">
+                                            <span className="text-warm-honey text-xl">✓</span> <span><strong>2 Laundry Assists:</strong> You start the first wash, I handle the rest! (2nd load left in dryer).</span>
                                         </li>
                                         <li className="flex items-start gap-3 text-sm text-[#525252]">
                                             <span className="text-[#E2C16B] text-xl">✓</span> <span><strong>1 Dish Reset:</strong> Empty sink, dishwasher running.</span>
@@ -158,13 +136,13 @@ export default function BeeDonePage() {
                         </div>
 
                         {/* The Whole Hive Reset */}
-                        <div className="bg-white rounded-3xl border-2 border-[#3C3C3C] overflow-hidden shadow-lg relative">
-                            <div className="absolute top-0 right-0 bg-[#3C3C3C] text-[#E2C16B] px-4 py-1 rounded-bl-xl text-sm font-bold">BEST VALUE</div>
+                        <div className="bg-white rounded-3xl border-2 border-charcoal-gray overflow-hidden shadow-lg relative">
+                            <div className="absolute top-0 right-0 bg-charcoal-gray text-warm-honey px-4 py-1 rounded-bl-xl text-sm font-bold">BEST VALUE</div>
                             <div className="p-8 flex flex-col h-full">
-                                <h2 className="font-[family-name:var(--font-lora)] text-3xl font-bold text-[#3C3C3C] mb-2">
+                                <h2 className="font-[family-name:var(--font-lora)] text-3xl font-bold text-charcoal-gray mb-2">
                                     The Whole Hive Reset
                                 </h2>
-                                <div className="text-2xl font-bold text-[#C17A5B] mb-4">$125 <span className="text-sm font-normal text-gray-400 line-through">($140 Value)</span></div>
+                                <div className="text-2xl font-bold text-terra-cotta-dark mb-4">$125 <span className="text-sm font-normal text-gray-400 line-through">($140 Value)</span></div>
                                 <p className="font-[family-name:var(--font-montserrat)] text-sm text-[#525252] mb-6">
                                     The ultimate "Main Floor" refresh. I focus on the rooms you use the most so the heart of your home stays clean and inviting.
                                 </p>
@@ -210,7 +188,7 @@ export default function BeeDonePage() {
                                         <p className="font-[family-name:var(--font-montserrat)] text-sm text-[#525252]">Fast door-to-door errands within Wentzville.</p>
                                     </div>
                                 </div>
-                                <div className="bg-[#BFC8A1] text-white px-5 py-2.5 rounded-full font-[family-name:var(--font-montserrat)] font-bold text-lg self-start sm:self-auto">
+                                <div className="bg-soft-sage-dark text-white px-5 py-2.5 rounded-full font-[family-name:var(--font-montserrat)] font-bold text-lg self-start sm:self-auto">
                                     $15 <span className="text-sm font-normal">flat rate</span>
                                 </div>
                             </div>
@@ -218,15 +196,15 @@ export default function BeeDonePage() {
                             <div className="p-8">
                                 <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4 mb-6">
                                     {[
-                                        { name: 'Returns', desc: 'Dropping off pre-labeled Amazon, UPS, or FedEx packages.' },
-                                        { name: 'Grocery/Retail Pickups', desc: 'Curbside pickup & delivery of pre-ordered items.' },
-                                        { name: 'Dry Cleaning', desc: 'Seamless drop-off or pickup.' },
-                                        { name: 'Pharmacy', desc: 'Secure pickup of pre-paid prescriptions.' },
-                                        { name: 'Post Office', desc: 'Handling mail, stamps, or prepared packages.' },
+                                        { name: 'Returns', desc: 'Dropping off pre-labeled Amazon, UPS, or FedEx packages.', icon: '/bee_returns_box.png' },
+                                        { name: 'Grocery/Retail Pickups', desc: 'Curbside pickup & delivery of pre-ordered items.', icon: '/bee_grocery_bag.png' },
+                                        { name: 'Dry Cleaning', desc: 'Seamless drop-off or pickup.', icon: '/bee_dry_cleaning.png' },
+                                        { name: 'Pharmacy', desc: 'Secure pickup of pre-paid prescriptions.', icon: '/bee_pharmacy_pill.png' },
+                                        { name: 'Post Office', desc: 'Handling mail, stamps, or prepared packages.', icon: '/bee_post_office_mail.png' },
                                     ].map((errand, i) => (
                                         <div key={i} className="bg-white rounded-xl p-4 border border-[#BFC8A1]/20 hover:border-[#BFC8A1] hover:shadow-md transition-all">
-                                            <div className="w-8 h-8 mb-2 relative">
-                                                <Image src="/bee-12-paper-airplane.png" alt="Bee Icon" fill className="object-contain opacity-60" />
+                                            <div className="w-12 h-12 mb-2 relative">
+                                                <Image src={errand.icon} alt={`${errand.name} Bee Icon`} fill className="object-contain" />
                                             </div>
                                             <h3 className="font-[family-name:var(--font-lora)] font-semibold text-[#3C3C3C] mb-1">{errand.name}</h3>
                                             <p className="font-[family-name:var(--font-montserrat)] text-xs text-[#525252]">{errand.desc}</p>
@@ -248,7 +226,7 @@ export default function BeeDonePage() {
                             <h2 className="font-[family-name:var(--font-lora)] text-2xl font-bold text-[#3C3C3C] mb-2">
                                 The Worker Bee
                             </h2>
-                            <div className="text-xl font-bold text-[#C17A5B] mb-2">$40 <span className="text-sm font-normal text-gray-500">/ hour</span></div>
+                            <div className="text-xl font-bold text-terra-cotta-dark mb-2">$40 <span className="text-sm font-normal text-gray-500">/ hour</span></div>
                             <span className="text-xs text-[#525252] italic mb-4">1-hour minimum</span>
                             <p className="font-[family-name:var(--font-montserrat)] text-sm text-[#525252] mb-4 flex-grow">
                                 The ultimate solution for your home to-do list. Provide your "honey-do" list and I'll work through it efficiently.
@@ -266,7 +244,7 @@ export default function BeeDonePage() {
                             <h2 className="font-[family-name:var(--font-lora)] text-2xl font-bold text-[#3C3C3C] mb-2">
                                 The Grocery Bee
                             </h2>
-                            <div className="text-xl font-bold text-[#C17A5B] mb-2">$35 <span className="text-sm font-normal text-gray-500">/ hour</span></div>
+                            <div className="text-xl font-bold text-terra-cotta-dark mb-2">$35 <span className="text-sm font-normal text-gray-500">/ hour</span></div>
                             <span className="text-xs text-[#525252] italic mb-4">1-hour minimum</span>
                             <p className="font-[family-name:var(--font-montserrat)] text-sm text-[#525252] mb-4 flex-grow">
                                 I don't just "grab items", I select freshest produce and check dates. Includes shopping, delivery, and optional put-away.
@@ -281,7 +259,7 @@ export default function BeeDonePage() {
                             <h2 className="font-[family-name:var(--font-lora)] text-2xl font-bold text-[#3C3C3C] mb-2">
                                 The Waiting Bee
                             </h2>
-                            <div className="text-xl font-bold text-[#C17A5B] mb-2">$30 <span className="text-sm font-normal text-gray-500">/ hour</span></div>
+                            <div className="text-xl font-bold text-terra-cotta-dark mb-2">$30 <span className="text-sm font-normal text-gray-500">/ hour</span></div>
                             <span className="text-xs text-[#525252] italic mb-4">1-hour minimum</span>
                             <p className="font-[family-name:var(--font-montserrat)] text-sm text-[#525252] mb-4 flex-grow">
                                 I'll stay on-site for the cable tech or delivery so you don't miss work. Real-time updates provided.
@@ -311,7 +289,7 @@ export default function BeeDonePage() {
                                     <div key={i} className="flex flex-col border-b border-gray-100 last:border-0 pb-4 last:pb-0">
                                         <div className="flex justify-between items-baseline mb-1">
                                             <h3 className="font-[family-name:var(--font-lora)] font-bold text-[#3C3C3C]">{service.name}</h3>
-                                            <span className="text-[#C17A5B] font-bold text-sm">{service.price}</span>
+                                            <span className="text-terra-cotta-dark font-bold text-sm">{service.price}</span>
                                         </div>
                                         <p className="font-[family-name:var(--font-montserrat)] text-xs text-[#525252]">{service.desc}</p>
                                     </div>
@@ -340,7 +318,7 @@ export default function BeeDonePage() {
                     </svg>
                 </div>
                 <div className="max-w-3xl mx-auto text-center relative z-10">
-                    <h2 className="font-[family-name:var(--font-lora)] text-3xl md:text-4xl font-bold !text-[#E2C16B] mb-4">
+                    <h2 className="font-[family-name:var(--font-lora)] text-3xl md:text-4xl font-bold !text-warm-honey-dark mb-4">
                         Ready to Bee Done with your to-do list?
                     </h2>
                     <p className="font-[family-name:var(--font-montserrat)] text-white/70 mb-8 text-lg">
@@ -349,7 +327,7 @@ export default function BeeDonePage() {
                     <div className="flex flex-col sm:flex-row gap-4 justify-center">
                         <Link
                             href="/contact"
-                            className="inline-block px-8 py-4 bg-[#E2C16B] text-[#3C3C3C] font-[family-name:var(--font-montserrat)] font-semibold rounded-full hover:bg-[#d4b35f] transition-all hover:shadow-lg hover:-translate-y-0.5"
+                            className="inline-block px-8 py-4 bg-warm-honey text-charcoal-gray font-[family-name:var(--font-montserrat)] font-semibold rounded-full hover:bg-[#d4b35f] transition-all hover:shadow-lg hover:-translate-y-0.5"
                         >
                             Book a Service
                         </Link>

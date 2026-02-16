@@ -34,47 +34,51 @@ export default function HomePage() {
   const beeCategories = [
     {
       name: "Bee Done",
-      desc: "Taking the sting out of home chores and errands so you can Bee Done with your to-do list.",
+      desc: "Home resets, laundry & dishes, and errand dashes. Taking the sting out of chores so you can Bee Done with your to-do list.",
       icon: '🧽',
-      color: "#BFC8A1", // Soft Sage
-      bee: "/bee-clean.png", // Bee Done logo
+      bee: "/bee-new-2.png", // New Bee Done logo
       href: "/for-home-and-life/bee-done",
-      active: true
+      active: true,
+      color: "#5D684B", // Darker sage for better contrast with white text
+      bgColor: "bg-[#BFC8A1]/20", // Light sage background
+      patternColor: "#BFC8A1" // Sage pattern stroke
     },
     {
       name: "Bee Kind",
       desc: "Tending to your pets and plants so you can Bee Kind to your peace of mind while you're away from the hive.",
       icon: '🐾',
-      color: "#98B4AC", // Seafoam Teal
       bee: "/bee-1-petfood.png", // Bee Kind logo
       href: "/for-home-and-life/bee-kind",
-      active: true
+      active: true,
+      color: "#506A62", // Darker teal for better contrast with white text
+      bgColor: "bg-[#98B4AC]/20", // Light teal background
+      patternColor: "#98B4AC" // Teal pattern stroke
     },
     {
       name: 'Bee Organized',
-      desc: 'Clearing the clutter and creating structure. (Coming Soon)',
+      desc: 'Clearing the clutter and creating structure.',
       icon: '📦',
       bee: '/bee-6-bins.png',
       href: '#',
-      color: '#A2C1D4',
+      color: 'var(--sky-blue)',
       active: false
     },
     {
       name: 'Bee Connected',
-      desc: 'Networking and community support. (Coming Soon)',
+      desc: 'Networking and community support.',
       icon: '🤝',
       bee: '/bee-7-megaphone.png',
       href: '#',
-      color: '#7B6B8D',
+      color: 'var(--elderberry)',
       active: false
     },
     {
       name: 'Bee Balanced',
-      desc: 'Harmony for your business and books. (Coming Soon)',
+      desc: 'Harmony for your business and books.',
       icon: '💼',
       bee: '/bee-11-calculator.png',
       href: '#',
-      color: '#4A5D66',
+      color: 'var(--slate-blue)',
       active: false
     },
   ];
@@ -82,11 +86,20 @@ export default function HomePage() {
   return (
     <div className="min-h-screen font-[family-name:var(--font-geist-sans)]">
       {/* Hero Section */}
-      <section className="relative min-h-[90vh] flex flex-col items-center justify-center p-8 md:p-20 overflow-hidden bg-[#FFF8E7]">
+      <section className="relative min-h-[90vh] flex flex-col items-center justify-center p-8 md:p-20 overflow-hidden bg-cream-white">
         {/* Background Decorative Elements */}
         <div className="absolute inset-0 pointer-events-none">
-          <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-[#E2C16B]/10 rounded-full blur-3xl -translate-y-1/2 translate-x-1/2" />
-          <div className="absolute bottom-0 left-0 w-[600px] h-[600px] bg-[#C17A5B]/10 rounded-full blur-3xl translate-y-1/3 -translate-x-1/3" />
+          {/* Hexagonal Pattern */}
+          <div className="absolute inset-0 opacity-10">
+            <svg className="w-full h-full" viewBox="0 0 100 100" preserveAspectRatio="none">
+              <pattern id="honeycomb-home" width="10" height="10" patternUnits="userSpaceOnUse">
+                <path d="M5 0L10 2.5V7.5L5 10L0 7.5V2.5Z" fill="none" stroke="#E2C16B" strokeWidth="0.5" />
+              </pattern>
+              <rect width="100%" height="100%" fill="url(#honeycomb-home)" />
+            </svg>
+          </div>
+          <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-warm-honey/10 rounded-full blur-3xl -translate-y-1/2 translate-x-1/2" />
+          <div className="absolute bottom-0 left-0 w-[600px] h-[600px] bg-terra-cotta/10 rounded-full blur-3xl translate-y-1/3 -translate-x-1/3" />
         </div>
 
         <div className="relative max-w-4xl mx-auto text-center z-10">
@@ -99,7 +112,7 @@ export default function HomePage() {
                 src="/official-logo-circular.jpg"
                 alt="The Helpful Hive"
                 fill
-                className="object-contain rounded-full border-4 border-[#E2C16B] shadow-2xl"
+                className="object-contain rounded-full border-4 border-warm-honey shadow-2xl"
                 priority
               />
             </div>
@@ -154,8 +167,8 @@ export default function HomePage() {
           </div>
 
           {/* Tagline */}
-          <h1 className="font-[family-name:var(--font-lora)] text-2xl md:text-3xl font-medium text-[#3C3C3C] mb-8 animate-fade-up delay-100 max-w-4xl mx-auto leading-relaxed">
-            The Helpful Hive offers a full suite of services to help your home and business hum. Whether you need to <span className="text-[#BFC8A1] font-bold">Bee Done</span> with your to-do list, <span className="text-[#98B4AC] font-bold">Bee Kind</span> to your pets, <span className="text-[#A2C1D4] font-bold">Bee Organized</span>, <span className="text-[#7B6B8D] font-bold">Bee Connected</span>, or <span className="text-[#4A5D66] font-bold">Bee Balanced</span> with your books, we make life a little sweeter.
+          <h1 className="font-[family-name:var(--font-lora)] text-2xl md:text-3xl font-medium text-charcoal-gray mb-8 animate-fade-up delay-100 max-w-4xl mx-auto leading-relaxed">
+            The Helpful Hive offers a full suite of services to help your home and business hum. Whether you need to <span className="text-soft-sage-dark font-bold">Bee Done</span> with your to-do list, <span className="text-seafoam-teal-dark font-bold">Bee Kind</span> to your pets, <span className="text-sky-blue-dark font-bold">Bee Organized</span>, <span className="text-elderberry-dark font-bold">Bee Connected</span>, or <span className="text-slate-blue-dark font-bold">Bee Balanced</span> with your books, we make life a little sweeter.
           </h1>
 
           {/* Dual CTAs - Removed per user request */}
@@ -179,10 +192,10 @@ export default function HomePage() {
       {/* Service Menu Section */}
       <section className="py-16 px-4 md:px-8 max-w-7xl mx-auto" id="services">
         <div className="text-center mb-12">
-          <h2 className="font-[family-name:var(--font-lora)] text-3xl md:text-5xl font-bold text-[#3C3C3C] mb-4">
+          <h2 className="font-[family-name:var(--font-lora)] text-3xl md:text-5xl font-bold text-charcoal-gray mb-4">
             Our Services
           </h2>
-          <p className="font-[family-name:var(--font-montserrat)] text-[#525252] max-w-2xl mx-auto">
+          <p className="font-[family-name:var(--font-montserrat)] text-neutral-600 max-w-2xl mx-auto">
             Choose a service below to get started.
           </p>
         </div>
@@ -193,10 +206,22 @@ export default function HomePage() {
             <Link
               key={index}
               href={service.href}
-              className="group relative overflow-hidden rounded-3xl bg-white border-2 border-[#E2C16B]/20 hover:border-[#E2C16B] transition-all duration-300 hover:shadow-xl hover:-translate-y-1 p-8 flex flex-col items-center text-center"
+              className={`group relative overflow-hidden rounded-3xl border-2 border-transparent hover:border-warm-honey transition-all duration-300 hover:shadow-xl hover:-translate-y-1 p-8 flex flex-col items-center text-center ${service.bgColor || 'bg-white'}`}
             >
+              {/* background pattern */}
+              {service.patternColor && (
+                <div className="absolute inset-0 opacity-20 pointer-events-none">
+                  <svg className="w-full h-full" viewBox="0 0 100 100" preserveAspectRatio="none">
+                    <pattern id={`honeycomb-card-${index}`} width="20" height="20" patternUnits="userSpaceOnUse">
+                      <path d="M10 0L20 5V15L10 20L0 15V5Z" fill="none" stroke={service.patternColor} strokeWidth="1" />
+                    </pattern>
+                    <rect width="100%" height="100%" fill={`url(#honeycomb-card-${index})`} />
+                  </svg>
+                </div>
+              )}
+
               <div
-                className="w-24 h-24 relative mb-4 group-hover:scale-110 transition-transform duration-300"
+                className="w-24 h-24 relative mb-4 group-hover:scale-110 transition-transform duration-300 z-10"
               >
                 <Image
                   src={service.bee}
@@ -205,13 +230,13 @@ export default function HomePage() {
                   className="object-contain"
                 />
               </div>
-              <h3 className="font-[family-name:var(--font-lora)] text-2xl font-bold text-[#E2C16B] mb-2">
+              <h3 className="font-[family-name:var(--font-lora)] text-2xl font-bold text-charcoal-gray mb-2 z-10">
                 {service.name}
               </h3>
-              <p className="font-[family-name:var(--font-montserrat)] text-[#525252] mb-4">
+              <p className="font-[family-name:var(--font-montserrat)] text-[#525252] mb-4 z-10">
                 {service.desc}
               </p>
-              <div className="mt-auto px-6 py-2 rounded-full text-white font-semibold text-sm transition-colors" style={{ backgroundColor: service.color }}>
+              <div className="mt-auto px-6 py-2 rounded-full text-white font-semibold text-sm transition-colors z-10 shadow-sm" style={{ backgroundColor: service.patternColor ? service.color : service.color }}>
                 View Services
               </div>
             </Link>
@@ -261,7 +286,7 @@ export default function HomePage() {
           <div className="flex flex-col sm:flex-row gap-6 justify-center">
             <Link
               href="/contact"
-              className="px-8 py-4 bg-[#E2C16B] text-[#3C3C3C] font-semibold rounded-full hover:bg-[#d4b35f] transition-all transform hover:scale-105"
+              className="px-8 py-4 bg-warm-honey text-charcoal-gray font-semibold rounded-full hover:bg-[#d4b35f] transition-all transform hover:scale-105"
             >
               Schedule a Consultation
             </Link>

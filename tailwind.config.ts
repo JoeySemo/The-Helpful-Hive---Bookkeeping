@@ -9,14 +9,35 @@ export default {
     theme: {
         extend: {
             colors: {
-                // Sweet & Minimal Design System
+                // Brand Design System
+                // Primary Brand Colors
+                'warm-honey': '#E2C16B',
+                'warm-honey-dark': '#8F7118', // Darkened to pass 4.5:1 on white
+                'charcoal-gray': '#3C3C3C',
+                'cream-white': '#FFF8E7',
+                'terra-cotta': '#C17A5B',
+                'terra-cotta-dark': '#A05A3B', // Passes 4.5:1
+
+                // Service Colors
+                'soft-sage': '#BFC8A1',    // Bee Done
+                'soft-sage-dark': '#5D684B', // Darkened to pass 4.5:1 on white
+                'seafoam-teal': '#98B4AC', // Bee Kind
+                'seafoam-teal-dark': '#506A62', // Darkened slightly more to be safe
+                'sky-blue': '#A2C1D4',     // Bee Organized
+                'sky-blue-dark': '#4A6D85', // Darkened to pass 4.5:1
+                'slate-blue': '#4A5D66',   // Bee Balanced
+                'slate-blue-dark': '#293C45', // Darkened significanty to match visual weight of others
+                'elderberry': '#7B6B8D',   // Bee Connected
+                'elderberry-dark': '#5B4B6D', // Passes 7.5:1
+
+                // Legacy Honey Scale (kept for compatibility)
                 honey: {
                     50: '#FFFBF0',
                     100: '#FFF5E0',
                     200: '#FFECC2',
                     300: '#FFE0A3',
                     400: '#F5C859',
-                    500: '#E5A921',   // Primary honey gold
+                    500: '#E2C16B',   // Primary brand honey
                     600: '#C98E19',
                     700: '#A67314',
                     800: '#825A0F',
