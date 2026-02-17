@@ -59,12 +59,12 @@ export default function AboutPage() {
             </section>
 
             {/* Mission Section */}
-            <section className="py-12 px-6 bg-[#F5F0E8]">
+            <section className="py-12 px-6 bg-white">
                 <div className="max-w-4xl mx-auto text-center">
-                    <h2 className="font-[family-name:var(--font-lora)] text-2xl md:text-3xl font-bold text-black mb-4">
-                        Our Mission
+                    <h2 className="font-[family-name:var(--font-lora)] text-2xl md:text-3xl font-bold text-charcoal-gray mb-4">
+                        Our <span className="text-warm-honey-dark">Mission</span>
                     </h2>
-                    <p className="font-[family-name:var(--font-montserrat)] text-black/80 text-lg leading-relaxed max-w-3xl mx-auto">
+                    <p className="font-[family-name:var(--font-montserrat)] text-neutral-600 text-lg leading-relaxed max-w-3xl mx-auto">
                         If we can give you one thing, it is the <strong>gift of time</strong> to focus on your own passions and the peace of mind that comes with a "sigh of relief." We treat every home and business we step into with the same care and attention we give our own.
                     </p>
                 </div>
