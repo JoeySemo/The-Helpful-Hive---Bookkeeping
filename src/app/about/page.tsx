@@ -61,8 +61,8 @@ export default function AboutPage() {
             {/* Mission Section */}
             <section className="py-12 px-6 bg-white">
                 <div className="max-w-4xl mx-auto text-center">
-                    <h2 className="font-[family-name:var(--font-lora)] text-2xl md:text-3xl font-bold text-charcoal-gray mb-4">
-                        Our <span className="text-warm-honey-dark">Mission</span>
+                    <h2 className="font-[family-name:var(--font-lora)] text-2xl md:text-3xl font-bold text-warm-honey-dark mb-4">
+                        Our Mission
                     </h2>
                     <p className="font-[family-name:var(--font-montserrat)] text-neutral-600 text-lg leading-relaxed max-w-3xl mx-auto">
                         If we can give you one thing, it is the <strong>gift of time</strong> to focus on your own passions and the peace of mind that comes with a "sigh of relief." We treat every home and business we step into with the same care and attention we give our own.
@@ -84,8 +84,8 @@ export default function AboutPage() {
 
                         {/* Bio */}
                         <div className="md:col-span-3">
-                            <h2 className="font-[family-name:var(--font-lora)] text-3xl md:text-4xl font-bold text-charcoal-gray mb-2">
-                                Meet the <span className="text-warm-honey-dark">Queen Bee</span>
+                            <h2 className="font-[family-name:var(--font-lora)] text-3xl md:text-4xl font-bold text-warm-honey-dark mb-2">
+                                Meet the Queen Bee
                             </h2>
                             <p className="font-[family-name:var(--font-allura)] text-xl text-terra-cotta-dark mb-4">Amanda Knittel</p>
 
@@ -95,7 +95,7 @@ export default function AboutPage() {
                             <p className="font-[family-name:var(--font-montserrat)] text-neutral-600 leading-relaxed mb-4">
                                 I also realized I have a unique advantage: a genuine joy for numbers and data. Most small business owners and solopreneurs want to focus on the passion that started their journey; not the bookkeeping or pricing analysis at the bottom of the list.
                             </p>
-                            <h3 className="font-[family-name:var(--font-lora)] text-xl font-bold text-charcoal-gray mt-6 mb-2">
+                            <h3 className="font-[family-name:var(--font-lora)] text-xl font-bold text-warm-honey-dark mt-6 mb-2">
                                 A Career Built on Precision
                             </h3>
                             <p className="font-[family-name:var(--font-montserrat)] text-neutral-600 leading-relaxed">
@@ -111,8 +111,8 @@ export default function AboutPage() {
                 <div className="max-w-5xl mx-auto">
                     <div className="grid md:grid-cols-5 gap-10 items-center">
                         <div className="md:col-span-3 order-2 md:order-1">
-                            <h2 className="font-[family-name:var(--font-lora)] text-2xl md:text-3xl font-bold text-charcoal-gray mb-3">
-                                Life in the <span className="text-warm-honey-dark">Hive</span>
+                            <h2 className="font-[family-name:var(--font-lora)] text-2xl md:text-3xl font-bold text-warm-honey-dark mb-3">
+                                Life in the Hive
                             </h2>
                             <p className="font-[family-name:var(--font-montserrat)] text-neutral-600 leading-relaxed mb-4">
                                 When I'm not color-coding a bookshelf or building a complex spreadsheet, you'll find me with my husband, Joe, and our two daughters, Harleigh and Scarlett.

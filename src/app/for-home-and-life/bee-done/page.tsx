@@ -68,7 +68,7 @@ export default function BeeDonePage() {
                         <div className="bg-white rounded-3xl border-2 border-[#BFC8A1]/30 overflow-hidden shadow-sm">
                             <div className="bg-[#BFC8A1]/15 px-8 py-6 border-b border-[#BFC8A1]/20 relative overflow-hidden">
                                 <div className="absolute inset-0 opacity-[0.08] pointer-events-none">
-                                    <svg className="w-full h-full" viewBox="0 0 100 100" preserveAspectRatio="none">
+                                    <svg className="w-full h-full" viewBox="0 0 100 100" preserveAspectRatio="xMidYMid slice">
                                         <pattern id="honeycomb-alacarte" width="10" height="10" patternUnits="userSpaceOnUse">
                                             <path d="M5 0L10 2.5V7.5L5 10L0 7.5V2.5Z" fill="none" stroke="#BFC8A1" strokeWidth="0.5" />
                                         </pattern>
@@ -186,7 +186,7 @@ export default function BeeDonePage() {
                         <div className="rounded-3xl border-2 border-[#BFC8A1]/30 overflow-hidden bg-[#FFF8E7]">
                             <div className="bg-[#BFC8A1]/15 px-8 py-6 border-b border-[#BFC8A1]/20 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-3 relative overflow-hidden">
                                 <div className="absolute inset-0 opacity-[0.08] pointer-events-none">
-                                    <svg className="w-full h-full" viewBox="0 0 100 100" preserveAspectRatio="none">
+                                    <svg className="w-full h-full" viewBox="0 0 100 100" preserveAspectRatio="xMidYMid slice">
                                         <pattern id="honeycomb-busybee" width="10" height="10" patternUnits="userSpaceOnUse">
                                             <path d="M5 0L10 2.5V7.5L5 10L0 7.5V2.5Z" fill="none" stroke="#BFC8A1" strokeWidth="0.5" />
                                         </pattern>
@@ -290,7 +290,7 @@ export default function BeeDonePage() {
                     <div className="bg-white rounded-3xl border-2 border-[#BFC8A1]/30 overflow-hidden shadow-sm">
                         <div className="bg-[#BFC8A1]/15 px-8 py-6 border-b border-[#BFC8A1]/20 relative overflow-hidden">
                             <div className="absolute inset-0 opacity-[0.08] pointer-events-none">
-                                <svg className="w-full h-full" viewBox="0 0 100 100" preserveAspectRatio="none">
+                                <svg className="w-full h-full" viewBox="0 0 100 100" preserveAspectRatio="xMidYMid slice">
                                     <pattern id="honeycomb-outdoor" width="10" height="10" patternUnits="userSpaceOnUse">
                                         <path d="M5 0L10 2.5V7.5L5 10L0 7.5V2.5Z" fill="none" stroke="#BFC8A1" strokeWidth="0.5" />
                                     </pattern>
