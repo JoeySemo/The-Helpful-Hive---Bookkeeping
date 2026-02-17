@@ -22,7 +22,7 @@ export default function Footer({ compact = false }: FooterProps) {
                         <h3 className={`font-display font-semibold !text-[#E2C16B] ${compact ? 'text-sm mb-1' : 'mb-2'}`}>Phone</h3>
                         <a
                             href="tel:+13145267240"
-                            className={`${compact ? 'text-xs' : 'text-sm'} text-white/70 hover:text-[#E2C16B] transition-colors`}
+                            className={`${compact ? 'text-xs' : 'text-sm'} text-white/80 hover:text-[#E2C16B] transition-colors`}
                         >
                             (314) 526-7240
                         </a>
@@ -36,7 +36,7 @@ export default function Footer({ compact = false }: FooterProps) {
                         <h3 className={`font-display font-semibold !text-[#E2C16B] ${compact ? 'text-sm mb-1' : 'mb-2'}`}>Email</h3>
                         <a
                             href="mailto:hellohelpfulhive@gmail.com"
-                            className={`${compact ? 'text-xs' : 'text-sm'} text-white/70 hover:text-[#E2C16B] transition-colors`}
+                            className={`${compact ? 'text-xs' : 'text-sm'} text-white/80 hover:text-[#E2C16B] transition-colors`}
                         >
                             hellohelpfulhive@gmail.com
                         </a>
@@ -48,7 +48,7 @@ export default function Footer({ compact = false }: FooterProps) {
                             <MapPin size={compact ? 18 : 24} className="text-[#E2C16B]" />
                         </div>
                         <h3 className={`font-display font-semibold !text-[#E2C16B] ${compact ? 'text-sm mb-1' : 'mb-2'}`}>Location</h3>
-                        <p className={`${compact ? 'text-xs' : 'text-sm'} text-white/70`}>
+                        <p className={`${compact ? 'text-xs' : 'text-sm'} text-white/80`}>
                             Wentzville, MO
                         </p>
                     </div>
@@ -60,7 +60,7 @@ export default function Footer({ compact = false }: FooterProps) {
                         href="https://www.facebook.com/thehelpfulhive"
                         target="_blank"
                         rel="noopener noreferrer"
-                        className={`${compact ? 'w-8 h-8' : 'w-10 h-10'} flex items-center justify-center rounded-full bg-white/10 text-white/70 hover:bg-[#E2C16B] hover:text-white transition-all transform hover:scale-110`}
+                        className={`${compact ? 'w-8 h-8' : 'w-10 h-10'} flex items-center justify-center rounded-full bg-white/10 text-white/80 hover:bg-[#E2C16B] hover:text-white transition-all transform hover:scale-110`}
                         aria-label="Facebook"
                     >
                         <Facebook size={compact ? 14 : 18} />
@@ -69,7 +69,7 @@ export default function Footer({ compact = false }: FooterProps) {
                         href="https://www.instagram.com/thehelpfulhiveco/"
                         target="_blank"
                         rel="noopener noreferrer"
-                        className={`${compact ? 'w-8 h-8' : 'w-10 h-10'} flex items-center justify-center rounded-full bg-white/10 text-white/70 hover:bg-[#E2C16B] hover:text-white transition-all transform hover:scale-110`}
+                        className={`${compact ? 'w-8 h-8' : 'w-10 h-10'} flex items-center justify-center rounded-full bg-white/10 text-white/80 hover:bg-[#E2C16B] hover:text-white transition-all transform hover:scale-110`}
                         aria-label="Instagram"
                     >
                         <Instagram size={compact ? 14 : 18} />
@@ -78,7 +78,7 @@ export default function Footer({ compact = false }: FooterProps) {
 
                 {/* Copyright */}
                 <div className={`${compact ? 'mt-4 pt-4' : 'mt-10 pt-8'} border-t border-white/10 text-center`}>
-                    <p className="text-xs text-white/40">
+                    <p className="text-xs text-white/60">
                         © {currentYear} The Helpful Hive. All rights reserved.
                     </p>
                 </div>

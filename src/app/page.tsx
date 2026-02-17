@@ -206,7 +206,7 @@ export default function HomePage() {
             <Link
               key={index}
               href={service.href}
-              className={`group relative overflow-hidden rounded-3xl border-2 border-transparent hover:border-warm-honey transition-all duration-300 hover:shadow-xl hover:-translate-y-1 p-8 flex flex-col items-center text-center ${service.bgColor || 'bg-white'}`}
+              className={`group relative overflow-hidden rounded-3xl border-2 border-black hover:border-warm-honey transition-all duration-300 hover:shadow-xl hover:-translate-y-1 p-8 flex flex-col items-center text-center ${service.bgColor || 'bg-white'}`}
             >
               {/* background pattern */}
               {service.patternColor && (
@@ -236,7 +236,7 @@ export default function HomePage() {
               <p className="font-[family-name:var(--font-montserrat)] text-[#525252] mb-4 z-10">
                 {service.desc}
               </p>
-              <div className="mt-auto px-6 py-2 rounded-full text-white font-semibold text-sm transition-colors z-10 shadow-sm" style={{ backgroundColor: service.patternColor ? service.color : service.color }}>
+              <div className="mt-auto px-6 py-2 rounded-full text-white font-semibold text-sm transition-colors z-10 shadow-sm border-2 border-black" style={{ backgroundColor: service.patternColor ? service.color : service.color }}>
                 View Services
               </div>
             </Link>
@@ -250,7 +250,7 @@ export default function HomePage() {
               key={index}
               className="relative overflow-hidden rounded-3xl bg-gray-50 border-2 border-dashed border-gray-200 p-6 flex flex-col items-center text-center opacity-80"
             >
-              <div className="absolute top-3 right-3 bg-gray-200 text-gray-500 text-xs font-bold px-2 py-1 rounded">
+              <div className="absolute top-3 right-3 bg-gray-200 text-gray-700 text-xs font-bold px-2 py-1 rounded">
                 COMING SOON
               </div>
               <div
@@ -266,7 +266,7 @@ export default function HomePage() {
               <h3 className="font-[family-name:var(--font-lora)] text-xl font-bold text-gray-500 mb-1">
                 {service.name}
               </h3>
-              <p className="font-[family-name:var(--font-montserrat)] text-sm text-gray-400">
+              <p className="font-[family-name:var(--font-montserrat)] text-sm text-gray-500">
                 {service.desc}
               </p>
             </div>
@@ -275,12 +275,20 @@ export default function HomePage() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 px-4 md:px-8 bg-[#3C3C3C]">
-        <div className="max-w-3xl mx-auto text-center">
+      <section className="py-20 px-4 md:px-8 bg-[#3C3C3C] relative overflow-hidden">
+        <div className="absolute inset-0 opacity-5 pointer-events-none">
+          <svg className="w-full h-full" viewBox="0 0 100 100" preserveAspectRatio="none">
+            <pattern id="honeycomb-home-cta" width="10" height="10" patternUnits="userSpaceOnUse">
+              <path d="M5 0L10 2.5V7.5L5 10L0 7.5V2.5Z" fill="none" stroke="#E2C16B" strokeWidth="0.5" />
+            </pattern>
+            <rect width="100%" height="100%" fill="url(#honeycomb-home-cta)" />
+          </svg>
+        </div>
+        <div className="max-w-3xl mx-auto text-center relative z-10">
           <h2 className="font-display text-3xl md:text-5xl font-medium mb-6">
             <span className="text-gradient-honey">Ready To Let Us Help?</span>
           </h2>
-          <p className="text-white/70 mb-10 text-xl font-light">
+          <p className="text-white/80 mb-10 text-xl font-light">
             Whether It's Your Home, Your Pets, Or Your Books—We've Got You Covered.
           </p>
           <div className="flex flex-col sm:flex-row gap-6 justify-center">
@@ -292,7 +300,7 @@ export default function HomePage() {
             </Link>
             <a
               href="tel:+13145267240"
-              className="px-8 py-4 bg-transparent border-2 border-white/30 text-white font-semibold rounded-full hover:bg-white/10 transition-all"
+              className="px-8 py-4 bg-transparent border-2 border-white/60 text-white font-semibold rounded-full hover:bg-white/10 transition-all"
             >
               Call (314) 526-7240
             </a>

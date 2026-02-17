@@ -13,7 +13,7 @@ export default function BeeDonePage() {
             {/* Hero Section */}
             <section className="relative overflow-hidden">
                 <div className="absolute inset-0 bg-gradient-to-br from-soft-sage/15 via-cream-white to-soft-sage/10" />
-                <div className="absolute inset-0 opacity-5 pointer-events-none">
+                <div className="absolute inset-0 opacity-[0.125] pointer-events-none">
                     <svg className="w-full h-full" viewBox="0 0 100 100" preserveAspectRatio="none">
                         <pattern id="honeycomb-bd" width="10" height="10" patternUnits="userSpaceOnUse">
                             <path d="M5 0L10 2.5V7.5L5 10L0 7.5V2.5Z" fill="none" stroke="#BFC8A1" strokeWidth="0.5" />
@@ -66,8 +66,16 @@ export default function BeeDonePage() {
                     {/* === The A-La-Carte Hive === */}
                     <div className="mb-20">
                         <div className="bg-white rounded-3xl border-2 border-[#BFC8A1]/30 overflow-hidden shadow-sm">
-                            <div className="bg-[#BFC8A1]/15 px-8 py-6 border-b border-[#BFC8A1]/20">
-                                <div className="flex items-center gap-4">
+                            <div className="bg-[#BFC8A1]/15 px-8 py-6 border-b border-[#BFC8A1]/20 relative overflow-hidden">
+                                <div className="absolute inset-0 opacity-[0.08] pointer-events-none">
+                                    <svg className="w-full h-full" viewBox="0 0 100 100" preserveAspectRatio="none">
+                                        <pattern id="honeycomb-alacarte" width="10" height="10" patternUnits="userSpaceOnUse">
+                                            <path d="M5 0L10 2.5V7.5L5 10L0 7.5V2.5Z" fill="none" stroke="#BFC8A1" strokeWidth="0.5" />
+                                        </pattern>
+                                        <rect width="100%" height="100%" fill="url(#honeycomb-alacarte)" />
+                                    </svg>
+                                </div>
+                                <div className="flex items-center gap-4 relative z-10">
                                     <div className="relative w-12 h-12 flex-shrink-0">
                                         <Image src="/bee-4-spraybottle.png" alt="Chore Bee" fill className="object-contain" />
                                     </div>
@@ -92,7 +100,7 @@ export default function BeeDonePage() {
                                         <div key={i} className="group rounded-xl p-5 border-2 border-[#BFC8A1]/15 hover:border-[#BFC8A1] hover:shadow-md transition-all bg-[#FFF8E7]">
                                             <div className="flex items-center justify-between mb-2">
                                                 <h3 className="font-[family-name:var(--font-lora)] font-semibold text-[#3C3C3C]">{addon.name}</h3>
-                                                <span className="bg-[#BFC8A1] text-white text-sm px-3 py-1 rounded-full font-[family-name:var(--font-montserrat)] font-bold">{addon.price}</span>
+                                                <span className="bg-[#5D684B] text-white text-sm px-3 py-1 rounded-full font-[family-name:var(--font-montserrat)] font-bold">{addon.price}</span>
                                             </div>
                                             <p className="font-[family-name:var(--font-montserrat)] text-sm text-[#525252]">{addon.desc}</p>
                                         </div>
@@ -111,7 +119,7 @@ export default function BeeDonePage() {
                                 <h2 className="font-[family-name:var(--font-lora)] text-3xl font-bold text-charcoal-gray mb-2">
                                     The Monday Reset
                                 </h2>
-                                <div className="text-2xl font-bold text-terra-cotta-dark mb-4">$55 <span className="text-sm font-normal text-gray-400 line-through">($65 Value)</span></div>
+                                <div className="text-2xl font-bold text-terra-cotta-dark mb-4">$55 <span className="text-sm font-normal text-gray-500 line-through">($65 Value)</span></div>
                                 <p className="font-[family-name:var(--font-montserrat)] text-sm text-neutral-600 mb-6">
                                     Don't let a "weekend hangover" of chores ruin your Monday focus. While you're at work, I'll erase the evidence of your busy weekend.
                                 </p>
@@ -142,7 +150,7 @@ export default function BeeDonePage() {
                                 <h2 className="font-[family-name:var(--font-lora)] text-3xl font-bold text-charcoal-gray mb-2">
                                     The Whole Hive Reset
                                 </h2>
-                                <div className="text-2xl font-bold text-terra-cotta-dark mb-4">$125 <span className="text-sm font-normal text-gray-400 line-through">($140 Value)</span></div>
+                                <div className="text-2xl font-bold text-terra-cotta-dark mb-4">$125 <span className="text-sm font-normal text-gray-500 line-through">($140 Value)</span></div>
                                 <p className="font-[family-name:var(--font-montserrat)] text-sm text-[#525252] mb-6">
                                     The ultimate "Main Floor" refresh. I focus on the rooms you use the most so the heart of your home stays clean and inviting.
                                 </p>
@@ -176,8 +184,16 @@ export default function BeeDonePage() {
                     {/* === The Busy Bee Dash === */}
                     <div className="mb-20">
                         <div className="rounded-3xl border-2 border-[#BFC8A1]/30 overflow-hidden bg-[#FFF8E7]">
-                            <div className="bg-[#BFC8A1]/15 px-8 py-6 border-b border-[#BFC8A1]/20 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-3">
-                                <div className="flex items-center gap-4">
+                            <div className="bg-[#BFC8A1]/15 px-8 py-6 border-b border-[#BFC8A1]/20 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-3 relative overflow-hidden">
+                                <div className="absolute inset-0 opacity-[0.08] pointer-events-none">
+                                    <svg className="w-full h-full" viewBox="0 0 100 100" preserveAspectRatio="none">
+                                        <pattern id="honeycomb-busybee" width="10" height="10" patternUnits="userSpaceOnUse">
+                                            <path d="M5 0L10 2.5V7.5L5 10L0 7.5V2.5Z" fill="none" stroke="#BFC8A1" strokeWidth="0.5" />
+                                        </pattern>
+                                        <rect width="100%" height="100%" fill="url(#honeycomb-busybee)" />
+                                    </svg>
+                                </div>
+                                <div className="flex items-center gap-4 relative z-10">
                                     <div className="relative w-12 h-12 flex-shrink-0">
                                         <Image src="/bee-5-clipboard.png" alt="Errand Bee" fill className="object-contain" />
                                     </div>
@@ -188,7 +204,7 @@ export default function BeeDonePage() {
                                         <p className="font-[family-name:var(--font-montserrat)] text-sm text-[#525252]">Fast door-to-door errands within Wentzville.</p>
                                     </div>
                                 </div>
-                                <div className="bg-soft-sage-dark text-white px-5 py-2.5 rounded-full font-[family-name:var(--font-montserrat)] font-bold text-lg self-start sm:self-auto">
+                                <div className="bg-soft-sage-dark text-black px-5 py-2.5 rounded-full font-[family-name:var(--font-montserrat)] font-bold text-lg self-start sm:self-auto relative z-10">
                                     $15 <span className="text-sm font-normal">flat rate</span>
                                 </div>
                             </div>
@@ -272,11 +288,19 @@ export default function BeeDonePage() {
 
                     {/* === The Outdoor Hive === */}
                     <div className="bg-white rounded-3xl border-2 border-[#BFC8A1]/30 overflow-hidden shadow-sm">
-                        <div className="bg-[#BFC8A1]/15 px-8 py-6 border-b border-[#BFC8A1]/20">
-                            <h2 className="font-[family-name:var(--font-lora)] text-2xl md:text-3xl font-bold text-[#3C3C3C]">
+                        <div className="bg-[#BFC8A1]/15 px-8 py-6 border-b border-[#BFC8A1]/20 relative overflow-hidden">
+                            <div className="absolute inset-0 opacity-[0.08] pointer-events-none">
+                                <svg className="w-full h-full" viewBox="0 0 100 100" preserveAspectRatio="none">
+                                    <pattern id="honeycomb-outdoor" width="10" height="10" patternUnits="userSpaceOnUse">
+                                        <path d="M5 0L10 2.5V7.5L5 10L0 7.5V2.5Z" fill="none" stroke="#BFC8A1" strokeWidth="0.5" />
+                                    </pattern>
+                                    <rect width="100%" height="100%" fill="url(#honeycomb-outdoor)" />
+                                </svg>
+                            </div>
+                            <h2 className="font-[family-name:var(--font-lora)] text-2xl md:text-3xl font-bold text-[#3C3C3C] relative z-10">
                                 The Outdoor Hive
                             </h2>
-                            <p className="font-[family-name:var(--font-montserrat)] text-sm text-[#525252]">Keeping your yard and garden as welcoming as your home.</p>
+                            <p className="font-[family-name:var(--font-montserrat)] text-sm text-[#525252] relative z-10">Keeping your yard and garden as welcoming as your home.</p>
                         </div>
                         <div className="p-8">
                             <div className="grid sm:grid-cols-2 gap-6">
@@ -318,13 +342,13 @@ export default function BeeDonePage() {
                     </svg>
                 </div>
                 <div className="max-w-3xl mx-auto text-center relative z-10">
-                    <h2 className="font-[family-name:var(--font-lora)] text-3xl md:text-4xl font-bold !text-warm-honey-dark mb-4">
-                        Ready to Bee Done with your to-do list?
+                    <h2 className="font-display text-3xl md:text-5xl font-medium mb-6">
+                        <span className="text-gradient-honey">Ready to Bee Done with your to-do list?</span>
                     </h2>
-                    <p className="font-[family-name:var(--font-montserrat)] text-white/70 mb-8 text-lg">
+                    <p className="text-white/80 mb-10 text-xl font-light">
                         Let us take care of the cleaning and errands so you can enjoy your home.
                     </p>
-                    <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                    <div className="flex flex-col sm:flex-row gap-6 justify-center">
                         <Link
                             href="/contact"
                             className="inline-block px-8 py-4 bg-warm-honey text-charcoal-gray font-[family-name:var(--font-montserrat)] font-semibold rounded-full hover:bg-[#d4b35f] transition-all hover:shadow-lg hover:-translate-y-0.5"
@@ -333,7 +357,7 @@ export default function BeeDonePage() {
                         </Link>
                         <a
                             href="tel:+13145267240"
-                            className="inline-block px-8 py-4 bg-transparent border-2 border-white/30 text-white font-[family-name:var(--font-montserrat)] font-semibold rounded-full hover:bg-white/10 transition-all"
+                            className="inline-block px-8 py-4 bg-transparent border-2 border-white/60 text-white font-[family-name:var(--font-montserrat)] font-semibold rounded-full hover:bg-white/10 transition-all"
                         >
                             Call (314) 526-7240
                         </a>

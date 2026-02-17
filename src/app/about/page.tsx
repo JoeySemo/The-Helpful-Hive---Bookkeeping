@@ -15,7 +15,7 @@ export default function AboutPage() {
             <section className="relative py-16 md:py-24 overflow-hidden">
                 <div className="absolute inset-0 bg-gradient-to-br from-warm-honey/10 via-cream-white to-terra-cotta/5" />
 
-                <div className="absolute inset-0 opacity-5 pointer-events-none">
+                <div className="absolute inset-0 opacity-[0.065] pointer-events-none">
                     <svg className="w-full h-full" viewBox="0 0 100 100" preserveAspectRatio="none">
                         <pattern id="honeycomb-about" width="10" height="10" patternUnits="userSpaceOnUse">
                             <path d="M5 0L10 2.5V7.5L5 10L0 7.5V2.5Z" fill="none" stroke="#E2C16B" strokeWidth="0.5" />
@@ -59,12 +59,12 @@ export default function AboutPage() {
             </section>
 
             {/* Mission Section */}
-            <section className="py-12 px-6 bg-charcoal-gray">
+            <section className="py-12 px-6 bg-[#F5F0E8]">
                 <div className="max-w-4xl mx-auto text-center">
-                    <h2 className="font-[family-name:var(--font-lora)] text-2xl md:text-3xl font-bold text-white mb-4">
+                    <h2 className="font-[family-name:var(--font-lora)] text-2xl md:text-3xl font-bold text-black mb-4">
                         Our Mission
                     </h2>
-                    <p className="font-[family-name:var(--font-montserrat)] text-white/80 text-lg leading-relaxed max-w-3xl mx-auto">
+                    <p className="font-[family-name:var(--font-montserrat)] text-black/80 text-lg leading-relaxed max-w-3xl mx-auto">
                         If we can give you one thing, it is the <strong>gift of time</strong> to focus on your own passions and the peace of mind that comes with a "sigh of relief." We treat every home and business we step into with the same care and attention we give our own.
                     </p>
                 </div>
@@ -169,7 +169,7 @@ export default function AboutPage() {
             </section>
 
             {/* CTA Section */}
-            <section className="py-20 px-6 bg-charcoal-gray relative overflow-hidden">
+            <section className="py-20 px-6 bg-[#3C3C3C] relative overflow-hidden">
                 <div className="absolute inset-0 opacity-5 pointer-events-none">
                     <svg className="w-full h-full" viewBox="0 0 100 100" preserveAspectRatio="none">
                         <pattern id="honeycomb-about-cta" width="10" height="10" patternUnits="userSpaceOnUse">
@@ -179,13 +179,13 @@ export default function AboutPage() {
                     </svg>
                 </div>
                 <div className="max-w-3xl mx-auto text-center relative z-10">
-                    <h2 className="font-[family-name:var(--font-lora)] text-3xl md:text-4xl font-bold !text-warm-honey-dark mb-4">
-                        Ready to sweeten your life?
+                    <h2 className="font-display text-3xl md:text-5xl font-medium mb-6">
+                        <span className="text-gradient-honey">Ready to sweeten your life?</span>
                     </h2>
-                    <p className="font-[family-name:var(--font-montserrat)] text-white/70 mb-8 text-lg">
+                    <p className="text-white/80 mb-10 text-xl font-light">
                         We&apos;d love to hear from you. Let&apos;s find the right services for your family or business.
                     </p>
-                    <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                    <div className="flex flex-col sm:flex-row gap-6 justify-center">
                         <Link
                             href="/contact"
                             className="inline-block px-8 py-4 bg-warm-honey text-charcoal-gray font-[family-name:var(--font-montserrat)] font-semibold rounded-full hover:bg-[#d4b35f] transition-all hover:shadow-lg hover:-translate-y-0.5"
@@ -194,7 +194,7 @@ export default function AboutPage() {
                         </Link>
                         <a
                             href="tel:+13145267240"
-                            className="inline-block px-8 py-4 bg-transparent border-2 border-white/30 text-white font-[family-name:var(--font-montserrat)] font-semibold rounded-full hover:bg-white/10 transition-all"
+                            className="inline-block px-8 py-4 bg-transparent border-2 border-white/60 text-white font-[family-name:var(--font-montserrat)] font-semibold rounded-full hover:bg-white/10 transition-all"
                         >
                             Call (314) 526-7240
                         </a>

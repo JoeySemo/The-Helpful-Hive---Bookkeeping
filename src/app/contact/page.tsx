@@ -29,11 +29,20 @@ export default function ContactPage() {
     ];
 
     return (
-        <main className="min-h-[calc(100vh-80px)] bg-gradient-warm py-16 md:py-24 px-4 md:px-8">
-            <div className="max-w-4xl mx-auto">
+        <main className="min-h-[calc(100vh-80px)] bg-gradient-warm py-16 md:py-24 px-4 md:px-8 relative overflow-hidden">
+            {/* Honeycomb Background */}
+            <div className="absolute inset-0 opacity-[0.091] pointer-events-none">
+                <svg className="w-full h-full" viewBox="0 0 100 100" preserveAspectRatio="none">
+                    <pattern id="honeycomb-contact" width="10" height="10" patternUnits="userSpaceOnUse">
+                        <path d="M5 0L10 2.5V7.5L5 10L0 7.5V2.5Z" fill="none" stroke="#E2C16B" strokeWidth="0.5" />
+                    </pattern>
+                    <rect width="100%" height="100%" fill="url(#honeycomb-contact)" />
+                </svg>
+            </div>
+            <div className="max-w-4xl mx-auto relative z-10">
                 {/* Header */}
                 <div className="text-center mb-12">
-                    <h1 className="font-display text-3xl md:text-5xl font-medium text-neutral-900 mb-4">
+                    <h1 className="font-[family-name:var(--font-lora)] text-3xl md:text-5xl font-medium text-neutral-900 mb-4">
                         Meet the <span className="text-gradient-honey">Queen Bee</span>
                     </h1>
 

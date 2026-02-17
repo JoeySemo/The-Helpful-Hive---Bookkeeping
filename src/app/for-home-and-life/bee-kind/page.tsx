@@ -41,7 +41,7 @@ export default function BeeKindPage() {
             {/* Hero Section */}
             <section className="relative overflow-hidden">
                 <div className="absolute inset-0 bg-gradient-to-br from-seafoam-teal/15 via-cream-white to-seafoam-teal/10" />
-                <div className="absolute inset-0 opacity-5 pointer-events-none">
+                <div className="absolute inset-0 opacity-[0.0625] pointer-events-none">
                     <svg className="w-full h-full" viewBox="0 0 100 100" preserveAspectRatio="none">
                         <pattern id="honeycomb-bk" width="10" height="10" patternUnits="userSpaceOnUse">
                             <path d="M5 0L10 2.5V7.5L5 10L0 7.5V2.5Z" fill="none" stroke="#98B4AC" strokeWidth="0.5" />
@@ -66,7 +66,7 @@ export default function BeeKindPage() {
                             </p>
                             <Link
                                 href="/contact"
-                                className="inline-block px-8 py-4 bg-terra-cotta-dark text-white font-[family-name:var(--font-montserrat)] font-semibold rounded-full hover:bg-[#a86a4d] transition-all hover:shadow-lg hover:-translate-y-0.5"
+                                className="inline-block px-8 py-4 bg-terra-cotta text-white font-[family-name:var(--font-montserrat)] font-semibold rounded-full hover:bg-[#a86a4d] transition-all hover:shadow-lg hover:-translate-y-0.5"
                             >
                                 Book a Visit
                             </Link>
@@ -190,13 +190,13 @@ export default function BeeKindPage() {
                     </svg>
                 </div>
                 <div className="max-w-3xl mx-auto text-center relative z-10">
-                    <h2 className="font-[family-name:var(--font-lora)] text-3xl md:text-4xl font-bold !text-warm-honey-dark mb-4">
-                        Ready to give your pets the kindness they deserve?
+                    <h2 className="font-display text-3xl md:text-5xl font-medium mb-6">
+                        <span className="text-gradient-honey">Ready to give your pets the kindness they deserve?</span>
                     </h2>
-                    <p className="font-[family-name:var(--font-montserrat)] text-white/70 mb-8 text-lg">
+                    <p className="text-white/80 mb-10 text-xl font-light">
                         Book a visit and let us shower your furry friends with love.
                     </p>
-                    <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                    <div className="flex flex-col sm:flex-row gap-6 justify-center">
                         <Link
                             href="/contact"
                             className="inline-block px-8 py-4 bg-warm-honey text-charcoal-gray font-[family-name:var(--font-montserrat)] font-semibold rounded-full hover:bg-[#d4b35f] transition-all hover:shadow-lg hover:-translate-y-0.5"
@@ -205,7 +205,7 @@ export default function BeeKindPage() {
                         </Link>
                         <a
                             href="tel:+13145267240"
-                            className="inline-block px-8 py-4 bg-transparent border-2 border-white/30 text-white font-[family-name:var(--font-montserrat)] font-semibold rounded-full hover:bg-white/10 transition-all"
+                            className="inline-block px-8 py-4 bg-transparent border-2 border-white/60 text-white font-[family-name:var(--font-montserrat)] font-semibold rounded-full hover:bg-white/10 transition-all"
                         >
                             Call (314) 526-7240
                         </a>

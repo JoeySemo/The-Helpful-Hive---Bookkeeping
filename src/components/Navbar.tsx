@@ -40,7 +40,7 @@ export default function Navbar() {
             <div className="flex items-center gap-6">
               <Link
                 href="/"
-                className={`text-sm font-medium font-[family-name:var(--font-montserrat)] transition-colors ${pathname === '/' ? 'text-[#E2C16B]' : 'text-[#3C3C3C] hover:text-[#E2C16B]'}`}
+                className={`text-sm font-medium font-[family-name:var(--font-montserrat)] transition-colors ${pathname === '/' ? 'text-[#B8941E]' : 'text-[#3C3C3C] hover:text-[#B8941E]'}`}
               >
                 Home
               </Link>
@@ -48,7 +48,7 @@ export default function Navbar() {
               {/* Active Services */}
               <Link
                 href="/for-home-and-life/bee-done"
-                className={`flex items-center gap-2 text-sm font-medium font-[family-name:var(--font-montserrat)] transition-colors ${pathname === '/for-home-and-life/bee-done' ? 'text-[#E2C16B]' : 'text-[#3C3C3C] hover:text-[#E2C16B]'}`}
+                className={`flex items-center gap-2 text-sm font-medium font-[family-name:var(--font-montserrat)] transition-colors ${pathname === '/for-home-and-life/bee-done' ? 'text-[#B8941E]' : 'text-[#3C3C3C] hover:text-[#B8941E]'}`}
               >
                 <div className="relative w-6 h-6">
                   <Image src="/bee-2-broom.png" alt="Bee Done" fill className="object-contain" />
@@ -58,7 +58,7 @@ export default function Navbar() {
 
               <Link
                 href="/for-home-and-life/bee-kind"
-                className={`flex items-center gap-2 text-sm font-medium font-[family-name:var(--font-montserrat)] transition-colors ${pathname === '/for-home-and-life/bee-kind' ? 'text-[#E2C16B]' : 'text-[#3C3C3C] hover:text-[#E2C16B]'}`}
+                className={`flex items-center gap-2 text-sm font-medium font-[family-name:var(--font-montserrat)] transition-colors ${pathname === '/for-home-and-life/bee-kind' ? 'text-[#B8941E]' : 'text-[#3C3C3C] hover:text-[#B8941E]'}`}
               >
                 <div className="relative w-6 h-6">
                   <Image src="/bee-1-petfood.png" alt="Bee Kind" fill className="object-contain" />
@@ -69,7 +69,7 @@ export default function Navbar() {
               {/* About */}
               <Link
                 href="/about"
-                className={`text-sm font-medium font-[family-name:var(--font-montserrat)] transition-colors ${pathname === '/about' ? 'text-[#E2C16B]' : 'text-[#3C3C3C] hover:text-[#E2C16B]'}`}
+                className={`text-sm font-medium font-[family-name:var(--font-montserrat)] transition-colors ${pathname === '/about' ? 'text-[#B8941E]' : 'text-[#3C3C3C] hover:text-[#B8941E]'}`}
               >
                 About
               </Link>
@@ -103,7 +103,7 @@ export default function Navbar() {
               <Link
                 href="/"
                 onClick={() => setIsMenuOpen(false)}
-                className={`px-4 py-3 rounded-lg text-base font-medium font-[family-name:var(--font-montserrat)] ${pathname === '/' ? 'bg-[#FFF8E7] text-[#E2C16B]' : 'text-[#3C3C3C] hover:bg-[#FFF8E7]'}`}
+                className={`px-4 py-3 rounded-lg text-base font-medium font-[family-name:var(--font-montserrat)] ${pathname === '/' ? 'bg-[#FFF8E7] text-[#B8941E]' : 'text-[#3C3C3C] hover:bg-[#FFF8E7]'}`}
               >
                 Home
               </Link>
@@ -111,7 +111,7 @@ export default function Navbar() {
               <Link
                 href="/for-home-and-life/bee-done"
                 onClick={() => setIsMenuOpen(false)}
-                className={`flex items-center gap-3 px-4 py-3 rounded-lg text-base font-medium font-[family-name:var(--font-montserrat)] ${pathname === '/for-home-and-life/bee-done' ? 'bg-[#FFF8E7] text-[#E2C16B]' : 'text-[#3C3C3C] hover:bg-[#FFF8E7]'}`}
+                className={`flex items-center gap-3 px-4 py-3 rounded-lg text-base font-medium font-[family-name:var(--font-montserrat)] ${pathname === '/for-home-and-life/bee-done' ? 'bg-[#FFF8E7] text-[#B8941E]' : 'text-[#3C3C3C] hover:bg-[#FFF8E7]'}`}
               >
                 <div className="relative w-6 h-6">
                   <Image src="/bee-2-broom.png" alt="Bee Done" fill className="object-contain" />
@@ -122,7 +122,7 @@ export default function Navbar() {
               <Link
                 href="/for-home-and-life/bee-kind"
                 onClick={() => setIsMenuOpen(false)}
-                className={`flex items-center gap-3 px-4 py-3 rounded-lg text-base font-medium font-[family-name:var(--font-montserrat)] ${pathname === '/for-home-and-life/bee-kind' ? 'bg-[#FFF8E7] text-[#E2C16B]' : 'text-[#3C3C3C] hover:bg-[#FFF8E7]'}`}
+                className={`flex items-center gap-3 px-4 py-3 rounded-lg text-base font-medium font-[family-name:var(--font-montserrat)] ${pathname === '/for-home-and-life/bee-kind' ? 'bg-[#FFF8E7] text-[#B8941E]' : 'text-[#3C3C3C] hover:bg-[#FFF8E7]'}`}
               >
                 <div className="relative w-6 h-6">
                   <Image src="/bee-1-petfood.png" alt="Bee Kind" fill className="object-contain" />
@@ -133,7 +133,7 @@ export default function Navbar() {
               <Link
                 href="/about"
                 onClick={() => setIsMenuOpen(false)}
-                className={`px-4 py-3 rounded-lg text-base font-medium font-[family-name:var(--font-montserrat)] ${pathname === '/about' ? 'bg-[#FFF8E7] text-[#E2C16B]' : 'text-[#3C3C3C] hover:bg-[#FFF8E7]'}`}
+                className={`px-4 py-3 rounded-lg text-base font-medium font-[family-name:var(--font-montserrat)] ${pathname === '/about' ? 'bg-[#FFF8E7] text-[#B8941E]' : 'text-[#3C3C3C] hover:bg-[#FFF8E7]'}`}
               >
                 About
               </Link>
