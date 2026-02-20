@@ -210,19 +210,16 @@ export default function BeeDonePage() {
                                         <p className="font-[family-name:var(--font-montserrat)] text-sm text-[#525252]">Fast door-to-door errands within Wentzville.</p>
                                     </div>
                                 </div>
-                                <div className="bg-soft-sage-dark text-black px-5 py-2.5 rounded-full font-[family-name:var(--font-montserrat)] font-bold text-lg self-start sm:self-auto relative z-10">
-                                    $15 <span className="text-sm font-normal">flat rate</span>
-                                </div>
                             </div>
 
                             <div className="p-8">
                                 <div className="grid sm:grid-cols-2 gap-4 mb-6">
                                     {[
-                                        { name: 'Returns', desc: 'Dropping off pre-labeled Amazon, UPS, or FedEx packages.', icon: '/bee_returns_box.png' },
-                                        { name: 'Grocery/Retail Pickups', desc: 'Curbside pickup & delivery of pre-ordered items.', icon: '/bee_grocery_bag.png' },
-                                        { name: 'Dry Cleaning', desc: 'Seamless drop-off or pickup.', icon: '/bee_dry_cleaning.png' },
-                                        { name: 'Pharmacy', desc: 'Secure pickup of pre-paid prescriptions.', icon: '/bee_pharmacy_pill.png' },
-                                        { name: 'Post Office', desc: 'Handling mail, stamps, or prepared packages.', icon: '/bee_post_office_mail.png' },
+                                        { name: 'Returns', price: '$15', desc: 'Dropping off pre-labeled Amazon, UPS, or FedEx packages.', icon: '/bee-new-1.png' },
+                                        { name: 'Grocery/Retail Pickups', price: '$15', desc: 'Curbside pickup & delivery of pre-ordered items.', icon: '/bee-new-2.png' },
+                                        { name: 'Dry Cleaning', price: '$15', desc: 'Seamless drop-off or pickup.', icon: '/bee-new-3.png' },
+                                        { name: 'Pharmacy', price: '$15', desc: 'Secure pickup of pre-paid prescriptions.', icon: '/bee-new-4.png' },
+                                        { name: 'Post Office', price: '$15', desc: 'Handling mail, stamps, or prepared packages.', icon: '/bee-new-5.png' },
                                     ].map((errand, i) => (
                                         <div key={i} className="group rounded-xl p-5 border-2 border-[#BFC8A1]/15 hover:border-[#BFC8A1] hover:shadow-md transition-all bg-[#FFF8E7]">
                                             <div className="flex items-center justify-between mb-2">
@@ -232,6 +229,7 @@ export default function BeeDonePage() {
                                                     </div>
                                                     <h3 className="font-[family-name:var(--font-lora)] font-semibold text-[#3C3C3C]">{errand.name}</h3>
                                                 </div>
+                                                <span className="bg-[#5D684B] text-white text-sm px-3 py-1 rounded-full font-[family-name:var(--font-montserrat)] font-bold">{errand.price}</span>
                                             </div>
                                             <p className="font-[family-name:var(--font-montserrat)] text-sm text-[#525252]">
                                                 {errand.desc}
