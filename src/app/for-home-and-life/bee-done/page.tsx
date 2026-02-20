@@ -311,7 +311,7 @@ export default function BeeDonePage() {
                             </div>
                             <div className="flex items-center gap-4 relative z-10">
                                 <div className="relative w-24 h-24 flex-shrink-0">
-                                    <Image src="/bee-new-2.png" alt="Outdoor Bee" fill className="object-contain" />
+                                    <Image src="/bee_outdoor_watering.png" alt="Outdoor Bee" fill className="object-contain" />
                                 </div>
                                 <div>
                                     <h2 className="font-[family-name:var(--font-lora)] text-2xl md:text-3xl font-bold text-[#3C3C3C]">
