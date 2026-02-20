@@ -28,12 +28,7 @@ export default function BeeDonePage() {
                             <h1 className="font-[family-name:var(--font-lora)] text-[1.75rem] sm:text-4xl md:text-5xl xl:text-6xl font-bold text-charcoal-gray mb-6 lg:whitespace-nowrap">
                                 &ldquo;Bee Done&rdquo; Service Menu
                             </h1>
-                            <ul className="font-[family-name:var(--font-lora)] text-lg sm:text-xl md:text-2xl font-semibold text-charcoal-gray mb-8 leading-relaxed">
-                                <li>Home Resets</li>
-                                <li>Laundry</li>
-                                <li>Dishes</li>
-                                <li>Errand Dashes</li>
-                            </ul>
+
                             <p className="font-[family-name:var(--font-lora)] italic text-xl sm:text-2xl md:text-3xl lg:text-4xl text-soft-sage-dark mb-8 leading-normal">
                                 Taking the Sting out of Chores so you can Bee Done with your To-Do list.
                             </p>

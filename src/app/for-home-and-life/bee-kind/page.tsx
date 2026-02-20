@@ -56,11 +56,7 @@ export default function BeeKindPage() {
                             <h1 className="font-[family-name:var(--font-lora)] text-[1.75rem] sm:text-4xl md:text-5xl xl:text-6xl font-bold text-charcoal-gray mb-6 lg:whitespace-nowrap">
                                 &ldquo;Bee Kind&rdquo; Service Menu
                             </h1>
-                            <ul className="font-[family-name:var(--font-lora)] text-lg sm:text-xl md:text-2xl font-semibold text-charcoal-gray mb-8 leading-relaxed">
-                                <li>Daily Pet Care</li>
-                                <li>Daily Home Checks</li>
-                                <li>Overnight Home and Pet Care</li>
-                            </ul>
+
                             <p className="font-[family-name:var(--font-lora)] italic text-xl sm:text-2xl md:text-3xl lg:text-4xl text-seafoam-teal-dark mb-8 leading-normal">
                                 Tending to your Pets and Plants so you can Bee Kind to your Peace of Mind while you're away from the Hive.
                             </p>
