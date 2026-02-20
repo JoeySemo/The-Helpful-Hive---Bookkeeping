@@ -28,7 +28,7 @@ export default function BeeDonePage() {
                             <h1 className="font-[family-name:var(--font-lora)] text-[1.75rem] sm:text-4xl md:text-5xl xl:text-6xl font-bold text-charcoal-gray mb-6 lg:whitespace-nowrap">
                                 &ldquo;Bee Done&rdquo; Service Menu
                             </h1>
-                            <ul className="font-[family-name:var(--font-lora)] text-lg sm:text-xl md:text-2xl font-semibold text-charcoal-gray mb-8 leading-relaxed list-inside list-disc">
+                            <ul className="font-[family-name:var(--font-lora)] text-lg sm:text-xl md:text-2xl font-semibold text-charcoal-gray mb-8 leading-relaxed">
                                 <li>Home Resets</li>
                                 <li>Laundry</li>
                                 <li>Dishes</li>
