@@ -77,7 +77,7 @@ export default function BeeDonePage() {
                                     </svg>
                                 </div>
                                 <div className="flex items-center gap-4 relative z-10">
-                                    <div className="relative w-12 h-12 flex-shrink-0">
+                                    <div className="relative w-24 h-24 flex-shrink-0">
                                         <Image src="/bee-4-spraybottle.png" alt="Chore Bee" fill className="object-contain" />
                                     </div>
                                     <div>
@@ -205,7 +205,7 @@ export default function BeeDonePage() {
                                     </svg>
                                 </div>
                                 <div className="flex items-center gap-4 relative z-10">
-                                    <div className="relative w-12 h-12 flex-shrink-0">
+                                    <div className="relative w-24 h-24 flex-shrink-0">
                                         <Image src="/bee-5-clipboard.png" alt="Errand Bee" fill className="object-contain" />
                                     </div>
                                     <div>
@@ -308,10 +308,17 @@ export default function BeeDonePage() {
                                     <rect width="100%" height="100%" fill="url(#honeycomb-outdoor)" />
                                 </svg>
                             </div>
-                            <h2 className="font-[family-name:var(--font-lora)] text-2xl md:text-3xl font-bold text-[#3C3C3C] relative z-10">
-                                The Outdoor Hive
-                            </h2>
-                            <p className="font-[family-name:var(--font-montserrat)] text-sm text-[#525252] relative z-10">Keeping your yard and garden as welcoming as your home.</p>
+                            <div className="flex items-center gap-4 relative z-10">
+                                <div className="relative w-24 h-24 flex-shrink-0">
+                                    <Image src="/bee-new-2.png" alt="Outdoor Bee" fill className="object-contain" />
+                                </div>
+                                <div>
+                                    <h2 className="font-[family-name:var(--font-lora)] text-2xl md:text-3xl font-bold text-[#3C3C3C]">
+                                        The Outdoor Hive
+                                    </h2>
+                                    <p className="font-[family-name:var(--font-montserrat)] text-sm text-[#525252]">Keeping your yard and garden as welcoming as your home.</p>
+                                </div>
+                            </div>
                         </div>
                         <div className="p-8">
                             <div className="grid sm:grid-cols-2 gap-6">

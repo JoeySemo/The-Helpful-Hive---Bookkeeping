@@ -99,7 +99,9 @@ export default function BeeKindPage() {
 
                     <div className="grid sm:grid-cols-3 gap-6">
                         <div className="bg-white p-8 rounded-2xl border-2 border-seafoam-teal/20 hover:border-seafoam-teal transition-all hover:shadow-lg text-center">
-                            <div className="text-4xl mb-4">🐾</div>
+                            <div className="w-24 h-24 mx-auto mb-4 relative">
+                                <Image src="/bee_pet_care.png" alt="Pet Care Bee Icon" fill className="object-contain" />
+                            </div>
                             <h3 className="font-[family-name:var(--font-lora)] text-xl font-bold text-charcoal-gray mb-3">Pet Care</h3>
                             <p className="text-sm text-neutral-600 font-[family-name:var(--font-montserrat)]">
                                 Dog walking, potty breaks, and feeding tailored to your pet's routine.
@@ -107,7 +109,9 @@ export default function BeeKindPage() {
                         </div>
 
                         <div className="bg-white p-8 rounded-2xl border-2 border-seafoam-teal/20 hover:border-seafoam-teal transition-all hover:shadow-lg text-center">
-                            <div className="text-4xl mb-4">🐱</div>
+                            <div className="w-24 h-24 mx-auto mb-4 relative">
+                                <Image src="/bee_litter_refresh.png" alt="Litter Refresh Bee Icon" fill className="object-contain" />
+                            </div>
                             <h3 className="font-[family-name:var(--font-lora)] text-xl font-bold text-charcoal-gray mb-3">Litter Refresh</h3>
                             <p className="text-sm text-neutral-600 font-[family-name:var(--font-montserrat)]">
                                 Regular maintenance and deep cleaning to keep your home fresh.
@@ -115,7 +119,9 @@ export default function BeeKindPage() {
                         </div>
 
                         <div className="bg-white p-8 rounded-2xl border-2 border-seafoam-teal/20 hover:border-seafoam-teal transition-all hover:shadow-lg text-center">
-                            <div className="text-4xl mb-4">🏡</div>
+                            <div className="w-24 h-24 mx-auto mb-4 relative">
+                                <Image src="/bee_outdoor_watering.png" alt="Vacation Checks Bee Icon" fill className="object-contain" />
+                            </div>
                             <h3 className="font-[family-name:var(--font-lora)] text-xl font-bold text-charcoal-gray mb-3">Vacation Checks</h3>
                             <p className="text-sm text-neutral-600 font-[family-name:var(--font-montserrat)]">
                                 Home security checks, mail retrieval, and plant watering while you're away.
