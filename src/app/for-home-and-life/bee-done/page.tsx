@@ -117,72 +117,99 @@ export default function BeeDonePage() {
                     </div>
 
                     {/* === Bundles === */}
-                    <div className="grid md:grid-cols-2 gap-8 mb-20">
-                        {/* The Monday Reset */}
-                        <div className="bg-white rounded-3xl border-2 border-charcoal-gray overflow-hidden shadow-lg relative">
-                            <div className="absolute top-0 right-0 bg-charcoal-gray text-warm-honey px-4 py-1 rounded-bl-xl text-sm font-bold">POPULAR</div>
-                            <div className="p-8 flex flex-col h-full">
-                                <h2 className="font-[family-name:var(--font-lora)] text-3xl font-bold text-charcoal-gray mb-2">
-                                    The Monday Reset
-                                </h2>
-                                <div className="text-2xl font-bold text-terra-cotta-dark mb-4">$55 <span className="text-sm font-normal text-gray-500 line-through">($65 Value)</span></div>
-                                <p className="font-[family-name:var(--font-montserrat)] text-sm text-neutral-600 mb-6">
-                                    Don't let a "weekend hangover" of chores ruin your Monday focus. While you're at work, I'll erase the evidence of your busy weekend.
-                                </p>
-                                <div className="mb-6 flex-grow">
-                                    <h4 className="font-bold text-charcoal-gray mb-2 text-sm uppercase tracking-wide">What's Included:</h4>
-                                    <ul className="space-y-3">
-                                        <li className="flex items-start gap-3 text-sm text-neutral-600">
-                                            <span className="text-warm-honey text-xl">✓</span> <span><strong>2 Laundry Assists:</strong> You start the first wash, I handle the rest! (2nd load left in dryer).</span>
-                                        </li>
-                                        <li className="flex items-start gap-3 text-sm text-[#525252]">
-                                            <span className="text-[#E2C16B] text-xl">✓</span> <span><strong>1 Dish Reset:</strong> Empty sink, dishwasher running.</span>
-                                        </li>
-                                        <li className="flex items-start gap-3 text-sm text-[#525252]">
-                                            <span className="text-[#E2C16B] text-xl">✓</span> <span><strong>1 Fresh Fridge & Pantry:</strong> Toss expired food, wipe shelves.</span>
-                                        </li>
-                                    </ul>
+                    <div className="mb-20">
+                        <div className="bg-white rounded-3xl border-2 border-[#BFC8A1]/30 overflow-hidden shadow-sm">
+                            <div className="bg-[#BFC8A1]/15 px-8 py-6 border-b border-[#BFC8A1]/20 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-3 relative overflow-hidden">
+                                <div className="absolute inset-0 opacity-[0.08] pointer-events-none">
+                                    <svg className="w-full h-full" viewBox="0 0 100 100" preserveAspectRatio="xMidYMid slice">
+                                        <pattern id="honeycomb-bundles" width="10" height="10" patternUnits="userSpaceOnUse">
+                                            <path d="M5 0L10 2.5V7.5L5 10L0 7.5V2.5Z" fill="none" stroke="#BFC8A1" strokeWidth="0.5" />
+                                        </pattern>
+                                        <rect width="100%" height="100%" fill="url(#honeycomb-bundles)" />
+                                    </svg>
                                 </div>
-                                <Link href="/contact" className="block w-full text-center py-3 bg-[#3C3C3C] text-white font-bold rounded-xl hover:bg-[#525252] transition-all">
-                                    Book Bundle
-                                </Link>
+                                <div className="flex items-center gap-4 relative z-10">
+                                    <div className="relative w-24 h-24 flex-shrink-0">
+                                        <Image src="/bee-2-broom.png" alt="Bundle Bee" fill className="object-contain" />
+                                    </div>
+                                    <div>
+                                        <h2 className="font-[family-name:var(--font-lora)] text-2xl md:text-3xl font-bold text-[#3C3C3C]">
+                                            Bundles
+                                        </h2>
+                                        <p className="font-[family-name:var(--font-montserrat)] text-sm text-[#525252]">Comprehensive resets for maximum impact.</p>
+                                    </div>
+                                </div>
                             </div>
-                        </div>
+                            <div className="p-8">
+                                <div className="grid md:grid-cols-2 gap-8">
+                                    {/* The Monday Reset */}
+                                    <div className="bg-white rounded-3xl border-2 border-charcoal-gray overflow-hidden shadow-lg relative">
+                                        <div className="absolute top-0 right-0 bg-charcoal-gray text-warm-honey px-4 py-1 rounded-bl-xl text-sm font-bold">POPULAR</div>
+                                        <div className="p-8 flex flex-col h-full">
+                                            <h2 className="font-[family-name:var(--font-lora)] text-3xl font-bold text-charcoal-gray mb-2">
+                                                The Monday Reset
+                                            </h2>
+                                            <div className="text-2xl font-bold text-terra-cotta-dark mb-4">$55 <span className="text-sm font-normal text-gray-500 line-through">($65 Value)</span></div>
+                                            <p className="font-[family-name:var(--font-montserrat)] text-sm text-neutral-600 mb-6">
+                                                Don't let a "weekend hangover" of chores ruin your Monday focus. While you're at work, I'll erase the evidence of your busy weekend.
+                                            </p>
+                                            <div className="mb-6 flex-grow">
+                                                <h4 className="font-bold text-charcoal-gray mb-2 text-sm uppercase tracking-wide">What's Included:</h4>
+                                                <ul className="space-y-3">
+                                                    <li className="flex items-start gap-3 text-sm text-neutral-600">
+                                                        <span className="text-warm-honey text-xl">✓</span> <span><strong>2 Laundry Assists:</strong> You start the first wash, I handle the rest! (2nd load left in dryer).</span>
+                                                    </li>
+                                                    <li className="flex items-start gap-3 text-sm text-[#525252]">
+                                                        <span className="text-[#E2C16B] text-xl">✓</span> <span><strong>1 Dish Reset:</strong> Empty sink, dishwasher running.</span>
+                                                    </li>
+                                                    <li className="flex items-start gap-3 text-sm text-[#525252]">
+                                                        <span className="text-[#E2C16B] text-xl">✓</span> <span><strong>1 Fresh Fridge & Pantry:</strong> Toss expired food, wipe shelves.</span>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                            <Link href="/contact" className="block w-full text-center py-3 bg-[#3C3C3C] text-white font-bold rounded-xl hover:bg-[#525252] transition-all">
+                                                Book Bundle
+                                            </Link>
+                                        </div>
+                                    </div>
 
-                        {/* The Whole Hive Reset */}
-                        <div className="bg-white rounded-3xl border-2 border-charcoal-gray overflow-hidden shadow-lg relative">
-                            <div className="absolute top-0 right-0 bg-charcoal-gray text-warm-honey px-4 py-1 rounded-bl-xl text-sm font-bold">BEST VALUE</div>
-                            <div className="p-8 flex flex-col h-full">
-                                <h2 className="font-[family-name:var(--font-lora)] text-3xl font-bold text-charcoal-gray mb-2">
-                                    The Whole Hive Reset
-                                </h2>
-                                <div className="text-2xl font-bold text-terra-cotta-dark mb-4">$125 <span className="text-sm font-normal text-gray-500 line-through">($140 Value)</span></div>
-                                <p className="font-[family-name:var(--font-montserrat)] text-sm text-[#525252] mb-6">
-                                    The ultimate "Main Floor" refresh. I focus on the rooms you use the most so the heart of your home stays clean and inviting.
-                                </p>
-                                <div className="mb-6 flex-grow">
-                                    <h4 className="font-bold text-[#3C3C3C] mb-2 text-sm uppercase tracking-wide">What's Included:</h4>
-                                    <ul className="space-y-3">
-                                        <li className="flex items-start gap-3 text-sm text-[#525252]">
-                                            <span className="text-[#E2C16B] text-xl">✓</span> <span><strong>1 Kitchen Shine:</strong> Counters, appliances, cabinets.</span>
-                                        </li>
-                                        <li className="flex items-start gap-3 text-sm text-[#525252]">
-                                            <span className="text-[#E2C16B] text-xl">✓</span> <span><strong>1 Dish Reset:</strong> Unload, load, start.</span>
-                                        </li>
-                                        <li className="flex items-start gap-3 text-sm text-[#525252]">
-                                            <span className="text-[#E2C16B] text-xl">✓</span> <span><strong>1 Fridge & Pantry Refresh:</strong> Toss old food, wipe.</span>
-                                        </li>
-                                        <li className="flex items-start gap-3 text-sm text-[#525252]">
-                                            <span className="text-[#E2C16B] text-xl">✓</span> <span><strong>1 Guest Bath Shine:</strong> Surfaces, mirrors, toilet.</span>
-                                        </li>
-                                        <li className="flex items-start gap-3 text-sm text-[#525252]">
-                                            <span className="text-[#E2C16B] text-xl">✓</span> <span><strong>1 Clean Path:</strong> Vacuum & mop main living area.</span>
-                                        </li>
-                                    </ul>
+                                    {/* The Whole Hive Reset */}
+                                    <div className="bg-white rounded-3xl border-2 border-charcoal-gray overflow-hidden shadow-lg relative">
+                                        <div className="absolute top-0 right-0 bg-charcoal-gray text-warm-honey px-4 py-1 rounded-bl-xl text-sm font-bold">BEST VALUE</div>
+                                        <div className="p-8 flex flex-col h-full">
+                                            <h2 className="font-[family-name:var(--font-lora)] text-3xl font-bold text-charcoal-gray mb-2">
+                                                The Whole Hive Reset
+                                            </h2>
+                                            <div className="text-2xl font-bold text-terra-cotta-dark mb-4">$125 <span className="text-sm font-normal text-gray-500 line-through">($140 Value)</span></div>
+                                            <p className="font-[family-name:var(--font-montserrat)] text-sm text-[#525252] mb-6">
+                                                The ultimate "Main Floor" refresh. I focus on the rooms you use the most so the heart of your home stays clean and inviting.
+                                            </p>
+                                            <div className="mb-6 flex-grow">
+                                                <h4 className="font-bold text-[#3C3C3C] mb-2 text-sm uppercase tracking-wide">What's Included:</h4>
+                                                <ul className="space-y-3">
+                                                    <li className="flex items-start gap-3 text-sm text-[#525252]">
+                                                        <span className="text-[#E2C16B] text-xl">✓</span> <span><strong>1 Kitchen Shine:</strong> Counters, appliances, cabinets.</span>
+                                                    </li>
+                                                    <li className="flex items-start gap-3 text-sm text-[#525252]">
+                                                        <span className="text-[#E2C16B] text-xl">✓</span> <span><strong>1 Dish Reset:</strong> Unload, load, start.</span>
+                                                    </li>
+                                                    <li className="flex items-start gap-3 text-sm text-[#525252]">
+                                                        <span className="text-[#E2C16B] text-xl">✓</span> <span><strong>1 Fridge & Pantry Refresh:</strong> Toss old food, wipe.</span>
+                                                    </li>
+                                                    <li className="flex items-start gap-3 text-sm text-[#525252]">
+                                                        <span className="text-[#E2C16B] text-xl">✓</span> <span><strong>1 Guest Bath Shine:</strong> Surfaces, mirrors, toilet.</span>
+                                                    </li>
+                                                    <li className="flex items-start gap-3 text-sm text-[#525252]">
+                                                        <span className="text-[#E2C16B] text-xl">✓</span> <span><strong>1 Clean Path:</strong> Vacuum & mop main living area.</span>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                            <Link href="/contact" className="block w-full text-center py-3 bg-[#3C3C3C] text-white font-bold rounded-xl hover:bg-[#525252] transition-all">
+                                                Book Bundle
+                                            </Link>
+                                        </div>
+                                    </div>
                                 </div>
-                                <Link href="/contact" className="block w-full text-center py-3 bg-[#3C3C3C] text-white font-bold rounded-xl hover:bg-[#525252] transition-all">
-                                    Book Bundle
-                                </Link>
                             </div>
                         </div>
                     </div>
@@ -215,11 +242,11 @@ export default function BeeDonePage() {
                             <div className="p-8">
                                 <div className="grid sm:grid-cols-2 gap-4 mb-6">
                                     {[
-                                        { name: 'Returns', price: '$15', desc: 'Dropping off pre-labeled Amazon, UPS, or FedEx packages.', icon: '/bee-new-1.png' },
-                                        { name: 'Grocery/Retail Pickups', price: '$15', desc: 'Curbside pickup & delivery of pre-ordered items.', icon: '/bee-new-2.png' },
-                                        { name: 'Dry Cleaning', price: '$15', desc: 'Seamless drop-off or pickup.', icon: '/bee-new-3.png' },
-                                        { name: 'Pharmacy', price: '$15', desc: 'Secure pickup of pre-paid prescriptions.', icon: '/bee-new-4.png' },
-                                        { name: 'Post Office', price: '$15', desc: 'Handling mail, stamps, or prepared packages.', icon: '/bee-new-5.png' },
+                                        { name: 'Returns', price: '$15', desc: 'Dropping off pre-labeled Amazon, UPS, or FedEx packages.', icon: '/bee-9-label.png' },
+                                        { name: 'Grocery/Retail Pickups', price: '$15', desc: 'Curbside pickup & delivery of pre-ordered items.', icon: '/bee-1-petfood.png' },
+                                        { name: 'Dry Cleaning', price: '$15', desc: 'Seamless drop-off or pickup.', icon: '/bee-4-spraybottle.png' },
+                                        { name: 'Pharmacy', price: '$15', desc: 'Secure pickup of pre-paid prescriptions.', icon: '/bee-10-briefcase.png' },
+                                        { name: 'Post Office', price: '$15', desc: 'Handling mail, stamps, or prepared packages.', icon: '/bee-5-clipboard.png' },
                                     ].map((errand, i) => (
                                         <div key={i} className="group rounded-xl p-5 border-2 border-[#BFC8A1]/15 hover:border-[#BFC8A1] hover:shadow-md transition-all bg-[#FFF8E7]">
                                             <div className="flex items-center justify-between mb-2">
@@ -246,52 +273,79 @@ export default function BeeDonePage() {
                     </div>
 
                     {/* === Hourly Services (Worker, Grocery, Waiting) === */}
-                    <div className="grid md:grid-cols-3 gap-6 mb-20">
-                        {/* The Worker Bee */}
-                        <div className="bg-white p-8 rounded-3xl border border-[#BFC8A1]/20 shadow-sm flex flex-col">
-                            <h2 className="font-[family-name:var(--font-lora)] text-2xl font-bold text-[#3C3C3C] mb-2">
-                                The Worker Bee
-                            </h2>
-                            <div className="text-xl font-bold text-terra-cotta-dark mb-2">$40 <span className="text-sm font-normal text-gray-500">/ hour</span></div>
-                            <span className="text-xs text-[#525252] italic mb-4">1-hour minimum</span>
-                            <p className="font-[family-name:var(--font-montserrat)] text-sm text-[#525252] mb-4 flex-grow">
-                                The ultimate solution for your home to-do list. Provide your "honey-do" list and I'll work through it efficiently.
-                            </p>
-                            <div className="text-xs text-[#525252] mb-4">
-                                <strong>Examples:</strong> Baseboards, interior windows, dusting, organizing, scheduling, plants.
+                    <div className="mb-20">
+                        <div className="bg-white rounded-3xl border-2 border-[#BFC8A1]/30 overflow-hidden shadow-sm">
+                            <div className="bg-[#BFC8A1]/15 px-8 py-6 border-b border-[#BFC8A1]/20 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-3 relative overflow-hidden">
+                                <div className="absolute inset-0 opacity-[0.08] pointer-events-none">
+                                    <svg className="w-full h-full" viewBox="0 0 100 100" preserveAspectRatio="xMidYMid slice">
+                                        <pattern id="honeycomb-hourly" width="10" height="10" patternUnits="userSpaceOnUse">
+                                            <path d="M5 0L10 2.5V7.5L5 10L0 7.5V2.5Z" fill="none" stroke="#BFC8A1" strokeWidth="0.5" />
+                                        </pattern>
+                                        <rect width="100%" height="100%" fill="url(#honeycomb-hourly)" />
+                                    </svg>
+                                </div>
+                                <div className="flex items-center gap-4 relative z-10">
+                                    <div className="relative w-24 h-24 flex-shrink-0">
+                                        <Image src="/bee-new-6.png" alt="Worker Bee" fill className="object-contain" />
+                                    </div>
+                                    <div>
+                                        <h2 className="font-[family-name:var(--font-lora)] text-2xl md:text-3xl font-bold text-[#3C3C3C]">
+                                            Hourly Services
+                                        </h2>
+                                        <p className="font-[family-name:var(--font-montserrat)] text-sm text-[#525252]">Flexible, on-demand assistance for any hive.</p>
+                                    </div>
+                                </div>
                             </div>
-                            <div className="text-xs text-[#525252] bg-[#BFC8A1]/10 p-3 rounded-lg">
-                                <strong>*The "Ultimate Hive" Half-Day:</strong> 4 hours of dedicated service for $145 (Save $15).
-                            </div>
-                        </div>
+                            <div className="p-8">
+                                <div className="grid md:grid-cols-3 gap-6">
+                                    {/* The Worker Bee */}
+                                    <div className="bg-white p-8 rounded-3xl border border-[#BFC8A1]/20 shadow-sm flex flex-col">
+                                        <h2 className="font-[family-name:var(--font-lora)] text-2xl font-bold text-[#3C3C3C] mb-2">
+                                            The Worker Bee
+                                        </h2>
+                                        <div className="text-xl font-bold text-terra-cotta-dark mb-2">$40 <span className="text-sm font-normal text-gray-500">/ hour</span></div>
+                                        <span className="text-xs text-[#525252] italic mb-4">1-hour minimum</span>
+                                        <p className="font-[family-name:var(--font-montserrat)] text-sm text-[#525252] mb-4 flex-grow">
+                                            The ultimate solution for your home to-do list. Provide your "honey-do" list and I'll work through it efficiently.
+                                        </p>
+                                        <div className="text-xs text-[#525252] mb-4">
+                                            <strong>Examples:</strong> Baseboards, interior windows, dusting, organizing, scheduling, plants.
+                                        </div>
+                                        <div className="text-xs text-[#525252] bg-[#BFC8A1]/10 p-3 rounded-lg">
+                                            <strong>*The "Ultimate Hive" Half-Day:</strong> 4 hours of dedicated service for $145 (Save $15).
+                                        </div>
+                                    </div>
 
-                        {/* The Grocery Bee */}
-                        <div className="bg-white p-8 rounded-3xl border border-[#BFC8A1]/20 shadow-sm flex flex-col">
-                            <h2 className="font-[family-name:var(--font-lora)] text-2xl font-bold text-[#3C3C3C] mb-2">
-                                The Grocery Bee
-                            </h2>
-                            <div className="text-xl font-bold text-terra-cotta-dark mb-2">$35 <span className="text-sm font-normal text-gray-500">/ hour</span></div>
-                            <span className="text-xs text-[#525252] italic mb-4">1-hour minimum</span>
-                            <p className="font-[family-name:var(--font-montserrat)] text-sm text-[#525252] mb-4 flex-grow">
-                                I don't just "grab items", I select freshest produce and check dates. Includes shopping, delivery, and optional put-away.
-                            </p>
-                            <div className="text-xs text-[#525252] bg-[#BFC8A1]/10 p-3 rounded-lg">
-                                <strong>*The "Produce-Plus" Upgrade:</strong> ($15 Flat + Hourly) I grab your curbside order then hand-select your produce/meat inside.
-                            </div>
-                        </div>
+                                    {/* The Grocery Bee */}
+                                    <div className="bg-white p-8 rounded-3xl border border-[#BFC8A1]/20 shadow-sm flex flex-col">
+                                        <h2 className="font-[family-name:var(--font-lora)] text-2xl font-bold text-[#3C3C3C] mb-2">
+                                            The Grocery Bee
+                                        </h2>
+                                        <div className="text-xl font-bold text-terra-cotta-dark mb-2">$35 <span className="text-sm font-normal text-gray-500">/ hour</span></div>
+                                        <span className="text-xs text-[#525252] italic mb-4">1-hour minimum</span>
+                                        <p className="font-[family-name:var(--font-montserrat)] text-sm text-[#525252] mb-4 flex-grow">
+                                            I don't just "grab items", I select freshest produce and check dates. Includes shopping, delivery, and optional put-away.
+                                        </p>
+                                        <div className="text-xs text-[#525252] bg-[#BFC8A1]/10 p-3 rounded-lg">
+                                            <strong>*The "Produce-Plus" Upgrade:</strong> ($15 Flat + Hourly) I grab your curbside order then hand-select your produce/meat inside.
+                                        </div>
+                                    </div>
 
-                        {/* The Waiting Bee */}
-                        <div className="bg-white p-8 rounded-3xl border border-[#BFC8A1]/20 shadow-sm flex flex-col">
-                            <h2 className="font-[family-name:var(--font-lora)] text-2xl font-bold text-[#3C3C3C] mb-2">
-                                The Waiting Bee
-                            </h2>
-                            <div className="text-xl font-bold text-terra-cotta-dark mb-2">$30 <span className="text-sm font-normal text-gray-500">/ hour</span></div>
-                            <span className="text-xs text-[#525252] italic mb-4">1-hour minimum</span>
-                            <p className="font-[family-name:var(--font-montserrat)] text-sm text-[#525252] mb-4 flex-grow">
-                                I'll stay on-site for the cable tech or delivery so you don't miss work. Real-time updates provided.
-                            </p>
-                            <div className="text-xs text-[#525252] bg-[#BFC8A1]/10 p-3 rounded-lg">
-                                <strong>*Efficiency Upgrade:</strong> Upgrade to $40/hr "Worker Bee" rate to have me tackle chores while I wait!
+                                    {/* The Waiting Bee */}
+                                    <div className="bg-white p-8 rounded-3xl border border-[#BFC8A1]/20 shadow-sm flex flex-col">
+                                        <h2 className="font-[family-name:var(--font-lora)] text-2xl font-bold text-[#3C3C3C] mb-2">
+                                            The Waiting Bee
+                                        </h2>
+                                        <div className="text-xl font-bold text-terra-cotta-dark mb-2">$30 <span className="text-sm font-normal text-gray-500">/ hour</span></div>
+                                        <span className="text-xs text-[#525252] italic mb-4">1-hour minimum</span>
+                                        <p className="font-[family-name:var(--font-montserrat)] text-sm text-[#525252] mb-4 flex-grow">
+                                            I'll stay on-site for the cable tech or delivery so you don't miss work. Real-time updates provided.
+                                        </p>
+                                        <div className="text-xs text-[#525252] bg-[#BFC8A1]/10 p-3 rounded-lg">
+                                            <strong>*Efficiency Upgrade:</strong> Upgrade to $40/hr "Worker Bee" rate to have me tackle chores while I wait!
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
