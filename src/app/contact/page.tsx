@@ -71,7 +71,7 @@ export default function ContactPage() {
                     {contactMethods.map((method, index) => {
                         const Icon = method.icon;
                         const cardContent = (
-                            <div className={`bg-white rounded-2xl p-6 md:p-8 text-center transition-all duration-300 ${method.clickable ? 'hover:shadow-card-hover hover:-translate-y-1 cursor-pointer' : ''
+                            <div className={`bg-white rounded-2xl p-6 md:p-8 text-center h-full flex flex-col justify-center transition-all duration-300 ${method.clickable ? 'hover:shadow-card-hover hover:-translate-y-1 cursor-pointer' : ''
                                 } border border-neutral-200/50`}>
                                 <div className="w-14 h-14 rounded-xl bg-honey-100 flex items-center justify-center mx-auto mb-4">
                                     <Icon className="w-7 h-7 text-honey-600" />
@@ -86,11 +86,11 @@ export default function ContactPage() {
                         );
 
                         return method.clickable ? (
-                            <a key={index} href={method.href!} className="block">
+                            <a key={index} href={method.href!} className="block h-full">
                                 {cardContent}
                             </a>
                         ) : (
-                            <div key={index}>
+                            <div key={index} className="h-full">
                                 {cardContent}
                             </div>
                         );
