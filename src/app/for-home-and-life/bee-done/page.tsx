@@ -91,16 +91,21 @@ export default function BeeDonePage() {
                             <div className="p-8">
                                 <div className="grid sm:grid-cols-2 gap-4">
                                     {[
-                                        { name: 'The Dish Reset', price: '$10/load', desc: 'We unload the clean, load the dirty, and start the cycle. (Hand-washing billed at hourly rate).' },
-                                        { name: 'The Fresh Fridge & Pantry', price: '$35', desc: 'We toss expired items and give shelves/drawers a fresh wipe.' },
-                                        { name: 'The Surface Shine (Kitchen or Bathroom)', price: '$35', desc: 'A surface-level shine including counters, mirrors, cabinet fronts, exterior appliances, and floors.' },
-                                        { name: 'The Clean Path', price: '$20', desc: 'Vacuum and mop of the main-level "traffic lanes" and living area.' },
-                                        { name: 'The Laundry Cycle', price: '$15/load', desc: 'Complete Cycle: Wash, dry, and fold (or hang).', note: '*Only available when paired with another service.' },
-                                        { name: 'The Laundry Assist', price: '$10/load', desc: 'You start the wash, I switch & fold. Or I wash & dry and leave it warm in the dryer.', note: '*Only available when paired with another service.' },
+                                        { name: 'The Dish Reset', price: '$10/load', desc: 'We unload the clean, load the dirty, and start the cycle. (Hand-washing billed at hourly rate).', icon: '/bee_alacarte_dish.png' },
+                                        { name: 'The Fresh Fridge & Pantry', price: '$35', desc: 'We toss expired items and give shelves/drawers a fresh wipe.', icon: '/bee_alacarte_fridge.png' },
+                                        { name: 'The Surface Shine (Kitchen or Bathroom)', price: '$35', desc: 'A surface-level shine including counters, mirrors, cabinet fronts, exterior appliances, and floors.', icon: '/bee-4-spraybottle.png' },
+                                        { name: 'The Clean Path', price: '$20', desc: 'Vacuum and mop of the main-level "traffic lanes" and living area.', icon: '/bee_alacarte_path.png' },
+                                        { name: 'The Laundry Cycle', price: '$15/load', desc: 'Complete Cycle: Wash, dry, and fold (or hang).', note: '*Only available when paired with another service.', icon: '/bee_alacarte_cycle.png' },
+                                        { name: 'The Laundry Assist', price: '$10/load', desc: 'You start the wash, I switch & fold. Or I wash & dry and leave it warm in the dryer.', note: '*Only available when paired with another service.', icon: '/bee_alacarte_assist.png' },
                                     ].map((addon, i) => (
                                         <div key={i} className="group rounded-xl p-5 border-2 border-[#BFC8A1]/15 hover:border-[#BFC8A1] hover:shadow-md transition-all bg-[#FFF8E7]">
                                             <div className="flex items-center justify-between mb-2">
-                                                <h3 className="font-[family-name:var(--font-lora)] font-semibold text-[#3C3C3C]">{addon.name}</h3>
+                                                <div className="flex items-center gap-3">
+                                                    <div className="relative w-8 h-8 flex-shrink-0">
+                                                        <Image src={addon.icon} alt={`${addon.name} icon`} fill className="object-contain" />
+                                                    </div>
+                                                    <h3 className="font-[family-name:var(--font-lora)] font-semibold text-[#3C3C3C]">{addon.name}</h3>
+                                                </div>
                                                 <span className="bg-[#5D684B] text-white text-sm px-3 py-1 rounded-full font-[family-name:var(--font-montserrat)] font-bold">{addon.price}</span>
                                             </div>
                                             <p className="font-[family-name:var(--font-montserrat)] text-sm text-[#525252]">
