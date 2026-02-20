@@ -194,7 +194,7 @@ export default function BeeDonePage() {
 
                     {/* === The Busy Bee Dash === */}
                     <div className="mb-20">
-                        <div className="rounded-3xl border-2 border-[#BFC8A1]/30 overflow-hidden bg-[#FFF8E7]">
+                        <div className="bg-white rounded-3xl border-2 border-[#BFC8A1]/30 overflow-hidden shadow-sm">
                             <div className="bg-[#BFC8A1]/15 px-8 py-6 border-b border-[#BFC8A1]/20 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-3 relative overflow-hidden">
                                 <div className="absolute inset-0 opacity-[0.08] pointer-events-none">
                                     <svg className="w-full h-full" viewBox="0 0 100 100" preserveAspectRatio="xMidYMid slice">
