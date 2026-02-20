@@ -145,7 +145,7 @@ export default function BeeKindPage() {
                     <div className="rounded-3xl border-2 border-seafoam-teal overflow-hidden bg-cream-white relative">
                         <div className="bg-seafoam-teal/15 px-8 py-6 border-b border-seafoam-teal/20 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-3">
                             <div className="flex items-center gap-4">
-                                <div className="relative w-12 h-12 flex-shrink-0">
+                                <div className="relative w-24 h-24 flex-shrink-0">
                                     <Image src="/bee-1-petfood.png" alt="Overnight Bee" fill className="object-contain" />
                                 </div>
                                 <div>
