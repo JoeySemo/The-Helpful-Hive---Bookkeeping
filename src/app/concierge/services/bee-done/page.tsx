@@ -109,8 +109,8 @@ export default function BeeDonePage() {
                             Schedule Free Consultation
                         </Link>
                         <a href="tel:+13145267240" style={{ padding: '0.75rem 1.75rem', border: '2px solid white', color: 'white', fontWeight: 600, borderRadius: '9999px', textDecoration: 'none' }}>
-                            <span className="block">(314) 526-7240</span>
-                            <span className="block text-sm font-normal mt-0.5 opacity-90">Call or Text</span>
+                            <span className="block leading-tight">(314) 526-7240</span>
+                            <span className="block text-sm font-normal mt-0.5 opacity-90 leading-tight tracking-normal">Call or Text</span>
                         </a>
                     </div>
                 </section>

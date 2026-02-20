@@ -224,8 +224,8 @@ export default function ConciergeServicesPage() {
                         borderRadius: '9999px',
                         textDecoration: 'none'
                     }}>
-                            <span className="block">(314) 526-7240</span>
-                            <span className="block text-sm font-normal mt-0.5 opacity-90">Call or Text</span>
+                            <span className="block leading-tight">(314) 526-7240</span>
+                            <span className="block text-sm font-normal mt-0.5 opacity-90 leading-tight tracking-normal">Call or Text</span>
                         </a>
                 </div>
             </div>

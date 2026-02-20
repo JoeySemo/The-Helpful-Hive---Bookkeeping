@@ -126,8 +126,8 @@ export default function QuickBooksCleanupPage() {
                             href="tel:+13145267240"
                             className="px-7 py-3 border-2 border-white text-white font-semibold rounded-full hover:bg-white/10 transition-colors"
                         >
-                            <span className="block">(314) 526-7240</span>
-                            <span className="block text-sm font-normal mt-0.5 opacity-90">Call or Text</span>
+                            <span className="block leading-tight">(314) 526-7240</span>
+                            <span className="block text-sm font-normal mt-0.5 opacity-90 leading-tight tracking-normal">Call or Text</span>
                         </a>
                     </div>
                 </section>

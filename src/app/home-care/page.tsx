@@ -238,7 +238,7 @@ export default function HomeCarePage() {
                     <p className="text-white/70 mb-10 text-xl font-light">
                         Let Us Handle The Cleaning While You Enjoy Your Space.
                     </p>
-                    <div className="flex flex-col sm:flex-row gap-6 justify-center">
+                    <div className="flex flex-col sm:flex-row gap-6 justify-center items-center">
                         <Link
                             href="/about"
                             className="px-8 py-4 bg-[#E2C16B] text-[#3C3C3C] font-semibold rounded-full hover:bg-[#d4b35f] transition-all transform hover:scale-105"
@@ -249,8 +249,8 @@ export default function HomeCarePage() {
                             href="tel:+13145267240"
                             className="px-8 py-4 bg-transparent border-2 border-white/30 text-white font-semibold rounded-full hover:bg-white/10 transition-all"
                         >
-                            <span className="block">(314) 526-7240</span>
-                            <span className="block text-sm font-normal mt-0.5 opacity-90">Call or Text</span>
+                            <span className="block leading-tight">(314) 526-7240</span>
+                            <span className="block text-sm font-normal mt-0.5 opacity-90 leading-tight tracking-normal">Call or Text</span>
                         </a>
                     </div>
                 </div>

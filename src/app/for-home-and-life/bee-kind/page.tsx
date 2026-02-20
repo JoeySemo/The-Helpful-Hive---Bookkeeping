@@ -198,19 +198,19 @@ export default function BeeKindPage() {
                     <p className="text-white/80 mb-10 text-xl font-light">
                         Book a visit and let us shower your furry friends with love.
                     </p>
-                    <div className="flex flex-col sm:flex-row gap-6 justify-center">
+                    <div className="flex flex-col sm:flex-row gap-6 justify-center items-center">
                         <Link
                             href="/contact"
-                            className="inline-block px-8 py-4 bg-warm-honey text-charcoal-gray font-[family-name:var(--font-montserrat)] font-semibold rounded-full hover:bg-[#d4b35f] transition-all hover:shadow-lg hover:-translate-y-0.5"
+                            className="flex items-center justify-center px-8 h-[72px] bg-warm-honey text-charcoal-gray font-[family-name:var(--font-montserrat)] font-semibold rounded-full hover:bg-[#d4b35f] transition-all hover:shadow-lg hover:-translate-y-0.5 whitespace-nowrap"
                         >
                             Book a Visit
                         </Link>
                         <a
                             href="tel:+13145267240"
-                            className="inline-block px-8 py-4 bg-transparent border-2 border-white/60 text-white font-[family-name:var(--font-montserrat)] font-semibold rounded-full hover:bg-white/10 transition-all"
+                            className="flex flex-col items-center justify-center px-8 h-[72px] bg-transparent border-2 border-white/60 text-white font-[family-name:var(--font-montserrat)] font-semibold rounded-full hover:bg-white/10 transition-all whitespace-nowrap"
                         >
-                            <span className="block">(314) 526-7240</span>
-                            <span className="block text-sm font-normal mt-0.5 opacity-90">Call or Text</span>
+                            <span className="block leading-tight">(314) 526-7240</span>
+                            <span className="block text-sm font-normal mt-0.5 opacity-90 leading-tight tracking-normal">Call or Text</span>
                         </a>
                     </div>
                 </div>
