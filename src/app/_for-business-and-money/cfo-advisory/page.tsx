@@ -142,7 +142,10 @@ export default function CFOAdvisoryPage() {
                     <p className="font-[family-name:var(--font-montserrat)] text-white/70 mb-8 text-lg">Get expert financial guidance to take your business to the next level.</p>
                     <div className="flex flex-col sm:flex-row gap-4 justify-center">
                         <Link href="/contact" className="inline-block px-8 py-4 bg-[#C17A5B] text-white font-[family-name:var(--font-montserrat)] font-semibold rounded-full hover:bg-[#a86a4d] transition-all hover:shadow-lg hover:-translate-y-0.5">Schedule a Consultation</Link>
-                        <a href="tel:+13145267240" className="inline-block px-8 py-4 bg-transparent border-2 border-white/30 text-white font-[family-name:var(--font-montserrat)] font-semibold rounded-full hover:bg-white/10 transition-all">Call (314) 526-7240</a>
+                        <a href="tel:+13145267240" className="inline-block px-8 py-4 bg-transparent border-2 border-white/30 text-white font-[family-name:var(--font-montserrat)] font-semibold rounded-full hover:bg-white/10 transition-all">
+                            <span className="block">(314) 526-7240</span>
+                            <span className="block text-sm font-normal mt-0.5 opacity-90">Call or Text</span>
+                        </a>
                     </div>
                 </div>
             </section>

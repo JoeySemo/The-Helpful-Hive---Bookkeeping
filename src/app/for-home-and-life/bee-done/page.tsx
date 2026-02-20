@@ -323,14 +323,15 @@ export default function BeeDonePage() {
                                         </h2>
                                         <div className="text-xl font-bold text-terra-cotta-dark mb-2">$40 <span className="text-sm font-normal text-gray-500">/ hour</span></div>
                                         <span className="text-xs text-[#525252] italic mb-4">1-hour minimum</span>
-                                        <p className="font-[family-name:var(--font-montserrat)] text-sm text-[#525252] mb-4 flex-grow">
-                                            The ultimate solution for your home to-do list. Provide your "honey-do" list and I'll work through it efficiently.
-                                        </p>
+                                        <div className="font-[family-name:var(--font-montserrat)] text-sm text-[#525252] mb-4 flex-grow">
+                                            <p className="mb-2">The ultimate solution for your home to-do list. For all those "get to it eventually" tasks and errands you don’t have time for or you're trying to avoid.</p>
+                                            <p><strong>How it works:</strong> Provide your “honey-do” list and I’ll work through it efficiently within your designated timeframe or until every item is checked off.</p>
+                                        </div>
                                         <div className="text-xs text-[#525252] mb-4">
-                                            <strong>Examples:</strong> Baseboards, interior windows, dusting, organizing, scheduling, plants.
+                                            <strong>Task Examples:</strong> Baseboard cleaning, interior windows, dusting, organizational projects, appointment scheduling, litter box refresh, plant watering, and more. Everyone’s hive is different, so we can work out a list that fits your needs.
                                         </div>
                                         <div className="text-xs text-[#525252] bg-[#BFC8A1]/10 p-3 rounded-lg">
-                                            <strong>*The "Ultimate Hive" Half-Day:</strong> 4 hours of dedicated service for $145 (Save $15).
+                                            <strong>The "Ultimate Hive" Half-Day:</strong> 4 hours of dedicated service for $145 (Save $15).
                                         </div>
                                     </div>
 
@@ -341,11 +342,12 @@ export default function BeeDonePage() {
                                         </h2>
                                         <div className="text-xl font-bold text-terra-cotta-dark mb-2">$35 <span className="text-sm font-normal text-gray-500">/ hour</span></div>
                                         <span className="text-xs text-[#525252] italic mb-4">1-hour minimum</span>
-                                        <p className="font-[family-name:var(--font-montserrat)] text-sm text-[#525252] mb-4 flex-grow">
-                                            I don't just "grab items", I select freshest produce and check dates. Includes shopping, delivery, and optional put-away.
-                                        </p>
+                                        <div className="font-[family-name:var(--font-montserrat)] text-sm text-[#525252] mb-4 flex-grow">
+                                            <p className="mb-2">Take back your weekend and let me handle the aisles. I don’t just "grab the items", I carefully select the freshest produce, check expiration dates, and shop with the same care you would.</p>
+                                            <p><strong>The Full Service:</strong> Includes shopping your specific list, delivery, and optional pantry/fridge put-away.</p>
+                                        </div>
                                         <div className="text-xs text-[#525252] bg-[#BFC8A1]/10 p-3 rounded-lg">
-                                            <strong>*The "Produce-Plus" Upgrade:</strong> ($15 Flat + Hourly) I grab your curbside order then hand-select your produce/meat inside.
+                                            <strong>The "Produce-Plus" Upgrade | $15 Flat Fee + Hourly Rate:</strong> Already placed a grocery pickup order but don't trust them to pick your avocados? I’ll grab your curbside order and head inside to hand-select your produce, meat, or specific "must-see" items.
                                         </div>
                                     </div>
 
@@ -356,11 +358,12 @@ export default function BeeDonePage() {
                                         </h2>
                                         <div className="text-xl font-bold text-terra-cotta-dark mb-2">$30 <span className="text-sm font-normal text-gray-500">/ hour</span></div>
                                         <span className="text-xs text-[#525252] italic mb-4">1-hour minimum</span>
-                                        <p className="font-[family-name:var(--font-montserrat)] text-sm text-[#525252] mb-4 flex-grow">
-                                            I'll stay on-site for the cable tech or delivery so you don't miss work. Real-time updates provided.
-                                        </p>
+                                        <div className="font-[family-name:var(--font-montserrat)] text-sm text-[#525252] mb-4 flex-grow">
+                                            <p className="mb-2">Stop planning your life around a four-hour "arrival window." I’ll stay on-site for the cable tech, furniture delivery, or repair person so you don't miss a minute of work.</p>
+                                            <p><strong>Peace of Mind:</strong> Receive real-time text updates and a final confirmation once your home is secure.</p>
+                                        </div>
                                         <div className="text-xs text-[#525252] bg-[#BFC8A1]/10 p-3 rounded-lg">
-                                            <strong>*Efficiency Upgrade:</strong> Upgrade to $40/hr "Worker Bee" rate to have me tackle chores while I wait!
+                                            <strong>Efficiency Upgrade:</strong> Upgrade to the $40/hour “Worker Bee” rate and save time and money by having me tackle your “honey-do” list while I wait!
                                         </div>
                                     </div>
                                 </div>
@@ -394,10 +397,10 @@ export default function BeeDonePage() {
                         <div className="p-8">
                             <div className="grid sm:grid-cols-2 gap-4">
                                 {[
-                                    { name: 'The Pet Waste Yard Reset', price: '$35', desc: 'Thorough sweep of neglected yards to make them safe for kids and paws.', icon: '/bee_outdoor_scoop.png' },
-                                    { name: 'The Weekly Hive Scoop', price: '$25/visit', desc: 'Weekly scheduled waste removal.', icon: '/bee_outdoor_bag.png' },
-                                    { name: 'The Twice-a-Week Scoop', price: '$20/visit', desc: 'Discounted rate for two visits per week.', icon: '/bee_outdoor_two_bags.png' },
-                                    { name: 'Seasonal Garden & Yard', price: '$40/hr', desc: 'Light weeding, watering, raking. Can be added to visit or booked as Worker Bee session.', icon: '/bee_outdoor_watering.png' },
+                                    { name: 'The Pet Waste Yard Reset', price: '$35', desc: "Perfect for when the yard has been neglected for a bit. I'll do a thorough sweep of the property so it's safe for kids and paws again.", icon: '/bee_outdoor_scoop.png' },
+                                    { name: 'The Weekly Hive Scoop', price: '$25/visit', desc: "Consistency is key! I'll swing by once a week on a set day to handle the waste so you never have to think about it.", icon: '/bee_outdoor_bag.png' },
+                                    { name: 'The Twice-a-Week Hive Scoop', price: '$20/visit', desc: 'For busy yards that need a little extra love. Book two visits per week and enjoy a discounted rate per visit.', icon: '/bee_outdoor_two_bags.png' },
+                                    { name: 'Seasonal Garden & Yard Tasks', price: '$40/hour', desc: 'Need help with light weeding, watering the garden, or raking a few stray leaves? These tasks can be added to any visit or booked as a standalone "Worker Bee" session.', icon: '/bee_outdoor_watering.png' },
                                 ].map((service, i) => (
                                     <div key={i} className="group rounded-xl p-5 border-2 border-[#BFC8A1]/15 hover:border-[#BFC8A1] hover:shadow-md transition-all bg-[#FFF8E7]">
                                         <div className="flex items-center justify-between mb-2">
@@ -455,7 +458,8 @@ export default function BeeDonePage() {
                             href="tel:+13145267240"
                             className="inline-block px-8 py-4 bg-transparent border-2 border-white/60 text-white font-[family-name:var(--font-montserrat)] font-semibold rounded-full hover:bg-white/10 transition-all"
                         >
-                            Call (314) 526-7240
+                            <span className="block">(314) 526-7240</span>
+                            <span className="block text-sm font-normal mt-0.5 opacity-90">Call or Text</span>
                         </a>
                     </div>
                 </div>

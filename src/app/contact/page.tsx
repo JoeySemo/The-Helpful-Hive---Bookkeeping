@@ -8,7 +8,12 @@ export default function ContactPage() {
         {
             icon: Phone,
             title: 'Phone',
-            value: '(314) 526-7240',
+            value: (
+                <>
+                    <span className="block font-medium">(314) 526-7240</span>
+                    <span className="block text-sm opacity-80 mt-0.5">Call or Text</span>
+                </>
+            ),
             href: 'tel:+13145267240',
             clickable: true
         },

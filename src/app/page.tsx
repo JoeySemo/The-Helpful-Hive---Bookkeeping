@@ -301,8 +301,9 @@ export default function HomePage() {
               href="tel:+13145267240"
               className="px-8 py-4 bg-transparent border-2 border-white/60 text-white font-semibold rounded-full hover:bg-white/10 transition-all"
             >
-              Call (314) 526-7240
-            </a>
+                            <span className="block">(314) 526-7240</span>
+                            <span className="block text-sm font-normal mt-0.5 opacity-90">Call or Text</span>
+                        </a>
           </div>
         </div>
       </section>

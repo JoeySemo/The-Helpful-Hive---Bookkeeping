@@ -224,8 +224,9 @@ export default function ConciergeServicesPage() {
                         borderRadius: '9999px',
                         textDecoration: 'none'
                     }}>
-                        Call (314) 526-7240
-                    </a>
+                            <span className="block">(314) 526-7240</span>
+                            <span className="block text-sm font-normal mt-0.5 opacity-90">Call or Text</span>
+                        </a>
                 </div>
             </div>
         </main>

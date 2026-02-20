@@ -24,7 +24,8 @@ export default function Footer({ compact = false }: FooterProps) {
                             href="tel:+13145267240"
                             className={`${compact ? 'text-xs' : 'text-sm'} text-white/80 hover:text-[#E2C16B] transition-colors`}
                         >
-                            (314) 526-7240
+                            <span className="block pb-1">(314) 526-7240</span>
+                            <span className="block text-[10px] opacity-80 uppercase tracking-wider">Call or Text</span>
                         </a>
                     </div>
 
