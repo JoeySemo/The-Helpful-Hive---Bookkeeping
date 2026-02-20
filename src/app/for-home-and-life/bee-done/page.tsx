@@ -25,16 +25,11 @@ export default function BeeDonePage() {
                 <div className="max-w-7xl mx-auto px-6 py-16 md:py-24 relative z-10">
                     <div className="grid md:grid-cols-2 gap-12 items-center">
                         <div className="order-2 md:order-1">
-                            <div className="inline-block px-4 py-2 bg-soft-sage/25 rounded-full mb-6 backdrop-blur-sm">
-                                <span className="text-charcoal-gray font-[family-name:var(--font-montserrat)] text-sm font-medium">
-                                    The &ldquo;Bee Done&rdquo; Service Menu
-                                </span>
-                            </div>
-                            <h1 className="font-[family-name:var(--font-lora)] text-5xl md:text-7xl font-bold text-charcoal-gray mb-4">
-                                Bee Done
+                            <h1 className="font-[family-name:var(--font-lora)] text-[1.75rem] sm:text-4xl md:text-5xl xl:text-6xl font-bold text-charcoal-gray mb-4 whitespace-nowrap">
+                                &ldquo;Bee Done&rdquo; Service Menu
                             </h1>
-                            <p className="font-[family-name:var(--font-allura)] text-xl md:text-2xl text-soft-sage-dark mb-6 leading-normal">
-                                Taking the sting out of home chores and errands so you can Bee Done with your to-do list.
+                            <p className="font-[family-name:var(--font-lora)] italic text-xl md:text-2xl text-soft-sage-dark mb-6 leading-normal">
+                                Taking the Sting Out of Home Chores so you can Bee Done with your To-Do List.
                             </p>
                             <Link
                                 href="/contact"
@@ -90,19 +85,24 @@ export default function BeeDonePage() {
                             <div className="p-8">
                                 <div className="grid sm:grid-cols-2 gap-4">
                                     {[
-                                        { name: 'The Laundry Cycle Add-On', price: '$15/load', desc: 'Complete Cycle: Wash, dry, and fold (or hang). *Only available when paired with another service.' },
-                                        { name: 'The Laundry Assist', price: '$10/load', desc: 'You start the wash, I switch & fold. Or I wash & dry and leave it warm in the dryer. *Only available when paired with another service.' },
                                         { name: 'The Dish Reset', price: '$10/load', desc: 'We unload the clean, load the dirty, and start the cycle. (Hand-washing billed at hourly rate).' },
                                         { name: 'The Fresh Fridge & Pantry', price: '$35', desc: 'A health-check for your kitchen: we toss expired items and fresh wipe shelves/drawers.' },
                                         { name: 'The Surface Shine', price: '$35', desc: 'Kitchen or Bathroom: Counters, mirrors, cabinet fronts, exterior appliances, and floors.' },
                                         { name: 'The Clean Path', price: '$20', desc: 'Vacuum and mop of the main-level "traffic lanes" and living area.' },
+                                        { name: 'The Laundry Cycle', price: '$15/load', desc: 'Complete Cycle: Wash, dry, and fold (or hang).', note: '*Only available when paired with another service.' },
+                                        { name: 'The Laundry Assist', price: '$10/load', desc: 'You start the wash, I switch & fold. Or I wash & dry and leave it warm in the dryer.', note: '*Only available when paired with another service.' },
                                     ].map((addon, i) => (
                                         <div key={i} className="group rounded-xl p-5 border-2 border-[#BFC8A1]/15 hover:border-[#BFC8A1] hover:shadow-md transition-all bg-[#FFF8E7]">
                                             <div className="flex items-center justify-between mb-2">
                                                 <h3 className="font-[family-name:var(--font-lora)] font-semibold text-[#3C3C3C]">{addon.name}</h3>
                                                 <span className="bg-[#5D684B] text-white text-sm px-3 py-1 rounded-full font-[family-name:var(--font-montserrat)] font-bold">{addon.price}</span>
                                             </div>
-                                            <p className="font-[family-name:var(--font-montserrat)] text-sm text-[#525252]">{addon.desc}</p>
+                                            <p className="font-[family-name:var(--font-montserrat)] text-sm text-[#525252]">
+                                                {addon.desc}
+                                                {addon.note && (
+                                                    <span className="block mt-1 text-xs italic opacity-80">{addon.note}</span>
+                                                )}
+                                            </p>
                                         </div>
                                     ))}
                                 </div>

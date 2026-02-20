@@ -41,7 +41,8 @@ export default function HomePage() {
       active: true,
       color: "#5D684B", // Darker sage for better contrast with white text
       bgColor: "bg-[#BFC8A1]/20", // Light sage background
-      patternColor: "#BFC8A1" // Sage pattern stroke
+      patternColor: "#BFC8A1", // Sage pattern stroke
+      actionText: "Chores & Errands"
     },
     {
       name: "Bee Kind",
@@ -52,7 +53,8 @@ export default function HomePage() {
       active: true,
       color: "#506A62", // Darker teal for better contrast with white text
       bgColor: "bg-[#98B4AC]/20", // Light teal background
-      patternColor: "#98B4AC" // Teal pattern stroke
+      patternColor: "#98B4AC", // Teal pattern stroke
+      actionText: "Pet & House Sitting"
     },
     {
       name: 'Bee Organized',
@@ -237,7 +239,7 @@ export default function HomePage() {
                 {service.desc}
               </p>
               <div className="mt-auto px-6 py-2 rounded-full text-white font-semibold text-sm transition-colors z-10 shadow-sm border-2 border-black" style={{ backgroundColor: service.patternColor ? service.color : service.color }}>
-                View Services
+                {service.actionText || "View Services"}
               </div>
             </Link>
           ))}
