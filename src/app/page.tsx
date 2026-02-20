@@ -34,7 +34,7 @@ export default function HomePage() {
   const beeCategories = [
     {
       name: "Bee Done",
-      desc: "Home resets, laundry & dishes, and errand dashes. Taking the sting out of chores so you can Bee Done with your to-do list.",
+      desc: "Home resets, laundry & dishes, and errand dashes.",
       icon: '🧽',
       bee: "/bee-new-2.png", // New Bee Done logo
       href: "/for-home-and-life/bee-done",
@@ -46,7 +46,7 @@ export default function HomePage() {
     },
     {
       name: "Bee Kind",
-      desc: "Tending to your pets and plants so you can Bee Kind to your peace of mind while you're away from the hive.",
+      desc: "Tending to your pets and plants while you're away from the hive.",
       icon: '🐾',
       bee: "/bee-1-petfood.png", // Bee Kind logo
       href: "/for-home-and-life/bee-kind",
@@ -223,7 +223,7 @@ export default function HomePage() {
               )}
 
               <div
-                className="w-24 h-24 relative mb-4 group-hover:scale-110 transition-transform duration-300 z-10"
+                className="w-48 h-48 relative mb-6 group-hover:scale-110 transition-transform duration-300 z-10"
               >
                 <Image
                   src={service.bee}
@@ -238,7 +238,7 @@ export default function HomePage() {
               <p className="font-[family-name:var(--font-montserrat)] text-[#525252] mb-4 z-10">
                 {service.desc}
               </p>
-              <div className="mt-auto px-6 py-2 rounded-full text-white font-semibold text-sm transition-colors z-10 shadow-sm border-2 border-black" style={{ backgroundColor: service.patternColor ? service.color : service.color }}>
+              <div className="mt-auto px-12 py-4 rounded-full text-white font-semibold text-lg md:text-xl transition-colors z-10 shadow-sm border-2 border-black" style={{ backgroundColor: service.patternColor ? service.color : service.color }}>
                 {service.actionText || "View Services"}
               </div>
             </Link>

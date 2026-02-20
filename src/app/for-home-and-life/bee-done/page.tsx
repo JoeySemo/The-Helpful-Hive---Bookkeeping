@@ -22,14 +22,20 @@ export default function BeeDonePage() {
                     </svg>
                 </div>
 
-                <div className="max-w-7xl mx-auto px-6 py-16 md:py-24 relative z-10">
+                <div className="max-w-7xl mx-auto px-6 py-8 md:py-12 lg:py-16 relative z-10">
                     <div className="grid md:grid-cols-2 gap-12 items-center">
                         <div className="order-2 md:order-1">
-                            <h1 className="font-[family-name:var(--font-lora)] text-[1.75rem] sm:text-4xl md:text-5xl xl:text-6xl font-bold text-charcoal-gray mb-4 whitespace-nowrap">
+                            <h1 className="font-[family-name:var(--font-lora)] text-[1.75rem] sm:text-4xl md:text-5xl xl:text-6xl font-bold text-charcoal-gray mb-6 lg:whitespace-nowrap">
                                 &ldquo;Bee Done&rdquo; Service Menu
                             </h1>
-                            <p className="font-[family-name:var(--font-lora)] italic text-xl md:text-2xl text-soft-sage-dark mb-6 leading-normal">
-                                Taking the Sting Out of Home Chores so you can Bee Done with your To-Do List.
+                            <ul className="font-[family-name:var(--font-lora)] text-lg sm:text-xl md:text-2xl font-semibold text-charcoal-gray mb-8 leading-relaxed list-inside list-disc">
+                                <li>Home Resets</li>
+                                <li>Laundry</li>
+                                <li>Dishes</li>
+                                <li>Errand Dashes</li>
+                            </ul>
+                            <p className="font-[family-name:var(--font-lora)] italic text-xl sm:text-2xl md:text-3xl lg:text-4xl text-soft-sage-dark mb-8 leading-normal">
+                                Taking the Sting out of Chores so you can Bee Done with your To-Do list.
                             </p>
                             <Link
                                 href="/contact"
@@ -86,8 +92,8 @@ export default function BeeDonePage() {
                                 <div className="grid sm:grid-cols-2 gap-4">
                                     {[
                                         { name: 'The Dish Reset', price: '$10/load', desc: 'We unload the clean, load the dirty, and start the cycle. (Hand-washing billed at hourly rate).' },
-                                        { name: 'The Fresh Fridge & Pantry', price: '$35', desc: 'A health-check for your kitchen: we toss expired items and fresh wipe shelves/drawers.' },
-                                        { name: 'The Surface Shine', price: '$35', desc: 'Kitchen or Bathroom: Counters, mirrors, cabinet fronts, exterior appliances, and floors.' },
+                                        { name: 'The Fresh Fridge & Pantry', price: '$35', desc: 'We toss expired items and give shelves/drawers a fresh wipe.' },
+                                        { name: 'The Surface Shine (Kitchen or Bathroom)', price: '$35', desc: 'A surface-level shine including counters, mirrors, cabinet fronts, exterior appliances, and floors.' },
                                         { name: 'The Clean Path', price: '$20', desc: 'Vacuum and mop of the main-level "traffic lanes" and living area.' },
                                         { name: 'The Laundry Cycle', price: '$15/load', desc: 'Complete Cycle: Wash, dry, and fold (or hang).', note: '*Only available when paired with another service.' },
                                         { name: 'The Laundry Assist', price: '$10/load', desc: 'You start the wash, I switch & fold. Or I wash & dry and leave it warm in the dryer.', note: '*Only available when paired with another service.' },

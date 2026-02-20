@@ -50,18 +50,18 @@ export default function BeeKindPage() {
                     </svg>
                 </div>
 
-                <div className="max-w-7xl mx-auto px-6 py-16 md:py-24 relative z-10">
+                <div className="max-w-7xl mx-auto px-6 py-8 md:py-12 lg:py-16 relative z-10">
                     <div className="grid md:grid-cols-2 gap-12 items-center">
                         <div className="order-2 md:order-1">
-                            <div className="inline-block px-4 py-2 bg-seafoam-teal/25 rounded-full mb-6 backdrop-blur-sm">
-                                <span className="text-charcoal-gray font-[family-name:var(--font-montserrat)] text-sm font-medium">
-                                    The &ldquo;Bee Kind&rdquo; Service Menu
-                                </span>
-                            </div>
-                            <h1 className="font-[family-name:var(--font-lora)] text-5xl md:text-7xl font-bold text-charcoal-gray mb-4">
-                                Bee Kind
+                            <h1 className="font-[family-name:var(--font-lora)] text-[1.75rem] sm:text-4xl md:text-5xl xl:text-6xl font-bold text-charcoal-gray mb-6 lg:whitespace-nowrap">
+                                &ldquo;Bee Kind&rdquo; Service Menu
                             </h1>
-                            <p className="font-[family-name:var(--font-allura)] text-xl md:text-2xl text-seafoam-teal-dark mb-6 leading-normal">
+                            <ul className="font-[family-name:var(--font-lora)] text-lg sm:text-xl md:text-2xl font-semibold text-charcoal-gray mb-8 leading-relaxed list-inside list-disc">
+                                <li>Daily Pet Care</li>
+                                <li>Daily Home Checks</li>
+                                <li>Overnight Home and Pet Care</li>
+                            </ul>
+                            <p className="font-[family-name:var(--font-lora)] italic text-xl sm:text-2xl md:text-3xl lg:text-4xl text-seafoam-teal-dark mb-8 leading-normal">
                                 Tending to your pets and plants so you can Bee Kind to your peace of mind while you're away from the hive.
                             </p>
                             <Link
