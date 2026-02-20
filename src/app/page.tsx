@@ -36,7 +36,7 @@ export default function HomePage() {
       name: "Bee Done",
       desc: "Home resets, laundry & dishes, and errand dashes.",
       icon: '🧽',
-      bee: "/bee-new-2.png", // New Bee Done logo
+      bee: "/bee-5-clipboard.png", // Bee holding clipboard
       href: "/for-home-and-life/bee-done",
       active: true,
       color: "#5D684B", // Darker sage for better contrast with white text
@@ -48,7 +48,7 @@ export default function HomePage() {
       name: "Bee Kind",
       desc: "Tending to your pets and plants while you're away from the hive.",
       icon: '🐾',
-      bee: "/bee-new-2.png", // Generic logo bee, previously /bee-1-petfood.png
+      bee: "/bee-1-petfood.png", // Bee holding pet food bag
       href: "/for-home-and-life/bee-kind",
       active: true,
       color: "#506A62", // Darker teal for better contrast with white text
