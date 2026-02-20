@@ -232,12 +232,9 @@ export default function HomePage() {
                   className="object-contain"
                 />
               </div>
-              <h3 className="font-[family-name:var(--font-lora)] text-2xl font-bold text-charcoal-gray mb-2 z-10">
+              <h3 className="font-[family-name:var(--font-lora)] text-3xl md:text-4xl font-bold text-charcoal-gray mb-6 z-10">
                 {service.name}
               </h3>
-              <p className="font-[family-name:var(--font-montserrat)] text-[#525252] mb-4 z-10">
-                {service.desc}
-              </p>
               <div className="mt-auto px-12 py-4 rounded-full text-white font-semibold text-lg md:text-xl transition-colors z-10 shadow-sm border-2 border-black" style={{ backgroundColor: service.patternColor ? service.color : service.color }}>
                 {service.actionText || "View Services"}
               </div>
