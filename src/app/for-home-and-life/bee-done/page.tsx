@@ -215,59 +215,77 @@ export default function BeeDonePage() {
                     </div>
 
                     {/* === The Busy Bee Dash === */}
-                    <div className="mb-20">
-                        <div className="bg-white rounded-3xl border-2 border-[#BFC8A1]/30 overflow-hidden shadow-sm">
-                            <div className="bg-[#BFC8A1]/15 px-8 py-6 border-b border-[#BFC8A1]/20 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-3 relative overflow-hidden">
-                                <div className="absolute inset-0 opacity-[0.08] pointer-events-none">
-                                    <svg className="w-full h-full" viewBox="0 0 100 100" preserveAspectRatio="xMidYMid slice">
-                                        <pattern id="honeycomb-busybee" width="10" height="10" patternUnits="userSpaceOnUse">
-                                            <path d="M5 0L10 2.5V7.5L5 10L0 7.5V2.5Z" fill="none" stroke="#BFC8A1" strokeWidth="0.5" />
-                                        </pattern>
-                                        <rect width="100%" height="100%" fill="url(#honeycomb-busybee)" />
-                                    </svg>
-                                </div>
-                                <div className="flex items-center gap-4 relative z-10">
-                                    <div className="relative w-24 h-24 flex-shrink-0">
-                                        <Image src="/bee-5-clipboard.png" alt="Errand Bee" fill className="object-contain" />
-                                    </div>
-                                    <div>
-                                        <h2 className="font-[family-name:var(--font-lora)] text-2xl md:text-3xl font-bold text-[#3C3C3C]">
-                                            The Busy Bee Dash
-                                        </h2>
-                                        <p className="font-[family-name:var(--font-montserrat)] text-sm text-[#525252]">Fast door-to-door errands within Wentzville.</p>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div className="p-8">
-                                <div className="grid sm:grid-cols-2 gap-4 mb-6">
-                                    {[
-                                        { name: 'Returns', price: '$15', desc: 'Dropping off pre-labeled Amazon, UPS, or FedEx packages.', icon: '/bee-9-label.png' },
-                                        { name: 'Grocery/Retail Pickups', price: '$15', desc: 'Curbside pickup & delivery of pre-ordered items.', icon: '/bee-1-petfood.png' },
-                                        { name: 'Dry Cleaning', price: '$15', desc: 'Seamless drop-off or pickup.', icon: '/bee-4-spraybottle.png' },
-                                        { name: 'Pharmacy', price: '$15', desc: 'Secure pickup of pre-paid prescriptions.', icon: '/bee-10-briefcase.png' },
-                                        { name: 'Post Office', price: '$15', desc: 'Handling mail, stamps, or prepared packages.', icon: '/bee-5-clipboard.png' },
-                                    ].map((errand, i) => (
-                                        <div key={i} className="group rounded-xl p-5 border-2 border-[#BFC8A1]/15 hover:border-[#BFC8A1] hover:shadow-md transition-all bg-[#FFF8E7]">
-                                            <div className="flex items-center justify-between mb-2">
-                                                <div className="flex items-center gap-3">
-                                                    <div className="relative w-16 h-16 flex-shrink-0">
-                                                        <Image src={errand.icon} alt={`${errand.name} icon`} fill className="object-contain" />
-                                                    </div>
-                                                    <h3 className="font-[family-name:var(--font-lora)] font-semibold text-[#3C3C3C]">{errand.name}</h3>
+                    <div className="grid md:grid-cols-2 gap-8 mb-20">
+                        {/* Single Dash */}
+                        <div className="bg-white rounded-3xl border-2 border-charcoal-gray overflow-hidden shadow-lg flex flex-col relative">
+                            <div className="p-8 flex flex-col h-full">
+                                <h2 className="font-[family-name:var(--font-lora)] text-3xl font-bold text-charcoal-gray mb-2">
+                                    The Busy Bee Dash
+                                </h2>
+                                <div className="text-2xl font-bold text-terra-cotta-dark mb-4">$15 <span className="text-sm font-normal text-gray-500">/ errand</span></div>
+                                <p className="font-[family-name:var(--font-montserrat)] text-sm text-[#525252] mb-6">
+                                    Fast door-to-door errands within Wentzville.
+                                </p>
+                                <div className="mb-6 flex-grow">
+                                    <h4 className="font-bold text-[#3C3C3C] mb-4 text-sm uppercase tracking-wide">Available Dashes:</h4>
+                                    <ul className="space-y-4">
+                                        {[
+                                            { name: 'Returns', desc: 'Pre-labeled Amazon, UPS, or FedEx.', icon: '/bee-9-label.png' },
+                                            { name: 'Grocery/Retail', desc: 'Curbside pickup & delivery.', icon: '/bee-1-petfood.png' },
+                                            { name: 'Dry Cleaning', desc: 'Seamless drop-off or pickup.', icon: '/bee-4-spraybottle.png' },
+                                            { name: 'Pharmacy', desc: 'Secure pickup of pre-paid Rx.', icon: '/bee-10-briefcase.png' },
+                                            { name: 'Post Office', desc: 'Mail, stamps, or prepared packages.', icon: '/bee-5-clipboard.png' },
+                                        ].map((errand, i) => (
+                                            <li key={i} className="flex items-start gap-3">
+                                                <div className="relative w-8 h-8 flex-shrink-0 mt-0.5">
+                                                    <Image src={errand.icon} alt={errand.name} fill className="object-contain" />
                                                 </div>
-                                                <span className="bg-[#5D684B] text-white text-sm px-3 py-1 rounded-full font-[family-name:var(--font-montserrat)] font-bold">{errand.price}</span>
-                                            </div>
-                                            <p className="font-[family-name:var(--font-montserrat)] text-sm text-[#525252]">
-                                                {errand.desc}
-                                            </p>
-                                        </div>
-                                    ))}
+                                                <div className="text-sm text-[#525252]">
+                                                    <span className="font-semibold text-charcoal-gray">{errand.name}:</span> {errand.desc}
+                                                </div>
+                                            </li>
+                                        ))}
+                                    </ul>
                                 </div>
-                                <div className="bg-[#BFC8A1]/10 p-4 rounded-xl text-center">
-                                    <p className="text-[#3C3C3C] font-bold mb-1">*The Busy Bee Bundle: Buy 5 “Dashes” for $65 (Save $10)</p>
-                                    <p className="text-[#525252] text-xs italic">Note: For "Dash" services, all orders must be placed/paid with vendor prior to pickup.</p>
+                                <Link href="/contact" className="block w-full text-center py-3 bg-[#3C3C3C] text-white font-bold rounded-xl hover:bg-[#525252] transition-all">
+                                    Book a Dash
+                                </Link>
+                            </div>
+                        </div>
+
+                        {/* The Dash Bundle */}
+                        <div className="bg-white rounded-3xl border-2 border-charcoal-gray overflow-hidden shadow-lg relative flex flex-col">
+                            <div className="absolute top-0 right-0 bg-charcoal-gray text-warm-honey px-4 py-1 rounded-bl-xl text-sm font-bold">SAVE $10</div>
+                            <div className="p-8 flex flex-col h-full">
+                                <h2 className="font-[family-name:var(--font-lora)] text-3xl font-bold text-charcoal-gray mb-2">
+                                    The Busy Bee Bundle
+                                </h2>
+                                <div className="text-2xl font-bold text-terra-cotta-dark mb-4">$65 <span className="text-sm font-normal text-gray-500 line-through">($75 Value)</span></div>
+                                <p className="font-[family-name:var(--font-montserrat)] text-sm text-[#525252] mb-6">
+                                    Pre-purchase a bundle of 5 "Dashes" to use whenever you need them. Perfect for recurring errands or busy seasons.
+                                </p>
+                                <div className="mb-6 flex-grow">
+                                    <h4 className="font-bold text-[#3C3C3C] mb-4 text-sm uppercase tracking-wide">What's Included:</h4>
+                                    <ul className="space-y-4">
+                                        <li className="flex items-start gap-3 text-sm text-[#525252]">
+                                            <span className="text-[#E2C16B] text-xl">✓</span> <span><strong>5 Mix-and-Match Dashes:</strong> Choose any combination of available errands.</span>
+                                        </li>
+                                        <li className="flex items-start gap-3 text-sm text-[#525252]">
+                                            <span className="text-[#E2C16B] text-xl">✓</span> <span><strong>Flexible Usage:</strong> Use them all in one busy week or spread them out over months.</span>
+                                        </li>
+                                        <li className="flex items-start gap-3 text-sm text-[#525252]">
+                                            <span className="text-[#E2C16B] text-xl">✓</span> <span><strong>No Expiration:</strong> Your dash credits never expire.</span>
+                                        </li>
+                                    </ul>
                                 </div>
+
+                                <div className="bg-[#FFF8E7] p-4 rounded-xl text-center mb-6">
+                                    <p className="text-[#525252] text-xs leading-relaxed">Note: For all "Dash" services, orders must be placed and paid with the vendor prior to our pickup.</p>
+                                </div>
+
+                                <Link href="/contact" className="block w-full text-center py-3 bg-[#3C3C3C] text-white font-bold rounded-xl hover:bg-[#525252] transition-all">
+                                    Purchase Bundle
+                                </Link>
                             </div>
                         </div>
                     </div>
