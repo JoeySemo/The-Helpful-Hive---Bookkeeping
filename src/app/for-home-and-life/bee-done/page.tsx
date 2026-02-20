@@ -221,7 +221,7 @@ export default function BeeDonePage() {
                             </div>
 
                             <div className="p-8">
-                                <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4 mb-6">
+                                <div className="grid sm:grid-cols-2 gap-4 mb-6">
                                     {[
                                         { name: 'Returns', desc: 'Dropping off pre-labeled Amazon, UPS, or FedEx packages.', icon: '/bee_returns_box.png' },
                                         { name: 'Grocery/Retail Pickups', desc: 'Curbside pickup & delivery of pre-ordered items.', icon: '/bee_grocery_bag.png' },
@@ -229,12 +229,18 @@ export default function BeeDonePage() {
                                         { name: 'Pharmacy', desc: 'Secure pickup of pre-paid prescriptions.', icon: '/bee_pharmacy_pill.png' },
                                         { name: 'Post Office', desc: 'Handling mail, stamps, or prepared packages.', icon: '/bee_post_office_mail.png' },
                                     ].map((errand, i) => (
-                                        <div key={i} className="bg-white rounded-xl p-4 border border-[#BFC8A1]/20 hover:border-[#BFC8A1] hover:shadow-md transition-all">
-                                            <div className="w-24 h-24 mb-2 relative">
-                                                <Image src={errand.icon} alt={`${errand.name} Bee Icon`} fill className="object-contain" />
+                                        <div key={i} className="group rounded-xl p-5 border-2 border-[#BFC8A1]/15 hover:border-[#BFC8A1] hover:shadow-md transition-all bg-[#FFF8E7]">
+                                            <div className="flex items-center justify-between mb-2">
+                                                <div className="flex items-center gap-3">
+                                                    <div className="relative w-16 h-16 flex-shrink-0">
+                                                        <Image src={errand.icon} alt={`${errand.name} icon`} fill className="object-contain" />
+                                                    </div>
+                                                    <h3 className="font-[family-name:var(--font-lora)] font-semibold text-[#3C3C3C]">{errand.name}</h3>
+                                                </div>
                                             </div>
-                                            <h3 className="font-[family-name:var(--font-lora)] font-semibold text-[#3C3C3C] mb-1">{errand.name}</h3>
-                                            <p className="font-[family-name:var(--font-montserrat)] text-xs text-[#525252]">{errand.desc}</p>
+                                            <p className="font-[family-name:var(--font-montserrat)] text-sm text-[#525252]">
+                                                {errand.desc}
+                                            </p>
                                         </div>
                                     ))}
                                 </div>
@@ -321,24 +327,26 @@ export default function BeeDonePage() {
                             </div>
                         </div>
                         <div className="p-8">
-                            <div className="grid sm:grid-cols-2 gap-6">
+                            <div className="grid sm:grid-cols-2 gap-4">
                                 {[
                                     { name: 'The Pet Waste Yard Reset', price: '$35', desc: 'Thorough sweep of neglected yards to make them safe for kids and paws.', icon: '/bee_outdoor_scoop.png' },
                                     { name: 'The Weekly Hive Scoop', price: '$25/visit', desc: 'Weekly scheduled waste removal.', icon: '/bee_outdoor_bag.png' },
                                     { name: 'The Twice-a-Week Scoop', price: '$20/visit', desc: 'Discounted rate for two visits per week.', icon: '/bee_outdoor_two_bags.png' },
                                     { name: 'Seasonal Garden & Yard', price: '$40/hr', desc: 'Light weeding, watering, raking. Can be added to visit or booked as Worker Bee session.', icon: '/bee_outdoor_watering.png' },
                                 ].map((service, i) => (
-                                    <div key={i} className="flex gap-4 border-b border-gray-100 last:border-0 pb-4 last:pb-0 items-start">
-                                        <div className="relative w-16 h-16 flex-shrink-0 mt-1">
-                                            <Image src={service.icon} alt={`${service.name} icon`} fill className="object-contain" />
-                                        </div>
-                                        <div className="flex-grow flex flex-col">
-                                            <div className="flex justify-between items-baseline mb-1">
-                                                <h3 className="font-[family-name:var(--font-lora)] font-bold text-[#3C3C3C] leading-tight">{service.name}</h3>
-                                                <span className="text-terra-cotta-dark font-bold text-sm whitespace-nowrap flex-shrink-0 ml-2">{service.price}</span>
+                                    <div key={i} className="group rounded-xl p-5 border-2 border-[#BFC8A1]/15 hover:border-[#BFC8A1] hover:shadow-md transition-all bg-[#FFF8E7]">
+                                        <div className="flex items-center justify-between mb-2">
+                                            <div className="flex items-center gap-3">
+                                                <div className="relative w-16 h-16 flex-shrink-0">
+                                                    <Image src={service.icon} alt={`${service.name} icon`} fill className="object-contain" />
+                                                </div>
+                                                <h3 className="font-[family-name:var(--font-lora)] font-semibold text-[#3C3C3C]">{service.name}</h3>
                                             </div>
-                                            <p className="font-[family-name:var(--font-montserrat)] text-xs text-[#525252] leading-snug">{service.desc}</p>
+                                            <span className="bg-[#5D684B] text-white text-sm px-3 py-1 rounded-full font-[family-name:var(--font-montserrat)] font-bold">{service.price}</span>
                                         </div>
+                                        <p className="font-[family-name:var(--font-montserrat)] text-sm text-[#525252]">
+                                            {service.desc}
+                                        </p>
                                     </div>
                                 ))}
                             </div>

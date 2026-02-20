@@ -208,7 +208,7 @@ export default function HomePage() {
             <Link
               key={index}
               href={service.href}
-              className={`group relative overflow-hidden rounded-3xl border-2 border-black hover:border-warm-honey transition-all duration-300 hover:shadow-xl hover:-translate-y-1 p-8 flex flex-col items-center text-center ${service.bgColor || 'bg-white'}`}
+              className={`group relative overflow-hidden rounded-3xl border-2 border-black hover:border-warm-honey transition-all duration-300 hover:shadow-xl hover:-translate-y-1 p-6 md:p-8 flex flex-col items-center text-center transform scale-90 md:scale-95 ${service.bgColor || 'bg-white'}`}
             >
               {/* background pattern */}
               {service.patternColor && (
@@ -222,8 +222,11 @@ export default function HomePage() {
                 </div>
               )}
 
+              <h3 className="font-[family-name:var(--font-lora)] text-3xl font-bold text-charcoal-gray mb-4 z-10">
+                {service.name}
+              </h3>
               <div
-                className="w-48 h-48 relative mb-6 group-hover:scale-110 transition-transform duration-300 z-10"
+                className="w-40 h-40 md:w-44 md:h-44 relative mb-6 group-hover:scale-110 transition-transform duration-300 z-10"
               >
                 <Image
                   src={service.bee}
@@ -232,10 +235,7 @@ export default function HomePage() {
                   className="object-contain"
                 />
               </div>
-              <h3 className="font-[family-name:var(--font-lora)] text-3xl md:text-4xl font-bold text-charcoal-gray mb-6 z-10">
-                {service.name}
-              </h3>
-              <div className="mt-auto px-12 py-4 rounded-full text-white font-semibold text-lg md:text-xl transition-colors z-10 shadow-sm border-2 border-black" style={{ backgroundColor: service.patternColor ? service.color : service.color }}>
+              <div className="mt-auto px-10 py-3 rounded-full text-white font-semibold text-base md:text-lg transition-colors z-10 shadow-sm border-2 border-black" style={{ backgroundColor: service.patternColor ? service.color : service.color }}>
                 {service.actionText || "View Services"}
               </div>
             </Link>
