@@ -290,20 +290,20 @@ export default function HomePage() {
           <p className="text-white/80 mb-10 text-xl font-light">
             Whether It's Your Home, Your Pets, Or Your Books—We've Got You Covered.
           </p>
-          <div className="flex flex-col sm:flex-row gap-6 justify-center">
+          <div className="flex flex-col sm:flex-row gap-6 justify-center items-center">
             <Link
               href="/contact"
-              className="px-8 py-4 bg-warm-honey text-charcoal-gray font-semibold rounded-full hover:bg-[#d4b35f] transition-all transform hover:scale-105"
+              className="flex items-center justify-center px-8 h-[72px] bg-warm-honey text-charcoal-gray font-semibold rounded-full hover:bg-[#d4b35f] transition-all transform hover:scale-105 whitespace-nowrap"
             >
               Schedule a Consultation
             </Link>
             <a
               href="tel:+13145267240"
-              className="px-8 py-4 bg-transparent border-2 border-white/60 text-white font-semibold rounded-full hover:bg-white/10 transition-all"
+              className="flex flex-col items-center justify-center px-8 h-[72px] bg-transparent border-2 border-white/60 text-white font-semibold rounded-full hover:bg-white/10 transition-all whitespace-nowrap"
             >
-                            <span className="block">(314) 526-7240</span>
-                            <span className="block text-sm font-normal mt-0.5 opacity-90">Call or Text</span>
-                        </a>
+              <span className="block leading-tight">(314) 526-7240</span>
+              <span className="block text-sm font-normal mt-0.5 opacity-90 leading-tight tracking-normal">Call or Text</span>
+            </a>
           </div>
         </div>
       </section>
