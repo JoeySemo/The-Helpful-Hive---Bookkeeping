@@ -117,26 +117,26 @@ export default function ContactPage() {
                         </div>
 
                         {/* Social Links Box */}
-                        <div className="bg-[#3C3C3C] rounded-2xl p-8 text-center shadow-lg border border-neutral-800">
-                            <h3 className="font-display text-xl text-white mb-6">Connect With Us</h3>
+                        <div className="bg-white rounded-2xl p-6 text-center border border-neutral-200/50 flex flex-col justify-center shadow-sm">
+                            <h3 className="font-display text-lg font-medium text-neutral-900 mb-4">Connect With Us</h3>
                             <div className="flex justify-center gap-6">
                                 <a
                                     href="https://www.facebook.com/thehelpfulhive"
                                     target="_blank"
                                     rel="noopener noreferrer"
-                                    className="w-16 h-16 flex items-center justify-center rounded-full bg-white/10 text-white/80 hover:bg-[#E2C16B] hover:text-white transition-all transform hover:scale-110"
+                                    className="w-14 h-14 flex items-center justify-center rounded-xl bg-[#1877F2]/10 text-[#1877F2] hover:bg-[#1877F2] hover:text-white transition-all duration-300 transform hover:-translate-y-1 hover:shadow-md"
                                     aria-label="Facebook"
                                 >
-                                    <Facebook size={28} />
+                                    <Facebook size={28} strokeWidth={2} />
                                 </a>
                                 <a
                                     href="https://www.instagram.com/thehelpfulhiveco/"
                                     target="_blank"
                                     rel="noopener noreferrer"
-                                    className="w-16 h-16 flex items-center justify-center rounded-full bg-white/10 text-white/80 hover:bg-[#E2C16B] hover:text-white transition-all transform hover:scale-110"
+                                    className="w-14 h-14 flex items-center justify-center rounded-xl bg-[#E1306C]/10 text-[#E1306C] hover:text-white transition-all duration-300 transform hover:-translate-y-1 hover:shadow-md hover:bg-gradient-to-tr hover:from-[#f09433] hover:via-[#e6683c] hover:to-[#bc1888]"
                                     aria-label="Instagram"
                                 >
-                                    <Instagram size={28} />
+                                    <Instagram size={28} strokeWidth={2} />
                                 </a>
                             </div>
                         </div>
