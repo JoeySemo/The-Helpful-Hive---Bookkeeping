@@ -107,14 +107,14 @@ export default function HomePage() {
         <div className="relative max-w-4xl mx-auto text-center z-10">
           {/* Animated Logo */}
           {/* Animated Logo Container */}
-          <div className="relative w-56 h-56 md:w-80 md:h-80 mx-auto mb-10">
+          <div className="relative w-full max-w-[320px] md:max-w-[500px] aspect-[1024/426] mx-auto mb-10">
             {/* Main Logo */}
-            <div className="relative w-full h-full animate-float z-10">
+            <div className="relative w-full h-full animate-float z-10 drop-shadow-xl">
               <Image
-                src="/official-logo-circular.jpg"
+                src="/official-logo-horizontal.png"
                 alt="The Helpful Hive"
                 fill
-                className="object-contain rounded-full border-4 border-warm-honey shadow-2xl"
+                className="object-contain"
                 priority
               />
             </div>
