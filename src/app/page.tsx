@@ -197,10 +197,10 @@ export default function HomePage() {
       <section className="py-16 px-4 md:px-8 max-w-7xl mx-auto" id="services">
         <div className="text-center mb-12">
           <h2 className="font-[family-name:var(--font-lora)] text-3xl md:text-5xl font-bold text-charcoal-gray mb-4">
-            Our Services
+            Explore the Hive
           </h2>
           <p className="font-[family-name:var(--font-montserrat)] text-neutral-600 max-w-2xl mx-auto">
-            Choose a service below to get started.
+            <strong>The Helpful Hive</strong> offers a full suite of services to help your home and business hum. Whether you need to <strong>Bee Done</strong> with your to-do list or <strong>Bee Kind</strong> to your home and pets, we make life a little sweeter.
           </p>
         </div>
 
