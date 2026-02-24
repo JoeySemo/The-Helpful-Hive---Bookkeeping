@@ -88,7 +88,7 @@ export default function HomePage() {
   return (
     <div className="min-h-screen font-[family-name:var(--font-geist-sans)]">
       {/* Hero Section */}
-      <section className="relative min-h-[90vh] flex flex-col items-center justify-center p-8 md:p-20 overflow-hidden bg-cream-white">
+      <section className="relative min-h-[45vh] flex flex-col items-center justify-center p-8 md:p-16 overflow-hidden bg-cream-white">
         {/* Background Decorative Elements */}
         <div className="absolute inset-0 pointer-events-none">
           {/* Hexagonal Pattern */}
@@ -119,8 +119,12 @@ export default function HomePage() {
               />
             </div>
 
+          </div>
+
+          {/* Tagline & Bee Animation Origin */}
+          <div className="relative w-full max-w-4xl mx-auto flex items-center justify-center">
             {/* Flying Bees - 11 total */}
-            <div className="absolute w-full h-full ml-[22%] -mt-[2%] flex items-center justify-center pointer-events-none z-0">
+            <div className="absolute inset-0 flex items-center justify-center pointer-events-none z-0">
               {/* Bee 1: Pet Food */}
               <div className="absolute animate-fly-1 w-12 h-12 md:w-16 md:h-16">
                 <Image src="/bee-1-petfood.png" alt="Bee with pet food" fill className="object-contain" />
@@ -166,12 +170,11 @@ export default function HomePage() {
                 <Image src="/bee-11-calculator.png" alt="Bee with calculator" fill className="object-contain" />
               </div>
             </div>
-          </div>
 
-          {/* Tagline */}
-          <h1 className="font-[family-name:var(--font-lora)] text-2xl md:text-3xl font-medium text-charcoal-gray mb-8 animate-fade-up delay-100 max-w-4xl mx-auto leading-relaxed">
-            The Helpful Hive offers a full suite of services to help your home and business hum. Whether you need to <span className="text-soft-sage-dark font-bold">Bee Done</span> with your to-do list, <span className="text-seafoam-teal-dark font-bold">Bee Kind</span> to your pets, <span className="text-sky-blue-dark font-bold">Bee Organized</span>, <span className="text-elderberry-dark font-bold">Bee Connected</span>, or <span className="text-slate-blue-dark font-bold">Bee Balanced</span> with your books, we make life a little sweeter.
-          </h1>
+            <h1 className="font-[family-name:var(--font-lora)] text-2xl md:text-3xl lg:text-4xl font-medium text-charcoal-gray mb-8 animate-fade-up delay-100 relative z-10 bg-cream-white/80 md:bg-transparent rounded-2xl px-4 py-2">
+              Because even the busiest bees need a little help.
+            </h1>
+          </div>
 
           {/* Dual CTAs - Removed per user request */}
           {/* <div className="flex flex-col sm:flex-row flex-wrap gap-4 justify-center animate-fade-up delay-300">
