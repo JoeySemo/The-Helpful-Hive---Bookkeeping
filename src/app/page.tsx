@@ -119,12 +119,8 @@ export default function HomePage() {
               />
             </div>
 
-          </div>
-
-          {/* Tagline & Bee Animation Origin */}
-          <div className="relative w-full max-w-4xl mx-auto flex items-center justify-center">
             {/* Flying Bees - 11 total */}
-            <div className="absolute inset-0 flex items-center justify-center pointer-events-none z-0">
+            <div className="absolute w-full h-full ml-[22%] -mt-[2%] flex items-center justify-center pointer-events-none z-0">
               {/* Bee 1: Pet Food */}
               <div className="absolute animate-fly-1 w-12 h-12 md:w-16 md:h-16">
                 <Image src="/bee-1-petfood.png" alt="Bee with pet food" fill className="object-contain" />
@@ -170,7 +166,10 @@ export default function HomePage() {
                 <Image src="/bee-11-calculator.png" alt="Bee with calculator" fill className="object-contain" />
               </div>
             </div>
+          </div>
 
+          {/* Tagline Container */}
+          <div className="relative w-full max-w-4xl mx-auto flex items-center justify-center">
             <h1 className="font-[family-name:var(--font-lora)] text-2xl md:text-3xl lg:text-4xl font-medium text-charcoal-gray mb-8 animate-fade-up delay-100 relative z-10 bg-cream-white/80 md:bg-transparent rounded-2xl px-4 py-2">
               Because even the busiest bees need a little help.
             </h1>
