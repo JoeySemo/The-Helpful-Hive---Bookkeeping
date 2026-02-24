@@ -111,7 +111,7 @@ export default function HomePage() {
             {/* Main Logo */}
             <div className="relative w-full h-full animate-float z-10 drop-shadow-xl">
               <Image
-                src="/official-logo-horizontal.png"
+                src="/primary-logo-transparent.png"
                 alt="The Helpful Hive"
                 fill
                 className="object-contain"
@@ -120,7 +120,7 @@ export default function HomePage() {
             </div>
 
             {/* Flying Bees - 11 total */}
-            <div className="absolute inset-0 flex items-center justify-center pointer-events-none z-0">
+            <div className="absolute w-full h-full ml-[22%] -mt-[2%] flex items-center justify-center pointer-events-none z-0">
               {/* Bee 1: Pet Food */}
               <div className="absolute animate-fly-1 w-12 h-12 md:w-16 md:h-16">
                 <Image src="/bee-1-petfood.png" alt="Bee with pet food" fill className="object-contain" />
