@@ -170,7 +170,7 @@ export default function HomePage() {
 
           {/* Tagline Container */}
           <div className="relative w-full max-w-4xl mx-auto flex items-center justify-center">
-            <h1 className="font-[family-name:var(--font-lora)] text-2xl md:text-3xl lg:text-4xl font-medium text-charcoal-gray mb-8 animate-fade-up delay-100 relative z-10 bg-cream-white/80 md:bg-transparent rounded-2xl px-4 py-2">
+            <h1 className="font-[family-name:var(--font-lora)] italic text-2xl md:text-3xl lg:text-4xl font-medium text-charcoal-gray mb-8 animate-fade-up delay-100 relative z-10 bg-cream-white/80 md:bg-transparent rounded-2xl px-4 py-2">
               Because even the busiest bees need a little help.
             </h1>
           </div>
