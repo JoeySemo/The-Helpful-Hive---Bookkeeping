@@ -173,55 +173,101 @@ export default function HomePage() {
           </p>
         </div>
 
-        {/* Active Services */}
-        <div className="grid md:grid-cols-2 gap-8 mb-8">
-          {beeCategories.filter(s => s.active).map((service, index) => (
-            <Link
-              key={index}
-              href={service.href}
-              className={`group relative overflow-hidden rounded-3xl border-2 border-neutral-300 hover:border-warm-honey transition-all duration-300 hover:shadow-xl hover:-translate-y-1 ${service.bgColor || 'bg-white'}`}
-            >
-              {/* Background honeycomb pattern */}
-              {service.patternColor && (
-                <div className="absolute inset-0 opacity-20 pointer-events-none">
-                  <svg className="w-full h-full" viewBox="0 0 100 100" preserveAspectRatio="none">
-                    <pattern id={`honeycomb-card-${index}`} width="20" height="20" patternUnits="userSpaceOnUse">
-                      <path d="M10 0L20 5V15L10 20L0 15V5Z" fill="none" stroke={service.patternColor} strokeWidth="1" />
-                    </pattern>
-                    <rect width="100%" height="100%" fill={`url(#honeycomb-card-${index})`} />
-                  </svg>
-                </div>
-              )}
+        {/* Active Services - Canva Design */}
+        <div className="flex flex-col gap-8 max-w-3xl mx-auto mb-8">
+          {/* Bee Done Card */}
+          <Link
+            href="/for-home-and-life/bee-done"
+            className="group relative overflow-hidden rounded-3xl border-2 border-neutral-300 hover:border-warm-honey transition-all duration-300 hover:shadow-xl hover:-translate-y-1 bg-[#BFC8A1]/30"
+          >
+            {/* Background honeycomb pattern */}
+            <div className="absolute inset-0 opacity-15 pointer-events-none">
+              <svg className="w-full h-full" viewBox="0 0 100 100" preserveAspectRatio="none">
+                <pattern id="honeycomb-card-done" width="20" height="20" patternUnits="userSpaceOnUse">
+                  <path d="M10 0L20 5V15L10 20L0 15V5Z" fill="none" stroke="#BFC8A1" strokeWidth="1" />
+                </pattern>
+                <rect width="100%" height="100%" fill="url(#honeycomb-card-done)" />
+              </svg>
+            </div>
 
-              <div className="relative z-10 flex flex-col md:flex-row items-center gap-6 p-8">
-                {/* Bee Image */}
-                <div className="w-36 h-36 md:w-44 md:h-44 relative flex-shrink-0 group-hover:scale-110 transition-transform duration-300">
-                  <Image
-                    src={service.bee}
-                    alt={service.name}
-                    fill
-                    className="object-contain"
-                  />
+            <div className="relative z-10 p-8">
+              {/* Top Row: Bee + Title & Bullets */}
+              <div className="flex items-start gap-6 mb-4">
+                <div className="w-28 h-28 md:w-32 md:h-32 relative flex-shrink-0 group-hover:scale-110 transition-transform duration-300">
+                  <Image src="/bee-5-clipboard.png" alt="Bee Done" fill className="object-contain" />
                 </div>
-
-                {/* Text Content */}
-                <div className="flex flex-col items-center md:items-start text-center md:text-left">
-                  <h3 className="font-[family-name:var(--font-lora)] text-3xl font-bold text-charcoal-gray mb-2">
-                    {service.name}
+                <div>
+                  <h3 className="font-[family-name:var(--font-lora)] text-3xl md:text-4xl font-bold text-charcoal-gray mb-3">
+                    Bee Done
                   </h3>
-                  <p className="font-[family-name:var(--font-montserrat)] text-neutral-600 mb-4 leading-relaxed">
-                    {service.desc}
-                  </p>
-                  <div
-                    className="px-8 py-3 rounded-full text-white font-[family-name:var(--font-montserrat)] font-semibold text-base transition-all shadow-sm group-hover:shadow-md"
-                    style={{ backgroundColor: service.color }}
-                  >
-                    {service.tagline || "View Services"}
-                  </div>
+                  <ul className="font-[family-name:var(--font-montserrat)] text-base md:text-lg font-bold text-charcoal-gray space-y-1">
+                    <li>• Home Resets</li>
+                    <li>• Laundry &amp; Dish Assists</li>
+                    <li>• Errand Dashes</li>
+                  </ul>
                 </div>
               </div>
-            </Link>
-          ))}
+
+              {/* Tagline */}
+              <p className="font-[family-name:var(--font-lora)] italic text-neutral-700 text-center mb-5 leading-relaxed">
+                Taking the Sting out of Chores so you can Bee Done with your To-Do list.
+              </p>
+
+              {/* CTA Button */}
+              <div className="flex justify-center">
+                <div className="px-8 py-3 rounded-full bg-terra-cotta text-white font-[family-name:var(--font-montserrat)] font-bold text-base md:text-lg transition-all shadow-sm group-hover:shadow-md group-hover:bg-terra-cotta-dark border-2 border-terra-cotta-dark/30">
+                  View the &ldquo;Bee Done&rdquo; Service Menu
+                </div>
+              </div>
+            </div>
+          </Link>
+
+          {/* Bee Kind Card */}
+          <Link
+            href="/for-home-and-life/bee-kind"
+            className="group relative overflow-hidden rounded-3xl border-2 border-neutral-300 hover:border-warm-honey transition-all duration-300 hover:shadow-xl hover:-translate-y-1 bg-[#98B4AC]/30"
+          >
+            {/* Background honeycomb pattern */}
+            <div className="absolute inset-0 opacity-15 pointer-events-none">
+              <svg className="w-full h-full" viewBox="0 0 100 100" preserveAspectRatio="none">
+                <pattern id="honeycomb-card-kind" width="20" height="20" patternUnits="userSpaceOnUse">
+                  <path d="M10 0L20 5V15L10 20L0 15V5Z" fill="none" stroke="#98B4AC" strokeWidth="1" />
+                </pattern>
+                <rect width="100%" height="100%" fill="url(#honeycomb-card-kind)" />
+              </svg>
+            </div>
+
+            <div className="relative z-10 p-8">
+              {/* Top Row: Bee + Title & Bullets */}
+              <div className="flex items-start gap-6 mb-4">
+                <div className="w-28 h-28 md:w-32 md:h-32 relative flex-shrink-0 group-hover:scale-110 transition-transform duration-300">
+                  <Image src="/bee-1-petfood.png" alt="Bee Kind" fill className="object-contain" />
+                </div>
+                <div>
+                  <h3 className="font-[family-name:var(--font-lora)] text-3xl md:text-4xl font-bold text-charcoal-gray mb-3">
+                    Bee Kind
+                  </h3>
+                  <ul className="font-[family-name:var(--font-montserrat)] text-base md:text-lg font-bold text-charcoal-gray space-y-1">
+                    <li>• Pet Visits &amp; Feeding</li>
+                    <li>• Vacation Home Checks</li>
+                    <li>• Overnight Sitting</li>
+                  </ul>
+                </div>
+              </div>
+
+              {/* Tagline */}
+              <p className="font-[family-name:var(--font-lora)] italic text-neutral-700 text-center mb-5 leading-relaxed">
+                Tending to your Pets and Plants so you can Bee Kind to your Peace of Mind while you&apos;re away from the Hive.
+              </p>
+
+              {/* CTA Button */}
+              <div className="flex justify-center">
+                <div className="px-8 py-3 rounded-full bg-terra-cotta text-white font-[family-name:var(--font-montserrat)] font-bold text-base md:text-lg transition-all shadow-sm group-hover:shadow-md group-hover:bg-terra-cotta-dark border-2 border-terra-cotta-dark/30">
+                  View the &ldquo;Bee Kind&rdquo; Service Menu
+                </div>
+              </div>
+            </div>
+          </Link>
         </div>
 
         {/* Coming Soon Services */}
