@@ -10,8 +10,5 @@ export default function FooterWrapper() {
         return null;
     }
 
-    const compactPages = ['/', '/pet-care', '/home-care', '/administrative-care', '/for-business-and-money'];
-    const isCompact = compactPages.includes(pathname);
-
-    return <Footer compact={isCompact} />;
+    return <Footer />;
 }

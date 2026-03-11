@@ -2,64 +2,34 @@
 
 import Link from 'next/link';
 import Image from 'next/image';
-import { ArrowRight, Home, Calculator, Sparkles, Heart, FolderOpen, Briefcase, Users } from 'lucide-react';
 
 export default function HomePage() {
-  const homePillar = {
-    title: 'For Your Home & Life',
-    subtitle: 'Sweet solutions for busy homes, pets, and people',
-    services: [
-      { icon: Sparkles, name: 'Cleaning Services', desc: 'Sparkling clean for your peace of mind' },
-      { icon: Heart, name: 'Pet Care', desc: 'Walking, sitting, and lots of love' },
-      { icon: FolderOpen, name: 'Organizing & Lifestyle', desc: 'De-cluttering and managing your daily tasks' },
-    ],
-    cta: 'Explore Home Services',
-    href: '/for-home-and-life',
-    color: 'honey'
-  };
-
-  const bookkeepingPillar = {
-    title: 'For Your Business & Money',
-    subtitle: 'Clarity and calm for your finances',
-    services: [
-      { icon: Calculator, name: 'Bookkeeping', desc: 'Accurate records for small businesses' },
-      { icon: Briefcase, name: 'Financial Management', desc: 'Budgeting, invoicing, and tracking' },
-      { icon: Users, name: 'Efficiency & Planning', desc: 'Streamlining operations and goals' },
-    ],
-    cta: 'Explore Business Services',
-    href: '/for-business-and-money',
-    color: 'sage'
-  };
-
   const beeCategories = [
     {
       name: "Bee Done",
+      tagline: "Chores & Errands",
       desc: "Home resets, laundry & dishes, and errand dashes.",
-      icon: '🧽',
-      bee: "/bee-5-clipboard.png", // Bee holding clipboard
+      bee: "/bee-5-clipboard.png",
       href: "/for-home-and-life/bee-done",
       active: true,
-      color: "#5D684B", // Darker sage for better contrast with white text
-      bgColor: "bg-[#BFC8A1]/20", // Light sage background
-      patternColor: "#BFC8A1", // Sage pattern stroke
-      actionText: "Chores & Errands"
+      color: "#5D684B",
+      bgColor: "bg-[#BFC8A1]/20",
+      patternColor: "#BFC8A1",
     },
     {
       name: "Bee Kind",
+      tagline: "Pet & House Sitting",
       desc: "Tending to your pets and plants while you're away from the hive.",
-      icon: '🐾',
-      bee: "/bee-1-petfood.png", // Bee holding pet food bag
+      bee: "/bee-1-petfood.png",
       href: "/for-home-and-life/bee-kind",
       active: true,
-      color: "#506A62", // Darker teal for better contrast with white text
-      bgColor: "bg-[#98B4AC]/20", // Light teal background
-      patternColor: "#98B4AC", // Teal pattern stroke
-      actionText: "Pet & House Sitting"
+      color: "#506A62",
+      bgColor: "bg-[#98B4AC]/20",
+      patternColor: "#98B4AC",
     },
     {
       name: 'Bee Organized',
       desc: 'Clearing the clutter and creating structure.',
-      icon: '📦',
       bee: '/bee-6-bins.png',
       href: '#',
       color: 'var(--sky-blue)',
@@ -68,7 +38,6 @@ export default function HomePage() {
     {
       name: 'Bee Connected',
       desc: 'Networking and community support.',
-      icon: '🤝',
       bee: '/bee-7-megaphone.png',
       href: '#',
       color: 'var(--elderberry)',
@@ -77,7 +46,6 @@ export default function HomePage() {
     {
       name: 'Bee Balanced',
       desc: 'Harmony for your business and books.',
-      icon: '💼',
       bee: '/bee-11-calculator.png',
       href: '#',
       color: 'var(--slate-blue)',
@@ -105,7 +73,6 @@ export default function HomePage() {
         </div>
 
         <div className="relative max-w-4xl mx-auto text-center z-10">
-          {/* Animated Logo */}
           {/* Animated Logo Container */}
           <div className="relative w-full max-w-[320px] md:max-w-[500px] aspect-[1024/426] mx-auto mb-10">
             {/* Main Logo */}
@@ -174,26 +141,28 @@ export default function HomePage() {
               Because even the busiest bees need a little help.
             </h1>
           </div>
-
-          {/* Dual CTAs - Removed per user request */}
-          {/* <div className="flex flex-col sm:flex-row flex-wrap gap-4 justify-center animate-fade-up delay-300">
-            <Link
-              href="/for-home-and-life"
-              className="px-8 py-4 bg-[#C17A5B] text-white font-[family-name:var(--font-montserrat)] font-semibold rounded-full hover:bg-[#a86a4d] transition-all hover:shadow-lg hover:-translate-y-1"
-            >
-              For Home & Life
-            </Link>
-            <Link
-              href="/for-business-and-money"
-              className="px-8 py-4 bg-[#4A5D66] text-white font-[family-name:var(--font-montserrat)] font-semibold rounded-full hover:bg-[#3a4b53] transition-all hover:shadow-lg hover:-translate-y-1"
-            >
-              For Business & Money
-            </Link>
-          </div> */}
         </div>
       </section>
 
-      {/* Service Menu Section */}
+      {/* CTA Buttons Section */}
+      <section className="py-10 px-4 md:px-8 bg-white">
+        <div className="max-w-3xl mx-auto flex flex-col sm:flex-row gap-4 justify-center items-center">
+          <Link
+            href="/contact"
+            className="px-8 py-4 bg-warm-honey text-charcoal-gray font-[family-name:var(--font-montserrat)] font-semibold rounded-full hover:bg-[#d4b35f] transition-all hover:shadow-lg hover:-translate-y-1 text-center"
+          >
+            New to the Hive? Start with a 15-minute Buzz Call
+          </Link>
+          <Link
+            href="/contact"
+            className="px-8 py-4 bg-charcoal-gray text-white font-[family-name:var(--font-montserrat)] font-semibold rounded-full hover:bg-[#2a2a2a] transition-all hover:shadow-lg hover:-translate-y-1 text-center"
+          >
+            Book a Service
+          </Link>
+        </div>
+      </section>
+
+      {/* Explore the Hive Section */}
       <section className="py-16 px-4 md:px-8 max-w-7xl mx-auto" id="services">
         <div className="text-center mb-12">
           <h2 className="font-[family-name:var(--font-lora)] text-3xl md:text-5xl font-bold text-charcoal-gray mb-4">
@@ -204,15 +173,15 @@ export default function HomePage() {
           </p>
         </div>
 
-        {/* Active Services (Top Row - 2 cols) */}
-        <div className="grid md:grid-cols-2 gap-6 mb-8">
+        {/* Active Services */}
+        <div className="grid md:grid-cols-2 gap-8 mb-8">
           {beeCategories.filter(s => s.active).map((service, index) => (
             <Link
               key={index}
               href={service.href}
-              className={`group relative overflow-hidden rounded-3xl border-2 border-black hover:border-warm-honey transition-all duration-300 hover:shadow-xl hover:-translate-y-1 p-6 md:p-8 flex flex-col items-center text-center transform scale-90 md:scale-95 ${service.bgColor || 'bg-white'}`}
+              className={`group relative overflow-hidden rounded-3xl border-2 border-neutral-300 hover:border-warm-honey transition-all duration-300 hover:shadow-xl hover:-translate-y-1 ${service.bgColor || 'bg-white'}`}
             >
-              {/* background pattern */}
+              {/* Background honeycomb pattern */}
               {service.patternColor && (
                 <div className="absolute inset-0 opacity-20 pointer-events-none">
                   <svg className="w-full h-full" viewBox="0 0 100 100" preserveAspectRatio="none">
@@ -224,27 +193,38 @@ export default function HomePage() {
                 </div>
               )}
 
-              <h3 className="font-[family-name:var(--font-lora)] text-3xl font-bold text-charcoal-gray mb-4 z-10">
-                {service.name}
-              </h3>
-              <div
-                className="w-40 h-40 md:w-44 md:h-44 relative mb-6 group-hover:scale-110 transition-transform duration-300 z-10"
-              >
-                <Image
-                  src={service.bee}
-                  alt={service.name}
-                  fill
-                  className="object-contain"
-                />
-              </div>
-              <div className="mt-auto px-10 py-3 rounded-full text-white font-semibold text-base md:text-lg transition-colors z-10 shadow-sm border-2 border-black" style={{ backgroundColor: service.patternColor ? service.color : service.color }}>
-                {service.actionText || "View Services"}
+              <div className="relative z-10 flex flex-col md:flex-row items-center gap-6 p-8">
+                {/* Bee Image */}
+                <div className="w-36 h-36 md:w-44 md:h-44 relative flex-shrink-0 group-hover:scale-110 transition-transform duration-300">
+                  <Image
+                    src={service.bee}
+                    alt={service.name}
+                    fill
+                    className="object-contain"
+                  />
+                </div>
+
+                {/* Text Content */}
+                <div className="flex flex-col items-center md:items-start text-center md:text-left">
+                  <h3 className="font-[family-name:var(--font-lora)] text-3xl font-bold text-charcoal-gray mb-2">
+                    {service.name}
+                  </h3>
+                  <p className="font-[family-name:var(--font-montserrat)] text-neutral-600 mb-4 leading-relaxed">
+                    {service.desc}
+                  </p>
+                  <div
+                    className="px-8 py-3 rounded-full text-white font-[family-name:var(--font-montserrat)] font-semibold text-base transition-all shadow-sm group-hover:shadow-md"
+                    style={{ backgroundColor: service.color }}
+                  >
+                    {service.tagline || "View Services"}
+                  </div>
+                </div>
               </div>
             </Link>
           ))}
         </div>
 
-        {/* Coming Soon Services (Bottom Row - 3 cols) */}
+        {/* Coming Soon Services */}
         <div className="grid md:grid-cols-3 gap-6">
           {beeCategories.filter(s => !s.active).map((service, index) => (
             <div
@@ -254,9 +234,7 @@ export default function HomePage() {
               <div className="absolute top-3 right-3 bg-gray-200 text-gray-700 text-xs font-bold px-2 py-1 rounded">
                 COMING SOON
               </div>
-              <div
-                className="w-16 h-16 relative mb-3 grayscale opacity-60"
-              >
+              <div className="w-16 h-16 relative mb-3 grayscale opacity-60">
                 <Image
                   src={service.bee}
                   alt={service.name}
@@ -275,37 +253,68 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* CTA Section */}
-      <section className="py-20 px-4 md:px-8 bg-[#3C3C3C] relative overflow-hidden">
-        <div className="absolute inset-0 opacity-5 pointer-events-none">
-          <svg className="w-full h-full" viewBox="0 0 100 100" preserveAspectRatio="none">
-            <pattern id="honeycomb-home-cta" width="10" height="10" patternUnits="userSpaceOnUse">
-              <path d="M5 0L10 2.5V7.5L5 10L0 7.5V2.5Z" fill="none" stroke="#E2C16B" strokeWidth="0.5" />
-            </pattern>
-            <rect width="100%" height="100%" fill="url(#honeycomb-home-cta)" />
-          </svg>
+      {/* Why The Helpful Hive? Section */}
+      <section className="py-16 md:py-20 px-4 md:px-8 bg-white">
+        <div className="max-w-5xl mx-auto">
+          <div className="text-center mb-12">
+            <h2 className="font-[family-name:var(--font-lora)] text-3xl md:text-4xl font-bold text-charcoal-gray mb-3">
+              Why The Helpful Hive?
+            </h2>
+          </div>
+
+          <div className="grid md:grid-cols-3 gap-8">
+            <div className="text-center p-6">
+              <div className="text-4xl mb-4">🌱</div>
+              <h3 className="font-[family-name:var(--font-lora)] text-xl font-bold text-charcoal-gray mb-3">Community Roots</h3>
+              <p className="font-[family-name:var(--font-montserrat)] text-sm text-neutral-600 leading-relaxed">
+                Based in Wentzville, MO, we&apos;re proud to serve the families and small businesses in our local community.
+              </p>
+            </div>
+            <div className="text-center p-6">
+              <div className="text-4xl mb-4">🤝</div>
+              <h3 className="font-[family-name:var(--font-lora)] text-xl font-bold text-charcoal-gray mb-3">Trust &amp; Reliability</h3>
+              <p className="font-[family-name:var(--font-montserrat)] text-sm text-neutral-600 leading-relaxed">
+                We show up on time, every time. You&apos;ll receive a text/photo update once your service is completed.
+              </p>
+            </div>
+            <div className="text-center p-6">
+              <div className="text-4xl mb-4">✨</div>
+              <h3 className="font-[family-name:var(--font-lora)] text-xl font-bold text-charcoal-gray mb-3">Custom Care</h3>
+              <p className="font-[family-name:var(--font-montserrat)] text-sm text-neutral-600 leading-relaxed">
+                No two hives are the same. Every service is tailored to your specific household routine.
+              </p>
+            </div>
+          </div>
         </div>
-        <div className="max-w-3xl mx-auto text-center relative z-10">
-          <h2 className="font-display text-3xl md:text-5xl font-medium mb-6">
-            <span className="text-gradient-honey">Ready To Let Us Help?</span>
-          </h2>
-          <p className="text-white/80 mb-10 text-xl font-light">
-            Whether It's Your Home, Your Pets, Or Your Books—We've Got You Covered.
-          </p>
-          <div className="flex flex-col sm:flex-row gap-6 justify-center items-center">
-            <Link
-              href="/contact"
-              className="flex items-center justify-center px-8 h-[72px] bg-warm-honey text-charcoal-gray font-semibold rounded-full hover:bg-[#d4b35f] transition-all transform hover:scale-105 whitespace-nowrap"
-            >
-              Schedule a Consultation
-            </Link>
-            <a
-              href="tel:+13145267240"
-              className="flex flex-col items-center justify-center px-8 h-[72px] bg-transparent border-2 border-white/60 text-white font-semibold rounded-full hover:bg-white/10 transition-all whitespace-nowrap"
-            >
-              <span className="block leading-tight">(314) 526-7240</span>
-              <span className="block text-sm font-normal mt-0.5 opacity-90 leading-tight tracking-normal">Call or Text</span>
-            </a>
+      </section>
+
+      {/* Meet the Queen Bee Section */}
+      <section className="py-16 md:py-20 px-4 md:px-8 bg-cream-white">
+        <div className="max-w-5xl mx-auto">
+          <div className="grid md:grid-cols-5 gap-10 items-center">
+            {/* Photo */}
+            <div className="md:col-span-2 flex justify-center">
+              <div className="relative w-56 h-72 md:w-64 md:h-80 rounded-2xl overflow-hidden">
+                <div className="absolute inset-0 rounded-2xl border-4 border-warm-honey shadow-xl z-10 pointer-events-none" />
+                <Image src="/amanda-headshot.jpg" alt="Amanda — The Queen Bee" fill className="object-cover" />
+              </div>
+            </div>
+
+            {/* Bio */}
+            <div className="md:col-span-3 text-center md:text-left">
+              <h2 className="font-[family-name:var(--font-lora)] text-3xl md:text-4xl font-bold text-warm-honey-dark mb-4">
+                Meet the Queen Bee
+              </h2>
+              <p className="font-[family-name:var(--font-montserrat)] text-neutral-600 leading-relaxed mb-6">
+                Hi, I&apos;m Amanda! As a business owner, mom of two, and manager of a full hive (including two Puggles and two cats), I know how quickly the &ldquo;to-do&rdquo; list can take over. I started The Helpful Hive to help you reclaim your time.
+              </p>
+              <Link
+                href="/about"
+                className="inline-block px-8 py-4 bg-warm-honey text-charcoal-gray font-[family-name:var(--font-montserrat)] font-semibold rounded-full hover:bg-[#d4b35f] transition-all hover:shadow-lg hover:-translate-y-1"
+              >
+                Learn More About Us
+              </Link>
+            </div>
           </div>
         </div>
       </section>
