@@ -155,7 +155,7 @@ export default function HomePage() {
           </Link>
           <Link
             href="/contact"
-            className="px-8 py-4 bg-charcoal-gray text-white font-[family-name:var(--font-montserrat)] font-semibold rounded-full hover:bg-[#2a2a2a] transition-all hover:shadow-lg hover:-translate-y-1 text-center"
+            className="px-8 py-4 bg-[#3C3C3C] text-white font-[family-name:var(--font-montserrat)] font-semibold rounded-full hover:bg-[#2a2a2a] transition-all hover:shadow-lg hover:-translate-y-1 text-center"
           >
             Book a Service
           </Link>
