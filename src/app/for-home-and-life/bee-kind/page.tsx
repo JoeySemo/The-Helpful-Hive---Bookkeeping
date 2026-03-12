@@ -160,7 +160,7 @@ export default function BeeKindPage() {
                                 </div>
 
                                 <p className="font-[family-name:var(--font-montserrat)] text-neutral-600 leading-relaxed mb-4">
-                                    Maximum peace of mind with a consistent presence. This premium service includes a <strong>10-hour overnight stay</strong> in your home. Amanda maintains your pet&apos;s familiar bedtime and morning routines while providing the &ldquo;lived-in&rdquo; look that keeps your property secure.
+                                    A consistent presence for your home and pets. This premium service includes a <strong>10-hour overnight stay</strong> in your home. Amanda maintains your pet&apos;s familiar bedtime and morning routines while providing the &ldquo;lived-in&rdquo; look that keeps your property secure.
                                 </p>
                                 <p className="font-[family-name:var(--font-montserrat)] text-neutral-600 leading-relaxed">
                                     Includes evening/morning feedings and a complimentary Home Hive Check.

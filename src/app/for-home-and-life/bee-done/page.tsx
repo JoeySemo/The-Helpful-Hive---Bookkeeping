@@ -91,8 +91,8 @@ export default function BeeDonePage() {
                             <div className="p-8">
                                 <div className="grid sm:grid-cols-2 gap-4">
                                     {[
-                                        { name: 'The Dish Reset', price: '$10/load', desc: 'We unload the clean, load the dirty, and start the cycle. (Hand-washing billed at hourly rate).', icon: '/bee_alacarte_dish.png' },
-                                        { name: 'The Fresh Fridge & Pantry', price: '$35', desc: 'We toss expired items and give shelves/drawers a fresh wipe.', icon: '/bee_alacarte_fridge.png' },
+                                        { name: 'The Dish Reset', price: '$10/load', desc: 'We unload the clean, load the dirty, and start the cycle. (Note: Hand-washing is billed at The Worker Bee hourly rate).', icon: '/bee_alacarte_dish.png' },
+                                        { name: 'The Fresh Fridge & Pantry', price: '$35', desc: 'A health-check for your kitchen: we toss expired items and give shelves and drawers a fresh wipe.', icon: '/bee_alacarte_fridge.png' },
                                         { name: 'The Surface Shine (Kitchen or Bathroom)', price: '$35', desc: 'A surface-level shine including counters, mirrors, cabinet fronts, exterior appliances, and floors.', icon: '/bee-4-spraybottle.png' },
                                         { name: 'The Clean Path', price: '$20', desc: 'Vacuum and mop of the main-level "traffic lanes" and living area.', icon: '/bee_alacarte_path.png' },
                                         { name: 'The Laundry Cycle', price: '$15/load', desc: 'Complete Cycle: Wash, dry, and fold (or hang).', note: '*Only available when paired with another service.', icon: '/bee_alacarte_cycle.png' },
@@ -162,13 +162,13 @@ export default function BeeDonePage() {
                                                 <h4 className="font-bold text-charcoal-gray mb-2 text-sm uppercase tracking-wide">What&apos;s Included:</h4>
                                                 <ul className="space-y-3">
                                                     <li className="flex items-start gap-3 text-sm text-neutral-600">
-                                                        <span className="text-warm-honey text-xl">✓</span> <span><strong>2 Laundry Assists:</strong> You start the first wash, I handle the rest! (2nd load left in dryer).</span>
+                                                        <span className="text-warm-honey text-xl">✓</span> <span><strong>2 Laundry Assists:</strong> You start the first wash before you leave, and I&apos;ll handle the rest! (Note: The second load will be left fresh in the dryer).</span>
                                                     </li>
                                                     <li className="flex items-start gap-3 text-sm text-[#525252]">
-                                                        <span className="text-[#E2C16B] text-xl">✓</span> <span><strong>1 Dish Reset:</strong> Empty sink, dishwasher running.</span>
+                                                        <span className="text-[#E2C16B] text-xl">✓</span> <span><strong>1 Dish Reset:</strong> I&apos;ll get the sink empty and the dishwasher running.</span>
                                                     </li>
                                                     <li className="flex items-start gap-3 text-sm text-[#525252]">
-                                                        <span className="text-[#E2C16B] text-xl">✓</span> <span><strong>1 Fresh Fridge &amp; Pantry:</strong> Toss expired food, wipe shelves.</span>
+                                                        <span className="text-[#E2C16B] text-xl">✓</span> <span><strong>1 Fresh Fridge &amp; Pantry:</strong> I&apos;ll toss expired food and wipe down the shelves.</span>
                                                     </li>
                                                 </ul>
                                             </div>
@@ -190,19 +190,19 @@ export default function BeeDonePage() {
                                                 <h4 className="font-bold text-[#3C3C3C] mb-2 text-sm uppercase tracking-wide">What&apos;s Included:</h4>
                                                 <ul className="space-y-3">
                                                     <li className="flex items-start gap-3 text-sm text-[#525252]">
-                                                        <span className="text-[#E2C16B] text-xl">✓</span> <span><strong>1 Kitchen Shine:</strong> Counters, appliances, cabinets.</span>
+                                                        <span className="text-[#E2C16B] text-xl">✓</span> <span><strong>1 Kitchen Shine:</strong> Counters, exterior appliances, and cabinet fronts.</span>
                                                     </li>
                                                     <li className="flex items-start gap-3 text-sm text-[#525252]">
-                                                        <span className="text-[#E2C16B] text-xl">✓</span> <span><strong>1 Dish Reset:</strong> Unload, load, start.</span>
+                                                        <span className="text-[#E2C16B] text-xl">✓</span> <span><strong>1 Dish Reset:</strong> Unload, load, and start the machine.</span>
                                                     </li>
                                                     <li className="flex items-start gap-3 text-sm text-[#525252]">
-                                                        <span className="text-[#E2C16B] text-xl">✓</span> <span><strong>1 Fridge &amp; Pantry Refresh:</strong> Toss old food, wipe.</span>
+                                                        <span className="text-[#E2C16B] text-xl">✓</span> <span><strong>1 Fridge &amp; Pantry Refresh:</strong> Toss old food and wipe the shelves.</span>
                                                     </li>
                                                     <li className="flex items-start gap-3 text-sm text-[#525252]">
-                                                        <span className="text-[#E2C16B] text-xl">✓</span> <span><strong>1 Guest Bath Shine:</strong> Surfaces, mirrors, toilet.</span>
+                                                        <span className="text-[#E2C16B] text-xl">✓</span> <span><strong>1 Guest Bath Shine:</strong> Surfaces, mirrors, and toilet.</span>
                                                     </li>
                                                     <li className="flex items-start gap-3 text-sm text-[#525252]">
-                                                        <span className="text-[#E2C16B] text-xl">✓</span> <span><strong>1 Clean Path:</strong> Vacuum &amp; mop main living area.</span>
+                                                        <span className="text-[#E2C16B] text-xl">✓</span> <span><strong>The Clean Path:</strong> Vacuum and mop all main-level floors.</span>
                                                     </li>
                                                     <li className="flex items-start gap-3 text-sm text-[#525252]">
                                                         <span className="text-[#E2C16B] text-xl">✓</span> <span><strong>Trash Empty:</strong> All main-level bins.</span>
@@ -224,7 +224,7 @@ export default function BeeDonePage() {
                                 <h2 className="font-[family-name:var(--font-lora)] text-3xl font-bold text-charcoal-gray mb-2">
                                     The Busy Bee Dash
                                 </h2>
-                                <div className="text-2xl font-bold text-terra-cotta-dark mb-4">$15 <span className="text-sm font-normal text-gray-500">/ errand</span></div>
+                                <div className="text-2xl font-bold text-terra-cotta-dark mb-4">$15 <span className="text-sm font-normal text-gray-500">Flat Rate</span></div>
                                 <p className="font-[family-name:var(--font-montserrat)] text-sm text-[#525252] mb-6">
                                     Fast door-to-door errands within Wentzville.
                                 </p>
@@ -232,11 +232,11 @@ export default function BeeDonePage() {
                                     <h4 className="font-bold text-[#3C3C3C] mb-4 text-sm uppercase tracking-wide">Available Dashes:</h4>
                                     <ul className="space-y-4">
                                         {[
-                                            { name: 'Returns', desc: 'Pre-labeled Amazon, UPS, or FedEx.' },
-                                            { name: 'Grocery/Retail', desc: 'Curbside pickup & delivery.' },
+                                            { name: 'Returns', desc: 'Dropping off pre-labeled Amazon, UPS, or FedEx packages.' },
+                                            { name: 'Grocery/Retail Pickups', desc: 'Curbside pickup and delivery of pre-ordered grocery or retail orders.' },
                                             { name: 'Dry Cleaning', desc: 'Seamless drop-off or pickup.' },
-                                            { name: 'Pharmacy', desc: 'Secure pickup of pre-paid Rx.' },
-                                            { name: 'Post Office', desc: 'Mail, stamps, or prepared packages.' },
+                                            { name: 'Pharmacy', desc: 'Secure pickup of pre-paid prescriptions.' },
+                                            { name: 'Post Office', desc: 'Handling mail, stamps, or prepared packages.' },
                                         ].map((errand, i) => (
                                             <li key={i} className="flex items-start gap-3">
                                                 <span className="text-[#E2C16B] text-xl">🐝</span>
