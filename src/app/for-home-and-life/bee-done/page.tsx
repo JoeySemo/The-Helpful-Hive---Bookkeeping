@@ -204,6 +204,9 @@ export default function BeeDonePage() {
                                                     <li className="flex items-start gap-3 text-sm text-[#525252]">
                                                         <span className="text-[#E2C16B] text-xl">✓</span> <span><strong>1 Clean Path:</strong> Vacuum &amp; mop main living area.</span>
                                                     </li>
+                                                    <li className="flex items-start gap-3 text-sm text-[#525252]">
+                                                        <span className="text-[#E2C16B] text-xl">✓</span> <span><strong>Trash Empty:</strong> All main-level bins.</span>
+                                                    </li>
                                                 </ul>
                                             </div>
                                         </div>
