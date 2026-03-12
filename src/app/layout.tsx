@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Lora, Montserrat } from "next/font/google";
 import Navbar from "@/components/Navbar";
 import FooterWrapper from "@/components/FooterWrapper";
+import BookServiceProvider from "@/components/BookServiceProvider";
 import "./globals.css";
 
 const lora = Lora({
@@ -29,11 +30,13 @@ export default function RootLayout({
     return (
         <html lang="en" className={`${lora.variable} ${montserrat.variable}`}>
             <body className="antialiased min-h-screen flex flex-col bg-[#FFF8E7]">
-                <Navbar />
-                <main className="flex-grow">
-                    {children}
-                </main>
-                <FooterWrapper />
+                <BookServiceProvider>
+                    <Navbar />
+                    <main className="flex-grow">
+                        {children}
+                    </main>
+                    <FooterWrapper />
+                </BookServiceProvider>
             </body>
         </html>
     );

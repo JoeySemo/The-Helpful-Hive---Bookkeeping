@@ -117,6 +117,18 @@
   box-sizing: border-box;
 }
 
+/* Book Service Modal Animations */
+@keyframes modalIn {
+  0% { opacity: 0; transform: scale(0.95) translateY(10px); }
+  100% { opacity: 1; transform: scale(1) translateY(0); }
+}
+@keyframes fadeInField {
+  0% { opacity: 0; transform: translateY(-8px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+.animate-modal-in { animation: modalIn 0.25s ease-out; }
+.animate-fade-in { animation: fadeInField 0.3s ease-out; }
+
 html {
   scroll-behavior: smooth;
 }

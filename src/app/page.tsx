@@ -2,6 +2,20 @@
 
 import Link from 'next/link';
 import Image from 'next/image';
+import { useBookService } from '@/components/BookServiceProvider';
+
+function BookServiceBtn() {
+    const { openBookService } = useBookService();
+    return (
+        <button
+            type="button"
+            onClick={openBookService}
+            className="px-8 py-4 bg-[#3C3C3C] text-white font-[family-name:var(--font-montserrat)] font-semibold rounded-full hover:bg-[#2a2a2a] transition-all hover:shadow-lg hover:-translate-y-1 text-center"
+        >
+            Book a Service
+        </button>
+    );
+}
 
 export default function HomePage() {
   const beeCategories = [
@@ -153,12 +167,7 @@ export default function HomePage() {
           >
             New to the Hive? Start with a 15-minute Buzz Call
           </Link>
-          <Link
-            href="/contact"
-            className="px-8 py-4 bg-[#3C3C3C] text-white font-[family-name:var(--font-montserrat)] font-semibold rounded-full hover:bg-[#2a2a2a] transition-all hover:shadow-lg hover:-translate-y-1 text-center"
-          >
-            Book a Service
-          </Link>
+          <BookServiceBtn />
         </div>
       </section>
 
