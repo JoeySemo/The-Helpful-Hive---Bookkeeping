@@ -503,7 +503,7 @@ export default function BookServiceModal({ isOpen, onClose }: BookServiceModalPr
                                 type="submit"
                                 className="w-full py-4 px-6 bg-[#3C3C3C] hover:bg-[#2a2a2a] text-white font-[family-name:var(--font-montserrat)] font-semibold rounded-xl transition-all shadow-sm hover:shadow-md text-lg"
                             >
-                                Submit Request 🐝
+                                Submit Request
                             </button>
                         </form>
                     </div>

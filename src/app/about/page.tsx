@@ -1,5 +1,6 @@
 import Image from 'next/image';
 import Link from 'next/link';
+import BuzzCallButton from '@/components/BuzzCallButton';
 
 export const metadata = {
     title: "About | The Helpful Hive",
@@ -168,12 +169,9 @@ export default function AboutPage() {
                     <p className="text-white/80 mb-10 text-xl font-light">
                         Schedule a 15-minute Buzz Call today and let&apos;s get to work!
                     </p>
-                    <Link
-                        href="/contact"
+                    <BuzzCallButton
                         className="inline-block px-8 py-4 bg-warm-honey text-charcoal-gray font-[family-name:var(--font-montserrat)] font-semibold rounded-full hover:bg-[#d4b35f] transition-all hover:shadow-lg hover:-translate-y-0.5"
-                    >
-                        Schedule a Buzz Call
-                    </Link>
+                    />
                 </div>
             </section>
         </div>

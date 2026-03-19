@@ -6,6 +6,7 @@ import { usePathname } from 'next/navigation';
 import { useState, useEffect } from 'react';
 import { Menu, X } from 'lucide-react';
 import { useBookService } from '@/components/BookServiceProvider';
+import { useBuzzCall } from '@/components/BuzzCallProvider';
 
 function BookServiceNavBtn({ mobile, onClick }: { mobile?: boolean; onClick?: () => void }) {
     const { openBookService } = useBookService();
@@ -19,6 +20,22 @@ function BookServiceNavBtn({ mobile, onClick }: { mobile?: boolean; onClick?: ()
             }
         >
             Book a Service
+        </button>
+    );
+}
+
+function BuzzCallNavBtn({ mobile, onClick }: { mobile?: boolean; onClick?: () => void }) {
+    const { openBuzzCall } = useBuzzCall();
+    return (
+        <button
+            type="button"
+            onClick={() => { openBuzzCall(); onClick?.(); }}
+            className={mobile
+                ? "px-4 py-3 bg-warm-honey text-charcoal-gray text-base font-medium font-[family-name:var(--font-montserrat)] rounded-lg text-center mt-2 shadow-md"
+                : "px-6 py-3 bg-warm-honey text-charcoal-gray text-sm font-medium font-[family-name:var(--font-montserrat)] rounded-full hover:bg-[#d4b35f] transition-all hover:shadow-lg hover:-translate-y-0.5"
+            }
+        >
+            Schedule a Buzz Call
         </button>
     );
 }
@@ -93,6 +110,7 @@ export default function Navbar() {
 
               {/* CTA Button - Book a Service */}
               <BookServiceNavBtn />
+              <BuzzCallNavBtn />
             </div>
           )}
 
@@ -151,6 +169,7 @@ export default function Navbar() {
               </Link>
 
               <BookServiceNavBtn mobile onClick={() => setIsMenuOpen(false)} />
+              <BuzzCallNavBtn mobile onClick={() => setIsMenuOpen(false)} />
             </div>
           </div>
         )}

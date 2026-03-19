@@ -1,6 +1,7 @@
 import Image from 'next/image';
 import Link from 'next/link';
 import BookServiceButton from '@/components/BookServiceButton';
+import BuzzCallButton from '@/components/BuzzCallButton';
 
 export const metadata = {
     title: "Bee Done | The Helpful Hive",
@@ -44,12 +45,9 @@ export default function BeeDonePage() {
                         <BookServiceButton
                             className="px-8 py-4 bg-[#3C3C3C] text-white font-[family-name:var(--font-montserrat)] font-semibold rounded-full hover:bg-[#2a2a2a] transition-all hover:shadow-lg hover:-translate-y-1 text-center"
                         />
-                        <Link
-                            href="/contact"
+                        <BuzzCallButton
                             className="px-8 py-4 bg-warm-honey text-charcoal-gray font-[family-name:var(--font-montserrat)] font-semibold rounded-full hover:bg-[#d4b35f] transition-all hover:shadow-lg hover:-translate-y-1 text-center"
-                        >
-                            Schedule a 15-minute Buzz Call
-                        </Link>
+                        />
                     </div>
                 </div>
             </section>
@@ -429,12 +427,9 @@ export default function BeeDonePage() {
                     <BookServiceButton
                         className="px-8 py-4 bg-[#3C3C3C] text-white font-[family-name:var(--font-montserrat)] font-semibold rounded-full hover:bg-[#2a2a2a] transition-all hover:shadow-lg hover:-translate-y-1 text-center"
                     />
-                    <Link
-                        href="/contact"
+                    <BuzzCallButton
                         className="px-8 py-4 bg-warm-honey text-charcoal-gray font-[family-name:var(--font-montserrat)] font-semibold rounded-full hover:bg-[#d4b35f] transition-all hover:shadow-lg hover:-translate-y-1 text-center"
-                    >
-                        Schedule a 15-minute Buzz Call
-                    </Link>
+                    />
                     <Link
                         href="/for-home-and-life/bee-kind"
                         className="px-8 py-4 bg-terra-cotta text-white font-[family-name:var(--font-montserrat)] font-semibold rounded-full hover:bg-terra-cotta-dark transition-all hover:shadow-lg hover:-translate-y-1 text-center"

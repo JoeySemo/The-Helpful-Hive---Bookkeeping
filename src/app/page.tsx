@@ -3,6 +3,20 @@
 import Link from 'next/link';
 import Image from 'next/image';
 import { useBookService } from '@/components/BookServiceProvider';
+import { useBuzzCall } from '@/components/BuzzCallProvider';
+
+function BuzzCallBtn() {
+    const { openBuzzCall } = useBuzzCall();
+    return (
+        <button
+            type="button"
+            onClick={openBuzzCall}
+            className="px-8 py-4 bg-warm-honey text-charcoal-gray font-[family-name:var(--font-montserrat)] font-semibold rounded-full hover:bg-[#d4b35f] transition-all hover:shadow-lg hover:-translate-y-1 text-center"
+        >
+            Schedule a Buzz Call
+        </button>
+    );
+}
 
 function BookServiceBtn() {
     const { openBookService } = useBookService();
@@ -161,12 +175,7 @@ export default function HomePage() {
       {/* CTA Buttons Section */}
       <section className="py-10 px-4 md:px-8 bg-white">
         <div className="max-w-3xl mx-auto flex flex-col sm:flex-row gap-4 justify-center items-center">
-          <Link
-            href="/contact"
-            className="px-8 py-4 bg-warm-honey text-charcoal-gray font-[family-name:var(--font-montserrat)] font-semibold rounded-full hover:bg-[#d4b35f] transition-all hover:shadow-lg hover:-translate-y-1 text-center"
-          >
-            New to the Hive? Start with a 15-minute Buzz Call
-          </Link>
+          <BuzzCallBtn />
           <BookServiceBtn />
         </div>
       </section>
