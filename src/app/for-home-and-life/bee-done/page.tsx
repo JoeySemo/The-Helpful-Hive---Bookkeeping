@@ -9,11 +9,11 @@ export const metadata = {
 
 export default function BeeDonePage() {
     return (
-        <div className="min-h-screen bg-[#FFF8E7]">
+        <div className="min-h-screen bg-cream-white">
             {/* Hero Section - Text Only */}
             <section className="relative overflow-hidden">
                 <div className="absolute inset-0 bg-gradient-to-br from-soft-sage/15 via-cream-white to-soft-sage/10" />
-                <div className="absolute inset-0 opacity-[0.125] pointer-events-none">
+                <div className="absolute inset-0 opacity-[0.0625] pointer-events-none">
                     <svg className="w-full h-full" viewBox="0 0 100 100" preserveAspectRatio="none">
                         <pattern id="honeycomb-bd" width="10" height="10" patternUnits="userSpaceOnUse">
                             <path d="M5 0L10 2.5V7.5L5 10L0 7.5V2.5Z" fill="none" stroke="#BFC8A1" strokeWidth="0.5" />
@@ -64,8 +64,8 @@ export default function BeeDonePage() {
 
                     {/* === The A-La-Carte Hive === */}
                     <div className="mb-20">
-                        <div className="bg-white rounded-3xl border-2 border-[#BFC8A1]/30 overflow-hidden shadow-sm">
-                            <div className="bg-[#BFC8A1]/15 px-8 py-6 border-b border-[#BFC8A1]/20 relative overflow-hidden">
+                        <div className="bg-white rounded-3xl border-2 border-[#BFC8A1]/20 overflow-hidden shadow-sm">
+                            <div className="bg-[#BFC8A1]/10 px-8 py-6 border-b border-[#BFC8A1]/15 relative overflow-hidden">
                                 <div className="absolute inset-0 opacity-[0.08] pointer-events-none">
                                     <svg className="w-full h-full" viewBox="0 0 100 100" preserveAspectRatio="xMidYMid slice">
                                         <pattern id="honeycomb-alacarte" width="10" height="10" patternUnits="userSpaceOnUse">
@@ -104,7 +104,7 @@ export default function BeeDonePage() {
                                                     </div>
                                                     <h3 className="font-[family-name:var(--font-lora)] font-semibold text-[#3C3C3C]">{addon.name}</h3>
                                                 </div>
-                                                <span className="bg-[#5D684B] text-white text-sm px-3 py-1 rounded-full font-[family-name:var(--font-montserrat)] font-bold">{addon.price}</span>
+                                                <span className="bg-[#6B7D5E] text-white text-sm px-3 py-1 rounded-full font-[family-name:var(--font-montserrat)] font-bold">{addon.price}</span>
                                             </div>
                                             <p className="font-[family-name:var(--font-montserrat)] text-sm text-[#525252]">
                                                 {addon.desc}
@@ -121,8 +121,8 @@ export default function BeeDonePage() {
 
                     {/* === Bundles === */}
                     <div className="mb-20">
-                        <div className="bg-white rounded-3xl border-2 border-[#BFC8A1]/30 overflow-hidden shadow-sm">
-                            <div className="bg-[#BFC8A1]/15 px-8 py-6 border-b border-[#BFC8A1]/20 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-3 relative overflow-hidden">
+                        <div className="bg-white rounded-3xl border-2 border-[#BFC8A1]/20 overflow-hidden shadow-sm">
+                            <div className="bg-[#BFC8A1]/10 px-8 py-6 border-b border-[#BFC8A1]/15 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-3 relative overflow-hidden">
                                 <div className="absolute inset-0 opacity-[0.08] pointer-events-none">
                                     <svg className="w-full h-full" viewBox="0 0 100 100" preserveAspectRatio="xMidYMid slice">
                                         <pattern id="honeycomb-bundles" width="10" height="10" patternUnits="userSpaceOnUse">
@@ -285,8 +285,8 @@ export default function BeeDonePage() {
 
                     {/* === Hourly Services (Worker, Grocery, Waiting) === */}
                     <div className="mb-20">
-                        <div className="bg-white rounded-3xl border-2 border-[#BFC8A1]/30 overflow-hidden shadow-sm">
-                            <div className="bg-[#BFC8A1]/15 px-8 py-6 border-b border-[#BFC8A1]/20 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-3 relative overflow-hidden">
+                        <div className="bg-white rounded-3xl border-2 border-[#BFC8A1]/20 overflow-hidden shadow-sm">
+                            <div className="bg-[#BFC8A1]/10 px-8 py-6 border-b border-[#BFC8A1]/15 relative overflow-hidden">
                                 <div className="absolute inset-0 opacity-[0.08] pointer-events-none">
                                     <svg className="w-full h-full" viewBox="0 0 100 100" preserveAspectRatio="xMidYMid slice">
                                         <pattern id="honeycomb-hourly" width="10" height="10" patternUnits="userSpaceOnUse">
@@ -365,8 +365,8 @@ export default function BeeDonePage() {
                     </div>
 
                     {/* === The Outdoor Hive === */}
-                    <div className="bg-white rounded-3xl border-2 border-[#BFC8A1]/30 overflow-hidden shadow-sm">
-                        <div className="bg-[#BFC8A1]/15 px-8 py-6 border-b border-[#BFC8A1]/20 relative overflow-hidden">
+                    <div className="bg-white rounded-3xl border-2 border-[#BFC8A1]/20 overflow-hidden shadow-sm">
+                        <div className="bg-[#BFC8A1]/10 px-8 py-6 border-b border-[#BFC8A1]/15 relative overflow-hidden">
                             <div className="absolute inset-0 opacity-[0.08] pointer-events-none">
                                 <svg className="w-full h-full" viewBox="0 0 100 100" preserveAspectRatio="xMidYMid slice">
                                     <pattern id="honeycomb-outdoor" width="10" height="10" patternUnits="userSpaceOnUse">
@@ -417,7 +417,7 @@ export default function BeeDonePage() {
             </section>
 
             {/* Pricing Note */}
-            <section className="py-6 px-6 bg-[#BFC8A1]/10 border-y border-[#BFC8A1]/20">
+            <section className="py-6 px-6 bg-[#BFC8A1]/5 border-y border-[#BFC8A1]/15">
                 <p className="font-[family-name:var(--font-montserrat)] text-sm text-[#525252] text-center italic max-w-3xl mx-auto">
                     Prices listed are estimates. Final pricing depends on the job details and will be confirmed before we start. Extra fees may apply for holidays, rush requests, or add-on tasks.
                 </p>
