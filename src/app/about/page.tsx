@@ -162,7 +162,7 @@ export default function AboutPage() {
                     </svg>
                 </div>
                 <div className="max-w-3xl mx-auto text-center relative z-10">
-                    <h2 className="font-[family-name:var(--font-lora)] text-2xl md:text-4xl font-bold mb-6 text-white">
+                    <h2 className="font-[family-name:var(--font-lora)] text-2xl md:text-4xl font-bold mb-6 text-warm-honey">
                         Ready to see how we can work together?
                     </h2>
                     <p className="text-white/80 mb-10 text-xl font-light">

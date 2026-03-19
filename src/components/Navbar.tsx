@@ -73,14 +73,6 @@ export default function Navbar() {
               >
                 About
               </Link>
-
-              {/* CTA Button - Terra Cotta */}
-              <Link
-                href="/contact"
-                className="px-6 py-3 bg-[#C17A5B] text-white text-sm font-medium font-[family-name:var(--font-montserrat)] rounded-full hover:bg-[#a86a4d] transition-all hover:shadow-lg hover:-translate-y-0.5"
-              >
-                Contact Us
-              </Link>
             </div>
           )}
 
@@ -136,14 +128,6 @@ export default function Navbar() {
                 className={`px-4 py-3 rounded-lg text-base font-medium font-[family-name:var(--font-montserrat)] ${pathname === '/about' ? 'bg-[#FFF8E7] text-[#B8941E]' : 'text-[#3C3C3C] hover:bg-[#FFF8E7]'}`}
               >
                 About
-              </Link>
-
-              <Link
-                href="/contact"
-                onClick={() => setIsMenuOpen(false)}
-                className="px-4 py-3 bg-[#C17A5B] text-white text-base font-medium font-[family-name:var(--font-montserrat)] rounded-lg text-center mt-2 shadow-md"
-              >
-                Contact Us
               </Link>
             </div>
           </div>
