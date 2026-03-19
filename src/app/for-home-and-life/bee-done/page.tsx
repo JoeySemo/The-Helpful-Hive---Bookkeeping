@@ -237,7 +237,9 @@ export default function BeeDonePage() {
                                             { name: 'Post Office', desc: 'Handling mail, stamps, or prepared packages.' },
                                         ].map((errand, i) => (
                                             <li key={i} className="flex items-start gap-3">
-                                                <span className="text-[#E2C16B] text-xl">🐝</span>
+                                                <div className="relative w-6 h-6 flex-shrink-0 mt-0.5">
+                                                    <Image src="/bee-plain.png" alt="" fill className="object-contain" />
+                                                </div>
                                                 <div className="text-sm text-[#525252]">
                                                     <span className="font-semibold text-charcoal-gray">{errand.name}:</span> {errand.desc}
                                                 </div>
