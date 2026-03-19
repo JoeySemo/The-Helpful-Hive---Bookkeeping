@@ -297,11 +297,6 @@ export default function BookServiceModal({ isOpen, onClose }: BookServiceModalPr
                                 <legend className="font-[family-name:var(--font-lora)] text-lg font-bold text-charcoal-gray mb-4">Scheduling</legend>
                                 <div className="grid sm:grid-cols-2 gap-4">
                                     <div className="space-y-1">
-                                        <label htmlFor="bs-date" className="block text-sm font-medium text-neutral-700">Preferred Date(s)</label>
-                                        <input type="date" id="bs-date" name="preferredDate" value={formData.preferredDate} onChange={handleChange}
-                                            className="w-full px-4 py-3 rounded-xl border border-neutral-300 focus:ring-2 focus:ring-[#E2C16B] focus:border-[#E2C16B] outline-none transition-all bg-white text-sm" />
-                                    </div>
-                                    <div className="space-y-1">
                                         <label htmlFor="bs-frequency" className="block text-sm font-medium text-neutral-700">Frequency *</label>
                                         <select id="bs-frequency" name="frequency" required value={formData.frequency} onChange={handleChange}
                                             className="w-full px-4 py-3 rounded-xl border border-neutral-300 focus:ring-2 focus:ring-[#E2C16B] focus:border-[#E2C16B] outline-none transition-all bg-white text-sm">
@@ -310,6 +305,11 @@ export default function BookServiceModal({ isOpen, onClose }: BookServiceModalPr
                                                 <option key={opt} value={opt}>{opt}</option>
                                             ))}
                                         </select>
+                                    </div>
+                                    <div className="space-y-1">
+                                        <label htmlFor="bs-date" className="block text-sm font-medium text-neutral-700">Preferred Date</label>
+                                        <input type="date" id="bs-date" name="preferredDate" value={formData.preferredDate} onChange={handleChange}
+                                            className="w-full px-4 py-3 rounded-xl border border-neutral-300 focus:ring-2 focus:ring-[#E2C16B] focus:border-[#E2C16B] outline-none transition-all bg-white text-sm" />
                                     </div>
                                 </div>
                             </fieldset>
