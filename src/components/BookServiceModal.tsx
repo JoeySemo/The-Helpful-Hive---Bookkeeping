@@ -38,8 +38,20 @@ export default function BookServiceModal({ isOpen, onClose }: BookServiceModalPr
         address: '',
         contactMethod: '',
         services: [] as string[],
+        // Bee Done: Home Chores
+        choreTypes: [] as string[],
+        homeSize: '',
+        // Bee Done: Errands
+        errandTypes: [] as string[],
+        errandLocations: '',
+        // Bee Kind: Pet Sitting
         petInfo: '',
+        numberOfPets: '',
+        petCareNotes: '',
+        // Bee Kind: House Sitting
         houseSittingDetails: '',
+        travelDates: '',
+        // General
         preferredDate: '',
         frequency: '',
         buzzDetails: '',
@@ -64,7 +76,9 @@ export default function BookServiceModal({ isOpen, onClose }: BookServiceModalPr
                 setSubmitted(false);
                 setFormData({
                     name: '', email: '', phone: '', address: '', contactMethod: '',
-                    services: [], petInfo: '', houseSittingDetails: '', preferredDate: '',
+                    services: [], choreTypes: [], homeSize: '', errandTypes: [], errandLocations: '',
+                    petInfo: '', numberOfPets: '', petCareNotes: '',
+                    houseSittingDetails: '', travelDates: '', preferredDate: '',
                     frequency: '', buzzDetails: '', homeAccess: '', specialInstructions: '',
                 });
             }, 300);
@@ -84,8 +98,28 @@ export default function BookServiceModal({ isOpen, onClose }: BookServiceModalPr
         }));
     };
 
+    const hasHomeChores = formData.services.includes('bee-done-chores');
+    const hasErrands = formData.services.includes('bee-done-errands');
     const hasPetSitting = formData.services.includes('bee-kind-pet');
     const hasHouseSitting = formData.services.includes('bee-kind-house');
+
+    const handleChoreToggle = (chore: string) => {
+        setFormData(prev => ({
+            ...prev,
+            choreTypes: prev.choreTypes.includes(chore)
+                ? prev.choreTypes.filter(c => c !== chore)
+                : [...prev.choreTypes, chore],
+        }));
+    };
+
+    const handleErrandToggle = (errand: string) => {
+        setFormData(prev => ({
+            ...prev,
+            errandTypes: prev.errandTypes.includes(errand)
+                ? prev.errandTypes.filter(e => e !== errand)
+                : [...prev.errandTypes, errand],
+        }));
+    };
 
     const handleSubmit = (e: React.FormEvent) => {
         e.preventDefault();
@@ -105,11 +139,32 @@ export default function BookServiceModal({ isOpen, onClose }: BookServiceModalPr
             `Services: ${selectedServices}`,
         ];
 
+        if (hasHomeChores && formData.choreTypes.length > 0) {
+            lines.push(`Chores Needed: ${formData.choreTypes.join(', ')}`);
+        }
+        if (hasHomeChores && formData.homeSize) {
+            lines.push(`Home Size: ${formData.homeSize}`);
+        }
+        if (hasErrands && formData.errandTypes.length > 0) {
+            lines.push(`Errand Types: ${formData.errandTypes.join(', ')}`);
+        }
+        if (hasErrands && formData.errandLocations) {
+            lines.push(`Store/Location Details: ${formData.errandLocations}`);
+        }
         if (hasPetSitting && formData.petInfo) {
             lines.push(`Pet Info: ${formData.petInfo}`);
         }
+        if (hasPetSitting && formData.numberOfPets) {
+            lines.push(`Number of Pets: ${formData.numberOfPets}`);
+        }
+        if (hasPetSitting && formData.petCareNotes) {
+            lines.push(`Special Pet Care Notes: ${formData.petCareNotes}`);
+        }
         if (hasHouseSitting && formData.houseSittingDetails) {
             lines.push(`House Sitting Details: ${formData.houseSittingDetails}`);
+        }
+        if (hasHouseSitting && formData.travelDates) {
+            lines.push(`Travel Dates: ${formData.travelDates}`);
         }
 
         lines.push(
@@ -265,28 +320,117 @@ export default function BookServiceModal({ isOpen, onClose }: BookServiceModalPr
                                 </div>
                             </fieldset>
 
-                            {/* --- Conditional: Pet Info --- */}
-                            {hasPetSitting && (
-                                <div className="bg-[#FFF8E7] rounded-xl p-4 border border-[#E2C16B]/30 space-y-1 animate-fade-in">
-                                    <label htmlFor="bs-pet" className="block text-sm font-medium text-charcoal-gray">
-                                        🐾 Pet&apos;s Name and Breed *
-                                    </label>
-                                    <input type="text" id="bs-pet" name="petInfo" required value={formData.petInfo} onChange={handleChange}
-                                        placeholder='e.g. "Cassian — Puggle, Lucy — Puggle"'
-                                        className="w-full px-4 py-3 rounded-xl border border-neutral-300 focus:ring-2 focus:ring-[#E2C16B] focus:border-[#E2C16B] outline-none transition-all text-sm bg-white" />
+                            {/* --- Conditional: Home Chores --- */}
+                            {hasHomeChores && (
+                                <div className="bg-[#FFF8E7] rounded-xl p-4 border border-[#E2C16B]/30 space-y-4 animate-fade-in">
+                                    <div>
+                                        <p className="text-sm font-medium text-charcoal-gray mb-3">🧹 Which chores do you need help with?</p>
+                                        <div className="grid grid-cols-2 gap-2">
+                                            {['Laundry (wash/dry/fold)', 'Dishes & Kitchen Reset', 'General Tidying', 'Bathroom Refresh', 'Vacuuming / Sweeping', 'Trash & Recycling'].map(chore => (
+                                                <label key={chore} className={`flex items-center gap-2 p-2.5 rounded-lg border cursor-pointer transition-all text-sm ${
+                                                    formData.choreTypes.includes(chore) ? 'border-[#E2C16B] bg-white shadow-sm' : 'border-transparent bg-white/50 hover:bg-white'
+                                                }`}>
+                                                    <input type="checkbox" checked={formData.choreTypes.includes(chore)} onChange={() => handleChoreToggle(chore)}
+                                                        className="w-3.5 h-3.5 accent-[#E2C16B] rounded" />
+                                                    <span className="text-[#525252]">{chore}</span>
+                                                </label>
+                                            ))}
+                                        </div>
+                                    </div>
+                                    <div className="space-y-1">
+                                        <label htmlFor="bs-homesize" className="block text-sm font-medium text-charcoal-gray">Approximate Home Size</label>
+                                        <select id="bs-homesize" name="homeSize" value={formData.homeSize} onChange={handleChange}
+                                            className="w-full px-4 py-3 rounded-xl border border-neutral-300 focus:ring-2 focus:ring-[#E2C16B] focus:border-[#E2C16B] outline-none transition-all bg-white text-sm">
+                                            <option value="" disabled>Select...</option>
+                                            <option value="Apartment / Studio">Apartment / Studio</option>
+                                            <option value="1-2 Bedrooms">1–2 Bedrooms</option>
+                                            <option value="3-4 Bedrooms">3–4 Bedrooms</option>
+                                            <option value="5+ Bedrooms">5+ Bedrooms</option>
+                                        </select>
+                                    </div>
                                 </div>
                             )}
 
-                            {/* --- Conditional: House Sitting Details --- */}
+                            {/* --- Conditional: Errands --- */}
+                            {hasErrands && (
+                                <div className="bg-[#FFF8E7] rounded-xl p-4 border border-[#E2C16B]/30 space-y-4 animate-fade-in">
+                                    <div>
+                                        <p className="text-sm font-medium text-charcoal-gray mb-3">🚗 What type of errands do you need?</p>
+                                        <div className="grid grid-cols-2 gap-2">
+                                            {['Grocery / Retail Pickup', 'Returns (Amazon, UPS, FedEx)', 'Dry Cleaning', 'Pharmacy Pickup', 'Post Office', 'Other'].map(errand => (
+                                                <label key={errand} className={`flex items-center gap-2 p-2.5 rounded-lg border cursor-pointer transition-all text-sm ${
+                                                    formData.errandTypes.includes(errand) ? 'border-[#E2C16B] bg-white shadow-sm' : 'border-transparent bg-white/50 hover:bg-white'
+                                                }`}>
+                                                    <input type="checkbox" checked={formData.errandTypes.includes(errand)} onChange={() => handleErrandToggle(errand)}
+                                                        className="w-3.5 h-3.5 accent-[#E2C16B] rounded" />
+                                                    <span className="text-[#525252]">{errand}</span>
+                                                </label>
+                                            ))}
+                                        </div>
+                                    </div>
+                                    <div className="space-y-1">
+                                        <label htmlFor="bs-errand-loc" className="block text-sm font-medium text-charcoal-gray">Store / Location Details</label>
+                                        <input type="text" id="bs-errand-loc" name="errandLocations" value={formData.errandLocations} onChange={handleChange}
+                                            placeholder={'e.g. "Walmart on Pearce, CVS on Hwy 40"'}
+                                            className="w-full px-4 py-3 rounded-xl border border-neutral-300 focus:ring-2 focus:ring-[#E2C16B] focus:border-[#E2C16B] outline-none transition-all text-sm bg-white" />
+                                    </div>
+                                </div>
+                            )}
+
+                            {/* --- Conditional: Pet Info (enhanced) --- */}
+                            {hasPetSitting && (
+                                <div className="bg-[#FFF8E7] rounded-xl p-4 border border-[#E2C16B]/30 space-y-4 animate-fade-in">
+                                    <div className="grid sm:grid-cols-2 gap-4">
+                                        <div className="space-y-1">
+                                            <label htmlFor="bs-pet" className="block text-sm font-medium text-charcoal-gray">
+                                                🐾 Pet&apos;s Name and Breed *
+                                            </label>
+                                            <input type="text" id="bs-pet" name="petInfo" required value={formData.petInfo} onChange={handleChange}
+                                                placeholder={'e.g. "Cassian — Puggle, Lucy — Puggle"'}
+                                                className="w-full px-4 py-3 rounded-xl border border-neutral-300 focus:ring-2 focus:ring-[#E2C16B] focus:border-[#E2C16B] outline-none transition-all text-sm bg-white" />
+                                        </div>
+                                        <div className="space-y-1">
+                                            <label htmlFor="bs-numpets" className="block text-sm font-medium text-charcoal-gray">Number of Pets</label>
+                                            <select id="bs-numpets" name="numberOfPets" value={formData.numberOfPets} onChange={handleChange}
+                                                className="w-full px-4 py-3 rounded-xl border border-neutral-300 focus:ring-2 focus:ring-[#E2C16B] focus:border-[#E2C16B] outline-none transition-all bg-white text-sm">
+                                                <option value="" disabled>Select...</option>
+                                                <option value="1">1</option>
+                                                <option value="2">2</option>
+                                                <option value="3">3</option>
+                                                <option value="4+">4+</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div className="space-y-1">
+                                        <label htmlFor="bs-petcare" className="block text-sm font-medium text-charcoal-gray">Special Care Instructions</label>
+                                        <textarea id="bs-petcare" name="petCareNotes" value={formData.petCareNotes} onChange={handleChange}
+                                            placeholder={'Medications, dietary needs, walking schedule, favorite toys...'}
+                                            rows={2}
+                                            className="w-full px-4 py-3 rounded-xl border border-neutral-300 focus:ring-2 focus:ring-[#E2C16B] focus:border-[#E2C16B] outline-none transition-all text-sm bg-white resize-y" />
+                                    </div>
+                                </div>
+                            )}
+
+                            {/* --- Conditional: House Sitting (enhanced) --- */}
                             {hasHouseSitting && (
-                                <div className="bg-[#FFF8E7] rounded-xl p-4 border border-[#E2C16B]/30 space-y-1 animate-fade-in">
-                                    <label htmlFor="bs-house" className="block text-sm font-medium text-charcoal-gray">
-                                        🏠 House Sitting — What needs attention?
-                                    </label>
-                                    <textarea id="bs-house" name="houseSittingDetails" value={formData.houseSittingDetails} onChange={handleChange}
-                                        placeholder="Mail pickup, plant watering schedule, security check preferences..."
-                                        rows={3}
-                                        className="w-full px-4 py-3 rounded-xl border border-neutral-300 focus:ring-2 focus:ring-[#E2C16B] focus:border-[#E2C16B] outline-none transition-all text-sm bg-white resize-y" />
+                                <div className="bg-[#FFF8E7] rounded-xl p-4 border border-[#E2C16B]/30 space-y-4 animate-fade-in">
+                                    <div className="space-y-1">
+                                        <label htmlFor="bs-travel" className="block text-sm font-medium text-charcoal-gray">
+                                            ✈️ Travel Dates
+                                        </label>
+                                        <input type="text" id="bs-travel" name="travelDates" value={formData.travelDates} onChange={handleChange}
+                                            placeholder={'e.g. "March 20 – March 27"'}
+                                            className="w-full px-4 py-3 rounded-xl border border-neutral-300 focus:ring-2 focus:ring-[#E2C16B] focus:border-[#E2C16B] outline-none transition-all text-sm bg-white" />
+                                    </div>
+                                    <div className="space-y-1">
+                                        <label htmlFor="bs-house" className="block text-sm font-medium text-charcoal-gray">
+                                            🏠 What needs attention while you&apos;re away?
+                                        </label>
+                                        <textarea id="bs-house" name="houseSittingDetails" value={formData.houseSittingDetails} onChange={handleChange}
+                                            placeholder="Mail pickup, plant watering schedule, security check preferences, thermostat settings..."
+                                            rows={3}
+                                            className="w-full px-4 py-3 rounded-xl border border-neutral-300 focus:ring-2 focus:ring-[#E2C16B] focus:border-[#E2C16B] outline-none transition-all text-sm bg-white resize-y" />
+                                    </div>
                                 </div>
                             )}
 
