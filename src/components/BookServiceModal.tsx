@@ -1,6 +1,7 @@
 'use client';
 
 import React, { useState, useEffect } from 'react';
+import Image from 'next/image';
 import { X } from 'lucide-react';
 
 interface BookServiceModalProps {
@@ -162,7 +163,9 @@ export default function BookServiceModal({ isOpen, onClose }: BookServiceModalPr
                 {submitted ? (
                     /* Success State */
                     <div className="p-10 md:p-14 text-center">
-                        <div className="text-6xl mb-6">🐝</div>
+                        <div className="text-6xl mb-6">
+                            <Image src="/bee-plain.png" alt="The Helpful Hive Bee" width={80} height={80} className="mx-auto" />
+                        </div>
                         <h2 className="font-[family-name:var(--font-lora)] text-3xl font-bold text-charcoal-gray mb-4">
                             Request Received!
                         </h2>

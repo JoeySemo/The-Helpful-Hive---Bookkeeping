@@ -5,6 +5,23 @@ import Image from 'next/image';
 import { usePathname } from 'next/navigation';
 import { useState, useEffect } from 'react';
 import { Menu, X } from 'lucide-react';
+import { useBookService } from '@/components/BookServiceProvider';
+
+function BookServiceNavBtn({ mobile, onClick }: { mobile?: boolean; onClick?: () => void }) {
+    const { openBookService } = useBookService();
+    return (
+        <button
+            type="button"
+            onClick={() => { openBookService(); onClick?.(); }}
+            className={mobile
+                ? "px-4 py-3 bg-[#C17A5B] text-white text-base font-medium font-[family-name:var(--font-montserrat)] rounded-lg text-center mt-2 shadow-md"
+                : "px-6 py-3 bg-[#C17A5B] text-white text-sm font-medium font-[family-name:var(--font-montserrat)] rounded-full hover:bg-[#a86a4d] transition-all hover:shadow-lg hover:-translate-y-0.5"
+            }
+        >
+            Book a Service
+        </button>
+    );
+}
 
 export default function Navbar() {
   const pathname = usePathname();
@@ -73,6 +90,9 @@ export default function Navbar() {
               >
                 About
               </Link>
+
+              {/* CTA Button - Book a Service */}
+              <BookServiceNavBtn />
             </div>
           )}
 
@@ -129,6 +149,8 @@ export default function Navbar() {
               >
                 About
               </Link>
+
+              <BookServiceNavBtn mobile onClick={() => setIsMenuOpen(false)} />
             </div>
           </div>
         )}
