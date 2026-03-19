@@ -215,6 +215,14 @@ export default function BeeKindPage() {
                                         </p>
                                     </div>
                                 </div>
+                                <div className="flex justify-center mt-6">
+                                    <Link
+                                        href="/for-home-and-life/bee-done"
+                                        className="px-8 py-4 bg-terra-cotta text-white font-[family-name:var(--font-montserrat)] font-semibold rounded-full hover:bg-terra-cotta-dark transition-all hover:shadow-lg hover:-translate-y-1 text-center"
+                                    >
+                                        View the &ldquo;Bee Done&rdquo; Service Menu
+                                    </Link>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -239,12 +247,6 @@ export default function BeeKindPage() {
                         className="px-8 py-4 bg-warm-honey text-charcoal-gray font-[family-name:var(--font-montserrat)] font-semibold rounded-full hover:bg-[#d4b35f] transition-all hover:shadow-lg hover:-translate-y-1 text-center"
                     >
                         Schedule a 15-minute Buzz Call
-                    </Link>
-                    <Link
-                        href="/for-home-and-life/bee-done"
-                        className="px-8 py-4 bg-terra-cotta text-white font-[family-name:var(--font-montserrat)] font-semibold rounded-full hover:bg-terra-cotta-dark transition-all hover:shadow-lg hover:-translate-y-1 text-center"
-                    >
-                        View the &ldquo;Bee Done&rdquo; Service Menu
                     </Link>
                 </div>
             </section>
