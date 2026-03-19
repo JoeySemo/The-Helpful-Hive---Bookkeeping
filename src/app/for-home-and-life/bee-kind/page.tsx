@@ -193,7 +193,7 @@ export default function BeeKindPage() {
                                 <div className="grid sm:grid-cols-2 gap-4">
                                     <div className="group rounded-xl p-5 border-2 border-seafoam-teal/15 hover:border-seafoam-teal hover:shadow-md transition-all bg-[#FFF8E7]">
                                         <div className="flex items-center gap-3 mb-2">
-                                            <span className="text-2xl">🐝</span>
+                                            <Image src="/bee-plain.png" alt="Bee" width={28} height={28} />
                                             <h3 className="font-[family-name:var(--font-lora)] font-semibold text-[#3C3C3C]">Make it a &ldquo;Bee Done&rdquo; Day!</h3>
                                         </div>
                                         <p className="font-[family-name:var(--font-montserrat)] text-sm text-[#525252]">
