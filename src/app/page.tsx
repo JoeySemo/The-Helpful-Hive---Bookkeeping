@@ -183,7 +183,7 @@ export default function HomePage() {
         </div>
 
         {/* Active Services - Canva Design */}
-        <div className="flex flex-col gap-8 max-w-3xl mx-auto mb-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto mb-8">
           {/* Bee Done Card */}
           <Link
             href="/for-home-and-life/bee-done"
@@ -224,7 +224,7 @@ export default function HomePage() {
 
               {/* CTA Button */}
               <div className="flex justify-center">
-                <div className="px-8 py-3 rounded-full bg-terra-cotta text-white font-[family-name:var(--font-montserrat)] font-bold text-base md:text-lg transition-all shadow-sm group-hover:shadow-md group-hover:bg-terra-cotta-dark border-2 border-terra-cotta-dark/30">
+                <div className="px-8 py-3 rounded-full bg-terra-cotta text-white font-[family-name:var(--font-montserrat)] font-bold text-base md:text-lg transition-all shadow-sm group-hover:shadow-md group-hover:bg-terra-cotta-dark border-2 border-terra-cotta-dark/30 text-center">
                   View the &ldquo;Bee Done&rdquo; Service Menu
                 </div>
               </div>
@@ -271,7 +271,7 @@ export default function HomePage() {
 
               {/* CTA Button */}
               <div className="flex justify-center">
-                <div className="px-8 py-3 rounded-full bg-terra-cotta text-white font-[family-name:var(--font-montserrat)] font-bold text-base md:text-lg transition-all shadow-sm group-hover:shadow-md group-hover:bg-terra-cotta-dark border-2 border-terra-cotta-dark/30">
+                <div className="px-8 py-3 rounded-full bg-terra-cotta text-white font-[family-name:var(--font-montserrat)] font-bold text-base md:text-lg transition-all shadow-sm group-hover:shadow-md group-hover:bg-terra-cotta-dark border-2 border-terra-cotta-dark/30 text-center">
                   View the &ldquo;Bee Kind&rdquo; Service Menu
                 </div>
               </div>
