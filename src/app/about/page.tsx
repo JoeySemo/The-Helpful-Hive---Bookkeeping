@@ -166,7 +166,7 @@ export default function AboutPage() {
                     <h2 className="font-[family-name:var(--font-lora)] text-2xl md:text-4xl font-bold mb-6 text-[#E2C16B]">
                         Ready to see how we can work together?
                     </h2>
-                    <p className="text-white/80 mb-10 text-xl font-light">
+                    <p className="text-[#E2C16B]/90 mb-10 text-xl font-light">
                         Schedule a 15-minute Buzz Call today and let&apos;s get to work!
                     </p>
                     <BuzzCallButton
