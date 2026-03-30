@@ -9,8 +9,8 @@ export default function Footer() {
     return (
         <footer className="bg-[#3C3C3C] text-white">
             <div className="max-w-6xl mx-auto px-4 md:px-8 py-10 md:py-14">
-                {/* Main 3 Column Layout */}
-                <div className="grid grid-cols-1 md:grid-cols-3 gap-8 items-center">
+                {/* Main 4 Column Layout */}
+                <div className="grid grid-cols-1 md:grid-cols-4 gap-8 items-center">
                     {/* Left: Circle Logo */}
                     <div className="flex justify-center md:justify-start">
                         <div className="relative w-20 h-20 md:w-24 md:h-24 rounded-full overflow-hidden border-2 border-[#E2C16B]/40">
@@ -23,16 +23,25 @@ export default function Footer() {
                         </div>
                     </div>
 
-                    {/* Center: Service Area */}
+                    {/* Contact Us */}
+                    <div className="text-center">
+                        <h3 className="font-display font-semibold !text-[#E2C16B] mb-1 text-sm uppercase tracking-wider">Contact Us</h3>
+                        <p className="text-white/80 text-sm">314.526.7240</p>
+                        <p className="text-white/80 text-sm">hellohelpfulhive@gmail.com</p>
+                    </div>
+
+                    {/* Service Area */}
                     <div className="text-center">
                         <h3 className="font-display font-semibold !text-[#E2C16B] mb-1 text-sm uppercase tracking-wider">Service Area</h3>
                         <p className="text-white/80 text-sm">Wentzville, MO</p>
+                        <p className="text-white/80 text-sm">and surrounding area</p>
                     </div>
 
                     {/* Right: Payment Methods */}
                     <div className="text-center md:text-right">
                         <h3 className="font-display font-semibold !text-[#E2C16B] mb-1 text-sm uppercase tracking-wider">Payment Methods</h3>
-                        <p className="text-white/80 text-sm">We proudly accept Venmo and Cash.</p>
+                        <p className="text-white/80 text-sm">We proudly accept</p>
+                        <p className="text-white/80 text-sm">Venmo and Cash.</p>
                     </div>
                 </div>
 
