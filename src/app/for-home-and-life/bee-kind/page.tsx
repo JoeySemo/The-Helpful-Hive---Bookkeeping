@@ -99,7 +99,7 @@ export default function BeeKindPage() {
                                             </div>
                                             <span className="font-[family-name:var(--font-lora)] text-lg font-bold text-[#3C3C3C]">$30 <span className="text-sm font-normal">/ visit</span></span>
                                         </div>
-                                        <ul className="font-[family-name:var(--font-montserrat)] text-sm text-[#525252] space-y-1 ml-2 mt-3">
+                                        <ul className="font-[family-name:var(--font-montserrat)] text-sm text-[#525252] space-y-1 ml-[3.75rem] mt-3">
                                             <li>• Approximately 45 minute visit</li>
                                             <li>• Potty break and/or litter box scoop</li>
                                             <li>• Crate relief</li>
@@ -123,7 +123,7 @@ export default function BeeKindPage() {
                                             </div>
                                             <span className="font-[family-name:var(--font-lora)] text-lg font-bold text-[#3C3C3C]">$20 <span className="text-sm font-normal">/ visit</span></span>
                                         </div>
-                                        <ul className="font-[family-name:var(--font-montserrat)] text-sm text-[#525252] space-y-1 ml-2 mt-3">
+                                        <ul className="font-[family-name:var(--font-montserrat)] text-sm text-[#525252] space-y-1 ml-[3.75rem] mt-3">
                                             <li>• Approximately 30 minute visit</li>
                                             <li>• Potty break and/or litter box scoop</li>
                                             <li>• Crate relief</li>
@@ -146,7 +146,7 @@ export default function BeeKindPage() {
                                             </div>
                                             <span className="font-[family-name:var(--font-lora)] text-lg font-bold text-[#3C3C3C]">$15 <span className="text-sm font-normal">/ visit</span></span>
                                         </div>
-                                        <ul className="font-[family-name:var(--font-montserrat)] text-sm text-[#525252] space-y-1 ml-2 mt-3">
+                                        <ul className="font-[family-name:var(--font-montserrat)] text-sm text-[#525252] space-y-1 ml-[3.75rem] mt-3">
                                             <li>• Approximately 20 minute visit</li>
                                             <li>• Mail and package retrieval</li>
                                             <li>• Trash bin in/out</li>
@@ -170,7 +170,7 @@ export default function BeeKindPage() {
                                             </div>
                                             <span className="font-[family-name:var(--font-lora)] text-lg font-bold text-[#3C3C3C]">$40 <span className="text-sm font-normal">/ visit</span></span>
                                         </div>
-                                        <ul className="font-[family-name:var(--font-montserrat)] text-sm text-[#525252] space-y-1 ml-2 mt-3">
+                                        <ul className="font-[family-name:var(--font-montserrat)] text-sm text-[#525252] space-y-1 ml-[3.75rem] mt-3">
                                             <li>• Approximately 60 minute visit</li>
                                             <li>• Includes a Home Hive Check and a Premium Pet Check-In</li>
                                         </ul>
