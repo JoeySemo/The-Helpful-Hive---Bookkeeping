@@ -336,36 +336,6 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* Meet the Queen Bee Section */}
-      <section className="py-16 md:py-20 px-4 md:px-8 bg-cream-white">
-        <div className="max-w-5xl mx-auto">
-          <div className="grid md:grid-cols-5 gap-10 items-center">
-            {/* Photo */}
-            <div className="md:col-span-2 flex justify-center">
-              <div className="relative w-56 h-72 md:w-64 md:h-80 rounded-2xl overflow-hidden">
-                <div className="absolute inset-0 rounded-2xl border-4 border-warm-honey shadow-xl z-10 pointer-events-none" />
-                <Image src="/amanda-headshot.jpg" alt="Amanda — The Queen Bee" fill className="object-cover" />
-              </div>
-            </div>
-
-            {/* Bio */}
-            <div className="md:col-span-3 text-center md:text-left">
-              <h2 className="font-[family-name:var(--font-lora)] text-3xl md:text-4xl font-bold text-warm-honey-dark mb-4">
-                Meet the Queen Bee
-              </h2>
-              <p className="font-[family-name:var(--font-montserrat)] text-neutral-600 leading-relaxed mb-6">
-                Hi, I&apos;m Amanda! As a business owner, mom of two, and manager of a full hive (including two Puggles and two cats), I know how quickly the &ldquo;to-do&rdquo; list can take over. I started The Helpful Hive to help you reclaim your time.
-              </p>
-              <Link
-                href="/about"
-                className="inline-block px-8 py-4 bg-warm-honey text-charcoal-gray font-[family-name:var(--font-montserrat)] font-semibold rounded-full hover:bg-[#d4b35f] transition-all hover:shadow-lg hover:-translate-y-1"
-              >
-                Learn More About Us
-              </Link>
-            </div>
-          </div>
-        </div>
-      </section>
     </div>
   );
 }
