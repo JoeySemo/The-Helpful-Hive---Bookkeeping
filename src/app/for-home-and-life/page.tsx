@@ -191,41 +191,6 @@ export default function HomeAndLifePage() {
                     </div>
                 </div>
             </section>
-
-            {/* CTA Section */}
-            <section className="py-16 px-6 bg-[#3C3C3C] relative overflow-hidden">
-                <div className="absolute inset-0 opacity-5 pointer-events-none">
-                    <svg className="w-full h-full" viewBox="0 0 100 100" preserveAspectRatio="none">
-                        <pattern id="honeycomb-cta-hl" width="10" height="10" patternUnits="userSpaceOnUse">
-                            <path d="M5 0L10 2.5V7.5L5 10L0 7.5V2.5Z" fill="none" stroke="#E2C16B" strokeWidth="0.5" />
-                        </pattern>
-                        <rect width="100%" height="100%" fill="url(#honeycomb-cta-hl)" />
-                    </svg>
-                </div>
-                <div className="max-w-3xl mx-auto text-center relative z-10">
-                    <h2 className="font-[family-name:var(--font-lora)] text-3xl md:text-4xl font-bold text-white mb-4">
-                        Ready to <span className="text-[#E2C16B]">sweeten</span> your day?
-                    </h2>
-                    <p className="font-[family-name:var(--font-montserrat)] text-white/70 mb-8 text-lg">
-                        Whether it&apos;s your home, your pets, or your to-do list — we&apos;ve got you covered.
-                    </p>
-                    <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                        <Link
-                            href="/contact"
-                            className="inline-block px-8 py-4 bg-[#C17A5B] text-white font-[family-name:var(--font-montserrat)] font-semibold rounded-full hover:bg-[#a86a4d] transition-all hover:shadow-lg hover:-translate-y-0.5"
-                        >
-                            Schedule a Consultation
-                        </Link>
-                        <a
-                            href="tel:+13145267240"
-                            className="inline-block px-8 py-4 bg-transparent border-2 border-white/30 text-white font-[family-name:var(--font-montserrat)] font-semibold rounded-full hover:bg-white/10 transition-all"
-                        >
-                            <span className="block leading-tight">(314) 526-7240</span>
-                            <span className="block text-sm font-normal mt-0.5 opacity-90 leading-tight tracking-normal">Call or Text</span>
-                        </a>
-                    </div>
-                </div>
-            </section>
         </main>
     );
 }

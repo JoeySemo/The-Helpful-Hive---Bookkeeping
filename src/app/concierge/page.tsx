@@ -243,40 +243,6 @@ export default function ConciergePage() {
                     </div>
                 </div>
             </section>
-
-            {/* CTA Section */}
-            <section className="py-16 md:py-24 px-4 md:px-8 bg-neutral-900">
-                <div className="max-w-3xl mx-auto text-center">
-                    <h2 className="font-display text-2xl md:text-3xl font-medium text-white mb-4">
-                        Get in Touch
-                    </h2>
-                    <p className="text-neutral-400 mb-8">
-                        Ready to experience stress-free home management? Reach out today for a free consultation.
-                    </p>
-                    <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                        <Link
-                            href="/about"
-                            className="px-8 py-3 bg-honey-500 text-white font-medium rounded-full hover:bg-honey-600 transition-all"
-                        >
-                            Schedule a Consultation
-                        </Link>
-                        <a
-                            href="tel:+13145267240"
-                            className="px-8 py-3 bg-transparent border-2 border-white/30 text-white font-medium rounded-full hover:bg-white/10 transition-all"
-                        >
-                            <span className="block leading-tight">(314) 526-7240</span>
-                            <span className="block text-sm font-normal mt-0.5 opacity-90 leading-tight tracking-normal">Call or Text</span>
-                        </a>
-                    </div>
-                </div>
-            </section>
-
-            {/* Service Area */}
-            <section className="py-6 px-4 bg-neutral-100 text-center">
-                <p className="text-neutral-500 text-sm">
-                    Serving Wentzville, Lake St. Louis, O'Fallon, and surrounding St. Charles County areas.
-                </p>
-            </section>
         </main>
     );
 }

@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Lora, Montserrat } from "next/font/google";
 import Navbar from "@/components/Navbar";
 import FooterWrapper from "@/components/FooterWrapper";
+import PreFooter from "@/components/PreFooter";
 import BookServiceProvider from "@/components/BookServiceProvider";
 import BuzzCallProvider from "@/components/BuzzCallProvider";
 import "./globals.css";
@@ -37,6 +38,7 @@ export default function RootLayout({
                     <main className="flex-grow">
                         {children}
                     </main>
+                    <PreFooter />
                     <FooterWrapper />
                 </BuzzCallProvider>
                 </BookServiceProvider>

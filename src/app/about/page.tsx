@@ -1,6 +1,5 @@
 import Image from 'next/image';
 import Link from 'next/link';
-import BuzzCallButton from '@/components/BuzzCallButton';
 
 export const metadata = {
     title: "About | The Helpful Hive",
@@ -152,28 +151,6 @@ export default function AboutPage() {
                 </div>
             </section>
 
-            {/* CTA Section */}
-            <section className="py-20 px-6 bg-[#3C3C3C] relative overflow-hidden">
-                <div className="absolute inset-0 opacity-5 pointer-events-none">
-                    <svg className="w-full h-full" viewBox="0 0 100 100" preserveAspectRatio="none">
-                        <pattern id="honeycomb-about-cta" width="10" height="10" patternUnits="userSpaceOnUse">
-                            <path d="M5 0L10 2.5V7.5L5 10L0 7.5V2.5Z" fill="none" stroke="#E2C16B" strokeWidth="0.5" />
-                        </pattern>
-                        <rect width="100%" height="100%" fill="url(#honeycomb-about-cta)" />
-                    </svg>
-                </div>
-                <div className="max-w-3xl mx-auto text-center relative z-10">
-                    <h2 className="font-[family-name:var(--font-lora)] text-2xl md:text-4xl font-bold mb-6 text-[#E2C16B]">
-                        Ready to see how we can work together?
-                    </h2>
-                    <p className="text-[#E2C16B]/90 mb-10 text-xl font-light">
-                        Schedule a 15-minute Buzz Call today and let&apos;s get to work!
-                    </p>
-                    <BuzzCallButton
-                        className="inline-block px-8 py-4 bg-warm-honey text-charcoal-gray font-[family-name:var(--font-montserrat)] font-semibold rounded-full hover:bg-[#d4b35f] transition-all hover:shadow-lg hover:-translate-y-0.5"
-                    />
-                </div>
-            </section>
         </div>
     );
 }

@@ -154,34 +154,6 @@ export default function PetCarePage() {
                     </div>
                 </div>
             </div>
-
-            {/* CTA Section */}
-            <section className="py-20 px-4 md:px-8 bg-[#3C3C3C]">
-                <div className="max-w-3xl mx-auto text-center">
-                    <h2 className="font-display text-3xl md:text-5xl font-medium mb-6">
-                        <span className="text-gradient-honey">Ready To Give Your Pets The Best?</span>
-                    </h2>
-                    <p className="text-white/70 mb-10 text-xl font-light">
-                        Let Us Care For Your Furry Friends While You're Away.
-                    </p>
-                    <div className="flex flex-col sm:flex-row gap-6 justify-center items-center">
-                        <Link
-                            href="/about"
-                            className="px-8 py-4 bg-[#E2C16B] text-[#3C3C3C] font-semibold rounded-full hover:bg-[#d4b35f] transition-all transform hover:scale-105"
-                        >
-                            Schedule a Consultation
-                        </Link>
-                        <a
-                            href="tel:+13145267240"
-                            className="px-8 py-4 bg-transparent border-2 border-white/30 text-white font-semibold rounded-full hover:bg-white/10 transition-all"
-                        >
-                            <span className="block leading-tight">(314) 526-7240</span>
-                            <span className="block text-sm font-normal mt-0.5 opacity-90 leading-tight tracking-normal">Call or Text</span>
-                        </a>
-                    </div>
-                </div>
-            </section>
-
         </main>
     );
 }
