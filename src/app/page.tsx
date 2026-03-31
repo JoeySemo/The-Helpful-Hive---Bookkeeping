@@ -214,15 +214,15 @@ export default function HomePage() {
                     <li>• Household Chores</li>
                     <li>• Errand Dashes</li>
                     <li>• Pet Waste Removal</li>
-                    <li>• ...and More!</li>
+                    <li className="list-none">...and More!</li>
                   </ul>
                 </div>
               </div>
 
               {/* CTA Button */}
               <div className="flex justify-center">
-                <div className="px-8 py-3 rounded-full bg-terra-cotta text-white font-[family-name:var(--font-montserrat)] font-bold text-base md:text-lg transition-all shadow-sm group-hover:shadow-md group-hover:bg-terra-cotta-dark border-2 border-terra-cotta-dark/30 text-center">
-                  View the &ldquo;Bee Done&rdquo; Service Menu
+                <div className="px-8 py-3 rounded-full bg-terra-cotta text-cream-white font-[family-name:var(--font-montserrat)] font-bold text-base md:text-lg transition-all shadow-sm group-hover:shadow-md group-hover:bg-terra-cotta-dark border-2 border-terra-cotta-dark/30 text-center">
+                  &ldquo;Bee Done&rdquo; Service Menu
                 </div>
               </div>
             </div>
@@ -255,17 +255,17 @@ export default function HomePage() {
                   </h3>
                   <ul className="font-[family-name:var(--font-montserrat)] text-base md:text-lg font-bold text-charcoal-gray space-y-1">
                     <li>• Pet Visits &amp; Feeding</li>
-                    <li>• Vacation Home Checks</li>
+                    <li>• Home Checks</li>
                     <li>• Overnight Sitting</li>
-                    <li>• ...and More!</li>
+                    <li className="list-none">...and More!</li>
                   </ul>
                 </div>
               </div>
 
               {/* CTA Button */}
               <div className="flex justify-center">
-                <div className="px-8 py-3 rounded-full bg-terra-cotta text-white font-[family-name:var(--font-montserrat)] font-bold text-base md:text-lg transition-all shadow-sm group-hover:shadow-md group-hover:bg-terra-cotta-dark border-2 border-terra-cotta-dark/30 text-center">
-                  View the &ldquo;Bee Kind&rdquo; Service Menu
+                <div className="px-8 py-3 rounded-full bg-terra-cotta text-cream-white font-[family-name:var(--font-montserrat)] font-bold text-base md:text-lg transition-all shadow-sm group-hover:shadow-md group-hover:bg-terra-cotta-dark border-2 border-terra-cotta-dark/30 text-center">
+                  &ldquo;Bee Kind&rdquo; Service Menu
                 </div>
               </div>
             </div>
