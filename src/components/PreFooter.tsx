@@ -1,8 +1,14 @@
 'use client';
 
+import { usePathname } from 'next/navigation';
 import BuzzCallButton from '@/components/BuzzCallButton';
 
+const HIDDEN_ON = ['/for-home-and-life/bee-kind'];
+
 export default function PreFooter() {
+    const pathname = usePathname();
+    if (HIDDEN_ON.includes(pathname)) return null;
+
     return (
         <section className="py-10 px-6 bg-[#3C3C3C] relative overflow-hidden">
             <div className="absolute inset-0 opacity-5 pointer-events-none">
