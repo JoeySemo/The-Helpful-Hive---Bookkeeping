@@ -172,14 +172,6 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* CTA Buttons Section */}
-      <section className="py-10 px-4 md:px-8 bg-white">
-        <div className="max-w-3xl mx-auto flex flex-col sm:flex-row gap-4 justify-center items-center">
-          <BuzzCallBtn />
-          <BookServiceBtn />
-        </div>
-      </section>
-
       {/* Explore the Hive Section */}
       <section className="py-16 px-4 md:px-8 max-w-7xl mx-auto" id="services">
         <div className="text-center mb-12">
@@ -219,17 +211,13 @@ export default function HomePage() {
                     Bee Done
                   </h3>
                   <ul className="font-[family-name:var(--font-montserrat)] text-base md:text-lg font-bold text-charcoal-gray space-y-1">
-                    <li>• Home Resets</li>
-                    <li>• Laundry &amp; Dish Assists</li>
+                    <li>• Household Chores</li>
                     <li>• Errand Dashes</li>
+                    <li>• Pet Waste Removal</li>
+                    <li>• ...and More!</li>
                   </ul>
                 </div>
               </div>
-
-              {/* Tagline */}
-              <p className="font-[family-name:var(--font-lora)] italic text-neutral-700 text-center mb-5 leading-relaxed">
-                Taking the Sting out of Chores so you can Bee Done with your To-Do list.
-              </p>
 
               {/* CTA Button */}
               <div className="flex justify-center">
@@ -269,14 +257,10 @@ export default function HomePage() {
                     <li>• Pet Visits &amp; Feeding</li>
                     <li>• Vacation Home Checks</li>
                     <li>• Overnight Sitting</li>
+                    <li>• ...and More!</li>
                   </ul>
                 </div>
               </div>
-
-              {/* Tagline */}
-              <p className="font-[family-name:var(--font-lora)] italic text-neutral-700 text-center mb-5 leading-relaxed">
-                Tending to your Pets and Plants so you can Bee Kind to your Peace of Mind while you&apos;re away from the Hive.
-              </p>
 
               {/* CTA Button */}
               <div className="flex justify-center">
