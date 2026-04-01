@@ -116,40 +116,7 @@ export default function AboutPage() {
                 </div>
             </section>
 
-            {/* Values */}
-            <section className="py-16 md:py-20 px-6">
-                <div className="max-w-5xl mx-auto">
-                    <div className="text-center mb-12">
-                        <h2 className="font-[family-name:var(--font-lora)] text-3xl md:text-4xl font-bold text-charcoal-gray mb-3">
-                            Why The Helpful Hive?
-                        </h2>
-                    </div>
 
-                    <div className="grid md:grid-cols-3 gap-8">
-                        <div className="text-center p-6">
-                            <div className="text-4xl mb-4">🌱</div>
-                            <h3 className="font-[family-name:var(--font-lora)] text-xl font-bold text-charcoal-gray mb-2">Community Roots</h3>
-                            <p className="font-[family-name:var(--font-montserrat)] text-sm text-neutral-600 leading-relaxed">
-                                Based in Wentzville, MO, we&apos;re proud to serve the families and small businesses in our local community.
-                            </p>
-                        </div>
-                        <div className="text-center p-6">
-                            <div className="text-4xl mb-4">🤝</div>
-                            <h3 className="font-[family-name:var(--font-lora)] text-xl font-bold text-charcoal-gray mb-2">Trust &amp; Reliability</h3>
-                            <p className="font-[family-name:var(--font-montserrat)] text-sm text-neutral-600 leading-relaxed">
-                                We show up on time, every time. You&apos;ll receive a text/photo update once your service is completed.
-                            </p>
-                        </div>
-                        <div className="text-center p-6">
-                            <div className="text-4xl mb-4">✨</div>
-                            <h3 className="font-[family-name:var(--font-lora)] text-xl font-bold text-charcoal-gray mb-2">Custom Care</h3>
-                            <p className="font-[family-name:var(--font-montserrat)] text-sm text-neutral-600 leading-relaxed">
-                                No two hives are the same. Every service is tailored to your specific household routine.
-                            </p>
-                        </div>
-                    </div>
-                </div>
-            </section>
 
         </div>
     );
