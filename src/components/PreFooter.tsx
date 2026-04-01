@@ -3,7 +3,7 @@
 import { usePathname } from 'next/navigation';
 import BuzzCallButton from '@/components/BuzzCallButton';
 
-const HIDDEN_ON = ['/for-home-and-life/bee-kind'];
+const HIDDEN_ON = ['/for-home-and-life/bee-kind', '/for-home-and-life/bee-done'];
 
 export default function PreFooter() {
     const pathname = usePathname();

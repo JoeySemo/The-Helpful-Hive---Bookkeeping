@@ -1,6 +1,5 @@
 import Image from 'next/image';
 import Link from 'next/link';
-import BookServiceButton from '@/components/BookServiceButton';
 import BuzzCallButton from '@/components/BuzzCallButton';
 
 export const metadata = {
@@ -23,36 +22,38 @@ export default function BeeDonePage() {
                     </svg>
                 </div>
 
-                <div className="max-w-4xl mx-auto px-6 py-12 md:py-16 lg:py-20 relative z-10 text-center">
-                    <h1 className="font-[family-name:var(--font-lora)] text-3xl sm:text-4xl md:text-5xl xl:text-6xl font-bold text-charcoal-gray mb-6">
-                        &ldquo;Bee Done&rdquo; Service Menu
+                <div className="max-w-5xl mx-auto px-6 py-12 md:py-16 lg:py-20 relative z-10 text-center">
+                    <h1 className="font-[family-name:var(--font-lora)] text-3xl sm:text-4xl md:text-[2.75rem] xl:text-5xl text-charcoal-gray mb-4 whitespace-nowrap">
+                        <strong>Bee Done</strong> with your to-do list!
                     </h1>
 
-                    <p className="font-[family-name:var(--font-lora)] italic text-xl md:text-2xl text-soft-sage-dark mb-6 leading-relaxed">
+                    <p className="font-[family-name:var(--font-lora)] italic text-xl md:text-2xl text-soft-sage-dark leading-relaxed">
                         Explore our &ldquo;Bee Done&rdquo; services below.
                     </p>
-
-                    <div className="font-[family-name:var(--font-montserrat)] text-neutral-600 max-w-3xl mx-auto mb-8 leading-relaxed">
-                        <p className="mb-4">
-                            Every hive is different. While we offer a structured menu, we specialize in customizing our services to fit your unique needs.
-                        </p>
-                        <p>
-                            If you already know exactly what you need to get your hive in order, <strong>Book a Service</strong> now. Not sure where to start? <strong>Schedule a 15-minute Buzz Call</strong> so I can learn more about your needs, and together we&apos;ll build a custom package that suits you perfectly.
-                        </p>
-                    </div>
-
-                    <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-                        <BookServiceButton
-                            className="px-8 py-4 bg-[#3C3C3C] text-white font-[family-name:var(--font-montserrat)] font-semibold rounded-full hover:bg-[#2a2a2a] transition-all hover:shadow-lg hover:-translate-y-1 text-center"
-                        />
-                        <BuzzCallButton
-                            className="px-8 py-4 bg-warm-honey text-charcoal-gray font-[family-name:var(--font-montserrat)] font-semibold rounded-full hover:bg-[#d4b35f] transition-all hover:shadow-lg hover:-translate-y-1 text-center"
-                        />
-                    </div>
                 </div>
             </section>
 
-
+            {/* Every hive is unique - moved up from footer */}
+            <section className="py-10 px-6 bg-[#3C3C3C] relative overflow-hidden">
+                <div className="absolute inset-0 opacity-5 pointer-events-none">
+                    <svg className="w-full h-full" viewBox="0 0 100 100" preserveAspectRatio="none">
+                        <pattern id="honeycomb-prefooter-bd" width="10" height="10" patternUnits="userSpaceOnUse">
+                            <path d="M5 0L10 2.5V7.5L5 10L0 7.5V2.5Z" fill="none" stroke="#E2C16B" strokeWidth="0.5" />
+                        </pattern>
+                        <rect width="100%" height="100%" fill="url(#honeycomb-prefooter-bd)" />
+                    </svg>
+                </div>
+                <div className="max-w-3xl mx-auto text-center relative z-10">
+                    <p className="font-[family-name:var(--font-montserrat)] text-[#E2C16B]/90 text-base md:text-lg leading-relaxed mb-8">
+                        <strong>Every hive is unique.</strong> Because your needs are one-of-a-kind, I specialize in custom-built solutions rather than one-size-fits-all packages. I&apos;d love to hear about your hive so we can create a plan that fits you perfectly.
+                    </p>
+                    <BuzzCallButton
+                        className="inline-block px-8 py-3 bg-terra-cotta text-cream-white font-[family-name:var(--font-montserrat)] font-semibold rounded-full hover:bg-terra-cotta-dark transition-all hover:shadow-lg hover:-translate-y-0.5"
+                    >
+                        Let&apos;s Chat
+                    </BuzzCallButton>
+                </div>
+            </section>
 
             {/* === The Bee Done Service Menu === */}
             <section className="py-14 md:py-20 px-6">
@@ -419,6 +420,28 @@ export default function BeeDonePage() {
                 <p className="font-[family-name:var(--font-montserrat)] text-sm text-[#525252] text-center italic max-w-3xl mx-auto">
                     Prices listed are estimates. Final pricing depends on the job details and will be confirmed before we start. Extra fees may apply for holidays, rush requests, or add-on tasks.
                 </p>
+            </section>
+
+            {/* Page-specific pre-footer: Ready to learn more or book a service? */}
+            <section className="py-4 px-6 bg-[#3C3C3C] relative overflow-hidden">
+                <div className="absolute inset-0 opacity-5 pointer-events-none">
+                    <svg className="w-full h-full" viewBox="0 0 100 100" preserveAspectRatio="none">
+                        <pattern id="honeycomb-bottom-bd" width="10" height="10" patternUnits="userSpaceOnUse">
+                            <path d="M5 0L10 2.5V7.5L5 10L0 7.5V2.5Z" fill="none" stroke="#E2C16B" strokeWidth="0.5" />
+                        </pattern>
+                        <rect width="100%" height="100%" fill="url(#honeycomb-bottom-bd)" />
+                    </svg>
+                </div>
+                <div className="max-w-5xl mx-auto flex flex-col sm:flex-row items-center justify-center gap-6 relative z-10">
+                    <p className="font-[family-name:var(--font-lora)] italic text-lg md:text-xl text-[#E2C16B]">
+                        Ready to learn more or book a service?
+                    </p>
+                    <BuzzCallButton
+                        className="inline-block px-8 py-3 bg-terra-cotta text-cream-white font-[family-name:var(--font-montserrat)] font-semibold rounded-full hover:bg-terra-cotta-dark transition-all hover:shadow-lg hover:-translate-y-0.5"
+                    >
+                        Let&apos;s Chat
+                    </BuzzCallButton>
+                </div>
             </section>
         </div>
     );
