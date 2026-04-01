@@ -17,7 +17,7 @@ export default function BuzzCallButton({ className, children }: BuzzCallButtonPr
             onClick={openBuzzCall}
             className={className}
         >
-            {children || 'Schedule a Buzz Call'}
+            {children || "Let\u2019s Chat"}
         </button>
     );
 }

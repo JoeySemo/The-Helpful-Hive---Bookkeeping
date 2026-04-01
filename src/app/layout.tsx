@@ -3,7 +3,6 @@ import { Lora, Montserrat } from "next/font/google";
 import Navbar from "@/components/Navbar";
 import FooterWrapper from "@/components/FooterWrapper";
 import PreFooter from "@/components/PreFooter";
-import BookServiceProvider from "@/components/BookServiceProvider";
 import BuzzCallProvider from "@/components/BuzzCallProvider";
 import "./globals.css";
 
@@ -32,7 +31,6 @@ export default function RootLayout({
     return (
         <html lang="en" className={`${lora.variable} ${montserrat.variable}`}>
             <body className="antialiased min-h-screen flex flex-col bg-[#FFF8E7]">
-                <BookServiceProvider>
                 <BuzzCallProvider>
                     <Navbar />
                     <main className="flex-grow">
@@ -41,7 +39,6 @@ export default function RootLayout({
                     <PreFooter />
                     <FooterWrapper />
                 </BuzzCallProvider>
-                </BookServiceProvider>
             </body>
         </html>
     );

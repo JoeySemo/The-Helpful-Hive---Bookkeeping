@@ -1,7 +1,6 @@
 'use client';
 
 import React, { useState, useEffect } from 'react';
-import Image from 'next/image';
 import { X } from 'lucide-react';
 
 interface BuzzCallModalProps {
@@ -10,18 +9,19 @@ interface BuzzCallModalProps {
 }
 
 const CONTACT_OPTIONS = ['Call', 'Text', 'Email'];
-const REFERRAL_OPTIONS = ['Word of Mouth', 'Social Media', 'Other'];
+const REFERRAL_OPTIONS = ['Word of Mouth', 'Social Media', 'Google Search', 'Facebook', 'Instagram', 'Nextdoor', 'Other'];
 
 export default function BuzzCallModal({ isOpen, onClose }: BuzzCallModalProps) {
     const [submitted, setSubmitted] = useState(false);
+    const [submitting, setSubmitting] = useState(false);
     const [formData, setFormData] = useState({
         name: '',
         email: '',
         phone: '',
         contactMethod: '',
         referralSource: '',
-        todoList: '',
-        preferredCallTime: '',
+        hiveNeeds: '',
+        timeline: '',
     });
 
     // Lock body scroll when modal is open
@@ -41,7 +41,7 @@ export default function BuzzCallModal({ isOpen, onClose }: BuzzCallModalProps) {
                 setSubmitted(false);
                 setFormData({
                     name: '', email: '', phone: '', contactMethod: '',
-                    referralSource: '', todoList: '', preferredCallTime: '',
+                    referralSource: '', hiveNeeds: '', timeline: '',
                 });
             }, 300);
         }
@@ -51,28 +51,70 @@ export default function BuzzCallModal({ isOpen, onClose }: BuzzCallModalProps) {
         setFormData({ ...formData, [e.target.name]: e.target.value });
     };
 
-    const handleSubmit = (e: React.FormEvent) => {
+    const handleSubmit = async (e: React.FormEvent) => {
         e.preventDefault();
+        setSubmitting(true);
 
-        const lines = [
-            `Name: ${formData.name}`,
-            `Email: ${formData.email}`,
-            `Phone: ${formData.phone}`,
-            `Preferred Contact Method: ${formData.contactMethod}`,
-            ``,
-            `How did you hear about the Hive? ${formData.referralSource}`,
-            ``,
-            `About my "to-do" list:`,
-            formData.todoList,
-            ``,
-            `Preferred Call Time: ${formData.preferredCallTime}`,
-        ];
+        try {
+            const payload = new FormData();
+            payload.append('name', formData.name);
+            payload.append('email', formData.email);
+            payload.append('phone', formData.phone);
+            payload.append('_subject', `New Inquiry — ${formData.name}`);
+            payload.append('Preferred Contact Method', formData.contactMethod);
+            payload.append('How did you hear about us', formData.referralSource);
+            payload.append('Hive Needs', formData.hiveNeeds);
+            payload.append('How soon to start', formData.timeline);
+            payload.append('_template', 'table');
+            payload.append('_captcha', 'false');
 
-        const subject = encodeURIComponent(`Buzz Call Request — ${formData.name}`);
-        const body = encodeURIComponent(lines.join('\n'));
-        window.location.href = `mailto:hellohelpfulhive@gmail.com?subject=${subject}&body=${body}`;
+            const response = await fetch('https://formsubmit.co/ajax/hellohelpfulhive@gmail.com', {
+                method: 'POST',
+                body: payload,
+            });
 
-        setSubmitted(true);
+            if (response.ok) {
+                setSubmitted(true);
+            } else {
+                // Fallback to mailto if API fails
+                const lines = [
+                    `Name: ${formData.name}`,
+                    `Email: ${formData.email}`,
+                    `Phone: ${formData.phone}`,
+                    `Preferred Contact: ${formData.contactMethod}`,
+                    `How they heard about us: ${formData.referralSource}`,
+                    ``,
+                    `Hive Needs:`,
+                    formData.hiveNeeds,
+                    ``,
+                    `Timeline: ${formData.timeline}`,
+                ];
+                const subject = encodeURIComponent(`New Inquiry — ${formData.name}`);
+                const body = encodeURIComponent(lines.join('\n'));
+                window.location.href = `mailto:hellohelpfulhive@gmail.com?subject=${subject}&body=${body}`;
+                setSubmitted(true);
+            }
+        } catch {
+            // Fallback to mailto on network error
+            const lines = [
+                `Name: ${formData.name}`,
+                `Email: ${formData.email}`,
+                `Phone: ${formData.phone}`,
+                `Preferred Contact: ${formData.contactMethod}`,
+                `How they heard about us: ${formData.referralSource}`,
+                ``,
+                `Hive Needs:`,
+                formData.hiveNeeds,
+                ``,
+                `Timeline: ${formData.timeline}`,
+            ];
+            const subject = encodeURIComponent(`New Inquiry — ${formData.name}`);
+            const body = encodeURIComponent(lines.join('\n'));
+            window.location.href = `mailto:hellohelpfulhive@gmail.com?subject=${subject}&body=${body}`;
+            setSubmitted(true);
+        } finally {
+            setSubmitting(false);
+        }
     };
 
     if (!isOpen) return null;
@@ -103,14 +145,11 @@ export default function BuzzCallModal({ isOpen, onClose }: BuzzCallModalProps) {
                 {submitted ? (
                     /* Success State */
                     <div className="p-10 md:p-14 text-center">
-                        <div className="text-6xl mb-6">
-                            <Image src="/bee-plain.png" alt="The Helpful Hive Bee" width={80} height={80} className="mx-auto" />
-                        </div>
-                        <h2 className="font-[family-name:var(--font-lora)] text-3xl font-bold text-charcoal-gray mb-4">
-                            Thanks for Reaching Out!
+                        <h2 className="font-[family-name:var(--font-lora)] text-2xl md:text-3xl font-bold text-charcoal-gray mb-4">
+                            Thanks for reaching out!
                         </h2>
                         <p className="font-[family-name:var(--font-montserrat)] text-neutral-600 max-w-md mx-auto leading-relaxed mb-2">
-                            Your message has been delivered to the Hive. I&apos;ll review your details and contact you shortly to confirm our call time.
+                            Your message has been delivered to the Hive. I&apos;ll review your details and contact you shortly.
                         </p>
                         <p className="font-[family-name:var(--font-montserrat)] text-neutral-600 italic mt-4">
                             Talk soon,<br />Amanda
@@ -118,7 +157,7 @@ export default function BuzzCallModal({ isOpen, onClose }: BuzzCallModalProps) {
                         <button
                             type="button"
                             onClick={onClose}
-                            className="mt-8 px-8 py-3 bg-warm-honey text-charcoal-gray font-[family-name:var(--font-montserrat)] font-semibold rounded-full hover:bg-[#d4b35f] transition-all"
+                            className="mt-8 px-8 py-3 bg-terra-cotta text-cream-white font-[family-name:var(--font-montserrat)] font-semibold rounded-full hover:bg-terra-cotta-dark transition-all"
                         >
                             Close
                         </button>
@@ -129,22 +168,22 @@ export default function BuzzCallModal({ isOpen, onClose }: BuzzCallModalProps) {
                         {/* Header */}
                         <div className="text-center mb-8">
                             <h2 className="font-[family-name:var(--font-lora)] text-2xl md:text-3xl font-bold text-charcoal-gray mb-2">
-                                Schedule a Buzz Call
+                                Contacting the Queen Bee
                             </h2>
-                            <p className="font-[family-name:var(--font-montserrat)] text-neutral-500 text-sm">
+                            <p className="font-[family-name:var(--font-lora)] italic text-neutral-500 text-sm">
                                 Let&apos;s chat about your hive&apos;s needs and how I can help you reclaim your time.
                             </p>
                         </div>
 
                         <div className="space-y-6">
-                            {/* --- Contact Info --- */}
+                            {/* --- Your Info --- */}
                             <fieldset>
                                 <legend className="font-[family-name:var(--font-lora)] text-lg font-bold text-charcoal-gray mb-4">Your Info</legend>
                                 <div className="space-y-4">
                                     <div className="space-y-1">
-                                        <label htmlFor="bc-name" className="block text-sm font-medium text-neutral-700">Name (First & Last) *</label>
+                                        <label htmlFor="bc-name" className="block text-sm font-medium text-neutral-700">Name *</label>
                                         <input type="text" id="bc-name" name="name" required value={formData.name} onChange={handleChange}
-                                            placeholder="Amanda Knittel"
+                                            placeholder="First and Last"
                                             className="w-full px-4 py-3 rounded-xl border border-neutral-300 focus:ring-2 focus:ring-warm-honey focus:border-warm-honey outline-none transition-all text-sm" />
                                     </div>
                                     <div className="grid sm:grid-cols-2 gap-4">
@@ -173,7 +212,7 @@ export default function BuzzCallModal({ isOpen, onClose }: BuzzCallModalProps) {
                                             </select>
                                         </div>
                                         <div className="space-y-1">
-                                            <label htmlFor="bc-referral" className="block text-sm font-medium text-neutral-700">How did you hear about the Hive?</label>
+                                            <label htmlFor="bc-referral" className="block text-sm font-medium text-neutral-700">How did you hear about us?</label>
                                             <select id="bc-referral" name="referralSource" value={formData.referralSource} onChange={handleChange}
                                                 className="w-full px-4 py-3 rounded-xl border border-neutral-300 focus:ring-2 focus:ring-warm-honey focus:border-warm-honey outline-none transition-all bg-white text-sm">
                                                 <option value="" disabled>Select...</option>
@@ -188,32 +227,36 @@ export default function BuzzCallModal({ isOpen, onClose }: BuzzCallModalProps) {
 
                             <hr className="border-neutral-200" />
 
-                            {/* --- About Your Needs --- */}
+                            {/* --- Tell Us More --- */}
                             <fieldset>
                                 <legend className="font-[family-name:var(--font-lora)] text-lg font-bold text-charcoal-gray mb-4">Tell Us More</legend>
                                 <div className="space-y-4">
                                     <div className="space-y-1">
-                                        <label htmlFor="bc-todo" className="block text-sm font-medium text-neutral-700">Tell me a little bit about your &ldquo;to-do&rdquo; list *</label>
-                                        <textarea id="bc-todo" name="todoList" required value={formData.todoList} onChange={handleChange}
-                                            placeholder={'"I need help with weekly grocery runs" or "Looking for a reliable pet sitter for vacation."'}
+                                        <label htmlFor="bc-needs" className="block text-sm font-medium text-neutral-700">Tell me a little bit about your hive needs. *</label>
+                                        <textarea id="bc-needs" name="hiveNeeds" required value={formData.hiveNeeds} onChange={handleChange}
+                                            placeholder={'"I need help with weekly grocery runs" or "Looking for a reliable pet sitter for vacation.", etc.'}
                                             rows={3}
                                             className="w-full px-4 py-3 rounded-xl border border-neutral-300 focus:ring-2 focus:ring-warm-honey focus:border-warm-honey outline-none transition-all text-sm resize-y" />
                                     </div>
                                     <div className="space-y-1">
-                                        <label htmlFor="bc-calltime" className="block text-sm font-medium text-neutral-700">Preferred Call Time</label>
-                                        <input type="datetime-local" id="bc-calltime" name="preferredCallTime" value={formData.preferredCallTime} onChange={handleChange}
-                                            className="w-full px-4 py-3 rounded-xl border border-neutral-300 focus:ring-2 focus:ring-warm-honey focus:border-warm-honey outline-none transition-all text-sm bg-white" />
+                                        <label htmlFor="bc-timeline" className="block text-sm font-medium text-neutral-700">How soon are you looking to start? *</label>
+                                        <input type="text" id="bc-timeline" name="timeline" required value={formData.timeline} onChange={handleChange}
+                                            placeholder={'"Weekly, starting next week." or "Our next vacation is in May.", etc.'}
+                                            className="w-full px-4 py-3 rounded-xl border border-neutral-300 focus:ring-2 focus:ring-warm-honey focus:border-warm-honey outline-none transition-all text-sm" />
                                     </div>
                                 </div>
                             </fieldset>
 
                             {/* Submit */}
-                            <button
-                                type="submit"
-                                className="w-full py-4 bg-warm-honey text-charcoal-gray font-[family-name:var(--font-montserrat)] font-bold rounded-full hover:bg-[#d4b35f] transition-all hover:shadow-lg text-lg"
-                            >
-                                Schedule My Buzz Call
-                            </button>
+                            <div className="flex justify-center">
+                                <button
+                                    type="submit"
+                                    disabled={submitting}
+                                    className="px-12 py-3 bg-terra-cotta text-cream-white font-[family-name:var(--font-montserrat)] font-bold rounded-full hover:bg-terra-cotta-dark transition-all hover:shadow-lg text-base disabled:opacity-60"
+                                >
+                                    {submitting ? 'Sending...' : "Let\u2019s Chat"}
+                                </button>
+                            </div>
                         </div>
                     </form>
                 )}

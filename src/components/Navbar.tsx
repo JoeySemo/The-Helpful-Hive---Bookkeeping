@@ -5,37 +5,20 @@ import Image from 'next/image';
 import { usePathname } from 'next/navigation';
 import { useState, useEffect } from 'react';
 import { Menu, X } from 'lucide-react';
-import { useBookService } from '@/components/BookServiceProvider';
 import { useBuzzCall } from '@/components/BuzzCallProvider';
 
-function BookServiceNavBtn({ mobile, onClick }: { mobile?: boolean; onClick?: () => void }) {
-    const { openBookService } = useBookService();
-    return (
-        <button
-            type="button"
-            onClick={() => { openBookService(); onClick?.(); }}
-            className={mobile
-                ? "px-4 py-3 bg-[#C17A5B] text-white text-base font-medium font-[family-name:var(--font-montserrat)] rounded-lg text-center mt-2 shadow-md"
-                : "px-6 py-3 bg-[#C17A5B] text-white text-sm font-medium font-[family-name:var(--font-montserrat)] rounded-full hover:bg-[#a86a4d] transition-all hover:shadow-lg hover:-translate-y-0.5"
-            }
-        >
-            Book a Service
-        </button>
-    );
-}
-
-function BuzzCallNavBtn({ mobile, onClick }: { mobile?: boolean; onClick?: () => void }) {
+function LetsChatNavBtn({ mobile, onClick }: { mobile?: boolean; onClick?: () => void }) {
     const { openBuzzCall } = useBuzzCall();
     return (
         <button
             type="button"
             onClick={() => { openBuzzCall(); onClick?.(); }}
             className={mobile
-                ? "px-4 py-3 bg-warm-honey text-charcoal-gray text-base font-medium font-[family-name:var(--font-montserrat)] rounded-lg text-center mt-2 shadow-md"
-                : "px-6 py-3 bg-warm-honey text-charcoal-gray text-sm font-medium font-[family-name:var(--font-montserrat)] rounded-full hover:bg-[#d4b35f] transition-all hover:shadow-lg hover:-translate-y-0.5"
+                ? "px-4 py-3 bg-terra-cotta text-cream-white text-base font-medium font-[family-name:var(--font-montserrat)] rounded-lg text-center mt-2 shadow-md"
+                : "px-6 py-3 bg-terra-cotta text-cream-white text-sm font-medium font-[family-name:var(--font-montserrat)] rounded-full hover:bg-terra-cotta-dark transition-all hover:shadow-lg hover:-translate-y-0.5"
             }
         >
-            Schedule a Buzz Call
+            Let&apos;s Chat
         </button>
     );
 }
@@ -108,9 +91,8 @@ export default function Navbar() {
                 About
               </Link>
 
-              {/* CTA Button - Book a Service */}
-              <BookServiceNavBtn />
-              <BuzzCallNavBtn />
+              {/* CTA Button */}
+              <LetsChatNavBtn />
             </div>
           )}
 
@@ -168,8 +150,7 @@ export default function Navbar() {
                 About
               </Link>
 
-              <BookServiceNavBtn mobile onClick={() => setIsMenuOpen(false)} />
-              <BuzzCallNavBtn mobile onClick={() => setIsMenuOpen(false)} />
+              <LetsChatNavBtn mobile onClick={() => setIsMenuOpen(false)} />
             </div>
           </div>
         )}
