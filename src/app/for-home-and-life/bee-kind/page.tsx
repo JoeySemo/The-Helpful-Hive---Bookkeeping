@@ -61,8 +61,8 @@ export default function BeeKindPage() {
 
                     {/* === Check-In Services === */}
                     <div className="mb-8">
-                        <div className="bg-white rounded-3xl border-2 border-seafoam-teal/30 overflow-hidden shadow-sm">
-                            <div className="bg-seafoam-teal/15 px-8 py-6 border-b border-seafoam-teal/20 relative overflow-hidden">
+                        <div className="bg-white rounded-3xl border-2 border-[#98B4AC]/20 overflow-hidden shadow-sm">
+                            <div className="bg-[#98B4AC]/10 px-8 py-6 border-b border-[#98B4AC]/15 relative overflow-hidden">
                                 <div className="absolute inset-0 opacity-[0.08] pointer-events-none">
                                     <svg className="w-full h-full" viewBox="0 0 100 100" preserveAspectRatio="xMidYMid slice">
                                         <pattern id="honeycomb-visits" width="10" height="10" patternUnits="userSpaceOnUse">
@@ -86,20 +86,18 @@ export default function BeeKindPage() {
                             <div className="p-8">
                                 <div className="grid sm:grid-cols-2 gap-4">
                                     {/* Premium Pet Check-In */}
-                                    <div className="group rounded-xl px-8 py-5 border-2 border-seafoam-teal/15 hover:border-seafoam-teal hover:shadow-md transition-all bg-[#FFF8E7]">
+                                    <div className="group rounded-xl p-5 border-2 border-[#98B4AC]/15 hover:border-[#98B4AC] hover:shadow-md transition-all bg-[#FFF8E7]">
                                         <div className="flex items-center justify-between mb-2">
                                             <div className="flex items-center gap-3">
-                                                <div className="relative w-12 h-12 flex-shrink-0">
+                                                <div className="relative w-16 h-16 flex-shrink-0">
                                                     <Image src="/bee-1-petfood.png" alt="Premium Pet Check-In" fill className="object-contain" />
                                                 </div>
-                                                <div>
-                                                    <h3 className="font-[family-name:var(--font-lora)] font-bold text-[#3C3C3C]">Premium Pet Check-In</h3>
-                                                    <p className="font-[family-name:var(--font-lora)] italic text-sm text-[#525252]">Ideal for busy pet parents</p>
-                                                </div>
+                                                <h3 className="font-[family-name:var(--font-lora)] font-semibold text-[#3C3C3C]">Premium Pet Check-In</h3>
                                             </div>
-                                            <span className="font-[family-name:var(--font-lora)] text-lg font-bold text-[#3C3C3C]">$30 <span className="text-sm font-normal">/ visit</span></span>
+                                            <span className="bg-[#506A62] text-white text-sm px-3 py-1 rounded-full font-[family-name:var(--font-montserrat)] font-bold whitespace-nowrap">$30/visit</span>
                                         </div>
-                                        <ul className="font-[family-name:var(--font-montserrat)] text-sm text-[#525252] space-y-1 ml-[3.75rem] mt-3">
+                                        <p className="font-[family-name:var(--font-montserrat)] text-sm text-[#525252] italic mb-2">Ideal for busy pet parents</p>
+                                        <ul className="font-[family-name:var(--font-montserrat)] text-sm text-[#525252] space-y-1 ml-[4.75rem]">
                                             <li>• Approximately 45 minute visit</li>
                                             <li>• Potty break and/or litter box scoop</li>
                                             <li>• Crate relief</li>
@@ -110,20 +108,18 @@ export default function BeeKindPage() {
                                     </div>
 
                                     {/* Standard Pet Check-In */}
-                                    <div className="group rounded-xl px-8 py-5 border-2 border-seafoam-teal/15 hover:border-seafoam-teal hover:shadow-md transition-all bg-[#FFF8E7]">
+                                    <div className="group rounded-xl p-5 border-2 border-[#98B4AC]/15 hover:border-[#98B4AC] hover:shadow-md transition-all bg-[#FFF8E7]">
                                         <div className="flex items-center justify-between mb-2">
                                             <div className="flex items-center gap-3">
-                                                <div className="relative w-12 h-12 flex-shrink-0">
+                                                <div className="relative w-16 h-16 flex-shrink-0">
                                                     <Image src="/bee-1-petfood.png" alt="Standard Pet Check-In" fill className="object-contain" />
                                                 </div>
-                                                <div>
-                                                    <h3 className="font-[family-name:var(--font-lora)] font-bold text-[#3C3C3C]">Standard Pet Check-In</h3>
-                                                    <p className="font-[family-name:var(--font-lora)] italic text-sm text-[#525252]">Ideal for busy pet parents</p>
-                                                </div>
+                                                <h3 className="font-[family-name:var(--font-lora)] font-semibold text-[#3C3C3C]">Standard Pet Check-In</h3>
                                             </div>
-                                            <span className="font-[family-name:var(--font-lora)] text-lg font-bold text-[#3C3C3C]">$20 <span className="text-sm font-normal">/ visit</span></span>
+                                            <span className="bg-[#506A62] text-white text-sm px-3 py-1 rounded-full font-[family-name:var(--font-montserrat)] font-bold whitespace-nowrap">$20/visit</span>
                                         </div>
-                                        <ul className="font-[family-name:var(--font-montserrat)] text-sm text-[#525252] space-y-1 ml-[3.75rem] mt-3">
+                                        <p className="font-[family-name:var(--font-montserrat)] text-sm text-[#525252] italic mb-2">Ideal for busy pet parents</p>
+                                        <ul className="font-[family-name:var(--font-montserrat)] text-sm text-[#525252] space-y-1 ml-[4.75rem]">
                                             <li>• Approximately 30 minute visit</li>
                                             <li>• Potty break and/or litter box scoop</li>
                                             <li>• Crate relief</li>
@@ -133,20 +129,18 @@ export default function BeeKindPage() {
                                     </div>
 
                                     {/* The Home Hive Check */}
-                                    <div className="group rounded-xl px-8 py-5 border-2 border-seafoam-teal/15 hover:border-seafoam-teal hover:shadow-md transition-all bg-[#FFF8E7]">
+                                    <div className="group rounded-xl p-5 border-2 border-[#98B4AC]/15 hover:border-[#98B4AC] hover:shadow-md transition-all bg-[#FFF8E7]">
                                         <div className="flex items-center justify-between mb-2">
                                             <div className="flex items-center gap-3">
-                                                <div className="relative w-12 h-12 flex-shrink-0">
+                                                <div className="relative w-16 h-16 flex-shrink-0">
                                                     <Image src="/bee-1-petfood.png" alt="Home Hive Check" fill className="object-contain" />
                                                 </div>
-                                                <div>
-                                                    <h3 className="font-[family-name:var(--font-lora)] font-bold text-[#3C3C3C]">The Home Hive Check</h3>
-                                                    <p className="font-[family-name:var(--font-lora)] italic text-sm text-[#525252]">Ideal for travelers</p>
-                                                </div>
+                                                <h3 className="font-[family-name:var(--font-lora)] font-semibold text-[#3C3C3C]">The Home Hive Check</h3>
                                             </div>
-                                            <span className="font-[family-name:var(--font-lora)] text-lg font-bold text-[#3C3C3C]">$15 <span className="text-sm font-normal">/ visit</span></span>
+                                            <span className="bg-[#506A62] text-white text-sm px-3 py-1 rounded-full font-[family-name:var(--font-montserrat)] font-bold whitespace-nowrap">$15/visit</span>
                                         </div>
-                                        <ul className="font-[family-name:var(--font-montserrat)] text-sm text-[#525252] space-y-1 ml-[3.75rem] mt-3">
+                                        <p className="font-[family-name:var(--font-montserrat)] text-sm text-[#525252] italic mb-2">Ideal for travelers</p>
+                                        <ul className="font-[family-name:var(--font-montserrat)] text-sm text-[#525252] space-y-1 ml-[4.75rem]">
                                             <li>• Approximately 20 minute visit</li>
                                             <li>• Mail and package retrieval</li>
                                             <li>• Trash bin in/out</li>
@@ -157,20 +151,18 @@ export default function BeeKindPage() {
                                     </div>
 
                                     {/* The Hive Hybrid */}
-                                    <div className="group rounded-xl px-8 py-5 border-2 border-seafoam-teal/15 hover:border-seafoam-teal hover:shadow-md transition-all bg-[#FFF8E7]">
+                                    <div className="group rounded-xl p-5 border-2 border-[#98B4AC]/15 hover:border-[#98B4AC] hover:shadow-md transition-all bg-[#FFF8E7]">
                                         <div className="flex items-center justify-between mb-2">
                                             <div className="flex items-center gap-3">
-                                                <div className="relative w-12 h-12 flex-shrink-0">
+                                                <div className="relative w-16 h-16 flex-shrink-0">
                                                     <Image src="/bee-1-petfood.png" alt="Hive Hybrid" fill className="object-contain" />
                                                 </div>
-                                                <div>
-                                                    <h3 className="font-[family-name:var(--font-lora)] font-bold text-[#3C3C3C]">The Hive Hybrid</h3>
-                                                    <p className="font-[family-name:var(--font-lora)] italic text-sm text-[#525252]">The perfect all-in-one solution for traveling pet parents</p>
-                                                </div>
+                                                <h3 className="font-[family-name:var(--font-lora)] font-semibold text-[#3C3C3C]">The Hive Hybrid</h3>
                                             </div>
-                                            <span className="font-[family-name:var(--font-lora)] text-lg font-bold text-[#3C3C3C]">$40 <span className="text-sm font-normal">/ visit</span></span>
+                                            <span className="bg-[#506A62] text-white text-sm px-3 py-1 rounded-full font-[family-name:var(--font-montserrat)] font-bold whitespace-nowrap">$40/visit</span>
                                         </div>
-                                        <ul className="font-[family-name:var(--font-montserrat)] text-sm text-[#525252] space-y-1 ml-[3.75rem] mt-3">
+                                        <p className="font-[family-name:var(--font-montserrat)] text-sm text-[#525252] italic mb-2">The perfect all-in-one solution for traveling pet parents</p>
+                                        <ul className="font-[family-name:var(--font-montserrat)] text-sm text-[#525252] space-y-1 ml-[4.75rem]">
                                             <li>• Approximately 60 minute visit</li>
                                             <li>• Includes a Home Hive Check and a Premium Pet Check-In</li>
                                         </ul>
@@ -178,7 +170,7 @@ export default function BeeKindPage() {
                                 </div>
 
                                 {/* Visit info note */}
-                                <div className="mt-6 bg-seafoam-teal/10 rounded-xl p-4 flex items-center gap-3">
+                                <div className="mt-6 bg-[#98B4AC]/10 rounded-xl p-4 flex items-center gap-3">
                                     <span className="text-xl">📱</span>
                                     <p className="font-[family-name:var(--font-montserrat)] text-sm text-charcoal-gray font-medium">
                                         All visits include a digital &ldquo;Hive Update&rdquo; (text/photo) sent immediately after the visit.
@@ -190,7 +182,7 @@ export default function BeeKindPage() {
 
                     {/* === Overnight Home and Pet Sitting === */}
                     <div className="mb-8">
-                        <div className="bg-white rounded-3xl border-2 border-seafoam-teal/30 overflow-hidden shadow-sm relative">
+                        <div className="bg-white rounded-3xl border-2 border-[#98B4AC]/20 overflow-hidden shadow-sm relative">
                             <div className="absolute top-3 right-3 bg-[#506A62] text-white text-xs font-bold px-3 py-1 rounded z-10">Premium</div>
                             <div className="p-8">
                                 <div className="flex items-center gap-4 mb-4">
@@ -203,7 +195,9 @@ export default function BeeKindPage() {
                                         </h2>
                                         <p className="font-[family-name:var(--font-lora)] italic text-sm text-[#525252]">A consistent presence for your home and pets.</p>
                                     </div>
-                                    <span className="font-[family-name:var(--font-lora)] text-xl font-bold text-[#3C3C3C]">$110 <span className="text-sm font-normal">/ night</span></span>
+                                    <div className="text-right">
+                                        <span className="font-[family-name:var(--font-lora)] text-xl font-bold text-[#3C3C3C]">$110 <span className="text-sm font-normal">/ night</span></span>
+                                    </div>
                                 </div>
 
                                 <p className="font-[family-name:var(--font-montserrat)] text-sm text-neutral-600 leading-relaxed mb-3">
@@ -218,7 +212,7 @@ export default function BeeKindPage() {
 
                     {/* === Make it a "Bee Done" Day! === */}
                     <div className="mb-8">
-                        <div className="bg-white rounded-3xl border-2 border-seafoam-teal/30 overflow-hidden shadow-sm">
+                        <div className="bg-white rounded-3xl border-2 border-[#98B4AC]/20 overflow-hidden shadow-sm">
                             <div className="p-8">
                                 <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4 mb-4">
                                     <div className="flex items-center gap-4">
@@ -250,7 +244,7 @@ export default function BeeKindPage() {
             </section>
 
             {/* Pricing Note */}
-            <section className="py-6 px-6 bg-seafoam-teal/10 border-y border-seafoam-teal/20">
+            <section className="py-6 px-6 bg-[#98B4AC]/5 border-y border-[#98B4AC]/15">
                 <p className="font-[family-name:var(--font-montserrat)] text-sm text-[#525252] text-center italic max-w-3xl mx-auto">
                     Prices listed are estimates. Final pricing depends on the job details and will be confirmed before we start. Extra fees may apply for holidays, rush requests, or add-on tasks.
                 </p>
