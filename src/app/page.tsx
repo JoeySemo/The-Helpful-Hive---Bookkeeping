@@ -54,7 +54,7 @@ export default function HomePage() {
   ];
 
   return (
-    <div className="min-h-screen font-[family-name:var(--font-geist-sans)]">
+    <div className="min-h-screen">
       {/* Hero Section */}
       <section className="relative min-h-[45vh] flex flex-col items-center justify-center p-8 md:p-16 overflow-hidden bg-cream-white">
         {/* Background Decorative Elements */}

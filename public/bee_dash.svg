@@ -1,0 +1,43 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" fill="none">
+  <!-- Bee Body -->
+  <ellipse cx="95" cy="105" rx="42" ry="38" fill="#E8D48B" stroke="#3C3C3C" stroke-width="2.5"/>
+  <!-- Bee Stripes -->
+  <path d="M75 85 Q95 80 115 85 L115 95 Q95 90 75 95Z" fill="#3C3C3C"/>
+  <path d="M70 105 Q95 100 120 105 L120 115 Q95 110 70 115Z" fill="#3C3C3C"/>
+  <!-- Bee back dark section -->
+  <path d="M110 90 Q135 95 137 105 Q138 115 115 120 Q120 110 120 105 Q120 95 110 90Z" fill="#3C3C3C" stroke="#3C3C3C" stroke-width="1"/>
+
+  <!-- Wings -->
+  <ellipse cx="115" cy="72" rx="20" ry="15" fill="#A8B99A" opacity="0.7" stroke="#3C3C3C" stroke-width="1.5" transform="rotate(-15 115 72)"/>
+  <ellipse cx="105" cy="68" rx="18" ry="13" fill="#B5C6A7" opacity="0.6" stroke="#3C3C3C" stroke-width="1.5" transform="rotate(10 105 68)"/>
+
+  <!-- Face -->
+  <circle cx="82" cy="98" r="3" fill="#3C3C3C"/>
+  <circle cx="82" cy="98" r="1" fill="white" transform="translate(-0.5,-0.5)"/>
+  <!-- Smile -->
+  <path d="M78 106 Q85 112 92 106" stroke="#3C3C3C" stroke-width="2" fill="none" stroke-linecap="round"/>
+
+  <!-- Antennae -->
+  <path d="M85 82 Q82 68 75 62" stroke="#3C3C3C" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+  <path d="M92 80 Q92 65 88 58" stroke="#3C3C3C" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+  <circle cx="75" cy="61" r="2.5" fill="#3C3C3C"/>
+  <circle cx="88" cy="57" r="2.5" fill="#3C3C3C"/>
+
+  <!-- Legs -->
+  <path d="M78 138 Q75 148 70 152" stroke="#3C3C3C" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+  <path d="M90 140 Q88 150 85 155" stroke="#3C3C3C" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+  <path d="M102 138 Q105 148 108 150" stroke="#3C3C3C" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+
+  <!-- Package/Box (errand delivery item) -->
+  <rect x="40" y="128" width="32" height="26" rx="3" fill="#C17A5B" stroke="#3C3C3C" stroke-width="2"/>
+  <line x1="56" y1="128" x2="56" y2="154" stroke="#3C3C3C" stroke-width="1.5"/>
+  <line x1="40" y1="140" x2="72" y2="140" stroke="#3C3C3C" stroke-width="1.5"/>
+  <!-- Package ribbon/bow -->
+  <path d="M52 132 Q56 128 60 132" stroke="#E2C16B" stroke-width="2" fill="none" stroke-linecap="round"/>
+  <circle cx="56" cy="133" r="2" fill="#E2C16B"/>
+
+  <!-- Speed lines (showing dash/movement) -->
+  <line x1="140" y1="95" x2="158" y2="90" stroke="#BFC8A1" stroke-width="2.5" stroke-linecap="round" opacity="0.7"/>
+  <line x1="142" y1="105" x2="162" y2="105" stroke="#BFC8A1" stroke-width="2.5" stroke-linecap="round" opacity="0.7"/>
+  <line x1="140" y1="115" x2="155" y2="118" stroke="#BFC8A1" stroke-width="2.5" stroke-linecap="round" opacity="0.7"/>
+</svg>

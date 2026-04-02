@@ -134,9 +134,9 @@ html {
 }
 
 body {
-  font-family: var(--font-inter);
-  background-color: #FAFAFA;
-  color: #171717;
+  font-family: var(--font-montserrat);
+  background-color: #FFF8E7;
+  color: #3C3C3C;
   line-height: 1.6;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -148,10 +148,10 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: var(--font-outfit);
+  font-family: var(--font-lora);
   font-weight: 500;
   line-height: 1.2;
-  color: #171717;
+  color: #3C3C3C;
 }
 
 /* Custom Utilities */
@@ -626,5 +626,5 @@ button {
 
 /* Font display utility */
 .font-display {
-  font-family: var(--font-outfit);
+  font-family: var(--font-lora);
 }

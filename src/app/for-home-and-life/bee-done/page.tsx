@@ -141,7 +141,7 @@ export default function BeeDonePage() {
                                         { name: 'The Surface Shine (Kitchen or Bathroom)', price: '$35/task', desc: 'A surface-level shine including counters, mirrors, cabinet fronts, exterior appliances, and floors.', icon: '/bee-4-spraybottle.png' },
                                         { name: 'The Fresh Fridge & Pantry', price: '$35/task', desc: 'A health-check for your kitchen: we toss expired items and give shelves and drawers a fresh wipe.', icon: '/bee_alacarte_fridge.png' },
                                         { name: 'The Clean Path', price: '$20/task', desc: 'Vacuum and mop of the main-level "traffic lanes" and living area.', icon: '/bee_alacarte_path.png' },
-                                        { name: 'The Busy Bee Dash', price: '$15/task', desc: 'Fast door-to-door errands within Wentzville. Handles pre-paid/pre-labeled pickups and returns.', icon: '/bee-plain.png' },
+                                        { name: 'The Busy Bee Dash', price: '$15/task', desc: 'Fast door-to-door errands within Wentzville. Handles pre-paid/pre-labeled pickups and returns.', icon: '/bee_dash.svg' },
                                     ].map((item, i) => (
                                         <div key={i} className="group rounded-xl p-5 border-2 border-[#BFC8A1]/15 hover:border-[#BFC8A1] hover:shadow-md transition-all bg-[#FFF8E7]">
                                             <div className="flex items-center justify-between mb-2">

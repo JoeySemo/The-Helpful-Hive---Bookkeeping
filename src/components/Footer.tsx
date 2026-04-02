@@ -25,21 +25,21 @@ export default function Footer() {
 
                     {/* Contact Us */}
                     <div className="text-center">
-                        <h3 className="font-display font-semibold !text-[#E2C16B] mb-1 text-sm uppercase tracking-wider">Contact Us</h3>
+                        <h3 className="font-[family-name:var(--font-lora)] font-semibold !text-[#E2C16B] mb-1 text-sm uppercase tracking-wider">Contact Us</h3>
                         <p className="text-white/80 text-sm">314.526.7240</p>
                         <p className="text-white/80 text-sm">hellohelpfulhive@gmail.com</p>
                     </div>
 
                     {/* Service Area */}
                     <div className="text-center">
-                        <h3 className="font-display font-semibold !text-[#E2C16B] mb-1 text-sm uppercase tracking-wider">Service Area</h3>
+                        <h3 className="font-[family-name:var(--font-lora)] font-semibold !text-[#E2C16B] mb-1 text-sm uppercase tracking-wider">Service Area</h3>
                         <p className="text-white/80 text-sm">Wentzville, MO</p>
                         <p className="text-white/80 text-sm">and surrounding area</p>
                     </div>
 
                     {/* Right: Payment Methods */}
                     <div className="text-center md:text-right">
-                        <h3 className="font-display font-semibold !text-[#E2C16B] mb-1 text-sm uppercase tracking-wider">Payment Methods</h3>
+                        <h3 className="font-[family-name:var(--font-lora)] font-semibold !text-[#E2C16B] mb-1 text-sm uppercase tracking-wider">Payment Methods</h3>
                         <p className="text-white/80 text-sm">We proudly accept</p>
                         <p className="text-white/80 text-sm">Venmo and Cash.</p>
                     </div>
