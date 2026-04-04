@@ -94,11 +94,11 @@ export default function BeeKindPage() {
                                                 </div>
                                                 <h3 className="font-[family-name:var(--font-lora)] font-semibold text-[#3C3C3C]">Premium Pet Check-In</h3>
                                             </div>
-                                            <span className="bg-[#506A62] text-white text-sm px-3 py-1 rounded-full font-[family-name:var(--font-montserrat)] font-bold whitespace-nowrap">$30/visit</span>
+                                            <span className="bg-[#506A62] text-white text-sm px-3 py-1 rounded-full font-[family-name:var(--font-montserrat)] font-bold whitespace-nowrap">$25/visit</span>
                                         </div>
                                         <p className="font-[family-name:var(--font-montserrat)] text-sm text-[#525252] italic mb-2">Ideal for busy pet parents</p>
-                                        <ul className="font-[family-name:var(--font-montserrat)] text-sm text-[#525252] space-y-1 ml-[4.75rem]">
-                                            <li>• Approximately 45 minute visit</li>
+                                        <ul className="font-[family-name:var(--font-montserrat)] text-sm text-[#525252] space-y-1 ml-[3.25rem]">
+                                            <li>• Approximately 40 minute visit</li>
                                             <li>• Potty break and/or litter box scoop</li>
                                             <li>• Crate relief</li>
                                             <li>• Potty accident cleanup</li>
@@ -119,13 +119,16 @@ export default function BeeKindPage() {
                                             <span className="bg-[#506A62] text-white text-sm px-3 py-1 rounded-full font-[family-name:var(--font-montserrat)] font-bold whitespace-nowrap">$20/visit</span>
                                         </div>
                                         <p className="font-[family-name:var(--font-montserrat)] text-sm text-[#525252] italic mb-2">Ideal for busy pet parents</p>
-                                        <ul className="font-[family-name:var(--font-montserrat)] text-sm text-[#525252] space-y-1 ml-[4.75rem]">
+                                        <ul className="font-[family-name:var(--font-montserrat)] text-sm text-[#525252] space-y-1 ml-[3.25rem]">
                                             <li>• Approximately 30 minute visit</li>
                                             <li>• Potty break and/or litter box scoop</li>
                                             <li>• Crate relief</li>
                                             <li>• Potty accident cleanup</li>
                                             <li>• Food and water refresh</li>
                                         </ul>
+                                        <div className="flex justify-end mt-3">
+                                            <span className="font-[family-name:var(--font-montserrat)] text-xs text-[#506A62] font-semibold italic">Cat Only Rate $17/visit</span>
+                                        </div>
                                     </div>
 
                                     {/* The Home Hive Check */}
@@ -140,14 +143,16 @@ export default function BeeKindPage() {
                                             <span className="bg-[#506A62] text-white text-sm px-3 py-1 rounded-full font-[family-name:var(--font-montserrat)] font-bold whitespace-nowrap">$15/visit</span>
                                         </div>
                                         <p className="font-[family-name:var(--font-montserrat)] text-sm text-[#525252] italic mb-2">Ideal for travelers</p>
-                                        <ul className="font-[family-name:var(--font-montserrat)] text-sm text-[#525252] space-y-1 ml-[4.75rem]">
+                                        <ul className="font-[family-name:var(--font-montserrat)] text-sm text-[#525252] space-y-1 ml-[3.25rem]">
                                             <li>• Approximately 20 minute visit</li>
                                             <li>• Mail and package retrieval</li>
                                             <li>• Trash bin in/out</li>
-                                            <li>• Plant watering</li>
                                             <li>• Lights rotation (for security)</li>
                                             <li>• Security and wellness walk-through</li>
                                         </ul>
+                                        <div className="flex justify-end mt-3">
+                                            <span className="font-[family-name:var(--font-montserrat)] text-xs text-[#506A62] font-semibold italic">3 visits for $40</span>
+                                        </div>
                                     </div>
 
                                     {/* The Hive Hybrid */}
@@ -159,10 +164,10 @@ export default function BeeKindPage() {
                                                 </div>
                                                 <h3 className="font-[family-name:var(--font-lora)] font-semibold text-[#3C3C3C]">The Hive Hybrid</h3>
                                             </div>
-                                            <span className="bg-[#506A62] text-white text-sm px-3 py-1 rounded-full font-[family-name:var(--font-montserrat)] font-bold whitespace-nowrap">$40/visit</span>
+                                            <span className="bg-[#506A62] text-white text-sm px-3 py-1 rounded-full font-[family-name:var(--font-montserrat)] font-bold whitespace-nowrap">$35/visit</span>
                                         </div>
                                         <p className="font-[family-name:var(--font-montserrat)] text-sm text-[#525252] italic mb-2">The perfect all-in-one solution for traveling pet parents</p>
-                                        <ul className="font-[family-name:var(--font-montserrat)] text-sm text-[#525252] space-y-1 ml-[4.75rem]">
+                                        <ul className="font-[family-name:var(--font-montserrat)] text-sm text-[#525252] space-y-1 ml-[3.25rem]">
                                             <li>• Approximately 60 minute visit</li>
                                             <li>• Includes a Home Hive Check and a Premium Pet Check-In</li>
                                         </ul>
@@ -174,6 +179,13 @@ export default function BeeKindPage() {
                                     <span className="text-xl">📱</span>
                                     <p className="font-[family-name:var(--font-montserrat)] text-sm text-charcoal-gray font-medium">
                                         All visits include a digital &ldquo;Hive Update&rdquo; (text/photo) sent immediately after the visit.
+                                    </p>
+                                </div>
+
+                                {/* Multi-pet note */}
+                                <div className="mt-4 bg-[#98B4AC]/10 rounded-xl p-4">
+                                    <p className="font-[family-name:var(--font-montserrat)] text-sm text-[#525252] text-center">
+                                        Rates are based on a single-dog or two-cat household. <strong>Add-a-Cat: $3</strong> &nbsp;|&nbsp; <strong>Add-a-Dog: $5</strong>
                                     </p>
                                 </div>
                             </div>
@@ -196,16 +208,33 @@ export default function BeeKindPage() {
                                         <p className="font-[family-name:var(--font-lora)] italic text-sm text-[#525252]">A consistent presence for your home and pets.</p>
                                     </div>
                                     <div className="text-right">
-                                        <span className="font-[family-name:var(--font-lora)] text-xl font-bold text-[#3C3C3C]">$110 <span className="text-sm font-normal">/ night</span></span>
+                                        <span className="font-[family-name:var(--font-lora)] text-xl font-bold text-[#3C3C3C]">$95 <span className="text-sm font-normal">/ night</span></span>
                                     </div>
                                 </div>
 
-                                <p className="font-[family-name:var(--font-montserrat)] text-sm text-neutral-600 leading-relaxed mb-3">
-                                    This premium service includes a <strong>10-hour overnight stay</strong> in your home. Amanda maintains your pet&apos;s familiar bedtime and morning routines while providing the &ldquo;lived-in&rdquo; look that keeps your home secure.
+                                <p className="font-[family-name:var(--font-montserrat)] text-sm text-neutral-600 leading-relaxed mb-4">
+                                    This premium service includes a <strong>10-hour overnight stay</strong> in your home. Amanda maintains your pet&apos;s familiar bedtime and morning routines including evening and morning feedings and potty breaks.
                                 </p>
-                                <p className="font-[family-name:var(--font-montserrat)] text-sm text-neutral-600 leading-relaxed">
-                                    Includes evening and morning feedings and a complimentary <strong>Home Hive Check</strong>.
-                                </p>
+
+                                {/* Hive Hybrid Overnight Upgrade bar */}
+                                <div className="bg-[#98B4AC]/15 rounded-xl p-4 flex items-center justify-between relative overflow-hidden">
+                                    <div className="absolute inset-0 opacity-[0.06] pointer-events-none">
+                                        <svg className="w-full h-full" viewBox="0 0 100 100" preserveAspectRatio="xMidYMid slice">
+                                            <pattern id="honeycomb-overnight-upgrade" width="10" height="10" patternUnits="userSpaceOnUse">
+                                                <path d="M5 0L10 2.5V7.5L5 10L0 7.5V2.5Z" fill="none" stroke="#98B4AC" strokeWidth="0.5" />
+                                            </pattern>
+                                            <rect width="100%" height="100%" fill="url(#honeycomb-overnight-upgrade)" />
+                                        </svg>
+                                    </div>
+                                    <div className="relative z-10 flex-grow">
+                                        <p className="font-[family-name:var(--font-lora)] font-bold text-[#3C3C3C] text-sm">The Hive Hybrid Overnight Upgrade</p>
+                                        <p className="font-[family-name:var(--font-montserrat)] text-xs text-[#525252]">Our elite all-in-one solution that pairs a premium overnight stay with our full Home Hive Check services for total home and pet protection.</p>
+                                    </div>
+                                    <div className="relative z-10 text-right ml-4 flex-shrink-0">
+                                        <span className="font-[family-name:var(--font-lora)] font-bold text-[#3C3C3C]">$105</span>
+                                        <p className="font-[family-name:var(--font-montserrat)] text-xs text-[#525252]">/ night</p>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
